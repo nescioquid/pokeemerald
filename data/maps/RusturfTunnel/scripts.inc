@@ -478,7 +478,7 @@ RusturfTunnel_Text_WhyCantTheyKeepDigging:
 	.string "Why can't they keep digging?\n"
 	.string "Is the bedrock too hard?\p"
 	.string "My beloved awaits me in VERDANTURF\n"
-	.string "TOWN just beyond here…\p"
+	.string "just beyond here…\p"
 	.string "If RUSTBORO and VERDANTURF were\n"
 	.string "joined by this tunnel, I could visit\l"
 	.string "her every day…\p"

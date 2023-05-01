@@ -346,7 +346,7 @@ Route103_Text_ShouldHaveBroughtPotion:
 
 Route103_Text_ShortcutToOldale:
 	.string "If you cross the sea from here,\n"
-	.string "it'll be a shortcut to OLDALE TOWN.\p"
+	.string "it'll be a shortcut to OLDALE.\p"
 	.string "Fufufu, that's useful, isn't it?$"
 
 Route103_Text_RouteSign:

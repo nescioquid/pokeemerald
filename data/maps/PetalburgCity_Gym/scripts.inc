@@ -1164,7 +1164,7 @@ PetalburgCity_Gym_Text_DadOhYoureWallyRight:
 
 PetalburgCity_Gym_Text_WallyIveNeverCaughtAPokemon:
 	.string "WALLY: I'm going to go stay with my\n"
-	.string "relatives in VERDANTURF TOWN.\p"
+	.string "relatives in VERDANTURF.\p"
 	.string "I thought I would be lonely by myself,\n"
 	.string "so I wanted to take a POKéMON along.\p"
 	.string "But I've never caught a POKéMON before.\n"
@@ -1218,7 +1218,7 @@ PetalburgCity_Gym_Text_DadGoCollectBadges:
 	.string "DAD: Now…\p"
 	.string "{PLAYER}, if you want to become a\n"
 	.string "strong TRAINER, here's my advice.\p"
-	.string "Head for RUSTBORO CITY beyond this\n"
+	.string "Head for RUSTBORO beyond this\n"
 	.string "town.\p"
 	.string "There, you should challenge\n"
 	.string "the GYM LEADER, ROXANNE.\p"
@@ -1233,7 +1233,7 @@ PetalburgCity_Gym_Text_DadGoCollectBadges:
 
 PetalburgCity_Gym_Text_NormanGoToRustboro:
 	.string "DAD: Hm? Aren't you going to the\n"
-	.string "POKéMON GYM in RUSTBORO CITY?\p"
+	.string "POKéMON GYM in RUSTBORO?\p"
 	.string "There's no challenge for me to\n"
 	.string "battle a greenhorn TRAINER.\p"
 	.string "{PLAYER}, I want you to challenge me\n"
@@ -1243,10 +1243,10 @@ PetalburgCity_Gym_Text_NormanGoToRustboro:
 
 PetalburgCity_Gym_Text_NormanGoToDewford:
 	.string "DAD: I see… So, you've beaten\n"
-	.string "the GYM LEADER in RUSTBORO CITY.\p"
+	.string "the GYM LEADER in RUSTBORO.\p"
 	.string "But there are many more TRAINERS\n"
 	.string "who are stronger than you, {PLAYER}.\p"
-	.string "Across the sea in DEWFORD TOWN is a\n"
+	.string "Across the sea in DEWFORD is a\n"
 	.string "GYM LEADER named BRAWLY.\p"
 	.string "You should go challenge him.$"
 
@@ -1437,7 +1437,7 @@ PetalburgCity_Gym_Text_BerkePostBattle:
 
 PetalburgCity_Gym_Text_BerkePostBadge:
 	.string "Since your dad became the LEADER,\n"
-	.string "the TRAINERS of PETALBURG CITY have\l"
+	.string "the TRAINERS of PETALBURG have\l"
 	.string "become a lot tougher.$"
 
 PetalburgCity_Gym_Text_MaryIntro:

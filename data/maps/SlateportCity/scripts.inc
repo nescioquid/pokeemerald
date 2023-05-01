@@ -1019,7 +1019,7 @@ SlateportCity_Text_GoingToCompeteInBattleTent:
 
 SlateportCity_Text_BushedHikingFromMauville:
 	.string "Whew… I'm just bushed…\p"
-	.string "I hiked over from MAUVILLE CITY.\n"
+	.string "I hiked over from MAUVILLE.\n"
 	.string "But, boy, this city's huge.\p"
 	.string "If I'd known this, I would've ridden\n"
 	.string "my BIKE here.$"

@@ -583,7 +583,7 @@ MauvilleCity_Text_WattsonNeedFavorTakeKey:
 	.string "That's a good thing, wahahahaha!\p"
 	.string "Fine! I've decided!\n"
 	.string "I need a favor, {PLAYER}{KUN}!\p"
-	.string "MAUVILLE CITY has an underground\n"
+	.string "MAUVILLE has an underground\n"
 	.string "sector called NEW MAUVILLE.\p"
 	.string "{PLAYER}{KUN}, I'd like you to go there and\n"
 	.string "switch off the GENERATOR.\p"

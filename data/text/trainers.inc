@@ -3812,7 +3812,7 @@ Route125_Text_TanyaDefeat:
 
 Route125_Text_TanyaPostBattle:
 	.string "Whew…\n"
-	.string "Which way is it to MOSSDEEP CITY?$"
+	.string "Which way is it to MOSSDEEP?$"
 
 Route125_Text_SharonIntro:
 	.string "How would you like to take on the\n"
@@ -3934,7 +3934,7 @@ Route126_Text_BarryPostBattle:
 
 Route126_Text_DeanIntro:
 	.string "This towering white mountain of rock\n"
-	.string "is SOOTOPOLIS CITY.$"
+	.string "is SOOTOPOLIS.$"
 
 Route126_Text_DeanDefeat:
 	.string "I was done in?$"
@@ -4147,7 +4147,7 @@ Route127_Text_AthenaPostBattle:
 	.string "and sky, it feels as if time slows down.$"
 
 Route128_Text_IsaiahIntro:
-	.string "EVER GRANDE CITY is still a long ways\n"
+	.string "EVER GRANDE is still a long ways\n"
 	.string "away…$"
 
 Route128_Text_IsaiahDefeat:
@@ -4165,13 +4165,13 @@ Route128_Text_IsaiahRegister:
 
 Route128_Text_IsaiahRematchIntro:
 	.string "I'm still feeling good. I'll keep on\n"
-	.string "swimming to EVER GRANDE CITY.$"
+	.string "swimming to EVER GRANDE.$"
 
 Route128_Text_IsaiahRematchDefeat:
 	.string "I've yet to taste my first victory…$"
 
 Route128_Text_IsaiahPostRematch:
-	.string "I'll eventually reach EVER GRANDE CITY\n"
+	.string "I'll eventually reach EVER GRANDE\n"
 	.string "where I can eventually win…$"
 
 Route128_Text_KatelynIntro:

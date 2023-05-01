@@ -503,7 +503,7 @@ Route119_Text_MayExplainFly:
 	.string "instantly carry you to any town you've\l"
 	.string "already visited.\p"
 	.string "But, to use FLY, you have to get\n"
-	.string "the GYM BADGE from FORTREE CITY.\l"
+	.string "the GYM BADGE from FORTREE.\l"
 	.string "That's important, so don't forget.\p"
 	.string "You should FLY home and visit\n"
 	.string "LITTLEROOT for a change.\p"
