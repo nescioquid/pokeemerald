@@ -399,7 +399,7 @@ LavaridgeTown_Text_TownSign:
 	.string "An excellent place for relaxing!”$"
 
 LavaridgeTown_Text_GymSign:
-	.string "LAVARIDGE TOWN POKéMON GYM\n"
+	.string "LAVARIDGE POKéMON GYM\n"
 	.string "LEADER: FLANNERY\l"
 	.string "“One with a fiery passion that burns!”$"
 

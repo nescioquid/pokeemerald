@@ -109,7 +109,7 @@ FortreeCity_Text_ThisTimeIllBeatWinona:
 FortreeCity_Text_TreesGrowByDrinkingRainwater:
 	.string "The ground absorbs rainwater, and\n"
 	.string "trees grow by drinking that water…\p"
-	.string "Our FORTREE CITY exists because\n"
+	.string "Our FORTREE exists because\n"
 	.string "there's both water and soil.$"
 
 FortreeCity_Text_EveryoneHealthyAndLively:
@@ -149,7 +149,7 @@ FortreeCity_Text_CitySign:
 	.string "nature.”$"
 
 FortreeCity_Text_GymSign:
-	.string "FORTREE CITY POKéMON GYM\n"
+	.string "FORTREE POKéMON GYM\n"
 	.string "LEADER: WINONA\p"
 	.string "“The bird user taking flight into\n"
 	.string "the world.”$"

@@ -411,7 +411,7 @@ SlateportCity_Harbor_Text_SailAnotherTime:
 	.string "Please sail with us another time!$"
 
 SlateportCity_Harbor_Text_LilycoveItIs:
-	.string "LILYCOVE CITY it is, then!$"
+	.string "LILYCOVE it is, then!$"
 
 SlateportCity_Harbor_Text_BattleFrontierItIs:
 	.string "BATTLE FRONTIER it is, then!$"
@@ -459,7 +459,7 @@ SlateportCity_Harbor_Text_ArchieYouAgainHideoutInLilycove:
 	.string "But now…\n"
 	.string "No one can stop us! No one!\p"
 	.string "Or, will you follow us back to our\n"
-	.string "HIDEOUT in LILYCOVE CITY?\p"
+	.string "HIDEOUT in LILYCOVE?\p"
 	.string "Fwahahahaha…$"
 
 SlateportCity_Harbor_Text_CaptSternWhyStealMySubmarine:

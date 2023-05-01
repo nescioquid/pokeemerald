@@ -1405,7 +1405,7 @@ SootopolisCity_Movement_DestroyTask::
 	step_end
 
 SootopolisCity_Text_GymSign:
-	.string "SOOTOPOLIS CITY POKéMON GYM\n"
+	.string "SOOTOPOLIS POKéMON GYM\n"
 	.string "LEADER: JUAN\p"
 	.string "“The GYM LEADER with the beauty\n"
 	.string "of pure water!”$"
@@ -1511,10 +1511,10 @@ SootopolisCity_Text_PrettyMonCameFromSky:
 
 SootopolisCity_Text_SootopolisWillBeWrecked:
 	.string "Oh, no!\n"
-	.string "SOOTOPOLIS CITY will get wrecked!$"
+	.string "SOOTOPOLIS will get wrecked!$"
 
 SootopolisCity_Text_SootopolisDidntGetWrecked:
-	.string "SOOTOPOLIS CITY didn't get wrecked!$"
+	.string "SOOTOPOLIS didn't get wrecked!$"
 
 SootopolisCity_Text_NoOrdinaryTourist:
 	.string "Hm!\n"

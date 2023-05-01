@@ -210,7 +210,7 @@ SlateportCity_ContestHall_Text_JudgeWouldntDoToMissContest:
 	.string "Then, it just wouldn't do for you\n"
 	.string "to miss a POKéMON CONTEST!\p"
 	.string "Get a CONTEST PASS in VERDANTURF\n"
-	.string "CITY and enter anytime!$"
+	.string "and enter anytime!$"
 
 @ Unused
 SlateportCity_ContestHall_Text_ItsAppealTime:

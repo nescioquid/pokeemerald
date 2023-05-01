@@ -1240,7 +1240,7 @@ RustboroCity_Text_DevonCorpSign:
 	.string "it all.”$"
 
 RustboroCity_Text_GymSign:
-	.string "RUSTBORO CITY POKéMON GYM\n"
+	.string "RUSTBORO POKéMON GYM\n"
 	.string "LEADER: ROXANNE\p"
 	.string "“The ROCK-loving honors student!”$"
 
