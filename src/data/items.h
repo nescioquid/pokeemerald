@@ -2132,10 +2132,10 @@ const struct Item gItemsInfo[] =
             .description = COMPOUND_STRING(
         #if B_X_ITEMS_BUFF >= GEN_7
             "Sharply raises move\n"
-            "accuracy during\n"
+            "Accuracy during\n"
             "one battle."),
         #else
-            "Raises accuracy\n"
+            "Raises Accuracy\n"
             "of attack moves\n"
             "during one battle."),
         #endif
@@ -2153,7 +2153,7 @@ const struct Item gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 1000 : 650,
         .description = COMPOUND_STRING(
             "Raises the\n"
-            "critical-hit ratio\n"
+            "critical hit ratio\n"
             "during one battle."),
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -6194,7 +6194,7 @@ const struct Item gItemsInfo[] =
         .description = COMPOUND_STRING(
             "A hold item that\n"
             "raises Farfetch'd's\n"
-            "critical-hit ratio."),
+            "critical hit ratio."),
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6225,7 +6225,7 @@ const struct Item gItemsInfo[] =
         .description = COMPOUND_STRING(
             "A hold item that\n"
             "raises Chansey's\n"
-            "critical-hit rate."),
+            "critical hit rate."),
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6391,7 +6391,7 @@ const struct Item gItemsInfo[] =
         .description = COMPOUND_STRING(
             "A hold item that\n"
             "slightly lowers the\n"
-            "foe's accuracy."),
+            "foe's Accuracy."),
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -7245,7 +7245,7 @@ const struct Item gItemsInfo[] =
         .description = COMPOUND_STRING(
             "A hold item that\n"
             "casts a glare to\n"
-            "reduce accuracy."),
+            "reduce Accuracy."),
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -7435,7 +7435,7 @@ const struct Item gItemsInfo[] =
         .description = COMPOUND_STRING(
             "A hold item that\n"
             "improves the\n"
-            "critical-hit rate."),
+            "critical hit rate."),
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -7485,7 +7485,7 @@ const struct Item gItemsInfo[] =
         .description = COMPOUND_STRING(
             "A magnifying lens\n"
             "that boosts the\n"
-            "accuracy of moves."),
+            "Accuracy of moves."),
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -7613,7 +7613,7 @@ const struct Item gItemsInfo[] =
         .description = COMPOUND_STRING(
             "If the holder moves\n"
             "after the foe, it'll\n"
-            "boost accuracy."),
+            "boost Accuracy."),
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -7763,7 +7763,7 @@ const struct Item gItemsInfo[] =
         .description = COMPOUND_STRING(
             "A hooked claw that\n"
             "ups the holder's\n"
-            "critical-hit ratio."),
+            "critical hit ratio."),
         .pocket = POCKET_ITEMS,
         .type = EVO_HELD_ITEM_TYPE,
         .fieldUseFunc = EVO_HELD_ITEM_FIELD_FUNC,
@@ -9068,7 +9068,7 @@ const struct Item gItemsInfo[] =
         .holdEffectParam = 4,
         .description = COMPOUND_STRING(
             "A hold item that\n"
-            "ups the critical-\n"
+            "ups the critical\n"
             "hit rate in a pinch."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -10652,7 +10652,7 @@ const struct Item gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Looses a powerful\n"
             "blast of light that\n"
-            "reduces accuracy."),
+            "reduces Accuracy."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
