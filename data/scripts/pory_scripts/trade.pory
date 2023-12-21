@@ -1,0 +1,89 @@
+// // modify to change:
+// // - include/constants/flags.h
+// // - src/data/trade.h
+// // - include/constants/trade.h
+
+// script _Common_EventScript_Trade {
+//   // takes in the values passed from the calling function
+//   copyvar(VAR_0x8004, VAR_0x8008)
+//   specialvar(VAR_0x8009, GetInGameTradeSpeciesInfo)
+//   special(ChoosePartyMon)
+//   waitstate
+//   if (var(VAR_0x8004) == PARTY_NOTHING_CHOSEN) {
+//     msgbox(format("Thats too bad, maybe next time."))
+//   } else {
+//     // checks if the chosen party mon is the right species
+//     copyvar(VAR_0x8005, VAR_0x8004)
+//     specialvar(VAR_RESULT, GetTradeSpecies)
+//     if (var(VAR_RESULT) != VAR_0x8009) {
+//       msgbox(format("I'm sorry, but that's just not what I was looking for."))
+//     } else {
+//       // Perform the actual trade
+//       copyvar(VAR_0x8004, VAR_0x8008)
+//       special(CreateInGameTradePokemon)
+//       special(DoInGameTradeScene)
+//       waitstate
+//       // set flags and exit
+//       goto(_Common_EventScript_SetTradeFlag)
+//     }
+//   }
+// }
+
+// script _Common_EventScript_SetTradeFlag {
+//   // lock and faceplayer feel redundant but the NPC doesn't stay locked
+//   // and facing the player after the trade in this approach without it
+//   lock
+//   faceplayer
+//   switch (var(VAR_TEMP_1)) {
+//     case 0:
+//       msgbox(format("Now this is REAL power! Thank you!"))
+//       setflag(FLAG_INGAME_KYOGRE_TRADE)
+//     case 1:
+//       msgbox(format("Now this is more like it! Thank you!"))
+//       setflag(FLAG_INGAME_GROUDON_TRADE)
+//   }
+//   release
+//   end
+// }
+
+// script _Common_EventScript_TradeKyogre {
+//   lock
+//   faceplayer
+//   if (!flag(FLAG_INGAME_KYOGRE_TRADE)) {
+//     msgbox(format("Check out this Kyogre!\nOh, I can see that you want it!\pI'll tell you what. I might be willing to trade it for a Bulbasaur."), MSGBOX_YESNO)
+//     if (var(VAR_RESULT)) {
+//       // sets the switch case for which trade-completed flag to set
+//       setvar(VAR_TEMP_1, 0)
+//       // Buffers the trade
+//       setvar(VAR_0x8008, INGAME_TRADE_KYOGRE)
+//       goto(_Common_EventScript_Trade)
+//     } else {
+//       msgbox(format("But why not?"))
+//     }
+//   } else {
+//     msgbox(format("Thanks for trading with me!"))
+//   }
+//   release
+//   end
+// }
+
+// script _Common_EventScript_TradeGroudon {
+//   lock
+//   faceplayer
+//   if (!flag(FLAG_INGAME_GROUDON_TRADE)) {
+//     msgbox(format("Check out this Groudon!\nOh, I can see that you want it!\pI'll tell you what. I might be willing to trade it for a Bulbasaur."), MSGBOX_YESNO)
+//     if (var(VAR_RESULT)) {
+//       // sets the switch case for which trade-completed flag to set
+//       setvar(VAR_TEMP_1, 1)
+//       // Buffers the trade
+//       setvar(VAR_0x8008, INGAME_TRADE_GROUDON)
+//       call(_Common_EventScript_Trade)
+//     } else {
+//       msgbox(format("Seriously? Dumb."))
+//     }
+//   } else {
+//     msgbox(format("Thanks for everything bro!"))
+//   }
+//   release
+//   end
+// }
