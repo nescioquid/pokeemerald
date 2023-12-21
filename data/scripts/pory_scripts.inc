@@ -11,6 +11,7 @@
 .include "data/scripts/pory_scripts/pokemart.inc"
 .include "data/scripts/pory_scripts/randomized_item_ball.inc"
 .include "data/scripts/pory_scripts/randomized_item_hidden.inc"
+.include "data/scripts/pory_scripts/trade.inc"
 .include "data/scripts/pory_scripts/tv.inc"
 .include "data/scripts/pory_scripts/vending_machine.inc"
 
