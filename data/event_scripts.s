@@ -1108,3 +1108,4 @@ EventScript_VsSeekerChargingDone::
 .include "data/scripts/pory/gt/wallace.inc"
 .include "data/maps/Route104North/scripts.inc"
 .include "data/maps/Route104South/scripts.inc"
+.include "data/scripts/pory/green_thing/trade.inc"
