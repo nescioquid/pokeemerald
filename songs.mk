@@ -109,7 +109,7 @@ $(MID_SUBDIR)/mus_petalburg_woods.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G018 -V080
 
 $(MID_SUBDIR)/mus_abandoned_ship.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G030 -V080
+	$(MID) $< $@ -E -R$(STD_REVERB) -G080 -V100
 
 $(MID_SUBDIR)/mus_cave_of_origin.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G037 -V080
