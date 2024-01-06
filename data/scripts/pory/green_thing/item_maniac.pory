@@ -1,0 +1,229 @@
+// Bamboo Maniac
+// TODO set to final location later
+// const BAMBOO_MANIAC_ID = 5
+
+script Pory_EventScript_BambooManiac {
+  lock
+  faceplayer
+  if (!flag(FLAG_TEMP_1)) {
+    msgbox(format("You there… Have you any bamboo?"))
+  }
+  checkitem(ITEM_BIG_BAMBOO_SHOOT)
+  if (var(VAR_RESULT)) {
+    if (flag(FLAG_TEMP_1)) {
+      call(Pory_EventScript_BambooManiac_Hellos)
+    }
+    call(Pory_EventScript_BambooManiac_DoExcitement)
+    checkitem(ITEM_TINY_BAMBOO_SHOOT)
+    if (var(VAR_RESULT)) {
+      random(2)
+      switch (var(VAR_RESULT)) {
+        case 0: call(Pory_EventScript_BambooManiac_DoBigBambooShoots)
+        case 1: call(Pory_EventScript_BambooManiac_DoTinyBambooShoots)
+      }
+    } else {
+      call(Pory_EventScript_BambooManiac_DoBigBambooShoots)
+    }
+  } else {
+    checkitem(ITEM_TINY_BAMBOO_SHOOT)
+    if (var(VAR_RESULT)) {
+      if (flag(FLAG_TEMP_1)) {
+        call(Pory_EventScript_BambooManiac_Hellos)
+      }
+      call(Pory_EventScript_BambooManiac_DoExcitement)
+      call(Pory_EventScript_BambooManiac_DoTinyBambooShoots)
+    } else {
+      if (flag(FLAG_TEMP_1)) {
+      msgbox(format("I can always go for some tender bamboo shoots, but the trouble is digging for them!"))
+      }
+    }
+  }
+  setflag(FLAG_TEMP_1)
+  release
+  end
+}
+
+script Pory_EventScript_BambooManiac_Hellos {
+  random(3)
+  switch (var(VAR_RESULT)) {
+    case 0: msgbox(format("{FONT_SMALL}…my back hurts…"))
+    case 1: msgbox(format("{FONT_SMALL}…I should have brought my gloves…"))
+    case 2: msgbox(format("{FONT_SMALL}…I could use a hot tea right about now…"))
+  }
+}
+
+script Pory_EventScript_BambooManiac_Declinations {
+  random(2)
+  switch (var(VAR_RESULT)) {
+    case 0: msgbox(format("Why disappoint me like that?"))
+    case 1: msgbox(format("Did you bring those here just to hurt an old woman's feelings, then?"))
+  }
+}
+
+script Pory_EventScript_BambooManiac_DoExcitement {
+//   playse(SE_PIN)
+//   applymovement(BAMBOO_MANIAC_ID, Common_Movement_ExclamationMark)
+//   waitmovement(0)
+//   applymovement(BAMBOO_MANIAC_ID, Common_Movement_Delay48)
+//   waitmovement(0)
+}
+
+script Pory_EventScript_BambooManiac_DoBigBambooShoots {
+  showmoneybox(0, 0)
+  checkitem(ITEM_BIG_BAMBOO_SHOOT, 2)
+  if (var(VAR_RESULT)) {
+    msgbox(format("So many Big Bamboo Shoots! Could you share some with me? I'll even give you ¥3000 for your trouble."), MSGBOX_YESNO)
+  } else {
+    msgbox(format("Look at that Big Bamboo Shoot you have! Can you part with it for ¥3000?"), MSGBOX_YESNO)
+  }
+  if (var(VAR_RESULT)) {
+    msgbox(format("{PLAYER} handed the Big Bamboo Shoot to the old lady. Her hand is stained with prune juice."))
+    removeitem(ITEM_BIG_BAMBOO_SHOOT)
+    addmoney(3000)
+    updatemoneybox
+    playse(SE_SHOP)
+    msgbox(format("Now go find more! I'll take all you got!"))
+  } else {
+    call(Pory_EventScript_BambooManiac_Declinations)
+  }
+  hidemoneybox
+}
+
+script Pory_EventScript_BambooManiac_DoTinyBambooShoots {
+  showmoneybox(0, 0)
+  checkitem(ITEM_TINY_BAMBOO_SHOOT, 2)
+  if (var(VAR_RESULT)) {
+    msgbox(format("Hey, where'd you find those Tiny Bamboo Shoots? You're gonna sell me one for ¥750, ok?"), MSGBOX_YESNO)
+  } else {
+    msgbox(format("A Tiny Bamboo Shoot! So cute! And tasty. Can I have it for ¥750?"), MSGBOX_YESNO)
+  }
+  if (var(VAR_RESULT)) {
+    msgbox(format("{PLAYER} handed the Tiny Bamboo Shoot to the old lady. Her brow softens."))
+    removeitem(ITEM_TINY_BAMBOO_SHOOT)
+    addmoney(750)
+    updatemoneybox
+    playse(SE_SHOP)
+    msgbox(format("Very good, young one."))
+  } else {
+    call(Pory_EventScript_BambooManiac_Declinations)
+  }
+  hidemoneybox
+}
+
+// Gold Maniac
+// TODO set to final location later
+// const GOLD_MANIAC_ID = 5
+
+script Pory_EventScript_GoldManiac {
+  lock
+  faceplayer
+  if (!flag(FLAG_TEMP_1)) {
+    msgbox(format("I buy gold! Because it's not just gold, it's great!"))
+  }
+  checkitem(ITEM_BIG_NUGGET)
+  if (var(VAR_RESULT)) {
+    if (flag(FLAG_TEMP_1)) {
+      call(Pory_EventScript_GoldManiac_Hellos)
+    }
+    call(Pory_EventScript_GoldManiac_DoExcitement)
+    checkitem(ITEM_NUGGET)
+    if (var(VAR_RESULT)) {
+      random(2)
+      switch (var(VAR_RESULT)) {
+        case 0: call(Pory_EventScript_GoldManiac_DoBigNuggets)
+        case 1: call(Pory_EventScript_GoldManiac_DoNuggets)
+      }
+    } else {
+      call(Pory_EventScript_GoldManiac_DoBigNuggets)
+    }
+  } else {
+    checkitem(ITEM_NUGGET)
+    if (var(VAR_RESULT)) {
+      if (flag(FLAG_TEMP_1)) {
+        call(Pory_EventScript_GoldManiac_Hellos)
+      }
+      call(Pory_EventScript_GoldManiac_DoExcitement)
+      call(Pory_EventScript_GoldManiac_DoNuggets)
+    } else {
+      if (flag(FLAG_TEMP_1)) {
+        msgbox(format("I buy {FONT_SMALL}(and hoard){FONT_NORMAL} gold… So bring me some!"))
+      }
+    }
+  }
+  setflag(FLAG_TEMP_1)
+  release
+  end
+}
+
+script Pory_EventScript_GoldManiac_Hellos {
+  random(9)
+  switch (var(VAR_RESULT)) {
+    case 0: msgbox(format("{FONT_SMALL}…it's a hedge against inflation…"))
+    case 1: msgbox(format("{FONT_SMALL}…it's a hedge against inflation…"))
+    case 2: msgbox(format("{FONT_SMALL}…index funds are for suckers…"))
+    case 3: msgbox(format("{FONT_SMALL}…index funds are for suckers…"))
+    case 4: msgbox(format("{FONT_SMALL}…crypto is kind of like gold, right?…"))
+    case 5: msgbox(format("{FONT_SMALL}…crypto is kind of like gold, right?…"))
+    case 6: msgbox(format("{FONT_SMALL}…now I just need a coffee can and a shovel…"))
+    case 7: msgbox(format("{FONT_SMALL}…now I just need a coffee can and a shovel…"))
+    case 8: msgbox(format("Of course I'm a landlord… Why do you ask?"))
+  }
+}
+
+script Pory_EventScript_GoldManiac_Declinations {
+  random(2)
+  switch (var(VAR_RESULT)) {
+    case 0: msgbox(format("You don't have to be so greedy, you know…"))
+    case 1: msgbox(format("No! Please! Take my fiat currency!"))
+  }
+}
+
+script Pory_EventScript_GoldManiac_DoExcitement {
+  // playse(SE_PIN)
+  // applymovement(GOLD_MANIAC_ID, Common_Movement_ExclamationMark)
+  // waitmovement(0)
+  // applymovement(GOLD_MANIAC_ID, Common_Movement_Delay48)
+  // waitmovement(0)
+}
+
+script Pory_EventScript_GoldManiac_DoBigNuggets {
+  showmoneybox(0, 0)
+  checkitem(ITEM_BIG_NUGGET, 2)
+  if (var(VAR_RESULT)) {
+    msgbox(format("Wow! A knowledgeable investor like me! You looking to liquidate some of those Big Nuggets? How about… ¥40000 for one?"), MSGBOX_YESNO)
+  } else {
+    msgbox(format("Look of the size of that Big Nugget! Hey, what would you said if I offered you ¥40000 for it?"), MSGBOX_YESNO)
+  }
+  if (var(VAR_RESULT)) {
+    msgbox(format("{PLAYER} handed the Big Nugget to the man. He smells of cheap cologne."))
+    removeitem(ITEM_BIG_NUGGET)
+    addmoney(40000)
+    updatemoneybox
+    playse(SE_SHOP)
+    msgbox(format("Thank you! Thank you! Thank you! Haha!"))
+  } else {
+    call(Pory_EventScript_GoldManiac_Declinations)
+  }
+  hidemoneybox
+}
+
+script Pory_EventScript_GoldManiac_DoNuggets {
+  showmoneybox(0, 0)
+  checkitem(ITEM_NUGGET, 2)
+  if (var(VAR_RESULT)) {
+    msgbox(format("I know precious metals when I see them! I'll give you ¥10000 for one of those Nuggets, how's that sound?"), MSGBOX_YESNO)
+  } else {
+    msgbox(format("A Nugget! Gold is gold, and ¥10000 is ¥10000. How's that offer sound?"), MSGBOX_YESNO)
+  }
+  if (var(VAR_RESULT)) {
+    msgbox(format("{PLAYER} handed the Nugget to the man. He shoves it in his coat pocket."))
+    removeitem(ITEM_NUGGET)
+    addmoney(10000)
+    updatemoneybox
+    playse(SE_SHOP)
+    msgbox(format("Sold!"))
+  } else {
+    call(Pory_EventScript_GoldManiac_Declinations)
+  }
+  hidemoneybox
+}
