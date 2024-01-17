@@ -23,42 +23,110 @@
 
 
 
+## set extra_levels = 10
+
 ## for encounter in wild_encounter_group.encounters
 {% if existsIn(encounter, "land_mons") %}
+## set total_min_level = 0
+## set total_max_level = 0
+## set num_pokemon = length(encounter.land_mons.mons)
+
+## for wild_mon in encounter.land_mons.mons
+{% set total_min_level = total_min_level + wild_mon.min_level %}
+{% set total_max_level = total_max_level + wild_mon.max_level %}
+## endfor
+
+## set average_level = round(((total_min_level + total_max_level) / (num_pokemon * 2)), 0)
+
 const struct WildPokemon {{ encounter.base_label }}_LandMons[] =
 {
 ## for wild_mon in encounter.land_mons.mons
-    { {{ wild_mon.min_level }}, {{ wild_mon.max_level }}, {{ wild_mon.species }} },
+    { {{ average_level - 2 + extra_levels }}, {{ average_level + 2 + extra_levels }}, {{ wild_mon.species }} },
 ## endfor
 };
 
 const struct WildPokemonInfo {{ encounter.base_label }}_LandMonsInfo = { {{encounter.land_mons.encounter_rate}}, {{ encounter.base_label }}_LandMons };
 {% endif %}
 {% if existsIn(encounter, "water_mons") %}
+## set total_min_level = 0
+## set total_max_level = 0
+## set num_pokemon = length(encounter.water_mons.mons)
+
+## for wild_mon in encounter.water_mons.mons
+{% set total_min_level = total_min_level + wild_mon.min_level %}
+{% set total_max_level = total_max_level + wild_mon.max_level %}
+## endfor
+
+## set average_level = round(((total_min_level + total_max_level) / (num_pokemon * 2)), 0)
+
 const struct WildPokemon {{ encounter.base_label }}_WaterMons[] =
 {
 ## for wild_mon in encounter.water_mons.mons
-    { {{ wild_mon.min_level }}, {{ wild_mon.max_level }}, {{ wild_mon.species }} },
+    { {{ average_level + extra_levels }}, {{ average_level + 10 + extra_levels }}, {{ wild_mon.species }} },
 ## endfor
 };
 
 const struct WildPokemonInfo {{ encounter.base_label }}_WaterMonsInfo = { {{encounter.water_mons.encounter_rate}}, {{ encounter.base_label }}_WaterMons };
 {% endif %}
 {% if existsIn(encounter, "rock_smash_mons") %}
+## set total_min_level = 0
+## set total_max_level = 0
+## set num_pokemon = length(encounter.rock_smash_mons.mons)
+
+## for wild_mon in encounter.rock_smash_mons.mons
+{% set total_min_level = total_min_level + wild_mon.min_level %}
+{% set total_max_level = total_max_level + wild_mon.max_level %}
+## endfor
+
+## set average_level = round(((total_min_level + total_max_level) / (num_pokemon * 2)), 0)
+
 const struct WildPokemon {{ encounter.base_label }}_RockSmashMons[] =
 {
 ## for wild_mon in encounter.rock_smash_mons.mons
-    { {{ wild_mon.min_level }}, {{ wild_mon.max_level }}, {{ wild_mon.species }} },
+    { {{ average_level - 4 + extra_levels }}, {{ average_level + 4 + extra_levels }}, {{ wild_mon.species }} },
 ## endfor
 };
 
 const struct WildPokemonInfo {{ encounter.base_label }}_RockSmashMonsInfo = { {{encounter.rock_smash_mons.encounter_rate}}, {{ encounter.base_label }}_RockSmashMons };
 {% endif %}
 {% if existsIn(encounter, "fishing_mons") %}
+## set total_min_level_old_rod = 0
+## set total_max_level_old_rod = 0
+## set total_min_level_good_rod = 0
+## set total_max_level_good_rod = 0
+## set total_min_level_super_rod = 0
+## set total_max_level_super_rod = 0
+## set num_pokemon_old_rod = 2
+## set num_pokemon_good_rod = 3
+## set num_pokemon_super_rod = 5
+
+## for wild_mon in encounter.fishing_mons.mons
+{% if loop.index <= 1 %}
+{% set total_min_level_old_rod = total_min_level_old_rod + wild_mon.min_level %}
+{% set total_max_level_old_rod = total_max_level_old_rod + wild_mon.max_level %}
+{% else if loop.index >= 5 %}
+{% set total_min_level_super_rod = total_min_level_super_rod + wild_mon.min_level %}
+{% set total_max_level_super_rod = total_max_level_super_rod + wild_mon.max_level %}
+{% else %}
+{% set total_min_level_good_rod = total_min_level_good_rod + wild_mon.min_level %}
+{% set total_max_level_good_rod = total_max_level_good_rod + wild_mon.max_level %}
+{% endif %}
+## endfor
+
+## set average_level_old_rod = round(((total_min_level_old_rod + total_max_level_old_rod) / (num_pokemon_old_rod * 2)), 0)
+## set average_level_good_rod = round(((total_min_level_good_rod + total_max_level_good_rod) / (num_pokemon_good_rod * 2)), 0)
+## set average_level_super_rod = round(((total_min_level_super_rod + total_max_level_super_rod) / (num_pokemon_super_rod * 2)), 0)
+
 const struct WildPokemon {{ encounter.base_label }}_FishingMons[] =
 {
 ## for wild_mon in encounter.fishing_mons.mons
-    { {{ wild_mon.min_level }}, {{ wild_mon.max_level }}, {{ wild_mon.species }} },
+{% if loop.index <= 1 %}
+    { {{ average_level_old_rod - 3 + extra_levels }}, {{ average_level_old_rod + 7 + extra_levels }}, {{ wild_mon.species }} },
+{% else if loop.index >= 5 %}
+    { {{ average_level_super_rod - 3 + extra_levels }}, {{ average_level_super_rod + 7 + extra_levels }}, {{ wild_mon.species }} },
+{% else %}
+    { {{ average_level_good_rod - 3 + extra_levels }}, {{ average_level_good_rod + 7 + extra_levels }}, {{ wild_mon.species }} },
+{% endif %}
 ## endfor
 };
 
