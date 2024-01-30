@@ -204,6 +204,10 @@ void NewGameInitData(void)
     WipeTrainerNameRecords();
     ResetTrainerHillResults();
     ResetContestLinkResults();
+
+    gSaveBlock1Ptr->registeredItemSelect = 0;
+    gSaveBlock1Ptr->registeredItemL = 0;
+    gSaveBlock1Ptr->registeredItemR = 0;
 }
 
 static void ResetMiniGamesRecords(void)
