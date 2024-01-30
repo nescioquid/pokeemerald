@@ -290,9 +290,9 @@ static const struct MenuAction sItemMenuActions[] = {
     [ACTION_SHOW]              = {gMenuText_Show,     {ItemMenu_Show}},
     [ACTION_GIVE_FAVOR_LADY]   = {gMenuText_Give2,    {ItemMenu_GiveFavorLady}},
     [ACTION_CONFIRM_QUIZ_LADY] = {gMenuText_Confirm,  {ItemMenu_ConfirmQuizLady}},
-    [ACTION_SELECT_BUTTON]     = {sMenuText_Select, ItemMenu_RegisterSelect},
-    [ACTION_L_BUTTON]          = {sMenuText_L, ItemMenu_RegisterL},
-    [ACTION_R_BUTTON]          = {sMenuText_R, ItemMenu_RegisterR},
+    [ACTION_SELECT_BUTTON]     = {sMenuText_Select,   {ItemMenu_RegisterSelect}},
+    [ACTION_L_BUTTON]          = {sMenuText_L,        {ItemMenu_RegisterL}},
+    [ACTION_R_BUTTON]          = {sMenuText_R,        {ItemMenu_RegisterR}},
     [ACTION_DUMMY]             = {gText_EmptyString2, {NULL}}
 };
 
@@ -2691,8 +2691,8 @@ static void ItemMenu_RegisterR(u8 taskId)
 static void ItemMenu_Deselect(u8 taskId)
 {
     s16* data = gTasks[taskId].data;
-    u16* scrollPos = &gBagPosition.scrollPosition[gBagPosition.pocket];
-    u16* cursorPos = &gBagPosition.cursorPosition[gBagPosition.pocket];
+    // u16* scrollPos = &gBagPosition.scrollPosition[gBagPosition.pocket];
+    // u16* cursorPos = &gBagPosition.cursorPosition[gBagPosition.pocket];
     int listPosition = ListMenu_ProcessInput(data[0]);
 
     ResetRegisteredItem(BagGetItemIdByPocketPosition(gBagPosition.pocket + 1, listPosition));
