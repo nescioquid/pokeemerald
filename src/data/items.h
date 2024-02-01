@@ -1810,6 +1810,21 @@ const struct Item gItemsInfo[] =
         .flingPower = 30,
     },
 
+    [ITEM_EVEN_RARER_CANDY] =
+    {
+        .name = _("Rarer Candy"),
+        .pluralName = _("Rarer Candies"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Raises the level\n"
+            "of a Pokémon by one\n"
+            "again and again."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_RarerCandy,
+    },
+
 // Medicinal Flutes
 
     [ITEM_BLUE_FLUTE] =
