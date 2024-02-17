@@ -11501,19 +11501,19 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_ROCK_POLISH,
     },
 
-    [ITEM_TM_FLASH] =
+    [ITEM_TM_FOCUS_PUNCH] =
     {
         .name = _("TM070"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "Looses a powerful\n"
-            "blast of light that\n"
-            "reduces accuracy."),
+            "Powerful, but makes\n"
+            "the user flinch if\n"
+            "hit by the foe."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_FLASH,
+        .secondaryId = MOVE_FOCUS_PUNCH,
     },
 
     [ITEM_TM_STONE_EDGE] =
