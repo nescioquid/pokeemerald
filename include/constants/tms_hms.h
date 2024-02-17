@@ -71,7 +71,7 @@
     F(RETALIATE) \
     F(GIGA_IMPACT) \
     F(ROCK_POLISH) \
-    F(FLASH) \
+    F(FOCUS_PUNCH) \
     F(STONE_EDGE) \
     F(VOLT_SWITCH) \
     F(THUNDER_WAVE) \
