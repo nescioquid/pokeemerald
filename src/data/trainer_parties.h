@@ -3324,8 +3324,8 @@ static const struct TrainerMon sParty_Winona1[] = {
     {
     .iv = TRAINER_PARTY_IVS(25, 25, 25, 25, 25, 25),
     .lvl = 29,
-    .species = SPECIES_TROPIUS,
-    .moves = {MOVE_SUNNY_DAY, MOVE_AERIAL_ACE, MOVE_SOLAR_BEAM, MOVE_SYNTHESIS}
+    .species = SPECIES_FEAROW,
+    .moves = {MOVE_PURSUIT, MOVE_AERIAL_ACE, MOVE_ASSURANCE, MOVE_ROOST}
     },
     {
     .iv = TRAINER_PARTY_IVS(25, 25, 25, 25, 25, 25),
@@ -10346,8 +10346,8 @@ static const struct TrainerMon sParty_Winona2[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 38,
-    .species = SPECIES_TROPIUS,
-    .moves = {MOVE_SUNNY_DAY, MOVE_AERIAL_ACE, MOVE_SOLAR_BEAM, MOVE_EARTHQUAKE}
+    .species = SPECIES_FEAROW,
+    .moves = {MOVE_PURSUIT, MOVE_AERIAL_ACE, MOVE_ASSURANCE, MOVE_ROOST}
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
@@ -10380,8 +10380,8 @@ static const struct TrainerMon sParty_Winona3[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 43,
-    .species = SPECIES_TROPIUS,
-    .moves = {MOVE_SUNNY_DAY, MOVE_AERIAL_ACE, MOVE_SOLAR_BEAM, MOVE_EARTHQUAKE}
+    .species = SPECIES_FEAROW,
+    .moves = {MOVE_PURSUIT, MOVE_AERIAL_ACE, MOVE_ASSURANCE, MOVE_ROOST}
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
@@ -10421,8 +10421,8 @@ static const struct TrainerMon sParty_Winona4[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 49,
-    .species = SPECIES_TROPIUS,
-    .moves = {MOVE_SUNNY_DAY, MOVE_AERIAL_ACE, MOVE_SOLAR_BEAM, MOVE_EARTHQUAKE}
+    .species = SPECIES_FEAROW,
+    .moves = {MOVE_PURSUIT, MOVE_AERIAL_ACE, MOVE_ASSURANCE, MOVE_ROOST}
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
@@ -10462,8 +10462,8 @@ static const struct TrainerMon sParty_Winona5[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 54,
-    .species = SPECIES_TROPIUS,
-    .moves = {MOVE_SUNNY_DAY, MOVE_AERIAL_ACE, MOVE_SOLAR_BEAM, MOVE_EARTHQUAKE}
+    .species = SPECIES_FEAROW,
+    .moves = {MOVE_PURSUIT, MOVE_AERIAL_ACE, MOVE_ASSURANCE, MOVE_ROOST}
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
