@@ -4958,7 +4958,7 @@ static const struct TrainerMon sParty_Jared[] = {
     {
     .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
     .lvl = 27,
-    .species = SPECIES_TROPIUS,
+    .species = SPECIES_FARFETCHD,
     }
 };
 
@@ -4966,7 +4966,7 @@ static const struct TrainerMon sParty_Humberto[] = {
     {
     .iv = TRAINER_PARTY_IVS(30, 30, 30, 30, 30, 30),
     .lvl = 30,
-    .species = SPECIES_SKARMORY,
+    .species = SPECIES_NOCTOWL,
     }
 };
 
@@ -10979,7 +10979,7 @@ static const struct TrainerMon sParty_Darius[] = {
     {
     .iv = TRAINER_PARTY_IVS(24, 24, 24, 24, 24, 24),
     .lvl = 30,
-    .species = SPECIES_TROPIUS,
+    .species = SPECIES_FEAROW,
     }
 };
 
