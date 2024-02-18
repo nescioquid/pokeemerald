@@ -6350,26 +6350,27 @@ static const struct TrainerMon sParty_WallyVR1[] = {
     {
     .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
     .lvl = 43,
-    .species = SPECIES_DELCATTY,
-    .moves = {MOVE_SING, MOVE_ASSIST, MOVE_CHARM, MOVE_FEINT_ATTACK}
+    .ability = ABILITY_TECHNICIAN,
+    .species = SPECIES_AMBIPOM,
+    .moves = {MOVE_FAKE_OUT, MOVE_RETALIATE, MOVE_LOW_KICK, MOVE_SHADOW_CLAW}
     },
     {
     .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
     .lvl = 44,
-    .species = SPECIES_ROSELIA,
-    .moves = {MOVE_MAGICAL_LEAF, MOVE_LEECH_SEED, MOVE_GIGA_DRAIN, MOVE_TOXIC}
+    .species = SPECIES_JUMPLUFF,
+    .moves = {MOVE_ENERGY_BALL, MOVE_ACROBATICS, MOVE_SLEEP_POWDER, MOVE_LEECH_SEED}
     },
     {
     .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
     .lvl = 41,
-    .species = SPECIES_MAGNETON,
+    .species = SPECIES_MAGNEZONE,
     .moves = {MOVE_SUPERSONIC, MOVE_THUNDERBOLT, MOVE_TRI_ATTACK, MOVE_SCREECH}
     },
     {
     .iv = TRAINER_PARTY_IVS(30, 30, 30, 30, 30, 30),
     .lvl = 45,
-    .species = SPECIES_GARDEVOIR,
-    .moves = {MOVE_DOUBLE_TEAM, MOVE_CALM_MIND, MOVE_PSYCHIC, MOVE_FUTURE_SIGHT}
+    .species = SPECIES_ESPEON,
+    .moves = {MOVE_PSYCHIC, MOVE_DAZZLING_GLEAM, MOVE_MORNING_SUN, MOVE_CALM_MIND}
     }
 };
 
@@ -8321,7 +8322,7 @@ static const struct TrainerMon sParty_WallyMauville[] = {
     {
     .iv = TRAINER_PARTY_IVS(3, 3, 3, 3, 3, 3),
     .lvl = 16,
-    .species = SPECIES_RALTS,
+    .species = SPECIES_EEVEE,
     }
 };
 
@@ -8335,26 +8336,27 @@ static const struct TrainerMon sParty_WallyVR2[] = {
     {
     .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
     .lvl = 46,
-    .species = SPECIES_DELCATTY,
-    .moves = {MOVE_SING, MOVE_ASSIST, MOVE_CHARM, MOVE_FEINT_ATTACK}
+    .ability = ABILITY_TECHNICIAN,
+    .species = SPECIES_AMBIPOM,
+    .moves = {MOVE_FAKE_OUT, MOVE_RETALIATE, MOVE_LOW_KICK, MOVE_SHADOW_CLAW}
     },
     {
     .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
     .lvl = 47,
-    .species = SPECIES_ROSELIA,
-    .moves = {MOVE_MAGICAL_LEAF, MOVE_LEECH_SEED, MOVE_GIGA_DRAIN, MOVE_TOXIC}
+    .species = SPECIES_JUMPLUFF,
+    .moves = {MOVE_ENERGY_BALL, MOVE_ACROBATICS, MOVE_SLEEP_POWDER, MOVE_LEECH_SEED}
     },
     {
     .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
     .lvl = 44,
-    .species = SPECIES_MAGNETON,
+    .species = SPECIES_MAGNEZONE,
     .moves = {MOVE_SUPERSONIC, MOVE_THUNDERBOLT, MOVE_TRI_ATTACK, MOVE_SCREECH}
     },
     {
     .iv = TRAINER_PARTY_IVS(30, 30, 30, 30, 30, 30),
     .lvl = 48,
-    .species = SPECIES_GARDEVOIR,
-    .moves = {MOVE_DOUBLE_TEAM, MOVE_CALM_MIND, MOVE_PSYCHIC, MOVE_FUTURE_SIGHT}
+    .species = SPECIES_ESPEON,
+    .moves = {MOVE_PSYCHIC, MOVE_DAZZLING_GLEAM, MOVE_MORNING_SUN, MOVE_CALM_MIND}
     }
 };
 
@@ -8368,26 +8370,27 @@ static const struct TrainerMon sParty_WallyVR3[] = {
     {
     .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
     .lvl = 49,
-    .species = SPECIES_DELCATTY,
-    .moves = {MOVE_SING, MOVE_ASSIST, MOVE_CHARM, MOVE_FEINT_ATTACK}
+    .ability = ABILITY_TECHNICIAN,
+    .species = SPECIES_AMBIPOM,
+    .moves = {MOVE_FAKE_OUT, MOVE_RETALIATE, MOVE_LOW_KICK, MOVE_SHADOW_CLAW}
     },
     {
     .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
     .lvl = 50,
-    .species = SPECIES_ROSELIA,
-    .moves = {MOVE_MAGICAL_LEAF, MOVE_LEECH_SEED, MOVE_GIGA_DRAIN, MOVE_TOXIC}
+    .species = SPECIES_JUMPLUFF,
+    .moves = {MOVE_ENERGY_BALL, MOVE_ACROBATICS, MOVE_SLEEP_POWDER, MOVE_LEECH_SEED}
     },
     {
     .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
     .lvl = 47,
-    .species = SPECIES_MAGNETON,
+    .species = SPECIES_MAGNEZONE,
     .moves = {MOVE_SUPERSONIC, MOVE_THUNDERBOLT, MOVE_TRI_ATTACK, MOVE_SCREECH}
     },
     {
     .iv = TRAINER_PARTY_IVS(30, 30, 30, 30, 30, 30),
     .lvl = 51,
-    .species = SPECIES_GARDEVOIR,
-    .moves = {MOVE_DOUBLE_TEAM, MOVE_CALM_MIND, MOVE_PSYCHIC, MOVE_FUTURE_SIGHT}
+    .species = SPECIES_ESPEON,
+    .moves = {MOVE_PSYCHIC, MOVE_DAZZLING_GLEAM, MOVE_MORNING_SUN, MOVE_CALM_MIND}
     }
 };
 
@@ -8401,26 +8404,27 @@ static const struct TrainerMon sParty_WallyVR4[] = {
     {
     .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
     .lvl = 52,
-    .species = SPECIES_DELCATTY,
-    .moves = {MOVE_SING, MOVE_ASSIST, MOVE_CHARM, MOVE_FEINT_ATTACK}
+    .ability = ABILITY_TECHNICIAN,
+    .species = SPECIES_AMBIPOM,
+    .moves = {MOVE_FAKE_OUT, MOVE_RETALIATE, MOVE_LOW_KICK, MOVE_SHADOW_CLAW}
     },
     {
     .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
     .lvl = 53,
-    .species = SPECIES_ROSELIA,
-    .moves = {MOVE_MAGICAL_LEAF, MOVE_LEECH_SEED, MOVE_GIGA_DRAIN, MOVE_TOXIC}
+    .species = SPECIES_JUMPLUFF,
+    .moves = {MOVE_ENERGY_BALL, MOVE_ACROBATICS, MOVE_SLEEP_POWDER, MOVE_LEECH_SEED}
     },
     {
     .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
     .lvl = 50,
-    .species = SPECIES_MAGNETON,
+    .species = SPECIES_MAGNEZONE,
     .moves = {MOVE_SUPERSONIC, MOVE_THUNDERBOLT, MOVE_TRI_ATTACK, MOVE_SCREECH}
     },
     {
     .iv = TRAINER_PARTY_IVS(30, 30, 30, 30, 30, 30),
     .lvl = 54,
-    .species = SPECIES_GARDEVOIR,
-    .moves = {MOVE_DOUBLE_TEAM, MOVE_CALM_MIND, MOVE_PSYCHIC, MOVE_FUTURE_SIGHT}
+    .species = SPECIES_ESPEON,
+    .moves = {MOVE_PSYCHIC, MOVE_DAZZLING_GLEAM, MOVE_MORNING_SUN, MOVE_CALM_MIND}
     }
 };
 
@@ -8434,26 +8438,27 @@ static const struct TrainerMon sParty_WallyVR5[] = {
     {
     .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
     .lvl = 55,
-    .species = SPECIES_DELCATTY,
-    .moves = {MOVE_SING, MOVE_ASSIST, MOVE_CHARM, MOVE_FEINT_ATTACK}
+    .ability = ABILITY_TECHNICIAN,
+    .species = SPECIES_AMBIPOM,
+    .moves = {MOVE_FAKE_OUT, MOVE_RETALIATE, MOVE_LOW_KICK, MOVE_SHADOW_CLAW}
     },
     {
     .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
     .lvl = 56,
-    .species = SPECIES_ROSELIA,
-    .moves = {MOVE_MAGICAL_LEAF, MOVE_LEECH_SEED, MOVE_GIGA_DRAIN, MOVE_TOXIC}
+    .species = SPECIES_JUMPLUFF,
+    .moves = {MOVE_ENERGY_BALL, MOVE_ACROBATICS, MOVE_SLEEP_POWDER, MOVE_LEECH_SEED}
     },
     {
     .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
     .lvl = 53,
-    .species = SPECIES_MAGNETON,
+    .species = SPECIES_MAGNEZONE,
     .moves = {MOVE_SUPERSONIC, MOVE_THUNDERBOLT, MOVE_TRI_ATTACK, MOVE_SCREECH}
     },
     {
     .iv = TRAINER_PARTY_IVS(30, 30, 30, 30, 30, 30),
     .lvl = 57,
-    .species = SPECIES_GARDEVOIR,
-    .moves = {MOVE_DOUBLE_TEAM, MOVE_CALM_MIND, MOVE_PSYCHIC, MOVE_FUTURE_SIGHT}
+    .species = SPECIES_ESPEON,
+    .moves = {MOVE_PSYCHIC, MOVE_DAZZLING_GLEAM, MOVE_MORNING_SUN, MOVE_CALM_MIND}
     }
 };
 
