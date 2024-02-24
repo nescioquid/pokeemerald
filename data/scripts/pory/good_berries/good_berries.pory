@@ -1,0 +1,416 @@
+script Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl_Pory {
+  lock
+  faceplayer
+  dotimebasedevents
+  if (!flag(FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY)) {
+    msgbox(format("I'm trying to be like my big sisters. I'm growing flowers, too!\pHere you go! It's for you!"))
+    if (!flag(FLAG_BADGE02_GET)) {
+      call(Pory_EventScript_Berries_Basic)
+    } else {
+      call(Pory_EventScript_Berries_Expanded)
+    }
+    setflag(FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY)
+  }
+  msgbox(format("You can plant a Berry and grow it big, or you can make a Pokémon hold it.\pBut now they have a machine that mixes up different Berries and makes candies for Pokémon.\pI want some candy, too."))
+  release
+  end
+}
+
+// now gives either a Jaboca or Rowap berry depending on the player's Trainer ID
+script Route104_EventScript_ExpertF_Pory {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_CHESTO_BERRY_ROUTE_104)) {
+    msgbox(format("If you see Berries growing in loamy soil, feel free to take them.\pBut, make sure you plant a Berry in the same spot. That's common courtesy.\pHere, I'll share this with you."))
+    call(Pory_EventScript_Berries_Retaliatory)
+    setflag(FLAG_RECEIVED_CHESTO_BERRY_ROUTE_104)
+  }
+  msgbox(format("The way you look, you must be a Trainer, no?\pTrainers often make Pokémon hold Berries.\pIt's up to you whether to grow Berries or use them."))
+  release
+  end
+}
+
+// now gives a berry that heals HP
+script Route111_EventScript_Girl_Pory {
+  lock
+  faceplayer
+  if (!flag(FLAG_DAILY_ROUTE_111_RECEIVED_BERRY)) {
+    msgbox(format("I watered the plants every day. They grew lots of flowers.\pAnd they gave me lots of Berries, too.\pHere you go! You can have it!"))
+    call(Pory_EventScript_Berries_HP)
+    setflag(FLAG_DAILY_ROUTE_111_RECEIVED_BERRY)
+    msgbox(format("I'm going to try really hard and make Berries in different colors.\pI hope you try hard, too!"))
+  } else {
+    msgbox(format("I wonder what color Berries I'll look for today?"))
+  }
+  release
+  end
+}
+
+script Route114_EventScript_Man_Pory {
+  lock
+  faceplayer
+  dotimebasedevents
+  if (!flag(FLAG_DAILY_ROUTE_114_RECEIVED_BERRY)) {
+    msgbox(format("I love using the Berry Crush machine, so I'm collecting Berries.\pI'll share one with you, if you'd like."))
+    call(Pory_EventScript_Berries_SuperEffective)
+    setflag(FLAG_DAILY_ROUTE_114_RECEIVED_BERRY)
+    msgbox(format("You should try the Berry Crush machine with your friends."))
+  } else {
+    msgbox(format("Which Berry should be planted? Should you use or hoard Berries?\pIt's fun to think about."))
+  }
+  release
+  end
+}
+
+script Route120_EventScript_BerryBeauty_Pory {
+  lock
+  faceplayer
+  dotimebasedevents
+  if (!flag(FLAG_DAILY_ROUTE_120_RECEIVED_BERRY)) {
+    msgbox(format("Berries grow by soaking up sunlight.\nWe help the Berries grow by watering them regularly.\pIt's an expression of love, isn't it?\pYes, yes. You understand what I mean. You should take this."))
+    call(Pory_EventScript_Berries_SuperEffective)
+    setflag(FLAG_DAILY_ROUTE_120_RECEIVED_BERRY)
+    msgbox(format("I think that Berry is rare. I hope you raise it with loving care."))
+  } else {
+    msgbox(format("I'm going to get more Berries from the Berry Master, I think."))
+  }
+  release
+  end
+}
+
+script LilycoveCity_EventScript_BerryGentleman_Pory {
+  lock
+  faceplayer
+  dotimebasedevents
+  if (!flag(FLAG_DAILY_LILYCOVE_RECEIVED_BERRY)) {
+    msgbox(format("When it gets right down to it…\pThe same way suits suit me perfectly, a crisp breeze suits the sea.\pAnd you, a Berry suits you to a “T”…\pWhy should that be so?"))
+    call(Pory_EventScript_Berries_SuperEffective)
+    setflag(FLAG_DAILY_LILYCOVE_RECEIVED_BERRY)
+    msgbox(format("When it gets right down to it…\pIt's because you're a Trainer!"))
+  } else {
+    msgbox(format("When it gets right down to it…\pThe way dignified simplicity suits me, {POKEBLOCK}s perfectly suit Pokémon."))
+  }
+  release
+  end
+}
+
+script Route123_BerryMastersHouse_EventScript_BerryMaster_Pory {
+  lock
+  faceplayer
+  dotimebasedevents
+  if (!flag(FLAG_DAILY_BERRY_MASTER_RECEIVED_BERRY)) {
+    msgbox(format("You may call me the Berry Master.\pI dream of filling the world with beautiful flowers, so I raise Berries and hand them out to everyone.\pTake this!"))
+    call(Pory_EventScript_Berries_RaiseStats)
+    setflag(FLAG_DAILY_BERRY_MASTER_RECEIVED_BERRY)
+    msgbox(format("Why be stingy?\nTake another!"))
+    call(Pory_EventScript_Berries_RaiseStats)
+    msgbox(format("Be sure to visit the Pretty Petal flower shop near Rustboro.\pLet flowers fill the world!"))
+  } else {
+    msgbox(format("I'm done for today. Come again another day.\pLet flowers fill the world!"))
+  }
+  release
+  end
+}
+
+// removed Easy Chat system and now goes straight to her GiveNormalBerry functionality
+script Route123_BerryMastersHouse_EventScript_BerryMastersWife_Pory {
+  lock
+  faceplayer
+  dotimebasedevents
+  if (!flag(FLAG_DAILY_BERRY_MASTERS_WIFE)) {
+    msgbox(format("The way my husband grows Berries, oh, he's the best in the world.\pHe makes me proud, that he does.\pAh…\nI want you to have this."))
+    call(Pory_EventScript_Berries_Confuse)
+    setflag(FLAG_DAILY_BERRY_MASTERS_WIFE)
+  }
+  msgbox(format("Our four grandchildren should become more accomplished than my husband.\pJoy never goes out of my life!"))
+  release
+  end
+}
+
+// now gives any of the Confuse berries, and doesn't give any EV/Friendship berries
+script SootopolisCity_EventScript_KiriGiveBerry_Pory {
+  dotimebasedevents
+  special(GetPlayerBigGuyGirlString)
+  if (!flag(FLAG_DAILY_SOOTOPOLIS_RECEIVED_BERRY)) {
+    msgbox(format("Hi, what your name?\p… … …  … … …  … … …\nOkay!\pI'm Kiri. Mommy and Daddy named me so I grow big and strong. They wished!\pHere, you have it!"))
+    call(Pory_EventScript_Berries_SuperEffective)
+    setflag(FLAG_DAILY_SOOTOPOLIS_RECEIVED_BERRY)
+    msgbox(format("Give you this, too! I like it lots!"))
+    call(Pory_EventScript_Berries_Confuse)
+    msgbox(format("What wish is your name?"))
+  } else {
+    msgbox(format("Spring, summer, fall, winter.\pBorn in spring, you like spring? You born in summer, you like summer?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT)) {
+      msgbox(format("Kiri was born in fall, I love fall!\pYou like what one?"))
+    } else {
+      msgbox(format("Oh…\nno matter…\pSo much I want to know…"))
+    }
+  }
+  release
+  end
+}
+
+// Helper scripts
+
+script Pory_EventScript_Berries_Basic {
+  random(7)
+  switch (var(VAR_RESULT)) {
+    case 0: giveItem(ITEM_CHERI_BERRY)
+    case 1: giveItem(ITEM_CHESTO_BERRY)
+    case 2: giveItem(ITEM_PECHA_BERRY)
+    case 3: giveItem(ITEM_RAWST_BERRY)
+    case 4: giveItem(ITEM_ASPEAR_BERRY)
+    case 5: giveItem(ITEM_ORAN_BERRY)
+    case 6: giveItem(ITEM_PERSIM_BERRY)
+  }
+  goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+}
+
+script Pory_EventScript_Berries_Expanded {
+  random(10)
+  switch (var(VAR_RESULT)) {
+    case 0: giveItem(ITEM_CHERI_BERRY)
+    case 1: giveItem(ITEM_CHESTO_BERRY)
+    case 2: giveItem(ITEM_PECHA_BERRY)
+    case 3: giveItem(ITEM_RAWST_BERRY)
+    case 4: giveItem(ITEM_ASPEAR_BERRY)
+    case 5: giveItem(ITEM_LEPPA_BERRY)
+    case 6: giveItem(ITEM_ORAN_BERRY)
+    case 7: giveItem(ITEM_PERSIM_BERRY)
+    case 8: giveItem(ITEM_LUM_BERRY)
+    case 9: giveItem(ITEM_SITRUS_BERRY)
+  }
+  goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+}
+
+script Pory_EventScript_Berries_HP {
+  random(2)
+  switch (var(VAR_RESULT)) {
+    case 0: giveItem(ITEM_ORAN_BERRY)
+    case 1: giveItem(ITEM_SITRUS_BERRY)
+  }
+  goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+}
+
+script Pory_EventScript_Berries_Confuse {
+  specialvar (VAR_RESULT, GetPlayerTrainerIdOnesDigit)
+  switch (var(VAR_RESULT)) {
+    case 0: giveitem(ITEM_FIGY_BERRY)
+    case 1: giveitem(ITEM_WIKI_BERRY)
+    case 2: giveitem(ITEM_MAGO_BERRY)
+    case 3: giveitem(ITEM_AGUAV_BERRY)
+    case 4: giveitem(ITEM_IAPAPA_BERRY)
+    case 5: giveitem(ITEM_FIGY_BERRY)
+    case 6: giveitem(ITEM_WIKI_BERRY)
+    case 7: giveitem(ITEM_MAGO_BERRY)
+    case 8: giveitem(ITEM_AGUAV_BERRY)
+    case 9: giveitem(ITEM_IAPAPA_BERRY)
+  }
+  goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+}
+
+script Pory_EventScript_Berries_SuperEffective {
+  if (!flag(FLAG_SET_TRAINER_ID_BERRIES)) {
+    call(Pory_EventScript_Berries_SuperEffective_Setter)
+  }
+  random(8)
+  switch (var(VAR_RESULT)) {
+    case 0: giveitem(VAR_BERRY_1)
+    case 1: giveitem(VAR_BERRY_2)
+    case 2: giveitem(VAR_BERRY_3)
+    case 3: giveitem(VAR_BERRY_4)
+    case 4: giveitem(VAR_BERRY_5)
+    case 5: giveitem(ITEM_LEPPA_BERRY)
+    case 6: giveitem(ITEM_LUM_BERRY)
+    case 7: giveitem(ITEM_CHILAN_BERRY)
+  }
+  goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+}
+
+script Pory_EventScript_Berries_SuperEffective_Setter {
+  specialvar(VAR_BERRY_1, GetPlayerTrainerIdTenThousandsDigitPlus)
+  switch (var(VAR_BERRY_1)) {
+    case  0: setvar(VAR_BERRY_1, ITEM_OCCA_BERRY)
+    case  1: setvar(VAR_BERRY_1, ITEM_PASSHO_BERRY)
+    case  2: setvar(VAR_BERRY_1, ITEM_WACAN_BERRY)
+    case  3: setvar(VAR_BERRY_1, ITEM_RINDO_BERRY)
+    case  4: setvar(VAR_BERRY_1, ITEM_YACHE_BERRY)
+    case  5: setvar(VAR_BERRY_1, ITEM_CHOPLE_BERRY)
+    case  6: setvar(VAR_BERRY_1, ITEM_KEBIA_BERRY)
+    case  7: setvar(VAR_BERRY_1, ITEM_SHUCA_BERRY)
+    case  8: setvar(VAR_BERRY_1, ITEM_COBA_BERRY)
+    case  9: setvar(VAR_BERRY_1, ITEM_PAYAPA_BERRY)
+    case 10: setvar(VAR_BERRY_1, ITEM_TANGA_BERRY)
+    case 11: setvar(VAR_BERRY_1, ITEM_CHARTI_BERRY)
+    case 12: setvar(VAR_BERRY_1, ITEM_KASIB_BERRY)
+    case 13: setvar(VAR_BERRY_1, ITEM_HABAN_BERRY)
+    case 14: setvar(VAR_BERRY_1, ITEM_COLBUR_BERRY)
+    case 15: setvar(VAR_BERRY_1, ITEM_BABIRI_BERRY)
+    case 16: setvar(VAR_BERRY_1, ITEM_ROSELI_BERRY)
+  }
+  specialvar(VAR_BERRY_2, GetPlayerTrainerIdThousandsDigitPlus)
+  switch (var(VAR_BERRY_2)) {
+    case  0: setvar(VAR_BERRY_2, ITEM_OCCA_BERRY)
+    case  1: setvar(VAR_BERRY_2, ITEM_PASSHO_BERRY)
+    case  2: setvar(VAR_BERRY_2, ITEM_WACAN_BERRY)
+    case  3: setvar(VAR_BERRY_2, ITEM_RINDO_BERRY)
+    case  4: setvar(VAR_BERRY_2, ITEM_YACHE_BERRY)
+    case  5: setvar(VAR_BERRY_2, ITEM_CHOPLE_BERRY)
+    case  6: setvar(VAR_BERRY_2, ITEM_KEBIA_BERRY)
+    case  7: setvar(VAR_BERRY_2, ITEM_SHUCA_BERRY)
+    case  8: setvar(VAR_BERRY_2, ITEM_COBA_BERRY)
+    case  9: setvar(VAR_BERRY_2, ITEM_PAYAPA_BERRY)
+    case 10: setvar(VAR_BERRY_2, ITEM_TANGA_BERRY)
+    case 11: setvar(VAR_BERRY_2, ITEM_CHARTI_BERRY)
+    case 12: setvar(VAR_BERRY_2, ITEM_KASIB_BERRY)
+    case 13: setvar(VAR_BERRY_2, ITEM_HABAN_BERRY)
+    case 14: setvar(VAR_BERRY_2, ITEM_COLBUR_BERRY)
+    case 15: setvar(VAR_BERRY_2, ITEM_BABIRI_BERRY)
+    case 16: setvar(VAR_BERRY_2, ITEM_ROSELI_BERRY)
+  }
+  specialvar(VAR_BERRY_3, GetPlayerTrainerIdHundredsDigitPlus)
+  switch (var(VAR_BERRY_3)) {
+    case  0: setvar(VAR_BERRY_3, ITEM_OCCA_BERRY)
+    case  1: setvar(VAR_BERRY_3, ITEM_PASSHO_BERRY)
+    case  2: setvar(VAR_BERRY_3, ITEM_WACAN_BERRY)
+    case  3: setvar(VAR_BERRY_3, ITEM_RINDO_BERRY)
+    case  4: setvar(VAR_BERRY_3, ITEM_YACHE_BERRY)
+    case  5: setvar(VAR_BERRY_3, ITEM_CHOPLE_BERRY)
+    case  6: setvar(VAR_BERRY_3, ITEM_KEBIA_BERRY)
+    case  7: setvar(VAR_BERRY_3, ITEM_SHUCA_BERRY)
+    case  8: setvar(VAR_BERRY_3, ITEM_COBA_BERRY)
+    case  9: setvar(VAR_BERRY_3, ITEM_PAYAPA_BERRY)
+    case 10: setvar(VAR_BERRY_3, ITEM_TANGA_BERRY)
+    case 11: setvar(VAR_BERRY_3, ITEM_CHARTI_BERRY)
+    case 12: setvar(VAR_BERRY_3, ITEM_KASIB_BERRY)
+    case 13: setvar(VAR_BERRY_3, ITEM_HABAN_BERRY)
+    case 14: setvar(VAR_BERRY_3, ITEM_COLBUR_BERRY)
+    case 15: setvar(VAR_BERRY_3, ITEM_BABIRI_BERRY)
+    case 16: setvar(VAR_BERRY_3, ITEM_ROSELI_BERRY)
+  }
+  specialvar(VAR_BERRY_4, GetPlayerTrainerIdTensDigitPlus)
+  switch (var(VAR_BERRY_4)) {
+    case  0: setvar(VAR_BERRY_4, ITEM_OCCA_BERRY)
+    case  1: setvar(VAR_BERRY_4, ITEM_PASSHO_BERRY)
+    case  2: setvar(VAR_BERRY_4, ITEM_WACAN_BERRY)
+    case  3: setvar(VAR_BERRY_4, ITEM_RINDO_BERRY)
+    case  4: setvar(VAR_BERRY_4, ITEM_YACHE_BERRY)
+    case  5: setvar(VAR_BERRY_4, ITEM_CHOPLE_BERRY)
+    case  6: setvar(VAR_BERRY_4, ITEM_KEBIA_BERRY)
+    case  7: setvar(VAR_BERRY_4, ITEM_SHUCA_BERRY)
+    case  8: setvar(VAR_BERRY_4, ITEM_COBA_BERRY)
+    case  9: setvar(VAR_BERRY_4, ITEM_PAYAPA_BERRY)
+    case 10: setvar(VAR_BERRY_4, ITEM_TANGA_BERRY)
+    case 11: setvar(VAR_BERRY_4, ITEM_CHARTI_BERRY)
+    case 12: setvar(VAR_BERRY_4, ITEM_KASIB_BERRY)
+    case 13: setvar(VAR_BERRY_4, ITEM_HABAN_BERRY)
+    case 14: setvar(VAR_BERRY_4, ITEM_COLBUR_BERRY)
+    case 15: setvar(VAR_BERRY_4, ITEM_BABIRI_BERRY)
+    case 16: setvar(VAR_BERRY_4, ITEM_ROSELI_BERRY)
+  }
+  specialvar(VAR_BERRY_5, GetPlayerTrainerIdOnesDigitPlus)
+  switch (var(VAR_BERRY_5)) {
+    case  0: setvar(VAR_BERRY_5, ITEM_OCCA_BERRY)
+    case  1: setvar(VAR_BERRY_5, ITEM_PASSHO_BERRY)
+    case  2: setvar(VAR_BERRY_5, ITEM_WACAN_BERRY)
+    case  3: setvar(VAR_BERRY_5, ITEM_RINDO_BERRY)
+    case  4: setvar(VAR_BERRY_5, ITEM_YACHE_BERRY)
+    case  5: setvar(VAR_BERRY_5, ITEM_CHOPLE_BERRY)
+    case  6: setvar(VAR_BERRY_5, ITEM_KEBIA_BERRY)
+    case  7: setvar(VAR_BERRY_5, ITEM_SHUCA_BERRY)
+    case  8: setvar(VAR_BERRY_5, ITEM_COBA_BERRY)
+    case  9: setvar(VAR_BERRY_5, ITEM_PAYAPA_BERRY)
+    case 10: setvar(VAR_BERRY_5, ITEM_TANGA_BERRY)
+    case 11: setvar(VAR_BERRY_5, ITEM_CHARTI_BERRY)
+    case 12: setvar(VAR_BERRY_5, ITEM_KASIB_BERRY)
+    case 13: setvar(VAR_BERRY_5, ITEM_HABAN_BERRY)
+    case 14: setvar(VAR_BERRY_5, ITEM_COLBUR_BERRY)
+    case 15: setvar(VAR_BERRY_5, ITEM_BABIRI_BERRY)
+    case 16: setvar(VAR_BERRY_5, ITEM_ROSELI_BERRY)
+  }
+  setflag(FLAG_SET_TRAINER_ID_BERRIES)
+}
+
+script Pory_EventScript_Berries_RaiseStats {
+  specialvar(VAR_RESULT, GetPlayerTrainerIdHundredsDigit)
+  switch (var(VAR_RESULT)) {
+    case 0:
+      random(2)
+      switch (var(VAR_RESULT)) {
+        case 0: giveItem(ITEM_LIECHI_BERRY)
+        case 1: giveItem(ITEM_GANLON_BERRY)
+      }
+    case 1:
+      random(2)
+      switch (var(VAR_RESULT)) {
+        case 0: giveItem(ITEM_LIECHI_BERRY)
+        case 1: giveItem(ITEM_SALAC_BERRY)
+      }
+    case 2:
+      random(2)
+      switch (var(VAR_RESULT)) {
+        case 0: giveItem(ITEM_LIECHI_BERRY)
+        case 1: giveItem(ITEM_PETAYA_BERRY)
+      }
+    case 3:
+      random(2)
+      switch (var(VAR_RESULT)) {
+        case 0: giveItem(ITEM_LIECHI_BERRY)
+        case 1: giveItem(ITEM_APICOT_BERRY)
+      }
+    case 4:
+      random(2)
+      switch (var(VAR_RESULT)) {
+        case 0: giveItem(ITEM_GANLON_BERRY)
+        case 1: giveItem(ITEM_SALAC_BERRY)
+      }
+    case 5:
+      random(2)
+      switch (var(VAR_RESULT)) {
+        case 0: giveItem(ITEM_GANLON_BERRY)
+        case 1: giveItem(ITEM_PETAYA_BERRY)
+      }
+    case 6:
+      random(2)
+      switch (var(VAR_RESULT)) {
+        case 0: giveItem(ITEM_GANLON_BERRY)
+        case 1: giveItem(ITEM_APICOT_BERRY)
+      }
+    case 7:
+      random(2)
+      switch (var(VAR_RESULT)) {
+        case 0: giveItem(ITEM_SALAC_BERRY)
+        case 1: giveItem(ITEM_PETAYA_BERRY)
+      }
+    case 8:
+      random(2)
+      switch (var(VAR_RESULT)) {
+        case 0: giveItem(ITEM_SALAC_BERRY)
+        case 1: giveItem(ITEM_APICOT_BERRY)
+      }
+    case 9:
+      random(2)
+      switch (var(VAR_RESULT)) {
+        case 0: giveItem(ITEM_PETAYA_BERRY)
+        case 1: giveItem(ITEM_APICOT_BERRY)
+      }
+  }
+  goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+}
+
+script Pory_EventScript_Berries_Retaliatory {
+  specialvar(VAR_RESULT, GetPlayerTrainerIdTenThousandsDigit)
+  switch (var(VAR_RESULT)) {
+    case 0: giveitem(ITEM_JABOCA_BERRY)
+    case 1: giveitem(ITEM_ROWAP_BERRY)
+    case 2: giveitem(ITEM_JABOCA_BERRY)
+    case 3: giveitem(ITEM_ROWAP_BERRY)
+    case 4: giveitem(ITEM_JABOCA_BERRY)
+    case 5: giveitem(ITEM_ROWAP_BERRY)
+    case 6: giveitem(ITEM_JABOCA_BERRY)
+    case 7: giveitem(ITEM_ROWAP_BERRY)
+    case 8: giveitem(ITEM_JABOCA_BERRY)
+    case 9: giveitem(ITEM_ROWAP_BERRY)
+  }
+  goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+}
