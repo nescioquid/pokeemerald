@@ -1073,3 +1073,4 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
 .include "data/scripts/pory/marts_by_badges/marts_by_badges.inc"
+.include "data/scripts/pory/marts_by_badges/department_store.inc"
