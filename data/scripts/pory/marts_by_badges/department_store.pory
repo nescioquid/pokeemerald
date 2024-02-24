@@ -457,3 +457,58 @@ script Pory_EventScript_Clerk_DepartmentStore_Goodbyes {
     case 15: msgbox(format("{FONT_SMALL}I {FONT_SHORT}HATE {FONT_SMALL}my job…\p{FONT_NORMAL}Wait, did you hear that?"))
   }
 }
+
+// Elevator scripts
+
+text gText_WhichFloorWouldYouLike_Pory {
+  "Hi, how are you doing?\nWhich floor would you like?"
+}
+
+// Vending Machine scripts
+
+// also changed from ¥350
+// const u8 gText_LemonadeAndPrice[] = _("Lemonade{CLEAR_TO 0x48}¥400");
+// appears that the price was changed but the Vending Machine text was not
+
+script LilycoveCity_DepartmentStoreRooftop_EventScript_CheckMoneyLemonade_Pory {
+  checkmoney(400)
+  return
+}
+
+script LilycoveCity_DepartmentStoreRooftop_EventScript_RemoveMoneyLemonade_Pory {
+  removemoney(400)
+  return
+}
+
+text LilycoveCity_DepartmentStoreRooftop_Text_WhichDrinkWouldYouLike_Pory {
+  format("Which would you like?")
+}
+
+// LilycoveCity_DepartmentStoreRooftop_EventScript_FreshWater::
+// 	setvar VAR_TEMP_0, ITEM_FRESH_WATER
+// 	goto LilycoveCity_DepartmentStoreRooftop_EventScript_TryBuyDrink
+// 	end
+
+// LilycoveCity_DepartmentStoreRooftop_EventScript_SodaPop::
+// 	setvar VAR_TEMP_0, ITEM_SODA_POP
+// 	goto LilycoveCity_DepartmentStoreRooftop_EventScript_TryBuyDrink
+// 	end
+
+// LilycoveCity_DepartmentStoreRooftop_EventScript_Lemonade::
+// 	setvar VAR_TEMP_0, ITEM_LEMONADE
+
+script LilycoveCity_DepartmentStoreRooftop_EventScript_CanOfDrinkDroppedDown_Pory {
+  switch (var(VAR_TEMP_0)) {
+    case ITEM_FRESH_WATER: msgbox("Clang! A bottle of {STR_VAR_1} dropped\ndown.")
+    case ITEM_SODA_POP: msgbox("Clang! A bottle of {STR_VAR_1} dropped\ndown.")
+    case ITEM_LEMONADE: msgbox("Clang! A can of {STR_VAR_1} dropped\ndown.")
+  }
+}
+
+script LilycoveCity_DepartmentStoreRooftop_EventScript_ExtraCanOfDrinkDroppedDown_Pory {
+  switch (var(VAR_TEMP_0)) {
+    case ITEM_FRESH_WATER: msgbox("Clang!\pScore! An extra bottle of {STR_VAR_1}\ndropped down!")
+    case ITEM_SODA_POP: msgbox("Clang!\pScore! An extra bottle of {STR_VAR_1}\ndropped down!")
+    case ITEM_LEMONADE: msgbox("Clang!\pScore! An extra can of {STR_VAR_1}\ndropped down!")
+  }
+}
