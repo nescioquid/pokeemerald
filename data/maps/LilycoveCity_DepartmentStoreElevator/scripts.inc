@@ -8,7 +8,7 @@ LilycoveCity_DepartmentStoreElevator_EventScript_Attendant::
 	call_if_unset FLAG_TEMP_2, LilycoveCity_DepartmentStoreElevator_EventScript_SetFloor
 	copyvar VAR_0x8005, VAR_DEPT_STORE_FLOOR
 	special ShowDeptStoreElevatorFloorSelect
-	message gText_WhichFloorWouldYouLike
+	message gText_WhichFloorWouldYouLike_Pory
 	waitmessage
 	setvar VAR_0x8004, 0
 	specialvar VAR_RESULT, GetDeptStoreDefaultFloorChoice
