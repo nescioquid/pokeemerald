@@ -911,6 +911,51 @@ u8 GetPlayerTrainerIdOnesDigit(void)
     return (u16)((gSaveBlock2Ptr->playerTrainerId[1] << 8) | gSaveBlock2Ptr->playerTrainerId[0]) % 10;
 }
 
+u8 GetPlayerTrainerIdTensDigit(void)
+{
+    return (u16)(((gSaveBlock2Ptr->playerTrainerId[1] << 8) | gSaveBlock2Ptr->playerTrainerId[0]) % 100) / 10;
+}
+
+u8 GetPlayerTrainerIdHundredsDigit(void)
+{
+    return (u16)(((gSaveBlock2Ptr->playerTrainerId[1] << 8) | gSaveBlock2Ptr->playerTrainerId[0]) % 1000) / 100;
+}
+
+u8 GetPlayerTrainerIdThousandsDigit(void)
+{
+    return (u16)(((gSaveBlock2Ptr->playerTrainerId[1] << 8) | gSaveBlock2Ptr->playerTrainerId[0]) % 10000) / 1000;
+}
+
+u8 GetPlayerTrainerIdTenThousandsDigit(void)
+{
+    return (u16)(((gSaveBlock2Ptr->playerTrainerId[1] << 8) | gSaveBlock2Ptr->playerTrainerId[0]) % 100000) / 10000;
+}
+
+u8 GetPlayerTrainerIdOnesDigitPlus(void)
+{
+    return (u16)((gSaveBlock2Ptr->playerTrainerId[1] << 8) | gSaveBlock2Ptr->playerTrainerId[0]) % 17;
+}
+
+u8 GetPlayerTrainerIdTensDigitPlus(void)
+{
+    return (u16)(((gSaveBlock2Ptr->playerTrainerId[1] << 8) | gSaveBlock2Ptr->playerTrainerId[0]) % 170) / 10;
+}
+
+u8 GetPlayerTrainerIdHundredsDigitPlus(void)
+{
+    return (u16)(((gSaveBlock2Ptr->playerTrainerId[1] << 8) | gSaveBlock2Ptr->playerTrainerId[0]) % 1700) / 100;
+}
+
+u8 GetPlayerTrainerIdThousandsDigitPlus(void)
+{
+    return (u16)(((gSaveBlock2Ptr->playerTrainerId[1] << 8) | gSaveBlock2Ptr->playerTrainerId[0]) % 17000) / 1000;
+}
+
+u8 GetPlayerTrainerIdTenThousandsDigitPlus(void)
+{
+    return (u16)(((gSaveBlock2Ptr->playerTrainerId[1] << 8) | gSaveBlock2Ptr->playerTrainerId[0]) % 170000) / 10000;
+}
+
 void GetPlayerBigGuyGirlString(void)
 {
     if (gSaveBlock2Ptr->playerGender == MALE)
