@@ -159,6 +159,15 @@ gSpecials::
 	def_special PetalburgGymSlideOpenRoomDoors
 	def_special PetalburgGymUnlockRoomDoors
 	def_special GetPlayerTrainerIdOnesDigit
+	def_special GetPlayerTrainerIdTensDigit
+	def_special GetPlayerTrainerIdHundredsDigit
+	def_special GetPlayerTrainerIdThousandsDigit
+	def_special GetPlayerTrainerIdTenThousandsDigit
+	def_special GetPlayerTrainerIdOnesDigitPlus
+	def_special GetPlayerTrainerIdTensDigitPlus
+	def_special GetPlayerTrainerIdHundredsDigitPlus
+	def_special GetPlayerTrainerIdThousandsDigitPlus
+	def_special GetPlayerTrainerIdTenThousandsDigitPlus
 	def_special GetPlayerBigGuyGirlString
 	def_special GetRivalSonDaughterString
 	def_special SetHiddenItemFlag
