@@ -1086,3 +1086,4 @@ EventScript_VsSeekerChargingDone::
 .include "data/scripts/pory/items/tms_hms.inc"
 .include "data/scripts/pory/items/tms_hms_marts.inc"
 .include "data/scripts/pory/items/randomized_item_hidden.inc"
+.include "data/scripts/pory/items/randomized_item_ball.inc"
