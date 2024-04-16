@@ -44,8 +44,6 @@ script LilycoveCity_DepartmentStore_2F_EventScript_ClerkRight_Pory {
   waitmessage
   if (!flag(FLAG_BADGE06_GET)) {
     pokemart(Pory_Pokemart_PokeBalls_Some)
-  } elif (!flag(FLAG_BADGE07_GET)) {
-    pokemart(Pory_Pokemart_PokeBalls_Most)
   } else {
     pokemart(Pory_Pokemart_PokeBalls_All)
   }
@@ -94,7 +92,7 @@ script LilycoveCity_DepartmentStore_3F_EventScript_ClerkRight_Pory {
   }
   waitmessage
   if (!flag(FLAG_BADGE07_GET)) {
-    pokemart(Pory_Pokemart_StatBoosters_Most)
+    pokemart(Pory_Pokemart_StatBoosters_Some)
   } else {
     pokemart(Pory_Pokemart_StatBoosters_All)
   }
@@ -154,7 +152,7 @@ script LilycoveCity_DepartmentStore_4F_EventScript_ClerkRight_Pory {
       if (var(VAR_RESULT)) {
         checkitem(ITEM_TM16) // Light Screen
         if (var(VAR_RESULT)) {
-          msgbox(format("Wow! you have all of them! That's so cool!"))
+          msgbox(format("Wow! You have all of them! That's so cool!"))
         } else {
           call(Pory_EventScript_Clerk_DepartmentStore_Goodbyes)
         }
@@ -240,7 +238,6 @@ mart Pory_Pokemart_Items_All {
   ITEM_SUPER_REPEL
   ITEM_MAX_REPEL
   ITEM_POKE_DOLL
-  ITEM_POKE_TOY
   ITEM_FLUFFY_TAIL
 }
 
@@ -263,7 +260,6 @@ mart Pory_Pokemart_Items_Most {
   ITEM_SUPER_REPEL
   ITEM_MAX_REPEL
   ITEM_POKE_DOLL
-  ITEM_POKE_TOY
   ITEM_FLUFFY_TAIL
 }
 
@@ -286,7 +282,6 @@ mart Pory_Pokemart_Items_Some {
   ITEM_SUPER_REPEL
   ITEM_MAX_REPEL
   ITEM_POKE_DOLL
-  ITEM_POKE_TOY
   ITEM_FLUFFY_TAIL
 }
 
@@ -307,26 +302,11 @@ mart Pory_Pokemart_PokeBalls_All {
   ITEM_TIMER_BALL
 }
 
-mart Pory_Pokemart_PokeBalls_Most {
-  ITEM_POKE_BALL
-  ITEM_GREAT_BALL
-  ITEM_ULTRA_BALL
-  // ITEM_QUICK_BALL
-  ITEM_DIVE_BALL
-  ITEM_DUSK_BALL
-  ITEM_HEAL_BALL
-  ITEM_LUXURY_BALL
-  ITEM_NET_BALL
-  ITEM_NEST_BALL
-  ITEM_REPEAT_BALL
-  ITEM_TIMER_BALL
-}
-
 mart Pory_Pokemart_PokeBalls_Some {
   ITEM_POKE_BALL
   ITEM_GREAT_BALL
   // ITEM_ULTRA_BALL
-  // ITEM_QUICK_BALL
+  ITEM_QUICK_BALL
   ITEM_DIVE_BALL
   ITEM_DUSK_BALL
   ITEM_HEAL_BALL
@@ -373,7 +353,7 @@ mart Pory_Pokemart_StatBoosters_All {
   ITEM_DIRE_HIT
 }
 
-mart Pory_Pokemart_StatBoosters_Most {
+mart Pory_Pokemart_StatBoosters_Some {
   ITEM_PROTEIN
   ITEM_IRON
   ITEM_CALCIUM
@@ -385,7 +365,7 @@ mart Pory_Pokemart_StatBoosters_Most {
   // ITEM_X_SP_ATK
   // ITEM_X_SP_DEF
   // ITEM_X_SPEED
-  // ITEM_X_ACCURACY
+  ITEM_X_ACCURACY
   ITEM_GUARD_SPEC
   ITEM_DIRE_HIT
 }
@@ -408,56 +388,6 @@ mart Pory_Pokemart_DefenseTMs {
   ITEM_TM16 // Light Screen
 }
 
-// Helper scripts
-
-script Pory_EventScript_Clerk_DepartmentStore_Hellos {
-  if (flag(FLAG_SYS_GAME_CLEAR)) {
-    random(8)
-    switch (var(VAR_RESULT)) {
-    case 0: msgbox(format("{FONT_SMALL}…Is …Is that the League Champion?!"))
-    case 1: msgbox(format("{FONT_SMALL}…I'm pretty sure that's the Champion!"))
-    }
-  }
-  random(13)
-  switch (var(VAR_RESULT)) {
-    case  0: message(format("Welcome! How may I serve you?"))
-    case  1: message(format("Welcome! How may I serve you?"))
-    case  2: message(format("Welcome! How may I serve you?"))
-    case  3: message(format("Hello! What can I do for you?"))
-    case  4: message(format("Hello! What can I do for you?"))
-    case  5: message(format("Hello! What can I do for you?"))
-    case  6: message(format("Hi! How can I help you?"))
-    case  7: message(format("Hi! How can I help you?"))
-    case  8: message(format("Hi! How can I help you?"))
-    case  9: message(format("Hey! What can I get you?"))
-    case 10: message(format("Hey! What can I get you?"))
-    case 11: message(format("How's it going? Know what you want already?"))
-    case 12: message(format("How's it going? Know what you want already?"))
-  }
-}
-
-script Pory_EventScript_Clerk_DepartmentStore_Goodbyes {
-  random(16)
-  switch (var(VAR_RESULT)) {
-    case  0: msgbox(format("Please come again!"))
-    case  1: msgbox(format("Please come again!"))
-    case  2: msgbox(format("Please come again!"))
-    case  3: msgbox(format("Until next time!"))
-    case  4: msgbox(format("Until next time!"))
-    case  5: msgbox(format("Goodbye!"))
-    case  6: msgbox(format("Goodbye!"))
-    case  7: msgbox(format("Bye bye!"))
-    case  8: msgbox(format("Bye now!"))
-    case  9: msgbox(format("Bye now!"))
-    case 10: msgbox(format("Bye!"))
-    case 11: msgbox(format("Ciao!"))
-    case 12: msgbox(format("Enjoy your purchases!"))
-    case 13: msgbox(format("Enjoy your purchases!"))
-    case 14: msgbox(format("Enjoy your purchases!"))
-    case 15: msgbox(format("{FONT_SMALL}I {FONT_SHORT}HATE {FONT_SMALL}my job…\p{FONT_NORMAL}Wait, did you hear that?"))
-  }
-}
-
 // Elevator scripts
 
 text gText_WhichFloorWouldYouLike_Pory {
@@ -465,10 +395,6 @@ text gText_WhichFloorWouldYouLike_Pory {
 }
 
 // Vending Machine scripts
-
-// also changed from ¥350
-// const u8 gText_LemonadeAndPrice[] = _("Lemonade{CLEAR_TO 0x48}¥400");
-// appears that the price was changed but the Vending Machine text was not
 
 script LilycoveCity_DepartmentStoreRooftop_EventScript_CheckMoneyLemonade_Pory {
   checkmoney(400)
@@ -484,19 +410,6 @@ text LilycoveCity_DepartmentStoreRooftop_Text_WhichDrinkWouldYouLike_Pory {
   format("Which would you like?")
 }
 
-// LilycoveCity_DepartmentStoreRooftop_EventScript_FreshWater::
-// 	setvar VAR_TEMP_0, ITEM_FRESH_WATER
-// 	goto LilycoveCity_DepartmentStoreRooftop_EventScript_TryBuyDrink
-// 	end
-
-// LilycoveCity_DepartmentStoreRooftop_EventScript_SodaPop::
-// 	setvar VAR_TEMP_0, ITEM_SODA_POP
-// 	goto LilycoveCity_DepartmentStoreRooftop_EventScript_TryBuyDrink
-// 	end
-
-// LilycoveCity_DepartmentStoreRooftop_EventScript_Lemonade::
-// 	setvar VAR_TEMP_0, ITEM_LEMONADE
-
 script LilycoveCity_DepartmentStoreRooftop_EventScript_CanOfDrinkDroppedDown_Pory {
   switch (var(VAR_TEMP_0)) {
     case ITEM_FRESH_WATER: msgbox("Clang! A bottle of {STR_VAR_1} dropped\ndown.")
@@ -510,5 +423,55 @@ script LilycoveCity_DepartmentStoreRooftop_EventScript_ExtraCanOfDrinkDroppedDow
     case ITEM_FRESH_WATER: msgbox("Clang!\pScore! An extra bottle of {STR_VAR_1}\ndropped down!")
     case ITEM_SODA_POP: msgbox("Clang!\pScore! An extra bottle of {STR_VAR_1}\ndropped down!")
     case ITEM_LEMONADE: msgbox("Clang!\pScore! An extra can of {STR_VAR_1}\ndropped down!")
+  }
+}
+
+// Helper scripts
+
+script Pory_EventScript_Clerk_DepartmentStore_Hellos {
+  if (flag(FLAG_SYS_GAME_CLEAR)) {
+    random(8)
+    switch (var(VAR_RESULT)) {
+    case 0: msgbox(format("{FONT_SMALL}…Is …Is that the League Champion?!"))
+    case 1: msgbox(format("{FONT_SMALL}…I'm pretty sure that's the Champion!"))
+    }
+  }
+  random(13)
+  switch (var(VAR_RESULT)) {
+    case 0: message(format("Welcome! How may I serve you?"))
+    case 1: message(format("Welcome! How may I serve you?"))
+    case 2: message(format("Welcome! How may I serve you?"))
+    case 3: message(format("Hello! What can I do for you?"))
+    case 4: message(format("Hello! What can I do for you?"))
+    case 5: message(format("Hello! What can I do for you?"))
+    case 6: message(format("Hi! How can I help you?"))
+    case 7: message(format("Hi! How can I help you?"))
+    case 8: message(format("Hi! How can I help you?"))
+    case 9: message(format("Hey! What can I get you?"))
+    case 10: message(format("Hey! What can I get you?"))
+    case 11: message(format("How's it going? Know what you want already?"))
+    case 12: message(format("How's it going? Know what you want already?"))
+  }
+}
+
+script Pory_EventScript_Clerk_DepartmentStore_Goodbyes {
+  random(16)
+  switch (var(VAR_RESULT)) {
+    case 0: msgbox(format("Please come again!"))
+    case 1: msgbox(format("Please come again!"))
+    case 2: msgbox(format("Please come again!"))
+    case 3: msgbox(format("Until next time!"))
+    case 4: msgbox(format("Until next time!"))
+    case 5: msgbox(format("Goodbye!"))
+    case 6: msgbox(format("Goodbye!"))
+    case 7: msgbox(format("Bye bye!"))
+    case 8: msgbox(format("Bye now!"))
+    case 9: msgbox(format("Bye now!"))
+    case 10: msgbox(format("Bye!"))
+    case 11: msgbox(format("Ciao!"))
+    case 12: msgbox(format("Enjoy your purchases!"))
+    case 13: msgbox(format("Enjoy your purchases!"))
+    case 14: msgbox(format("Enjoy your purchases!"))
+    case 15: msgbox(format("{FONT_SMALL}I {FONT_SHORT}HATE {FONT_SMALL}my job…\p{FONT_NORMAL}Wait, did you hear that?"))
   }
 }
