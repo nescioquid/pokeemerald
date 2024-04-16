@@ -2407,7 +2407,7 @@ const struct Item gItemsInfo[] =
 
     [ITEM_DIRE_HIT] =
     {
-        .name = _("Dire Hit"),
+        .name = _("X Critical"),
         .price = (I_PRICE >= GEN_7) ? 1000 : 650,
         .description = COMPOUND_STRING(
             "Raises the\n"
@@ -2425,8 +2425,7 @@ const struct Item gItemsInfo[] =
 
     [ITEM_GUARD_SPEC] =
     {
-        .name = _("Guard Spec."),
-        .pluralName = _("Guard Specs."),
+        .name = _("X Guard"),
         .price = (I_PRICE >= GEN_7) ? 1500 : 700,
         .description = COMPOUND_STRING(
             "Prevents stat\n"
@@ -4238,7 +4237,7 @@ const struct Item gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 2000 : 2100,
         .description = COMPOUND_STRING(
             "Makes a certain\n"
-            "Pokémon evolve. It's\n"
+            "Pokémon evolve.\n"
             "shaped like an egg."),
         .pocket = POCKET_ITEMS,
         .type = EVO_HELD_ITEM_TYPE,
@@ -7956,7 +7955,7 @@ const struct Item gItemsInfo[] =
 
     [ITEM_HEAT_ROCK] =
     {
-        .name = _("Heat Rock"),
+        .name = _("Hot Rock"),
         .price = (I_PRICE >= GEN_9) ? 8000 : ((I_PRICE >= GEN_7) ? 4000 : 200),
         .holdEffect = HOLD_EFFECT_HEAT_ROCK,
         .description = COMPOUND_STRING(
@@ -12243,7 +12242,7 @@ const struct Item gItemsInfo[] =
 
     [ITEM_DOWSING_MACHINE] =
     {
-        .name = _("Dowsing MCHN"),
+        .name = _("Itemfinder"),
         .price = 0,
         .description = COMPOUND_STRING(
             "A device that\n"
