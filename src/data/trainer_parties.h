@@ -3147,9 +3147,16 @@ static const struct TrainerMon sParty_Glacia[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 51,
+    .ability = ABILITY_SHELL_ARMOR,
+    .species = SPECIES_LAPRAS,
+    .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_PERISH_SONG, MOVE_SNOWSCAPE}
+    },
+    {
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 51,
     .ability = ABILITY_SKILL_LINK,
     .species = SPECIES_CLOYSTER,
-    .moves = {MOVE_ICICLE_SPEAR, MOVE_ROCK_BLAST, MOVE_EXPLOSION, MOVE_SHELL_SMASH}
+    .moves = {MOVE_ICICLE_SPEAR, MOVE_RAZOR_SHELL, MOVE_EXPLOSION, MOVE_SHELL_SMASH}
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
@@ -3160,16 +3167,9 @@ static const struct TrainerMon sParty_Glacia[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 51,
-    .ability = ABILITY_SHELL_ARMOR,
-    .species = SPECIES_LAPRAS,
-    .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_PERISH_SONG, MOVE_SNOWSCAPE}
-    },
-    {
-    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 51,
     .ability = ABILITY_SNOW_CLOAK,
     .species = SPECIES_MAMOSWINE,
-    .moves = {MOVE_ICICLE_CRASH, MOVE_EARTHQUAKE, MOVE_SUPERPOWER, MOVE_SNOWSCAPE}
+    .moves = {MOVE_ICE_SHARD, MOVE_EARTHQUAKE, MOVE_SUPERPOWER, MOVE_SNOWSCAPE}
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
