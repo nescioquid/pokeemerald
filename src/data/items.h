@@ -173,7 +173,7 @@ const struct Item gItemsInfo[] =
     [ITEM_POKE_BALL] =
     {
         .name = _("Poké Ball"),
-        .price = 200,
+        .price = 250,
         .description = COMPOUND_STRING(
             "A tool used for\n"
             "catching wild\n"
@@ -189,7 +189,7 @@ const struct Item gItemsInfo[] =
     [ITEM_GREAT_BALL] =
     {
         .name = _("Great Ball"),
-        .price = 600,
+        .price = 500,
         .description = COMPOUND_STRING(
             "A good Ball with a\n"
             "higher catch rate\n"
@@ -205,7 +205,7 @@ const struct Item gItemsInfo[] =
     [ITEM_ULTRA_BALL] =
     {
         .name = _("Ultra Ball"),
-        .price = (I_PRICE >= GEN_7) ? 800 : 1200,
+        .price = 750,
         .description = COMPOUND_STRING(
             "A better Ball with\n"
             "a higher catch rate\n"
@@ -253,7 +253,7 @@ const struct Item gItemsInfo[] =
     [ITEM_HEAL_BALL] =
     {
         .name = _("Heal Ball"),
-        .price = 300,
+        .price = 1000,
         .description = COMPOUND_STRING(
             "A remedial Ball\n"
             "that restores\n"
@@ -381,7 +381,7 @@ const struct Item gItemsInfo[] =
     [ITEM_LUXURY_BALL] =
     {
         .name = _("Luxury Ball"),
-        .price = (I_PRICE >= GEN_8) ? 3000 : 1000,
+        .price = 1000,
         .description = COMPOUND_STRING(
             "A cozy Ball that\n"
             "makes Pokémon\n"
@@ -629,7 +629,7 @@ const struct Item gItemsInfo[] =
     [ITEM_SUPER_POTION] =
     {
         .name = _("Super Potion"),
-        .price = 700,
+        .price = 600,
         .holdEffectParam = 60,
         .description = COMPOUND_STRING(
             "Restores the HP of\n"
@@ -675,7 +675,7 @@ const struct Item gItemsInfo[] =
     [ITEM_MAX_POTION] =
     {
         .name = _("Max Potion"),
-        .price = 2500,
+        .price = 2400,
         .holdEffectParam = 255,
         .description = COMPOUND_STRING(
             "Fully restores the\n"
@@ -693,7 +693,7 @@ const struct Item gItemsInfo[] =
     [ITEM_FULL_RESTORE] =
     {
         .name = _("Full Restore"),
-        .price = 3000,
+        .price = 2800,
         .holdEffectParam = 255,
         .description = COMPOUND_STRING(
             "Fully restores the\n"
@@ -2143,11 +2143,11 @@ const struct Item gItemsInfo[] =
     [ITEM_REPEL] =
     {
         .name = _("Repel"),
-        .price = (I_PRICE >= GEN_7) ? 400 : 350,
-        .holdEffectParam = 100,
+        .price = 150,
+        .holdEffectParam = 150,
         .description = COMPOUND_STRING(
             "Repels weak wild\n"
-            "Pokémon for 100\n"
+            "Pokémon for 150\n"
             "steps."),
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -2160,7 +2160,7 @@ const struct Item gItemsInfo[] =
     [ITEM_SUPER_REPEL] =
     {
         .name = _("Super Repel"),
-        .price = (I_PRICE >= GEN_7) ? 700 : 500,
+        .price = 200,
         .holdEffectParam = 200,
         .description = COMPOUND_STRING(
             "Repels weak wild\n"
@@ -2177,7 +2177,7 @@ const struct Item gItemsInfo[] =
     [ITEM_MAX_REPEL] =
     {
         .name = _("Max Repel"),
-        .price = (I_PRICE >= GEN_7) ? 900 : 700,
+        .price = 250,
         .holdEffectParam = 250,
         .description = COMPOUND_STRING(
             "Repels weak wild\n"
@@ -2272,7 +2272,7 @@ const struct Item gItemsInfo[] =
     [ITEM_X_ATTACK] =
     {
         .name = _("X Attack"),
-        .price = (I_PRICE >= GEN_7) ? 1000 : 500,
+        .price = 500,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
         #if B_X_ITEMS_BUFF >= GEN_7
@@ -2297,7 +2297,7 @@ const struct Item gItemsInfo[] =
     [ITEM_X_DEFENSE] =
     {
         .name = _("X Defense"),
-        .price = (I_PRICE >= GEN_7) ? 2000 : 550,
+        .price = 500,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
         #if B_X_ITEMS_BUFF >= GEN_7
@@ -2322,7 +2322,7 @@ const struct Item gItemsInfo[] =
     [ITEM_X_SP_ATK] =
     {
         .name = _("X Sp. Atk"),
-        .price = (I_PRICE >= GEN_7) ? 1000 : 350,
+        .price = 500,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
         #if B_X_ITEMS_BUFF >= GEN_7
@@ -2347,7 +2347,7 @@ const struct Item gItemsInfo[] =
     [ITEM_X_SP_DEF] =
     {
         .name = _("X Sp. Def"),
-        .price = (I_PRICE >= GEN_7) ? 2000 : 350,
+        .price = 500,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
         #if B_X_ITEMS_BUFF >= GEN_7
@@ -2372,7 +2372,7 @@ const struct Item gItemsInfo[] =
     [ITEM_X_SPEED] =
     {
         .name = _("X Speed"),
-        .price = (I_PRICE >= GEN_7) ? 1000 : 350,
+        .price = 500,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
         #if B_X_ITEMS_BUFF >= GEN_7
@@ -2398,7 +2398,7 @@ const struct Item gItemsInfo[] =
     {
         .name = _("X Accuracy"),
         .pluralName = _("X Accuracies"),
-        .price = (I_PRICE >= GEN_7) ? 1000 : 950,
+        .price = 250,
         .holdEffectParam = X_ITEM_STAGES,
             .description = COMPOUND_STRING(
         #if B_X_ITEMS_BUFF >= GEN_7
@@ -2423,7 +2423,7 @@ const struct Item gItemsInfo[] =
     [ITEM_DIRE_HIT] =
     {
         .name = _("X Critical"),
-        .price = (I_PRICE >= GEN_7) ? 1000 : 650,
+        .price = 250,
         .description = COMPOUND_STRING(
             "Raises the\n"
             "critical-hit ratio\n"
@@ -2441,7 +2441,7 @@ const struct Item gItemsInfo[] =
     [ITEM_GUARD_SPEC] =
     {
         .name = _("X Guard"),
-        .price = (I_PRICE >= GEN_7) ? 1500 : 700,
+        .price = 250,
         .description = COMPOUND_STRING(
             "Prevents stat\n"
             "reduction when\n"
@@ -2459,7 +2459,7 @@ const struct Item gItemsInfo[] =
     [ITEM_POKE_DOLL] =
     {
         .name = _("Poké Doll"),
-        .price = (I_PRICE < GEN_7) ? 1000 : ((I_PRICE == GEN_7) ? 100 : 300),
+        .price = 100,
         .description = sPokeDollDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
