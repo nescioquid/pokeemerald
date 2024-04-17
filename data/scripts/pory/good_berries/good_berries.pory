@@ -414,3 +414,37 @@ script Pory_EventScript_Berries_Retaliatory {
   }
   goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
 }
+
+// speeds up berry tree interactions
+
+script BerryTree_EventScript_WantToPlant_Pory {
+  lock
+  msgbox(format("It's soft, loamy soil."))
+  fadescreen(FADE_TO_BLACK)
+  closemessage
+  special(Bag_ChooseBerry)
+  waitstate
+  goto_if_eq(VAR_ITEM_ID, 0, BerryTree_EventScript_CancelPlanting)
+  removeitem(VAR_ITEM_ID)
+  call(BerryTree_EventScript_PlantBerry)
+  goto(BerryTree_EventScript_WantToWater)
+  release
+  end
+}
+
+text BerryTree_Text_WantToPick_Pory {
+  "Pick the {STR_VAR_2} {STR_VAR_1}?"
+}
+
+
+text BerryTree_Text_PlantedOneBerry_Pory {
+  "Planted the {STR_VAR_1}."
+}
+
+text BerryTree_Text_BerryGrowthStage2_Pory {
+  "The {STR_VAR_1} has sprouted!"
+}
+
+text BerryTree_Text_WantToWater_Pory {
+  "Want to water it?"
+}

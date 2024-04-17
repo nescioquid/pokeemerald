@@ -24,7 +24,7 @@ BerryTree_EventScript_CheckSoil::
 	lock
 	faceplayer
 	specialvar VAR_RESULT, PlayerHasBerries
-	goto_if_eq VAR_RESULT, TRUE, BerryTree_EventScript_WantToPlant
+	goto_if_eq VAR_RESULT, TRUE, BerryTree_EventScript_WantToPlant_Pory
 	specialvar VAR_RESULT, PlayerHasMulch
 	goto_if_eq VAR_RESULT, TRUE, BerryTree_EventScript_WantToMulch
 	message BerryTree_Text_ItsSoftLoamySoil
@@ -94,7 +94,7 @@ BerryTree_EventScript_CheckBerryStage1::
 BerryTree_EventScript_CheckBerryStage2::
 	lockall
 	special ObjectEventInteractionGetBerryName
-	message BerryTree_Text_BerryGrowthStage2
+	message BerryTree_Text_BerryGrowthStage2_Pory
 	waitmessage
 	waitbuttonpress
 	goto BerryTree_EventScript_WantToWater
@@ -157,7 +157,7 @@ BerryTree_EventScript_CheckBerryFullyGrown::
 .if OW_BERRY_MUTATIONS == TRUE
 	goto_if_eq VAR_RESULT, TRUE, BerryTree_EventScript_CheckBerryFullyGrown_Mutation
 .endif
-	msgbox BerryTree_Text_WantToPick, MSGBOX_YESNO
+	msgbox BerryTree_Text_WantToPick_Pory, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, BerryTree_EventScript_PickBerry
 	goto_if_eq VAR_RESULT, NO, BerryTree_EventScript_CancelPickingBerry
 
@@ -180,9 +180,9 @@ BerryTree_EventScript_PickBerry::
 	waitmessage
 	waitfanfare
 	waitbuttonpress
-	message BerryTree_Text_PutAwayBerry
-	waitmessage
-	waitbuttonpress
+	@ message BerryTree_Text_PutAwayBerry
+	@ waitmessage
+	@ waitbuttonpress
 	release
 	end
 
@@ -194,9 +194,9 @@ BerryTree_EventScript_BerryPocketFull::
 	end
 
 BerryTree_EventScript_CancelPickingBerry::
-	message BerryTree_Text_BerryLeftUnpicked
-	waitmessage
-	waitbuttonpress
+	@ message BerryTree_Text_BerryLeftUnpicked
+	@ waitmessage
+	@ waitbuttonpress
 	release
 	end
 
@@ -219,7 +219,7 @@ BerryTree_EventScript_WantToWater::
 	specialvar VAR_RESULT, CanWaterBerryPlot
 	goto_if_eq VAR_RESULT, FALSE, BerryTree_EventScript_DontWater
 	special ObjectEventInteractionGetBerryName
-	msgbox BerryTree_Text_WantToWater, MSGBOX_YESNO
+	msgbox BerryTree_Text_WantToWater_Pory, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, BerryTree_EventScript_WaterBerry
 	goto_if_eq VAR_RESULT, NO, BerryTree_EventScript_DontWater
 
@@ -237,9 +237,9 @@ BerryTree_EventScript_WaterBerry::
 	special ObjectEventInteractionWaterBerryTree
 	special DoWateringBerryTreeAnim
 	waitstate
-	message BerryTree_Text_PlantIsDelighted
-	waitmessage
-	waitbuttonpress
+	@ message BerryTree_Text_PlantIsDelighted
+	@ waitmessage
+	@ waitbuttonpress
 	releaseall
 	end
 
@@ -248,7 +248,7 @@ BerryTree_EventScript_PlantBerry::
 	incrementgamestat GAME_STAT_PLANTED_BERRIES
 	special IncrementDailyPlantedBerries
 	special ObjectEventInteractionGetBerryCountString
-	message BerryTree_Text_PlantedOneBerry
+	message BerryTree_Text_PlantedOneBerry_Pory
 	waitmessage
 	waitbuttonpress
 	return
