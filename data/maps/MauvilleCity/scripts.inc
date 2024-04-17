@@ -94,7 +94,7 @@ MauvilleCity_EventScript_Wally::
 	waitmovement 0
 	msgbox MauvilleCity_Text_WallyWantToChallengeGym, MSGBOX_DEFAULT
 	msgbox MauvilleCity_Text_UncleYourePushingIt, MSGBOX_DEFAULT
-	msgbox MauvilleCity_Text_WallyWeCanBeatAnyone, MSGBOX_DEFAULT
+	msgbox MauvilleCity_Text_WallyWeCanBeatAnyone_Pory, MSGBOX_DEFAULT
 	applymovement LOCALID_WALLY, Common_Movement_FacePlayer
 	waitmovement 0
 	playse SE_PIN

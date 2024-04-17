@@ -1,0 +1,13 @@
+// removes mention of Ralts as Wally's Pokémon
+
+text MauvilleCity_Text_WallyWeCanBeatAnyone_Pory {
+  format("Wally: I'm not pushing it.\pIf I combine forces with my Pokémon, we can beat anyone!")
+}
+
+text VerdanturfTown_WandasHouse_Text_StrongerSpeech_Pory {
+  format("Wally: I lost to you, {PLAYER}, but I'm not feeling down anymore.\pBecause I have a new purpose in life. Together with my Pokémon, I'm going to challenge Pokémon Gyms and become a great Trainer.\pPlease watch me, {PLAYER}.\nI'm going to be stronger than you.\pWhen I do, I'm going to challenge you to another battle.")
+}
+
+text MatchCall_Text_Wally5_Pory {
+  format("Wally: {PLAYER}? It's awesome!\nThat Pokémon we caught together? It evolved, {PLAYER}!\pMaybe I'm talented…\pOh, but I shouldn't get a big head like that!\pAfter all, it's the Pokémon that should be praised!")
+}
