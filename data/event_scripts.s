@@ -1075,3 +1075,4 @@ EventScript_VsSeekerChargingDone::
 .include "data/scripts/pory/gt/overwold_mons.inc"
 .include "data/scripts/pory/gt/npc_dialogues.inc"
 .include "data/scripts/pory/gt/trade.inc"
+.include "data/scripts/pory/gt/wally.inc"
