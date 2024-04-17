@@ -1079,3 +1079,4 @@ EventScript_VsSeekerChargingDone::
 .include "data/scripts/pory/gt/trade.inc"
 .include "data/scripts/pory/gt/wally.inc"
 .include "data/scripts/pory/gt/egg.inc"
+.include "data/scripts/pory/gt/givemon_helper.inc"
