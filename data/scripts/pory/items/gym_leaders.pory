@@ -1,0 +1,169 @@
+// changes Gym Leaders' dialogue and what TMs they give out
+
+// Roxanne
+text RustboroCity_Gym_Text_RoxanneDefeat_Pory {
+  format("So…\nI lost…\pIt seems that I still have much more to learn…")
+}
+
+text Pory_Text_RoxanneDefeated {
+  format("I understand.\pThe Pokémon League's rules state that Trainers are to be given this if they defeat a Gym Leader.\pPlease accept the official Pokémon League Stone Badge.")
+}
+
+text RustboroCity_Gym_Text_StoneBadgeInfoTakeThis_Pory {
+  format("The Stone Badge enables your Pokémon to use the HM move Cut outside of battle.\pAll Pokémon under Level 30, even those you get in trades, will also obey you.\pAnd…\nPlease take this with you, too.")
+}
+
+text RustboroCity_Gym_Text_ExplainRockTomb_Pory {
+  format("The move Rock Tomb not only inflicts damage by dropping rocks, it also lowers the target's Speed.\pIf you use a TM, it instantly teaches the move to a Pokémon.\pYou can use a TM as many times as you want, so please try it out!")
+}
+
+// Brawly
+text DewfordTown_Gym_Text_BrawlyDefeat_Pory {
+  format("Whoah, wow! You made a much bigger splash than I expected!")
+}
+
+text Pory_Text_BrawlyDefeated {
+  format("Okay, you've got me.\nTake this Gym Badge!")
+}
+
+text DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis_Pory {
+  format("The Knuckle Badge makes all Pokémon under Level 40, even those you get in trades, obey without question.\pAnd, you'll be able to use the HM move Flash outside of battle.\pHmm… You know what?\n I think you can make full use of this, too. I'm sure it will help your Pokémon bulk up muscle!")
+}
+
+text DewfordTown_Gym_Text_ExplainBulkUp_Pory {
+  format("Bulk Up temporarily enhances the Pokémon's muscle power.\pThe move boosts both the Attack and Defense of the Pokémon.")
+}
+
+text DewfordTown_Gym_Text_BrawlyPostBattle_Pory {
+  format("I can see your talent becoming a giant wave that causes a storm of astonishment among Trainers one day!")
+}
+
+// Wattson
+text MauvilleCity_Gym_Text_WattsonIntro_Pory {
+  format("Oh? Now, what are you doing here?\pWhat's that? You say you've gotten past all my rigged doors?\pWahahahah!\nNow, that is amusing!\pI've given up on my plans to reform the city, I have.\pMaking traps for my Gym and battling with young Trainers like you are what I live for now!\pSo then, I, Wattson, the Leader of Mauville Gym, shall electrify you!")
+}
+
+text MauvilleCity_Gym_Text_WattsonDefeat_Pory {
+  format("Wahahahah!\nFine, I lost!")
+}
+
+text Pory_Text_WattsonDefeated {
+  format("You wound up electrifying me!\nNow, take this Badge!")
+}
+
+text MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis_Pory {
+  format("With the Dynamo Badge, Pokémon can use the HM for Rock Smash outside of battle.\pOne other thing --Pokémon under Level 50 will obey you now, even if you got 'em from someone else!\pAlrighty then, this here's for you, too!\nGo on, take it with you!")
+}
+
+text Pory_Text_WattsonExplainVoltSwitch {
+  format("Volt Switch is a move where your Pokémon attacks the opponent and then rushes back to switch places with a party Pokémon in waiting!")
+}
+
+// Flannery
+text LavaridgeTown_Gym_1F_Text_FlanneryIntro_Pory {
+  format("WELCOME!\pNo, wait. I mean…\nPuny Trainer, you've done well to make it this far!\pLet's see. I'm uh, honored to be serving as the Gym Leader of…\pNo, I mean…\nI'm Flannery, and I'm in charge here!\pUh…\nYou'd better not underestimate me just 'cause I've only been Leader a short time!\pWith skills inherited from my grandfather, I'm gonna, uh, demonstrate the hot moves we've honed in this land!\p… … … … … …\n… … … … … …\pHAIYAAAAAAAAAAAAA!")
+}
+
+text LavaridgeTown_Gym_1F_Text_FlanneryDefeat_Pory {
+  format("Oh…\nI guess I was trying too hard…")
+}
+
+text Pory_Text_FlanneryDefeated {
+  format("I… I've only recently become a Gym Leader.\pI guess I was trying too hard to be someone I'm not.\pWhen I don't act like myself, no wonder the Pokémon that battle at my side confused.\pThanks for teaching me that.\nYou deserve this.")
+}
+
+text LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis_Pory {
+  format("If you have a Heat Badge, all Pokémon under Level 60, even those you get in trades from other people, will obey you completely.\pAnd, it lets Pokémon use the HM move Strength outside of battle.\pThis is a token of my appreciation.\nDon't be shy about taking it!")
+}
+
+text LavaridgeTown_Gym_1F_Text_ExplainOverheat_Pory {
+  format("Overheat is a Fire-type move that inflicts serious damage on the opponent.\pBut it also sharply cuts the Sp. Atk of the Pokémon using it. It might not be suitable for longer battles.")
+}
+
+// Norman
+text PetalburgCity_Gym_Text_NormanIntro_Pory {
+  format("Dad: {PLAYER}…\nSo, you did get four Gym Badges.\pIt makes me happier than I can really describe.\pBeing able to have a real battle with my own child like this.\pBut a battle is a battle!\pI will do everything within my power as a Gym Leader to win!\pYou'd better give it your best shot, too, {PLAYER}!")
+}
+
+text PetalburgCity_Gym_Text_NormanDefeat_Pory {
+  format("…!\pI… I can't…")
+}
+
+text Pory_Text_NormanDefeated {
+  format("I can't believe it. {PLAYER}…\pI've lost to {PLAYER}?\p… … … … … …\p… … … … … …\pYou've come this far…\pThat's how it is then!\pHere, take this.")
+}
+
+text PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis_Pory {
+  format("Dad: Having that Badge will insure that Pokémon under Level 70 will obey you, even if you received them in trades.\pPokémon that know the HM move Surf will also be able to travel over water now.\pAnd this is my gift to you, {PLAYER}. I'm sure you'll be able to use it well.")
+}
+
+text Pory_Text_NormanExplainRetaliate {
+  format("Retaliate will allow you to take revenge for a fallen team member.\pIts power will be doubled if you have a Pokémon use it in the very next turn after an ally faints.\p I hope you and your Pokémon will be diligent enough to use it wisely.\p… … … … … …")
+}
+
+// Winona
+text FortreeCity_Gym_Text_WinonaIntro_Pory {
+  format("I am Winona. I am the Leader of the Fortree Pokémon Gym.\pI have become one with Bird Pokémon and have soared the skies…\pHowever grueling the battle, we have triumphed with grace…\pWitness our elegant choreography!")
+}
+
+text FortreeCity_Gym_Text_WinonaDefeat_Pory {
+  format("Never before have I seen a Trainer command Pokémon with more grace than I…")
+}
+
+text Pory_Text_WinonaDefeated {
+  format("In recognition of your prowess,\nI present to you this Gym Badge.")
+}
+
+text FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis_Pory {
+  format("With the Feather Badge, all Pokémon under Level 80, even those received through trades, will obey your every command.\pYou will also be able to use the HM move Fly outside of battle.\pAnd this…\nThis is a gift from me.")
+}
+
+text Pory_Text_WinonaExplainRoost {
+  format("Roost…\pWith this move, the user can restore its HP by up to half by landing on the ground and resting its injured body.\pHowever, the user loses its Flying-type designation during the turn, so be cautious.")
+}
+
+text FortreeCity_Gym_Text_WinonaPostBattle_Pory {
+  format("You won against me…\pI know you'll keep aiming higher and higher. Someday, you may even fly up into the sky!")
+}
+
+// Tate & Liza
+text MossdeepCity_Gym_Text_TateAndLizaIntro_Pory {
+  format("Heh heh heh…\nTee hee hee…\pTate: Are you surprised?\nLiza: Are you surprised?\pTate: That there are two Gym Leaders?\nLiza: That there are two Gym Leaders?\pTate: We're twins!\nLiza: We're twins!\pTate: We don't need to talk because…\nLiza: …We can each tell…\pTate: …What the other is thinking…\nLiza: …All in our minds!\pTate: This combination of ours…\nLiza: …Can you beat it?")
+}
+
+text MossdeepCity_Gym_Text_TateAndLizaDefeat_Pory {
+  format("Tate: What?! Our combination…\nLiza: …Was shattered!")
+}
+
+text Pory_Text_TateAndLizaDefeated {
+  format("Tate: It can't be helped. You've won…\nLiza: …So take this in recognition.")
+}
+
+text MossdeepCity_Gym_Text_ExplainMindBadgeTakeThis_Pory {
+  format("Tate: The Mind Badge has the power to make all Pokémon under level 90, including those you've received from other people, obey you!\pLiza: It also enables Pokémon to use the HM move called Dive outside of battle!\pTate: And take this…\nLiza: …Too!")
+}
+
+text MossdeepCity_Gym_Text_ExplainCalmMind_Pory {
+  format("Tate: Calm Mind…\nLiza: …Comes from relaxing your mind and concentrating.\pTate: It raises Sp. Atk…\nLiza: …It raises Sp. Def!\pTate: It's the perfect move…\nLiza: …For Psychic Pokémon!")
+}
+
+text MossdeepCity_Gym_Text_TateAndLizaNeedTwoMons_Pory {
+  format("Tate: Heh heh heh… Are you surprised?\nLiza: …That there are two Gym Leaders?\pTate: Oops, you have only one…\nLiza: …Pokémon that can battle.\pTate: We can't battle that way!\pLiza: If you want to challenge us,\nbring some more Pokémon.")
+}
+
+// Juan
+text SootopolisCity_Gym_1F_Text_JuanDefeat_Pory {
+  format("Ahahaha, excellent!\nVery well, you are the winner.")
+}
+
+text Pory_Text_JuanDefeated {
+  format("From you, I sense the brilliant shine of skill that will overcome all.\pHowever, compared with me or even Wallace, you are lacking in elegance.\pPerhaps I should make you a loan of my outfit?\p… … … … … …\n… … … … … …\pHahaha, I merely jest!\pRather than my clothes, I shall reward you with this, the Rain Badge!")
+}
+
+text SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis_Pory {
+  format("Having the Rain Badge shall assure you\nthe full obedience of all your Pokémon\lto your every command.\pThe Rain Badge also allows the use\nof the HM move Waterfall to scale\lwalls of cascading water.\pAnd, so that you never forget the\nbattle we shared, take this…")
+}
+
+text Pory_Text_JuanExplainScald {
+  format("The Technical Machine I handed you contains the move Scald.\pIn use, it will occasionally burn the target with boiling hot water.")
+}
