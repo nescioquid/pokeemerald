@@ -1,0 +1,50 @@
+// changes Game Corner prizes and rewrites prize-giving scripts
+
+const ITEM_COINS = 1000
+
+script Pory_EventScript_ChooseItemPrize {
+  multichoice(12, 0, MULTI_GAME_CORNER_ITEMS, FALSE)
+  switch (var(VAR_RESULT)) {
+    case 0:
+      bufferitemname(STR_VAR_1, ITEM_SILK_SCARF)
+      setvar(VAR_TEMP_3, ITEM_SILK_SCARF)
+      goto(Pory_EventScript_GetItemPrize)
+    case 1:
+      bufferitemname(STR_VAR_1, ITEM_WIDE_LENS)
+      setvar(VAR_TEMP_3, ITEM_WIDE_LENS)
+      goto(Pory_EventScript_GetItemPrize)
+    case 2:
+      bufferitemname(STR_VAR_1, ITEM_ZOOM_LENS)
+      setvar(VAR_TEMP_3, ITEM_ZOOM_LENS)
+      goto(Pory_EventScript_GetItemPrize)
+    case 3:
+      bufferitemname(STR_VAR_1, ITEM_METRONOME)
+      setvar(VAR_TEMP_3, ITEM_METRONOME)
+      goto(Pory_EventScript_GetItemPrize)
+    case 4: goto(MauvilleCity_GameCorner_EventScript_CancelTMSelect)
+  }
+  goto(MauvilleCity_GameCorner_EventScript_CancelTMSelect)
+  end
+}
+
+script Pory_EventScript_GetItemPrize {
+  msgbox(format("You'd like the {STR_VAR_1}?"), MSGBOX_YESNO)
+  if (var(VAR_RESULT)) {
+    checkcoins(VAR_TEMP_2)
+    if (var(VAR_TEMP_2) < ITEM_COINS) {
+      goto(MauvilleCity_GameCorner_EventScript_NotEnoughCoinsForTM)
+    } else {
+      checkitemspace(VAR_TEMP_3)
+      goto_if_eq(VAR_RESULT, FALSE, MauvilleCity_GameCorner_EventScript_NoRoomForTM)
+      removecoins(ITEM_COINS)
+      additem(VAR_TEMP_3)
+      updatecoinsbox(1, 1)
+      playse(SE_SHOP)
+      msgbox(MauvilleCity_GameCorner_Text_HereYouGo, MSGBOX_DEFAULT)
+      goto(MauvilleCity_GameCorner_EventScript_ReturnToChooseTMPrize)
+    }
+  } else {
+    goto(MauvilleCity_GameCorner_EventScript_CancelTMSelect)
+  }
+  end
+}
