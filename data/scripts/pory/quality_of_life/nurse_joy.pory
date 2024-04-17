@@ -32,6 +32,9 @@ script Pory_EventScript_Nurse {
     }
   } else {
     call(Pory_EventScript_Nurse_Hellos)
+    if (flag(FLAG_BADGE01_GET)) {
+      call(EventScript_PkmnCenterNurse_ItCostsMoneyNow_Pory)
+    }
     goto(EventScript_PkmnCenterNurse_HealPkmn_Pory)
   }
 }
@@ -97,6 +100,119 @@ script EventScript_PkmnCenterNurse_ReturnPkmn_Pory {
 
 script Common_EventScript_PkmnCenterNurse_Pory {
   call(Pory_EventScript_Nurse)
+}
+
+script EventScript_PkmnCenterNurse_ItCostsMoneyNow_Pory {
+  showmoneybox(0, 0)
+  random(3)
+  switch (var(VAR_RESULT)) {
+    case 0: msgbox(format("We now charge a modest fee of ¥100 for Gym Badge you have for our services. Is that ok?"), MSGBOX_YESNO)
+    case 1: msgbox(format("That'll be ¥100 per Badge, ok?"), MSGBOX_YESNO)
+    case 2: msgbox(format("Our services now cost ¥100 per Badge obtained. Would you like us to heal your Pokémon?"), MSGBOX_YESNO)
+  }
+  if (!var(VAR_RESULT)) {
+    msgbox(format("Ok! Maybe next time then."))
+    hidemoneybox
+    release
+    end
+  }
+  if (flag(FLAG_BADGE08_GET)) {
+    checkmoney(800)
+    if (!var(VAR_RESULT)) {
+      msgbox(format("I'm sorry, but that's unfortunately not enough."))
+      hidemoneybox
+      release
+      end
+    }
+    removemoney(800)
+    updatemoneybox
+    msgbox(format("Thank you!"))
+    hidemoneybox
+  } elif (flag(FLAG_BADGE07_GET)) {
+    checkmoney(700)
+    if (!var(VAR_RESULT)) {
+      msgbox(format("I'm sorry, but that's unfortunately not enough."))
+      hidemoneybox
+      release
+      end
+    }
+    removemoney(700)
+    updatemoneybox
+    msgbox(format("Thank you!"))
+    hidemoneybox
+  } elif (flag(FLAG_BADGE06_GET)) {
+    checkmoney(600)
+    if (!var(VAR_RESULT)) {
+      msgbox(format("I'm sorry, but that's unfortunately not enough."))
+      hidemoneybox
+      release
+      end
+    }
+    removemoney(600)
+    updatemoneybox
+    msgbox(format("Thank you!"))
+    hidemoneybox
+  } elif (flag(FLAG_BADGE05_GET)) {
+    checkmoney(500)
+    if (!var(VAR_RESULT)) {
+      msgbox(format("I'm sorry, but that's unfortunately not enough."))
+      hidemoneybox
+      release
+      end
+    }
+    removemoney(500)
+    updatemoneybox
+    msgbox(format("Thank you!"))
+    hidemoneybox
+  } elif (flag(FLAG_BADGE04_GET)) {
+    checkmoney(400)
+    if (!var(VAR_RESULT)) {
+      msgbox(format("I'm sorry, but that's unfortunately not enough."))
+      hidemoneybox
+      release
+      end
+    }
+    removemoney(400)
+    updatemoneybox
+    msgbox(format("Thank you!"))
+    hidemoneybox
+  } elif (flag(FLAG_BADGE03_GET)) {
+    checkmoney(300)
+    if (!var(VAR_RESULT)) {
+      msgbox(format("I'm sorry, but that's unfortunately not enough."))
+      hidemoneybox
+      release
+      end
+    }
+    removemoney(300)
+    updatemoneybox
+    msgbox(format("Thank you!"))
+    hidemoneybox
+  } elif (flag(FLAG_BADGE02_GET)) {
+    checkmoney(200)
+    if (!var(VAR_RESULT)) {
+      msgbox(format("I'm sorry, but that's unfortunately not enough."))
+      hidemoneybox
+      release
+      end
+    }
+    removemoney(200)
+    updatemoneybox
+    msgbox(format("Thank you!"))
+    hidemoneybox
+  } elif (flag(FLAG_BADGE01_GET)) {
+    checkmoney(100)
+    if (!var(VAR_RESULT)) {
+      msgbox(format("I'm sorry, but that's unfortunately not enough."))
+      hidemoneybox
+      release
+      end
+    }
+    removemoney(100)
+    updatemoneybox
+    msgbox(format("Thank you!"))
+    hidemoneybox
+  }
 }
 
 // Helper scripts
