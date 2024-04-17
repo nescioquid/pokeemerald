@@ -1,0 +1,10 @@
+// changes the egg given in Lavaridge to hatch into a different mon depending on the player's gender
+
+script Pory_EventScript_GiveEgg {
+  // stores the result (MALE (0) or FEMALE (1)) in VAR_RESULT
+  checkplayergender
+  switch (var(VAR_RESULT)) {
+    case   MALE: giveegg(SPECIES_TOGEPI)
+    case FEMALE: giveegg(SPECIES_WYNAUT)
+  }
+}
