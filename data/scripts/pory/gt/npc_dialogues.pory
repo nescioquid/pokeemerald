@@ -23,3 +23,9 @@ script Pory_EventScript_GameCubeOrange {
   release
   end
 }
+
+// changes mention of Slateport in the Coin Case NPC's dialogue to Lilycove
+
+text MauvilleCity_House2_Text_BuyHarborMailAtLilycove_Pory {
+  format("If could go to Lilycove for some shopping, I'd be able to buy Harbor Mail at the Department Store there…")
+}
