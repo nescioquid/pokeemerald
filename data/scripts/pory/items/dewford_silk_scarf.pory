@@ -1,0 +1,9 @@
+// changes the Silk Scarf NPC in Dewford to give a Choice Scarf
+
+text Pory_Text_WantYouToHaveChoiceScarf {
+  format("Gorge your eyes on this!\pIt's a Choice Scarf. It's right at the cutting edge of fashion, yeah!\pOh, I can see your eyes twinkling!\nYou appreciate my dazzling style!\pOh, you're a delight!\nHere you go. I want you to have it!")
+}
+
+text Pory_Text_ExplainChoiceScarf {
+  format("The Choice Scarf raises its holder's Speed, but only allows the use of the first move selected. The effect resets when the holder is withdrawn.\pIt's a marvelous Scarf that will go\nwith almost all Pokémon!")
+}
