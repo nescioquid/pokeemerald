@@ -18,6 +18,7 @@
 .include "data/scripts/pory_scripts/maps/BattleFrontier_Lounge6.inc"
 .include "data/scripts/pory_scripts/maps/BattleFrontier_Mart.inc"
 .include "data/scripts/pory_scripts/maps/CaveOfOrigin_B1F.inc"
+.include "data/scripts/pory_scripts/maps/DewfordTown.inc"
 .include "data/scripts/pory_scripts/maps/DewfordTown_Gym.inc"
 .include "data/scripts/pory_scripts/maps/DewfordTown_House2.inc"
 .include "data/scripts/pory_scripts/maps/DewfordTown_PokemonCenter_1F.inc"
