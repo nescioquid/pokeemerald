@@ -9314,19 +9314,19 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_TOXIC,
     },
 
-    [ITEM_TM_HAIL] =
+    [ITEM_TM_SNOWSCAPE] =
     {
         .name = _("TM007"),
         .price = 10000,
         .description = COMPOUND_STRING(
-            "Creates a hailstorm\n"
-            "that damages all\n"
-            "types except Ice."),
+            "Summons snowfall\n"
+            "that boosts the\n"
+            "Def of Ice types."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_HAIL,
+        .secondaryId = MOVE_SNOWSCAPE,
     },
 
     [ITEM_TM_BULK_UP] =
