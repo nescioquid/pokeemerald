@@ -1,0 +1,14 @@
+script GraniteCave_1F_EventScript_Hiker_Pory {
+  lock
+  faceplayer
+  if(!flag(FLAG_RECEIVED_HM_FLASH)) {
+    msgbox(format("Hey, you.\nIt gets awfully dark ahead.\lIt'll be tough trying to explore.\pThat guy who came by earlier…\nSteven, I think it was.\pHe knew how to use Flash, so he ought\nto be all right, but…\pWell, for us Hikers, helping out those\nthat we meet is our motto.\pHere you go, I'll pass this on to you."))
+    giveitem(ITEM_HM_FLASH)
+    setflag(FLAG_RECEIVED_HM_FLASH)
+    msgbox(format("And take this too."))
+    giveitem(ITEM_ESCAPE_ROPE)
+  }
+  msgbox(format("Teach that hidden move Flash to\na Pokémon and use it.\pIt lights up even the inky darkness\nof caves.\pBut, to use it, you need the Gym Badge\nfrom Dewford's Pokémon Gym.\pThat Escape Rope though, you can use it anywhere you feel like you've gotten lost. Take care!"))
+  release
+  end
+}
