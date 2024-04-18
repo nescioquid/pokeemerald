@@ -57,7 +57,7 @@ Route113_EventScript_Dillon::
 	end
 
 Route113_EventScript_Madeline::
-	trainerbattle_single TRAINER_MADELINE_1, Route113_Text_MadelineIntro, Route113_Text_MadelineDefeat, Route113_EventScript_RegisterMadeline
+	trainerbattle_single TRAINER_MADELINE_1, Route113_Text_MadelineIntro_Pory, Route113_Text_MadelineDefeat, Route113_EventScript_RegisterMadeline
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route113_EventScript_RematchMadeline
 	msgbox Route113_Text_MadelinePostBattle, MSGBOX_DEFAULT
