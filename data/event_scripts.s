@@ -1072,3 +1072,4 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+.include "data/scripts/pory/items/dewford_silk_scarf.inc"
