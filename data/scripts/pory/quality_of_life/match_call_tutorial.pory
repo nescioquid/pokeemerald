@@ -1,0 +1,18 @@
+// removes the Match Call tutorial
+
+const SCIENTIST_ID = 15
+
+script RustboroCity_EventScript_MatchCallTutorial_Pory {
+  setflag(FLAG_ADDED_MATCH_CALL_TO_POKENAV)
+  msgbox(RustboroCity_Text_IdBetterGetBackToWork, MSGBOX_DEFAULT)
+  closemessage
+  applymovement(SCIENTIST_ID, RustboroCity_Movement_ScientistLeave)
+  waitmovement(0)
+  playse(SE_EXIT)
+  removeobject(SCIENTIST_ID)
+  setflag(FLAG_HIDE_RUSTBORO_CITY_SCIENTIST)
+  setvar(VAR_RUSTBORO_CITY_STATE, 7)
+  clearflag(FLAG_HIDE_MAP_NAME_POPUP)
+  releaseall
+  end
+}
