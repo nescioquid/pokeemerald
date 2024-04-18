@@ -12,7 +12,7 @@ RustboroCity_PokemonCenter_1F_OnTransition:
 
 RustboroCity_PokemonCenter_1F_EventScript_Nurse::
 	setvar VAR_0x800B, LOCALID_NURSE
-	call Common_EventScript_PkmnCenterNurse
+	call Common_EventScript_PkmnCenterNurse_Pory
 	waitmessage
 	waitbuttonpress
 	release
