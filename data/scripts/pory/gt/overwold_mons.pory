@@ -1,0 +1,20 @@
+// swaps all overworld Skitty for Pikachu
+
+script Pory_EventScript_Pikachu {
+  lock
+  faceplayer
+  waitse
+  playmoncry(SPECIES_PIKACHU, CRY_MODE_NORMAL)
+  msgbox(format("Pikachu: Pikaaaa!"))
+  waitmoncry
+  release
+  end
+}
+
+script FallarborTown_Mart_EventScript_Woman_Pory {
+  lock
+  faceplayer
+  msgbox(format("I'm having a hard time deciding if I\nshould make my Pikachu evolve or not.\pI only have to use this Thunder Stone,\nbut it's so hard to decide…\pIf I make it evolve, it will become\nmuch stronger.\pBut it will look so different, too."))
+  release
+  end
+}
