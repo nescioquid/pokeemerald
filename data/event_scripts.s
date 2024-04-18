@@ -1075,3 +1075,4 @@ EventScript_VsSeekerChargingDone::
 .include "data/scripts/pory/items/dewford_silk_scarf.inc"
 .include "data/scripts/pory/items/granite_cave_hiker.inc"
 .include "data/scripts/pory/items/winstrates.inc"
+.include "data/scripts/pory/items/devon_employee.inc"
