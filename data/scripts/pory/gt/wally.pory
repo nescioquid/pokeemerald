@@ -11,3 +11,9 @@ text VerdanturfTown_WandasHouse_Text_StrongerSpeech_Pory {
 text MatchCall_Text_Wally5_Pory {
   format("Wally: {PLAYER}? It's awesome!\nThat Pokémon we caught together? It evolved, {PLAYER}!\pMaybe I'm talented…\pOh, but I shouldn't get a big head like that!\pAfter all, it's the Pokémon that should be praised!")
 }
+
+// replaces mention of the Zigzagoon Wally borrows from Norman with a Chansey
+
+text PetalburgCity_Gym_Text_IllLoanYouMyChansey_Pory {
+  format("Wally, here, I'll loan you my Pokémon.\pWally received a Chansey!")
+}
