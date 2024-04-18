@@ -33,7 +33,7 @@
     F(PSYCHIC) \
     F(SHADOW_BALL) \
     F(BRICK_BREAK) \
-    F(DOUBLE_TEAM) \
+    F(SKILL_SWAP) \
     F(REFLECT) \
     F(SLUDGE_WAVE) \
     F(FLAMETHROWER) \
