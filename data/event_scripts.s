@@ -1084,3 +1084,4 @@ EventScript_VsSeekerChargingDone::
 .include "data/scripts/pory/gt/capt_stern.inc"
 .include "data/scripts/pory/gt/meta_boy.inc"
 .include "data/scripts/pory/gt/champion.inc"
+.include "data/scripts/pory/items/dewford_silk_scarf.inc"
