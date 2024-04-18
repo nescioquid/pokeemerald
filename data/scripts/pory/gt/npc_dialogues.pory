@@ -1,0 +1,25 @@
+// changes the text for the man who refers to Antidotes in Petalburg's Pokemart
+
+script PetalburgCity_Mart_EventScript_Man_Pory {
+  lock
+  faceplayer
+  msgbox(format("Do you have any Antidotes with you? No? Hah! Well, you better figure something out if you're gonna go anywhere near Petalburg Woods."))
+  release
+  end
+}
+
+// changes the scripts for the Gamecube in the player's and rival's rooms to say something funny
+
+script Pory_EventScript_GameCube {
+  msgbox(format("
+  It's a Nintendo GameCube.\p… … … … … … … …\n… … … … … … … …\pSeriously? I spent all this time modding this game, and you want to play a different one?"))
+  release
+  end
+}
+
+script Pory_EventScript_GameCubeOrange {
+  msgbox(format("
+  It's a Nintendo GameCube.\p… … … … … … … …\n… … … … … … … …\pYes, they came in orange.\nBut seriously? I spent all this time modding this game, and you want to play a different one?"))
+  release
+  end
+}
