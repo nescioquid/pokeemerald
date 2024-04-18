@@ -10539,7 +10539,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_TOXIC,
     },
 
-    [ITEM_TM_HAIL] =
+    [ITEM_TM_SNOWSCAPE] =
     {
         .name = _("TM007"),
         .price = 10000,
@@ -10558,7 +10558,7 @@ const struct Item gItemsInfo[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_HAIL,
+        .secondaryId = MOVE_SNOWSCAPE,
     },
 
     [ITEM_TM_BULK_UP] =
