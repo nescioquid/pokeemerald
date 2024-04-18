@@ -1,0 +1,33 @@
+// removes mention of in-game trades
+
+script RustboroCity_House1_EventScript_Trader_Pory {
+  lock
+  faceplayer
+  msgbox(format("Any Pokémon can be cute if you raise\nit with care and kindness."))
+  release
+  end
+}
+
+script FortreeCity_House1_EventScript_Trader_Pory {
+  lock
+  faceplayer
+  msgbox(format("I'm going to make my Pokémon super\nstrong from this moment on!\pI hope you do the same with yours!"))
+  release
+  end
+}
+
+script PacifidlogTown_House3_EventScript_Trader_Pory {
+  lock
+  faceplayer
+  msgbox(format("I know I could go looking for them\non my own, but…\pBut I really want to get a Pokémon\nthat another Trainer's caught…"))
+  release
+  end
+}
+
+script BattleFrontier_Lounge6_EventScript_Trader_Pory {
+  lock
+  faceplayer
+  msgbox(format("Giggle!\nMy Pokémon is so much cuter than I had\limagined. I'm delighted!"))
+  release
+  end
+}
