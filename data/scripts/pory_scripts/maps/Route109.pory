@@ -14,3 +14,11 @@ script PoryScript_MetaBoy_RelaxingOnBeach {
   release
   end
 }
+
+text Route109_Text_BrineySailToDewfordQuestion_Pory {
+  "Mr. Briney: I thought you're supposed\nto deliver the Devon Parts.\pWould you like to sail back to\nDewford, then?"
+}
+
+text Route109_Text_BrineyDeliverDevonGoods_Pory {
+  "Mr. Briney: Then you go on and deliver\nthe Devon Parts. I'll be waiting."
+}
