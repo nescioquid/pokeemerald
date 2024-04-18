@@ -155,31 +155,31 @@ Route116_EventScript_BrineyTrigger::
 Route116_EventScript_GlassesMan::
 	lock
 	faceplayer
-	checkitem ITEM_BLACK_GLASSES
+	checkitem ITEM_WISE_GLASSES
 	goto_if_eq VAR_RESULT, TRUE, Route116_EventScript_PlayerHasGlasses
 	specialvar VAR_RESULT, FoundBlackGlasses
 	goto_if_eq VAR_RESULT, TRUE, Route116_EventScript_FoundGlassesNotOnPlayer
-	msgbox Route116_Text_CanYouHelpMeFindGlasses, MSGBOX_DEFAULT
+	msgbox Route116_Text_CanYouHelpMeFindGlasses_Pory, MSGBOX_DEFAULT
 	release
 	end
 
 Route116_EventScript_FoundGlassesNotOnPlayer::
-	msgbox Route116_Text_CantFindGlassesNotHere, MSGBOX_DEFAULT
+	msgbox Route116_Text_CantFindGlassesNotHere_Pory, MSGBOX_DEFAULT
 	closemessage
 	goto Route116_EventScript_GlassesManExit
 	end
 
 Route116_EventScript_PlayerHasGlasses::
-	msgbox Route116_Text_CanYouHelpMeFindGlasses, MSGBOX_DEFAULT
+	msgbox Route116_Text_CanYouHelpMeFindGlasses_Pory, MSGBOX_DEFAULT
 	msgbox Route116_Text_MayISeeThoseGlasses, MSGBOX_DEFAULT
 	specialvar VAR_RESULT, FoundBlackGlasses
 	goto_if_eq VAR_RESULT, TRUE, Route116_EventScript_FoundGlassesOnPlayer
-	msgbox Route116_Text_NotWhatImLookingFor, MSGBOX_DEFAULT
+	msgbox Route116_Text_NotWhatImLookingFor_Pory, MSGBOX_DEFAULT
 	release
 	end
 
 Route116_EventScript_FoundGlassesOnPlayer::
-	msgbox Route116_Text_NotWhatImLookingForMaybeTheyArentHere, MSGBOX_DEFAULT
+	msgbox Route116_Text_NotWhatImLookingForMaybeTheyArentHere_Pory, MSGBOX_DEFAULT
 	closemessage
 	goto Route116_EventScript_GlassesManExit
 	end
