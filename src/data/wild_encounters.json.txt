@@ -23,7 +23,7 @@
 
 
 
-## set extra_levels = 10
+## set extra_levels = 20
 
 ## for encounter in wild_encounter_group.encounters
 {% if existsIn(encounter, "land_mons") %}
