@@ -1,0 +1,20 @@
+// makes the granny on Mt. Chimney now sell Lava Cookies by the dozen
+
+script MtChimney_EventScript_LavaCookieLady_Pory {
+  lock
+  faceplayer
+  showmoneybox(0, 0)
+  msgbox(format("Lava Cookies are Mt. Chimney's local specialty.\pTry some! They're just ¥2400 a dozen."), MSGBOX_YESNO)
+  goto_if_eq(VAR_RESULT, NO, MtChimney_EventScript_DeclineLavaCookie)
+  checkmoney(2400)
+  goto_if_eq(VAR_RESULT, FALSE, MtChimney_EventScript_NotEnoughMoney)
+  msgbox(MtChimney_Text_ThankYouDear, MSGBOX_DEFAULT)
+  checkitemspace(ITEM_LAVA_COOKIE)
+  removemoney(2400)
+  updatemoneybox
+  giveitem(ITEM_LAVA_COOKIE, 12)
+  goto_if_eq(VAR_RESULT, FALSE, MtChimney_EventScript_BagIsFull)
+  hidemoneybox
+  release
+  end
+}
