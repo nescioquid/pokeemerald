@@ -1281,14 +1281,14 @@
 #define FLAG_UNUSED_0x4CF                                           0x4CF // Unused Flag
 #define FLAG_UNUSED_0x4D0                                           0x4D0 // Unused Flag
 #define FLAG_UNUSED_0x4D1                                           0x4D1 // Unused Flag
-#define FLAG_UNUSED_0x4D2                                           0x4D2 // Unused Flag
-#define FLAG_UNUSED_0x4D3                                           0x4D3 // Unused Flag
-#define FLAG_UNUSED_0x4D4                                           0x4D4 // Unused Flag
-#define FLAG_UNUSED_0x4D5                                           0x4D5 // Unused Flag
-#define FLAG_UNUSED_0x4D6                                           0x4D6 // Unused Flag
-#define FLAG_UNUSED_0x4D7                                           0x4D7 // Unused Flag
-#define FLAG_UNUSED_0x4D8                                           0x4D8 // Unused Flag
-#define FLAG_UNUSED_0x4D9                                           0x4D9 // Unused Flag
+#define FLAG_TALKED_TO_GYM_GUIDE_RUSTBORO_GYM                       0x4D2
+#define FLAG_TALKED_TO_GYM_GUIDE_DEWFORD_GYM                        0x4D3
+#define FLAG_TALKED_TO_GYM_GUIDE_MAUVILLE_GYM                       0x4D4
+#define FLAG_TALKED_TO_GYM_GUIDE_LAVARIDGE_GYM                      0x4D5
+#define FLAG_TALKED_TO_GYM_GUIDE_PETALBURG_GYM                      0x4D6
+#define FLAG_TALKED_TO_GYM_GUIDE_FORTREE_GYM                        0x4D7
+#define FLAG_TALKED_TO_GYM_GUIDE_MOSSDEEP_GYM                       0x4D8
+#define FLAG_TALKED_TO_GYM_GUIDE_SOOTOPOLIS_GYM                     0x4D9
 #define FLAG_UNUSED_0x4DA                                           0x4DA // Unused Flag
 #define FLAG_UNUSED_0x4DB                                           0x4DB // Unused Flag
 #define FLAG_UNUSED_0x4DC                                           0x4DC // Unused Flag
