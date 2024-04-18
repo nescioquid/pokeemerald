@@ -1089,3 +1089,4 @@ EventScript_VsSeekerChargingDone::
 .include "data/scripts/pory/items/randomized_item_ball.inc"
 .include "data/scripts/pory/items/items_overwold.inc"
 .include "data/scripts/pory/items/mom.inc"
+.include "data/scripts/pory/items/sun_stone_man.inc"
