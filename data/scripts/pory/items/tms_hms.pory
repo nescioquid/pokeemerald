@@ -1,0 +1,300 @@
+// changes and adds NPCs that give ORAS TMs
+
+// TM003 Psyshock
+script Pory_EventScript_GiveTMPsyshock {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_TM_PSYSHOCK)) {
+    msgbox(format("I've been to Mirage Island…\nI'm sure of it. But I forgot where it is…\pI used to be really good at remembering things…\pI'm so shocked I can't remember…"))
+    giveitem(ITEM_TM_PSYSHOCK)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_TM_PSYSHOCK)
+  }
+  msgbox(format("Mirage Island…\pIt must become visible and invisible depending on the weather conditions that make mirages appear.\pOr is it really appearing and disappearing?"))
+  release
+  end
+}
+
+// TM09 Bullet Seed => TM049 Echoed Voice
+script Pory_EventScript_GiveTMEchoedVoice {
+  lock
+  faceplayer
+  if(!flag(FLAG_RECEIVED_TM_ECHOED_VOICE)) {
+    msgbox(format("Wassup!\nI like to shout my lungs out!\lIt feels so good!\pYou can have this, so you try it out!\pUse it on a Pokémon, and it will learn a move that attacks with its voice.\pIf the move is used several times in a row, it becomes more powerful!"))
+    giveitem(ITEM_TM_ECHOED_VOICE)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_TM_ECHOED_VOICE)
+  }
+  msgbox(format("A word of advice!\nA TM, or Technical Machine, can be used many times.\pIt won't go away.\nSo try it out as many times as you want!"))
+  release
+  end
+}
+
+// TM44 Rest => TM044 Rest and TM088 Sleep Talk
+script Pory_EventScript_GiveTMRestTMSleepTalk {
+  lock
+  faceplayer
+  if(!flag(FLAG_RECEIVED_TM_REST)) {
+    msgbox(format("Huh? What? What's that?\pI'm not near awake yet…\nYou can have this…"))
+    giveitem(ITEM_TM_REST)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_TM_REST)
+  } elif(!flag(FLAG_RECEIVED_TM_SLEEP_TALK)) {
+    msgbox(format("Zzz… Hm?\nLemme be… I'm still half-asleep…\lHere… take this, too…"))
+    giveitem(ITEM_TM_SLEEP_TALK)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_TM_SLEEP_TALK)
+  }
+  msgbox(format("Yawn…\pSleep is essential for good health…\nSleep and regain health…"))
+  release
+  end
+}
+
+// TM49 Snatch => TM063 Embargo
+script Pory_EventScript_GiveTMEmbargo {
+  lock
+  faceplayer
+  if(!flag(FLAG_RECEIVED_TM_EMBARGO)) {
+    msgbox(format("Uh… Hi! I… I'm not acting suspicious!\nUh… You can have this! For free!\pIt… Honestly, it's not an unlicensed item that's been embargoed or anything.\l It's totally legal! You can use it!"))
+    giveitem(ITEM_TM_EMBARGO)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_TM_EMBARGO)
+  }
+  msgbox(format("Embargo prevents the target from\nusing its held item!"))
+  release
+  end
+}
+
+// TM054 False Swipe
+script Pory_EventScript_GiveTMFalseSwipe {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_TM_FALSE_SWIPE)) {
+    msgbox(format("Excuse me, Trainer over there!\nDo you have a minute?\pYou know, sometimes moves are too strong to catch a Pokémon. You end up making them faint even when you don't want to.\pFor such a common problem, use this!"))
+    giveitem(ITEM_TM_FALSE_SWIPE)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_TM_FALSE_SWIPE)
+  }
+  msgbox(format("False Swipe is a very handy move. No matter how many times it's used on the opposing Pokémon, it won't faint!\pI'm offering it for free right now. It's a limited-time promotion!"))
+  release
+  end
+}
+
+// TM056 Fling
+script Pory_EventScript_GiveTMFling {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_TM_FLING)) {
+    msgbox(format("…Would you take this from me?\nI no longer have any use for it."))
+    giveitem(ITEM_TM_FLING)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_TM_FLING)
+  }
+  msgbox(format("That Big Stadium over in the Unova region… I always dreamed of standing on the mound there…\pBut no matter how much I struggled, my abilities couldn't keep up with my ambitions.\pMy dream wouldn't die, but before I knew it, I was a family man in my 50s.\pNot just for me, but for my family, too, it's time for me to wake up from my dream."))
+  release
+  end
+}
+
+// TM058 Sky Drop
+script Pory_EventScript_GiveTMSkyDrop {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_TM_SKY_DROP)) {
+    msgbox(format("Hey, you. Do you like scary rides? You know, like roller coasters and stuff?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT)) {
+      msgbox(format("…Hey, you're cool.\nLike, we are so totally BFFs now.\pAnd like as proof or whatever, I'm gonna give you my favorite TM."))
+      giveitem(ITEM_TM_SKY_DROP)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+      setflag(FLAG_RECEIVED_TM_SKY_DROP)
+    } else {
+      msgbox(format("…Tsk.\nYou're sooo lame."))
+    }
+  } else {
+    msgbox(format("Sky Drop is seriously sick.\nIt totally like, messes with your inner ear and everything!"))
+  }
+  release
+  end
+}
+
+// TM060 Quash
+script Pory_EventScript_GiveTMQuash {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_TM_QUASH)) {
+    msgbox(format("Hey, you! Quick question!\nDo you want a TM?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT)) {
+      giveitem(ITEM_TM_QUASH)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+      setflag(FLAG_RECEIVED_TM_QUASH)
+      msgbox(format("That's the TM that my sweetie gave me when I proposed.\pBut I'm not a Trainer, so I don't know how to use those things. Hahaha!"))
+    } else {
+      msgbox(format("Huh…\nOkie dokie then!"))
+    }
+  } else {
+    msgbox(format("That's the TM that my sweetie gave me when I proposed.\pBut I'm not a Trainer, so I don't know how to use those things. Hahaha!"))
+  }
+  release
+  end
+}
+
+// TM075 Swords Dance
+script Pory_EventScript_GiveTMSwordsDance {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_TM_SWORDS_DANCE)) {
+    msgbox(format("Dance and soul make power!\pSoul is way of karate for me!\pYou understand, yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT)) {
+      msgbox(format("Ok! Ok!\nYou good kid!"))
+    } else {
+      msgbox(format("Oh…\nI so sad and wretched…\pYou take this and you understand way of karate of me, fool Trainer!"))
+      giveitem(ITEM_TM_SWORDS_DANCE)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+      setflag(FLAG_RECEIVED_TM_SWORDS_DANCE)
+    }
+  } else {
+    msgbox(format("You understand way of karate now?"))
+  }
+  release
+  end
+}
+
+// TM077 Psych Up
+script Pory_EventScript_GiveTMPsychUp {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_TM_PSYCH_UP)) {
+    msgbox(format("Why hello, hellooo, little visiting Trainer! Greetings to you out here in the big blue!\pNow, I know you know that a Psychic Trainer like me can see riiiiiight through any foe.\pI can tell exactly how strong you are and how a battle between us would go…\pJust by lookin' at you! It's eerie, right?\pNow stand back and watch as I battle you within my mind!\p… … … … … … … …\n… … … … … … … …\pYowza! You did me right in!\nTake this, and have mercy!"))
+    giveitem(ITEM_TM_PSYCH_UP)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_TM_PSYCH_UP)
+
+  } else {
+    msgbox(format("Phew… That was bad. So eerie.\pI couldn't even get a hit in on you! Seriously, tell me: What are you?"))
+  }
+  release
+  end
+}
+
+// TM083 Infestation
+script Pory_EventScript_GiveTMInfestation {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_TM_INFESTATION)) {
+    msgbox(format("You there! You call yourself a fan? Then answer this!\pIs this the best Pokémon game you've ever played?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT)) {
+      msgbox(format("What?! How dare you sound so unsure!\pBut at least you answered the question right. I'll give you this as a reward for having such great taste!"))
+      giveitem(ITEM_TM_INFESTATION)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+      setflag(FLAG_RECEIVED_TM_INFESTATION)
+      msgbox(format("You know, this game took longer to make than you think. Make sure to thank those behind it all!"))
+    } else {
+      msgbox(format("What?! How dare you!"))
+    }
+  } else {
+    msgbox(format("You know, this game took longer to make than you think. Make sure to thank those behind it all!"))
+  }
+  release
+  end
+}
+
+// TM085 Dream Eater
+script Pory_EventScript_GiveTMDreamEater {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_TM_DREAM_EATER)) {
+    msgbox(format("That look in your eyes…\nThat aura floating about you…\pYou're one of my kind, make all kinds of mischief, right? You'll get a kick out of this then!"))
+    giveitem(ITEM_TM_DREAM_EATER)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_TM_DREAM_EATER)
+  }
+  msgbox(format("Maybe it's 'cause I used to be such a bad guy in the past, but I'd never wake up feeling refreshed. I taught that to one of my Pokémon, and now all my bad dreams get eaten up!"))
+  release
+  end
+}
+
+
+
+// TM087 Swagger
+const RICH_LADY_ID = 5
+
+script Pory_EventScript_GiveTMSwagger {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_TM_SWAGGER)) {
+    msgbox(format("{FONT_SMALL}How might I have been so heedless…"))
+    playse(SE_PIN)
+    applymovement(RICH_LADY_ID, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(RICH_LADY_ID, Common_Movement_Delay48)
+    waitmovement(0)
+    msgbox(format("You there!\nI've left my purse back on the yacht, and I find myself in somewhat compromised circumstances."))
+    showmoneybox(0, 0)
+    msgbox(format("Well, shall I allow you to furnish me the remuneration I require?\lYes, ¥100 would indeed suffice."), MSGBOX_YESNO)
+    if (var(VAR_RESULT)) {
+      checkmoney(100)
+      if (var(VAR_RESULT)) {
+        removemoney(100)
+        updatemoneybox
+        msgbox(format("Fine. You may assist me.\nHowever, my dignity won't allow me to accept your charity outright. Therefore, I will demonstrate my generosity by bestowing this upon you in return."))
+        hidemoneybox
+        giveitem(ITEM_TM_SWAGGER)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+        setflag(FLAG_RECEIVED_TM_SWAGGER)
+      } else {
+        hidemoneybox
+        msgbox(format("Oh dear, you don't even have a measly ¥100? I recall why it is that I now so rarely interact with the poors these days."))
+      }
+    } else {
+      hidemoneybox
+      msgbox(format("Oh dear, you don't even have a measly ¥100? I recall why it is that I now so rarely interact with the poors these days."))
+    }
+  } else {
+    msgbox(format("You may embrace the happiness, and express your gratitude, for having been able to assist me every time you use the item."))
+  }
+  release
+  end
+}
+
+// TM096 Nature Power
+const LOST_HIKER_ID = 9
+
+script Pory_EventScript_GiveTMNaturePower {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_TM_NATURE_POWER)) {
+    playse(SE_PIN)
+    applymovement(LOST_HIKER_ID, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(LOST_HIKER_ID, Common_Movement_Delay48)
+    waitmovement(0)
+    msgbox(format("Oh?!"))
+    giveitem(ITEM_TM_NATURE_POWER)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_TM_NATURE_POWER)
+    msgbox(format("That move there will change its effect based on where you are. Pretty neat, huh?\p…Also, speaking of where we are, where are we exactly? I'm a little lost here."))
+  } else {
+    msgbox(format("That Nature Power move there will change its effect based on where you are. Pretty neat, huh?\p…Also, speaking of where we are, where are we exactly? I'm a little lost here."))
+  }
+  release
+  end
+}
+
+// TM099 Dazzling Gleam
+script Pory_EventScript_GiveTMDazzlingGleam {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_TM_DAZZLING_GLEAM)) {
+    msgbox(format("Hey, hey!\pFairy types sure are cute, but they can be strong, too! I bet you already knew that, eh?"))
+    giveitem(ITEM_TM_DAZZLING_GLEAM)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_TM_DAZZLING_GLEAM)
+  }
+  msgbox(format("There's no Fairy-type Gym in Hoenn, eh?\pMaybe I'll go ahead and start one! Before anyone else even gets a chance!"))
+  release
+  end
+}
+
+// HM001 Cut
+text Pory_Text_ExplainHMCut {
+  format("That Hidden Machine, or HM for short, contains a move called Cut.\pAn HM move is one that can be used by Pokémon outside of battle.\pAny Pokémon that's learned Cut can chop down small trees if the Trainer has earned the Stone Badge.\pAnd, like a TM, an HM can be used more than once.")
+}
