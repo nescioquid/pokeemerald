@@ -280,8 +280,8 @@ Route109_EventScript_MrBriney::
 	end
 
 Route109_EventScript_HaveNotDeliveredDevonGood::
-	message Route109_Text_BrineySailToDewfordQuestion
-	msgbox Route109_Text_BrineySailToDewfordQuestion, MSGBOX_YESNO
+	message Route109_Text_BrineySailToDewfordQuestion_Pory
+	msgbox Route109_Text_BrineySailToDewfordQuestion_Pory, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Route109_EventScript_StayHere
 	goto Route109_EventScript_SailToDewford
 	end
@@ -303,7 +303,7 @@ Route109_EventScript_SailToDewford::
 	end
 
 Route109_EventScript_StayHere::
-	msgbox Route109_Text_BrineyDeliverDevonGoods, MSGBOX_DEFAULT
+	msgbox Route109_Text_BrineyDeliverDevonGoods_Pory, MSGBOX_DEFAULT
 	release
 	end
 
