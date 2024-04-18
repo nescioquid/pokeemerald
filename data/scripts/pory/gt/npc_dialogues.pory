@@ -29,3 +29,33 @@ script Pory_EventScript_GameCubeOrange {
 text MauvilleCity_House2_Text_BuyHarborMailAtLilycove_Pory {
   format("If could go to Lilycove for some shopping, I'd be able to buy Harbor Mail at the Department Store there…")
 }
+
+// removes mention of Numel (Team Magma mon only)
+
+script Route113_Text_MadelineIntro_Pory {
+  lock
+  faceplayer
+  msgbox(format("I use this parasol to ward off this filthy, yucky volcanic ash from my dear Numel."))
+  release
+  end
+}
+
+// removes mention of X Special
+
+script VerdanturfTown_Mart_EventScript_Boy_Pory {
+  lock
+  faceplayer
+  msgbox(format("For any Pokémon match, X Attack is crucial.\pIt jacks up the power of some moves even though it's only for one battle."))
+  release
+  end
+}
+
+// moves mention of Nest Ball availability to the past
+
+script VerdanturfTown_Mart_EventScript_Lass_Pory {
+  lock
+  faceplayer
+  msgbox(format("The Nest Ball works better on weakened Pokémon.\pVerdanturf used to be the only place you could buy it."))
+  release
+  end
+}
