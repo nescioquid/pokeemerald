@@ -1076,3 +1076,4 @@ EventScript_VsSeekerChargingDone::
 .include "data/scripts/pory/items/granite_cave_hiker.inc"
 .include "data/scripts/pory/items/winstrates.inc"
 .include "data/scripts/pory/items/devon_employee.inc"
+.include "data/scripts/pory/items/mr_stone.inc"
