@@ -1,0 +1,5 @@
+// the Winstrate family now gives a Muscle Band
+
+text Pory_Text_LikeYouToHaveMuscleBand {
+  format("We use this Muscle Band to strengthen our Pokémon.\pSince you've beaten all of us here, I don't know if you need it, but we would like you to have it.")
+}
