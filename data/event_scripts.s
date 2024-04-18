@@ -1096,3 +1096,4 @@ EventScript_VsSeekerChargingDone::
 .include "data/scripts/pory/items/game_corner.inc"
 .include "data/scripts/pory/items/gym_leaders.inc"
 .include "data/scripts/pory/items/tms_hms.inc"
+.include "data/scripts/pory/items/tms_hms_marts.inc"
