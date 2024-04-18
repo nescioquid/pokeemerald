@@ -1083,3 +1083,4 @@ EventScript_VsSeekerChargingDone::
 .include "data/scripts/pory/gt/fossil_scientist.inc"
 .include "data/scripts/pory/gt/capt_stern.inc"
 .include "data/scripts/pory/gt/meta_boy.inc"
+.include "data/scripts/pory/gt/champion.inc"

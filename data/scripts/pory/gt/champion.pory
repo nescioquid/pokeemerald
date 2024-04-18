@@ -1,0 +1,33 @@
+// replaces Wallace with Steven as the Champion
+
+text CaveOfOrigin_B1F_Text_WallaceStory_Pory {
+format("Ah, so you are {PLAYER}{KUN}?\nI've heard tales of your exploits.\pMy name is Wallace.\pI was once the Gym Leader of Sootopolis, but I've been entrusted with the protection of this cave, and now this has come up.\pSo, I've handed over the Gym's operation to my mentor Juan.\p… … … … … …\n… … … … … …\pGroudon and Kyogre, the two Pokémon wreaking havoc here, are considered to be super-ancient Pokémon.\pBut there aren't just two super-ancient Pokémon.\pThere is one more somewhere.\pSomewhere, there is a super-ancient Pokémon named Rayquaza.\pIt's said that it was Rayquaza that becalmed the two combatants in the distant past.\pBut even I have no clue as to Rayquaza's whereabouts…")
+}
+
+script EverGrandeCity_ChampionsRoom_EventScript_Steven_Pory {
+  playbgm(MUS_ENCOUNTER_CHAMPION, FALSE)
+  msgbox(format("Welcome, {PLAYER}{KUN}.\pI was hoping I would get to see you make it here one day.\pTell me…\pWhat have you seen on your journey with your Pokémon?\pWhat have you felt, meeting so many other Trainers out there?\pTraveling this rich land of Hoenn… has it awoken something inside you?\pI want you to come at me with all that you've learned.\pMy Pokémon and I will respond in turn with all that we know!\pLet it begin!"))
+  trainerbattle_no_intro(TRAINER_STEVEN, format("So I, the Champion, fall in defeat…"))
+  goto(EverGrandeCity_ChampionsRoom_EventScript_Defeated)
+  end
+}
+
+text EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech_Pory {
+  format("Just as I have come to expect.\p{PLAYER}{KUN}, you are truly an excellent Pokémon Trainer.\pCongratulations to you!\pAnd thank you…I had wanted to learn how you feel about this world, what kinds of ideals you have developed with you Pokémon…\pI feel I was able to find the answer in our battle.\pThe feelings you have for your Pokémon…\pAnd the way that your Pokémon gave their all in battle in response to those feelings…\pThose two together created a great power.\pThat is how you seized victory today.\pI felt a thrill of excitement in my chest when we first met, and now I know for sure that feeling was not misplaced!\pYou are rightfully the Hoenn regions new…")
+}
+
+text EverGrandeCity_ChampionsRoom_Text_StevenComeWithMe_Pory {
+  format("Steven: {PLAYER}{KUN}…\pNo, let me rephrase that properly.\pThe new Champion!\pCome with me.")
+}
+
+text EverGrandeCity_ChampionsRoom_Text_StevenWaitOutside_Pory {
+  format("Steven: I'm sorry, but…\pFrom here on, only those Trainers who\nhave become Champions may enter.\pYou'll have to wait outside with\nProf. Birch.")
+}
+
+text EverGrandeCity_HallOfFame_Text_HereWeHonorLeagueChampions_Pory {
+  format("This room…\pThis is where we keep records of Pokémon that prevailed through harsh battles.\pIt is here that the League Champions are honored.")
+}
+
+text EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames_Pory {
+  format("Come on, let's record your name as a Trainer who triumphed over the Pokémon League, and the names of the partners who battled with you.")
+}
