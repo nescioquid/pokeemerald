@@ -1082,3 +1082,4 @@ EventScript_VsSeekerChargingDone::
 .include "data/scripts/pory/items/steven_mossdeep.inc"
 .include "data/scripts/pory/items/gym_guide.inc"
 .include "data/scripts/pory/items/diving_treasure_hunter.inc"
+.include "data/scripts/pory/items/fossil_maniac.inc"
