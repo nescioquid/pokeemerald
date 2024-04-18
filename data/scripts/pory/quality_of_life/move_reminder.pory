@@ -1,0 +1,54 @@
+// makes the Move Tutor's new in-game name the "Move Reminder" and his services free
+
+script FallarborTown_MoveRelearnersHouse_EventScript_MoveRelearner_Pory {
+  lock
+  faceplayer
+  if (!flag(FLAG_TEMP_1)) {
+    msgbox(format("I'm the Move Reminder.\pI know all the moves that Pokémon\nlearn--every one of them--and I can\lmake Pokémon remember those moves.\pI can do it with some of yours if you'd like."))
+  }
+  setflag(FLAG_TEMP_1)
+  msgbox(format("You want me to remind one of them?"), MSGBOX_YESNO)
+  if (var(VAR_RESULT)) {
+    call(Pory_EventScript_MoveRelearner)
+  }
+  msgbox(format("If your Pokémon ever need to remember some moves, you know where to find me!"))
+  release
+  end
+}
+
+script Pory_EventScript_MoveRelearner {
+  if (!flag(FLAG_TEMP_2)) {
+    msgbox(format("Which one needs reminding?"))
+  } else {
+    msgbox(format("Any others?"))
+  }
+  setflag(FLAG_TEMP_2)
+  special(ChooseMonForMoveRelearner)
+  waitstate
+  if (var(VAR_0x8004) == PARTY_NOTHING_CHOSEN) {
+    clearflag(FLAG_TEMP_2)
+    msgbox(format("Come back if your Pokémon ever need help remembering moves!"))
+    release
+    end
+  } else {
+    special(IsSelectedMonEgg)
+    if (var(VAR_RESULT)) {
+      msgbox(format("Huh? There isn't a single move that\nI can teach an Egg."))
+      call(Pory_EventScript_MoveRelearner)
+    }
+    if (var(VAR_0x8005) == 0) {
+      msgbox(format("Sorry… It doesn't appear as if there's any move I can help that Pokémon remember."))
+      call(Pory_EventScript_MoveRelearner)
+    }
+    msgbox(format("What move should I remind them of?"))
+    special(TeachMoveRelearnerMove)
+    waitstate
+    call(Pory_EventScript_MoveRelearner)
+  }
+}
+
+script FallarborTown_EventScript_MoveTutorSign_Pory {
+  msgbox(format("Move Reminder's House\n“Moves taught to Pokémon.”"), MSGBOX_SIGN)
+  release
+  end
+}
