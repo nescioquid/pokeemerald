@@ -173,3 +173,11 @@ script PoryScript_FossilManiac {
   release
   end
 }
+
+text SlateportCity_Harbor_Text_SameThugsTriedToRobAtMuseum_Pory {
+  "Capt. Stern: Those thugs…\pThey're the same lot who tried to rob\nthe Devon Parts at the Museum."
+}
+
+text SlateportCity_SternsShipyard_1F_Text_MeetDockDeliverToStern_Pory {
+  "Hm?\nHi, I'm Dock.\pCapt. Stern commissioned me to\ndesign a ferry.\pOh! That there…\nAre they Devon Parts?\pBut, hmm…\nThis won't do…\pCapt. Stern went off somewhere.\nHe said he had some work to do.\pCould I get you to go find Capt.\nStern and deliver that to him?"
+}
