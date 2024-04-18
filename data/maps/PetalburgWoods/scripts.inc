@@ -90,9 +90,10 @@ PetalburgWoods_EventScript_DevonResearcherPostBattle::
 	removeobject LOCALID_GRUNT
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
-	msgbox PetalburgWoods_Text_ThatWasAwfullyClose, MSGBOX_DEFAULT
-	giveitem ITEM_GREAT_BALL
-	goto_if_eq VAR_RESULT, FALSE, PetalburgWoods_EventScript_BagFull
+	@ msgbox PetalburgWoods_Text_ThatWasAwfullyClose, MSGBOX_DEFAULT
+	@ giveitem ITEM_GREAT_BALL
+	@ goto_if_eq VAR_RESULT, FALSE, PetalburgWoods_EventScript_BagFull
+	call Pory_EventScript_ThatWasAwfullyClose
 	goto PetalburgWoods_EventScript_DevonResearcherFinish
 	end
 
