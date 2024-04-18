@@ -65,7 +65,7 @@ RustboroCity_EventScript_ScientistAddMatchCall::
 	msgbox RustboroCity_Text_AddedMatchCallPleaseCallMrStone, MSGBOX_DEFAULT
 	closemessage
 	delay 20
-	goto RustboroCity_EventScript_MatchCallTutorial
+	goto RustboroCity_EventScript_MatchCallTutorial_Pory
 
 RustboroCity_EventScript_PleaseSelectPokenav::
 	msgbox RustboroCity_Text_PleaseSelectPokenav, MSGBOX_DEFAULT
