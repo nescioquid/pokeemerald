@@ -1,0 +1,31 @@
+script MtChimney_EventScript_LavaCookieLady_Pory {
+  lock
+  faceplayer
+  showmoneybox(0, 0)
+  msgbox(format("Lava Cookies are Mt. Chimney's local specialty.\pTry some! They're just ¥2400 a dozen."), MSGBOX_YESNO)
+  if (var(VAR_RESULT)) {
+    checkmoney(2400)
+    if (!var(VAR_RESULT)) {
+      msgbox(MtChimney_Text_YouveNotGotTheMoney)
+      hidemoneybox
+      release
+      end
+    }
+    msgbox(MtChimney_Text_ThankYouDear)
+    checkitemspace(ITEM_LAVA_COOKIE)
+    if (!var(VAR_RESULT)) {
+      msgbox(gText_TooBadBagIsFull)
+      hidemoneybox
+      release
+      end
+    }
+    removemoney(2400)
+    updatemoneybox
+    hidemoneybox
+    giveitem(ITEM_LAVA_COOKIE, 12)
+  } else {
+    msgbox(MtChimney_Text_OhFineThen)
+  }
+  release
+  end
+}
