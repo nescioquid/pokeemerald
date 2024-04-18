@@ -1,0 +1,70 @@
+// Miracle Seed => Experience Charm
+
+script PetalburgWoods_EventScript_Girl_Pory {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_EXP_CHARM)) {
+    msgbox(format("Oh, neat!\nThat's the Badge from Rustboro Gym!\pYou must be a Trainer.\nI want you to have this!"))
+    giveitem(ITEM_EXP_CHARM)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    msgbox(format("That's an Experience Charm.\nIt helps your Pokémon grow big and strong a lot faster. I'm sure a Trainer like you can make better use of it than me."))
+    setflag(FLAG_RECEIVED_EXP_CHARM)
+  } else {
+    msgbox(format("So, are your Pokémon growing big and strong?"))
+  }
+  release
+  end
+}
+
+// Black Glasses => Wise Glasses
+
+text Route116_Text_CanYouHelpMeFindGlasses_Pory {
+  format("I think dropped my glasses…\nCan you help me find them?")
+}
+
+text Route116_Text_NotWhatImLookingForMaybeTheyArentHere_Pory {
+  format("Hmm…\nThese are Wise Glasses.\lThey're not what I'm looking for…\pMaybe my glasses aren't around here…\p… … … … … …\n… … … … … …\pWait… They're still on my face! Haha, oops!")
+}
+
+text Route116_Text_CantFindGlassesNotHere_Pory {
+  format("Hmm…\nI can't find my glasses anywhere…\lMaybe they're not around here…\p… … … … … …\n… … … … … …\pWait… They're still on my face! Haha, oops!")
+}
+
+text Route116_Text_NotWhatImLookingFor_Pory {
+  format("Hmm…\nThese are Wise Glasses.\lThey're not what I'm looking for…\p… … … … … …\n… … … … … …\pWait… They're still on my face! Haha, oops!")
+}
+
+// Charcoal => Revival Herb
+
+script LavaridgeTown_HerbShop_EventScript_OldMan_Pory {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_REVIVAL_HERB)) {
+    msgbox(format("You've come to look at herbal medicine in Lavaridge?\pThat's rather commendable.\pI like you! Take this!"))
+    giveitem(ITEM_REVIVAL_HERB)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_REVIVAL_HERB)
+  } else {
+    msgbox(format("That Revival Herb I gave you, it's used as an herbal medicine. It does wonders for healing Pokémon, too."))
+  }
+  release
+  end
+}
+
+// TM19 Giga Drain => Big Root
+
+script Pory_EventScript_GiveBigRoot {
+  lock
+  faceplayer
+  goto_if_set(FLAG_RECEIVED_BIG_ROOT, Route123_EventScript_ReceivedGigaDrain)
+  msgbox(Route123_Text_LoveGrassMonsHaveAny, MSGBOX_DEFAULT)
+  special(IsGrassTypeInParty)
+  goto_if_eq(VAR_RESULT, FALSE, Route123_EventScript_NoGrassMons)
+  msgbox(Route123_Text_YouLikeGrassMonsTooHaveThis, MSGBOX_DEFAULT)
+  giveitem(ITEM_BIG_ROOT)
+  goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+  setflag(FLAG_RECEIVED_BIG_ROOT)
+  msgbox(Route123_Text_CheckTreesWithMyGrassMon, MSGBOX_DEFAULT)
+  release
+  end
+}
