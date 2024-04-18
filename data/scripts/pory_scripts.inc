@@ -20,6 +20,7 @@
 .include "data/scripts/pory_scripts/maps/LilycoveCity_DepartmentStore_4F.inc"
 .include "data/scripts/pory_scripts/maps/LilycoveCity_DepartmentStore_5F.inc"
 .include "data/scripts/pory_scripts/maps/LilycoveCity_House2.inc"
+.include "data/scripts/pory_scripts/maps/LittlerootTown.inc"
 .include "data/scripts/pory_scripts/maps/MauvilleCity_GameCorner.inc"
 .include "data/scripts/pory_scripts/maps/MauvilleCity_Mart.inc"
 .include "data/scripts/pory_scripts/maps/MossdeepCity_Mart.inc"
