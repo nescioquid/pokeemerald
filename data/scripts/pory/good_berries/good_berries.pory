@@ -409,18 +409,12 @@ script Pory_EventScript_Berries_RaiseStats {
 }
 
 script Pory_EventScript_Berries_Retaliatory {
-  specialvar(VAR_RESULT, GetPlayerTrainerIdTenThousandsDigit)
+  random(4)
   switch (var(VAR_RESULT)) {
     case 0: giveitem(ITEM_JABOCA_BERRY)
     case 1: giveitem(ITEM_ROWAP_BERRY)
-    case 2: giveitem(ITEM_JABOCA_BERRY)
-    case 3: giveitem(ITEM_ROWAP_BERRY)
-    case 4: giveitem(ITEM_JABOCA_BERRY)
-    case 5: giveitem(ITEM_ROWAP_BERRY)
-    case 6: giveitem(ITEM_JABOCA_BERRY)
-    case 7: giveitem(ITEM_ROWAP_BERRY)
-    case 8: giveitem(ITEM_JABOCA_BERRY)
-    case 9: giveitem(ITEM_ROWAP_BERRY)
+    case 2: giveitem(ITEM_KEE_BERRY)
+    case 3: giveitem(ITEM_MARANGA_BERRY)
   }
   goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
 }
