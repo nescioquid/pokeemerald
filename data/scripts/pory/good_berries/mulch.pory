@@ -1,0 +1,22 @@
+// makes the Wailmer Pail girl now sell the decorations and the Shop Owner now sell Mulches
+
+script Route104_PrettyPetalFlowerShop_EventScript_WailmerPailGirl_Pory {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_WAILMER_PAIL)) {
+    goto(Route104_PrettyPetalFlowerShop_EventScript_GiveWailmerPail)
+  }
+  message(format("Been watering your Berries like I taught you? How can I help you?"))
+  waitmessage
+  pokemartdecoration2(Route104_PrettyPetalFlowerShop_Pokemart_Plants)
+  msgbox(format("Until next time!"))
+  release
+  end
+}
+
+mart Pory_Pokemart_Mulch {
+  ITEM_GROWTH_MULCH
+  ITEM_STABLE_MULCH
+  ITEM_GOOEY_MULCH
+  ITEM_DAMP_MULCH
+}
