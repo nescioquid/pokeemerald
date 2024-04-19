@@ -1073,3 +1073,4 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
 .include "data/scripts/pory/good_berries/good_berries.inc"
+.include "data/scripts/pory/good_berries/mulch.inc"
