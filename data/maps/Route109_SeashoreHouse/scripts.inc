@@ -37,7 +37,7 @@ Route109_SeashoreHouse_EventScript_BagFull::
 
 Route109_SeashoreHouse_EventScript_AlreadyReceivedSodaPop::
 	showmoneybox 0, 0
-	msgbox Route109_SeashoreHouse_Text_WantToBuySodaPop, MSGBOX_YESNO
+	msgbox Route109_SeashoreHouse_Text_WantToBuySodaPop_Pory, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Route109_SeashoreHouse_EventScript_BuySodaPop
 	msgbox Route109_SeashoreHouse_Text_ThatsTooBad, MSGBOX_DEFAULT
 	hidemoneybox
@@ -45,14 +45,14 @@ Route109_SeashoreHouse_EventScript_AlreadyReceivedSodaPop::
 	end
 
 Route109_SeashoreHouse_EventScript_BuySodaPop::
-	checkmoney 300
+	checkmoney 1800
 	goto_if_eq VAR_RESULT, FALSE, Route109_SeashoreHouse_EventScript_NotEnoughMoney
 	checkitemspace ITEM_SODA_POP
 	goto_if_eq VAR_RESULT, FALSE, Route109_SeashoreHouse_EventScript_NotEnoughSpace
 	msgbox Route109_SeashoreHouse_Text_HereYouGo, MSGBOX_DEFAULT
-	removemoney 300
+	removemoney 1800
 	updatemoneybox
-	giveitem ITEM_SODA_POP
+	giveitem ITEM_SODA_POP, 6
 	hidemoneybox
 	release
 	end

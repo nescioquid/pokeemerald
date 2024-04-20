@@ -1,0 +1,5 @@
+// The Seashore House owner now sell Soda Pops by the six pack
+
+text Route109_SeashoreHouse_Text_WantToBuySodaPop_Pory {
+  format("Want to buy some Soda Pop?\nPokémon love it!\pJust ¥1800 for a six pack!\nBuy some!")
+}
