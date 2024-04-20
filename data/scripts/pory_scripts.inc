@@ -65,6 +65,7 @@
 .include "data/scripts/pory_scripts/maps/Route103.inc"
 .include "data/scripts/pory_scripts/maps/Route104_PrettyPetalFlowerShop.inc"
 .include "data/scripts/pory_scripts/maps/Route109.inc"
+.include "data/scripts/pory_scripts/maps/Route109_SeashoreHouse.inc"
 .include "data/scripts/pory_scripts/maps/Route110.inc"
 .include "data/scripts/pory_scripts/maps/Route111.inc"
 .include "data/scripts/pory_scripts/maps/Route111_WinstrateFamilysHouse.inc"
