@@ -3236,7 +3236,7 @@ static const struct TrainerMon sParty_Roxanne1[] = {
     .iv = TRAINER_PARTY_IVS(24, 24, 24, 24, 24, 24),
     .lvl = 15,
     .species = SPECIES_SUDOWOODO,
-    .heldItem = ITEM_NOMEL_BERRY,
+    .heldItem = ITEM_NANAB_BERRY,
     .moves = {MOVE_COPYCAT, MOVE_TEARFUL_LOOK, MOVE_GRASS_KNOT, MOVE_ROCK_TOMB}
     }
 };
@@ -6424,7 +6424,7 @@ static const struct TrainerMon sParty_BrendanRoute110Mudkip[] = {
     .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
     .lvl = 20,
     .species = SPECIES_GROVYLE,
-    .heldItem = ITEM_NOMEL_BERRY
+    .heldItem = ITEM_NANAB_BERRY
     }
 };
 
@@ -6450,7 +6450,7 @@ static const struct TrainerMon sParty_BrendanRoute119Mudkip[] = {
     .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
     .lvl = 31,
     .species = SPECIES_GROVYLE,
-    .heldItem = ITEM_NOMEL_BERRY
+    .heldItem = ITEM_NANAB_BERRY
     }
 };
 
@@ -6478,7 +6478,7 @@ static const struct TrainerMon sParty_BrendanRoute110Treecko[] = {
     .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
     .lvl = 20,
     .species = SPECIES_COMBUSKEN,
-    .heldItem = ITEM_NOMEL_BERRY
+    .heldItem = ITEM_NANAB_BERRY
     }
 };
 
@@ -6504,7 +6504,7 @@ static const struct TrainerMon sParty_BrendanRoute119Treecko[] = {
     .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
     .lvl = 31,
     .species = SPECIES_COMBUSKEN,
-    .heldItem = ITEM_NOMEL_BERRY
+    .heldItem = ITEM_NANAB_BERRY
     }
 };
 
@@ -6532,7 +6532,7 @@ static const struct TrainerMon sParty_BrendanRoute110Torchic[] = {
     .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
     .lvl = 20,
     .species = SPECIES_MARSHTOMP,
-    .heldItem = ITEM_NOMEL_BERRY
+    .heldItem = ITEM_NANAB_BERRY
     }
 };
 
@@ -6558,7 +6558,7 @@ static const struct TrainerMon sParty_BrendanRoute119Torchic[] = {
     .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
     .lvl = 31,
     .species = SPECIES_MARSHTOMP,
-    .heldItem = ITEM_NOMEL_BERRY
+    .heldItem = ITEM_NANAB_BERRY
     }
 };
 
@@ -6586,7 +6586,7 @@ static const struct TrainerMon sParty_MayRoute110Mudkip[] = {
     .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
     .lvl = 20,
     .species = SPECIES_GROVYLE,
-    .heldItem = ITEM_NOMEL_BERRY
+    .heldItem = ITEM_NANAB_BERRY
     }
 };
 
@@ -6612,7 +6612,7 @@ static const struct TrainerMon sParty_MayRoute119Mudkip[] = {
     .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
     .lvl = 31,
     .species = SPECIES_GROVYLE,
-    .heldItem = ITEM_NOMEL_BERRY
+    .heldItem = ITEM_NANAB_BERRY
     }
 };
 
@@ -6640,7 +6640,7 @@ static const struct TrainerMon sParty_MayRoute110Treecko[] = {
     .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
     .lvl = 20,
     .species = SPECIES_COMBUSKEN,
-    .heldItem = ITEM_NOMEL_BERRY
+    .heldItem = ITEM_NANAB_BERRY
     }
 };
 
@@ -6666,7 +6666,7 @@ static const struct TrainerMon sParty_MayRoute119Treecko[] = {
     .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
     .lvl = 31,
     .species = SPECIES_COMBUSKEN,
-    .heldItem = ITEM_NOMEL_BERRY
+    .heldItem = ITEM_NANAB_BERRY
     }
 };
 
@@ -6694,7 +6694,7 @@ static const struct TrainerMon sParty_MayRoute110Torchic[] = {
     .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
     .lvl = 20,
     .species = SPECIES_MARSHTOMP,
-    .heldItem = ITEM_NOMEL_BERRY
+    .heldItem = ITEM_NANAB_BERRY
     }
 };
 
@@ -6720,7 +6720,7 @@ static const struct TrainerMon sParty_MayRoute119Torchic[] = {
     .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
     .lvl = 31,
     .species = SPECIES_MARSHTOMP,
-    .heldItem = ITEM_NOMEL_BERRY
+    .heldItem = ITEM_NANAB_BERRY
     }
 };
 
