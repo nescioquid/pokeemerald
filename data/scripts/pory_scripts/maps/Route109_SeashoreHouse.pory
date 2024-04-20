@@ -1,0 +1,55 @@
+script Route109_SeashoreHouse_EventScript_Owner_Pory {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_6_SODA_POP)) {
+    if (!flag(FLAG_DEFEATED_SEASHORE_HOUSE)) {
+      if (!flag(FLAG_TEMP_2)) {
+        msgbox(Route109_SeashoreHouse_Text_SeashoreHouseIntro)
+        setflag(FLAG_TEMP_2)
+      } else {
+        msgbox(Route109_SeashoreHouse_Text_ShowMeSomeHotMatches)
+      }
+      release
+      end
+    }
+    msgbox(Route109_SeashoreHouse_Text_TakeTheseSodaPopBottles)
+    giveitem(ITEM_SODA_POP, 6)
+    if (!var(VAR_RESULT)) {
+      msgbox(Route109_SeashoreHouse_Text_BagFull)
+      release
+      end
+    }
+    setflag(FLAG_RECEIVED_6_SODA_POP)
+  } else {
+    showmoneybox(0, 0)
+    msgbox(format("Wanna buy some Soda Pop? Pokémon love it!\pJust ¥1800 for a six pack! Buy some!"), MSGBOX_YESNO)
+    if (!var(VAR_RESULT)) {
+      msgbox(Route109_SeashoreHouse_Text_ThatsTooBad)
+      hidemoneybox
+      release
+      end
+    }
+    checkmoney(1800)
+    if (!var(VAR_RESULT)) {
+      msgbox(Route109_SeashoreHouse_Text_NotEnoughMoney)
+      hidemoneybox
+      release
+      end
+    }
+    checkitemspace(ITEM_SODA_POP, 6)
+    if (!var(VAR_RESULT)) {
+      msgbox(gText_TooBadBagIsFull)
+      hidemoneybox
+      release
+      end
+    }
+    msgbox(Route109_SeashoreHouse_Text_HereYouGo)
+    removemoney(1800)
+    updatemoneybox
+    hidemoneybox
+    giveitem(ITEM_SODA_POP, 6)
+  }
+  release
+  end
+}
+
