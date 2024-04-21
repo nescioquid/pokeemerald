@@ -340,7 +340,7 @@ PlayersHouse_1F_EventScript_CheckGiveAmuletCoin::
 	goto PlayersHouse_1F_EventScript_MomHealsParty
 
 PlayersHouse_1F_EventScript_TryGiveAmuletCoin::
-	goto_if_set FLAG_RECEIVED_AMULET_COIN, PlayersHouse_1F_EventScript_MomHealsParty
+	goto_if_set FLAG_RECEIVED_AMULET_COIN, PlayersHouse_1F_EventScript_MomHealsParty_Pory
 	msgbox PlayersHouse_1F_Text_GotDadsBadgeHeresSomethingFromMom, MSGBOX_DEFAULT
 	giveitem ITEM_AMULET_COIN
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
