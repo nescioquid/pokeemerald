@@ -91,6 +91,8 @@ static const u8 sRegionMapSectionId_To_PopUpThemeIdMapping[] =
     [MAPSEC_ROUTE_102] = MAPPOPUP_THEME_WOOD,
     [MAPSEC_ROUTE_103] = MAPPOPUP_THEME_WOOD,
     [MAPSEC_ROUTE_104] = MAPPOPUP_THEME_WOOD,
+    [MAPSEC_ROUTE_104_NORTH] = MAPPOPUP_THEME_WOOD,
+    [MAPSEC_ROUTE_104_SOUTH] = MAPPOPUP_THEME_WOOD,
     [MAPSEC_ROUTE_105] = MAPPOPUP_THEME_UNDERWATER,
     [MAPSEC_ROUTE_106] = MAPPOPUP_THEME_UNDERWATER,
     [MAPSEC_ROUTE_107] = MAPPOPUP_THEME_UNDERWATER,
@@ -403,13 +405,13 @@ static void LoadMapNamePopUpWindowBg(void)
     u8 popupWindowId = GetMapNamePopUpWindowId();
     u16 regionMapSectionId = gMapHeader.regionMapSectionId;
 
-    if (regionMapSectionId >= KANTO_MAPSEC_START)
-    {
-        if (regionMapSectionId > KANTO_MAPSEC_END)
-            regionMapSectionId -= KANTO_MAPSEC_COUNT;
-        else
-            regionMapSectionId = 0; // Discard kanto region sections;
-    }
+    // if (regionMapSectionId >= KANTO_MAPSEC_START)
+    // {
+    //     if (regionMapSectionId > KANTO_MAPSEC_END)
+    //         regionMapSectionId -= KANTO_MAPSEC_COUNT;
+    //     else
+    //         regionMapSectionId = 0; // Discard kanto region sections;
+    // }
     popUpThemeId = sRegionMapSectionId_To_PopUpThemeIdMapping[regionMapSectionId];
 
     LoadBgTiles(GetWindowAttribute(popupWindowId, WINDOW_BG), sMapPopUp_OutlineTable[popUpThemeId], 0x400, 0x21D);
