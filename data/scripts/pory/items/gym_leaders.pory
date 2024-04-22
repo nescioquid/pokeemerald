@@ -10,7 +10,7 @@ text Pory_Text_RoxanneDefeated {
 }
 
 text RustboroCity_Gym_Text_StoneBadgeInfoTakeThis_Pory {
-  format("The Stone Badge enables your Pokémon to use the HM move Cut outside of battle.\pAll Pokémon under Level 30, even those you get in trades, will also obey you.\pAnd…\nPlease take this with you, too.")
+  format("The Stone Badge enables your Pokémon to use the HM move Cut outside of battle.\pAnd…\nPlease take this with you, too.")
 }
 
 text RustboroCity_Gym_Text_ExplainRockTomb_Pory {
@@ -27,7 +27,7 @@ text Pory_Text_BrawlyDefeated {
 }
 
 text DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis_Pory {
-  format("The Knuckle Badge makes all Pokémon under Level 40, even those you get in trades, obey without question.\pAnd, you'll be able to use the HM move Flash outside of battle.\pHmm… You know what?\n I think you can make full use of this, too. I'm sure it will help your Pokémon bulk up muscle!")
+  format("With the Knuckle Badge, you'll be able to use the HM move Flash outside of battle.\pHmm… You know what?\n I think you can make full use of this, too. I'm sure it will help your Pokémon bulk up muscle!")
 }
 
 text DewfordTown_Gym_Text_ExplainBulkUp_Pory {
@@ -52,7 +52,7 @@ text Pory_Text_WattsonDefeated {
 }
 
 text MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis_Pory {
-  format("With the Dynamo Badge, Pokémon can use the HM for Rock Smash outside of battle.\pOne other thing --Pokémon under Level 50 will obey you now, even if you got 'em from someone else!\pAlrighty then, this here's for you, too!\nGo on, take it with you!")
+  format("With the Dynamo Badge, Pokémon can use the HM for Rock Smash outside of battle.\pAlrighty then, this here's for you, too!\nGo on, take it with you!")
 }
 
 text Pory_Text_WattsonExplainVoltSwitch {
@@ -73,7 +73,7 @@ text Pory_Text_FlanneryDefeated {
 }
 
 text LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis_Pory {
-  format("If you have a Heat Badge, all Pokémon under Level 60, even those you get in trades from other people, will obey you completely.\pAnd, it lets Pokémon use the HM move Strength outside of battle.\pThis is a token of my appreciation.\nDon't be shy about taking it!")
+  format("If you have a Heat Badge, it lets Pokémon use the HM move Strength outside of battle.\pThis is a token of my appreciation.\nDon't be shy about taking it!")
 }
 
 text LavaridgeTown_Gym_1F_Text_ExplainOverheat_Pory {
@@ -94,7 +94,7 @@ text Pory_Text_NormanDefeated {
 }
 
 text PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis_Pory {
-  format("Dad: Having that Badge will insure that Pokémon under Level 70 will obey you, even if you received them in trades.\pPokémon that know the HM move Surf will also be able to travel over water now.\pAnd this is my gift to you, {PLAYER}. I'm sure you'll be able to use it well.")
+  format("Dad: Having that Badge will insure that Pokémon that know the HM move Surf will also be able to travel over water now.\pAnd this is my gift to you, {PLAYER}. I'm sure you'll be able to use it well.")
 }
 
 text Pory_Text_NormanExplainRetaliate {
@@ -115,7 +115,7 @@ text Pory_Text_WinonaDefeated {
 }
 
 text FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis_Pory {
-  format("With the Feather Badge, all Pokémon under Level 80, even those received through trades, will obey your every command.\pYou will also be able to use the HM move Fly outside of battle.\pAnd this…\nThis is a gift from me.")
+  format("With the Feather Badge, you will be able to use the HM move Fly outside of battle.\pAnd this…\nThis is a gift from me.")
 }
 
 text Pory_Text_WinonaExplainRoost {
@@ -140,7 +140,7 @@ text Pory_Text_TateAndLizaDefeated {
 }
 
 text MossdeepCity_Gym_Text_ExplainMindBadgeTakeThis_Pory {
-  format("Tate: The Mind Badge has the power to make all Pokémon under level 90, including those you've received from other people, obey you!\pLiza: It also enables Pokémon to use the HM move called Dive outside of battle!\pTate: And take this…\nLiza: …Too!")
+  format("Tate: The Mind Badge has the power to enable Pokémon to use the HM move called Dive outside of battle!\pLiza: And take this too!")
 }
 
 text MossdeepCity_Gym_Text_ExplainCalmMind_Pory {
@@ -161,7 +161,7 @@ text Pory_Text_JuanDefeated {
 }
 
 text SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis_Pory {
-  format("Having the Rain Badge shall assure you\nthe full obedience of all your Pokémon\lto your every command.\pThe Rain Badge also allows the use\nof the HM move Waterfall to scale\lwalls of cascading water.\pAnd, so that you never forget the\nbattle we shared, take this…")
+  format("Having the Rain Badge shall allow you the use\nof the HM move Waterfall to scale\lwalls of cascading water.\pAnd, so that you never forget the\nbattle we shared, take this…")
 }
 
 text Pory_Text_JuanExplainScald {
