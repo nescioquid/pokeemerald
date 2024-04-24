@@ -59,3 +59,13 @@ script VerdanturfTown_Mart_EventScript_Lass_Pory {
   release
   end
 }
+
+// new dialogue references this Bug Maniac being swapped out of the Mauville Gym for a guitarist on Route 118
+
+text MauvilleCity_Gym_Text_AngeloIntro_Pory {
+	format("Hey, remember me? I'm that Bug Maniac from the Mauville Gym. I got some guy with a guitar to take my spot.\pAlso, I still love shiny things!")
+}
+
+text Route118_Text_DaltonPostBattle_Pory {
+ format("I knew I shouldn't have said yes to that weird bug guy…")
+}
