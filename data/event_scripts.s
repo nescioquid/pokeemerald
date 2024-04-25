@@ -1102,3 +1102,6 @@ EventScript_VsSeekerChargingDone::
 .include "data/scripts/pory/items/items_overwold.inc"
 .include "data/scripts/pory/items/mom.inc"
 .include "data/scripts/pory/items/sun_stone_man.inc"
+.include "data/scripts/pory/gt/rival_route_104.inc"
+.include "data/maps/Route104North/scripts.inc"
+.include "data/maps/Route104South/scripts.inc"

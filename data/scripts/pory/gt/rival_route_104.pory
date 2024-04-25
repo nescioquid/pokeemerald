@@ -1,0 +1,21 @@
+script Route104_EventScript_RivalEncounter_Pory {
+  // stores the result (MALE (0) or FEMALE (1)) in VAR_RESULT
+  checkplayergender
+  switch (var(VAR_RESULT)) {
+    case   MALE:
+      msgbox(format("Mine's looking pretty decent.\nSo…\lHow about a little battle?"))
+      switch(var(VAR_STARTER_MON)) {
+        case 0: call(Route104_EventScript_BattleMayTreecko)
+        case 1: call(Route104_EventScript_BattleMayTorchic)
+        case 2: call(Route104_EventScript_BattleMayMudkip)
+      }
+    case FEMALE:
+      msgbox(format("Me, I'm doing great!\pWanna check out how good I am with\na battle?"))
+      switch(var(VAR_STARTER_MON)) {
+        case 0: call(Route104_EventScript_BattleBrendanTreecko)
+        case 1: call(Route104_EventScript_BattleBrendanTorchic)
+        case 2: call(Route104_EventScript_BattleBrendanMudkip)
+      }
+  }
+	end
+}

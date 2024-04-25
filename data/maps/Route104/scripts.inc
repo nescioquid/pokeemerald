@@ -115,9 +115,10 @@ Route104_EventScript_MayEncounter::
 	applymovement LOCALID_RIVAL, Route104_Movement_RivalApproachPlayer
 	waitmovement 0
 	copyobjectxytoperm LOCALID_RIVAL
-	msgbox Route104_Text_MayMinesDecentLetsBattle, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, Route104_EventScript_BattleMay
-	msgbox Route104_Text_MayHaventRaisedPokemon, MSGBOX_DEFAULT
+	goto(Route104_EventScript_RivalEncounter_Pory)
+	@ msgbox Route104_Text_MayMinesDecentLetsBattle, MSGBOX_YESNO
+	@ goto_if_eq VAR_RESULT, YES, Route104_EventScript_BattleMay
+	@ msgbox Route104_Text_MayHaventRaisedPokemon, MSGBOX_DEFAULT
 	call Route104_EventScript_RestoreMusic
 	releaseall
 	end
@@ -201,9 +202,10 @@ Route104_EventScript_BrendanEncounter::
 	applymovement LOCALID_RIVAL, Route104_Movement_RivalApproachPlayer
 	waitmovement 0
 	copyobjectxytoperm LOCALID_RIVAL
-	msgbox Route104_Text_BrendanDoingGreatLetsBattle, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, Route104_EventScript_BattleBrendan
-	msgbox Route104_Text_BrendanNoConfidence, MSGBOX_DEFAULT
+	goto(Route104_EventScript_RivalEncounter_Pory)
+	@ msgbox Route104_Text_BrendanDoingGreatLetsBattle, MSGBOX_YESNO
+	@ goto_if_eq VAR_RESULT, YES, Route104_EventScript_BattleBrendan
+	@ msgbox Route104_Text_BrendanNoConfidence, MSGBOX_DEFAULT
 	call Route104_EventScript_RestoreMusic
 	releaseall
 	end
