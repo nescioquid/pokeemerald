@@ -18,7 +18,7 @@ script Pory_EventScript_Randomized_Item_Ball {
       var(VAR_RESULT) == ITEM_FULL_RESTORE  ||
       var(VAR_RESULT) == ITEM_ENERGY_POWDER ||
       var(VAR_RESULT) == ITEM_ENERGY_ROOT) {
-    call(Pory_EventScript_Randomized_Item_Ball_Repel)
+    call(Pory_EventScript_Randomized_Item_Ball_Common)
   }
   if (var(VAR_RESULT) == ITEM_ANTIDOTE      ||
       var(VAR_RESULT) == ITEM_AWAKENING     ||
@@ -114,14 +114,18 @@ script Pory_EventScript_Randomized_Item_Ball {
 }
 
 script Pory_EventScript_Randomized_Item_Ball_Common {
-  random(6)
+  random(10)
   switch (var(VAR_RESULT)) {
     case 0: call(Pory_EventScript_Randomized_Item_Ball_Snacks)
     case 1: call(Pory_EventScript_Randomized_Item_Ball_Snacks)
-    case 2: call(Pory_EventScript_Randomized_Item_Ball_XItem)
-    case 3: call(Pory_EventScript_Randomized_Item_Ball_Ether)
-    case 4: call(Pory_EventScript_Randomized_Item_Ball_Ether)
-    case 5: call(Pory_EventScript_Randomized_Item_Ball_Vitamins)
+    case 2: call(Pory_EventScript_Randomized_Item_Ball_Snacks)
+    case 3: call(Pory_EventScript_Randomized_Item_Ball_Snacks)
+    case 4: call(Pory_EventScript_Randomized_Item_Ball_XItem)
+    case 5: call(Pory_EventScript_Randomized_Item_Ball_XItem)
+    case 6: call(Pory_EventScript_Randomized_Item_Ball_Ether)
+    case 7: call(Pory_EventScript_Randomized_Item_Ball_Ether)
+    case 8: call(Pory_EventScript_Randomized_Item_Ball_Ether)
+    case 9: call(Pory_EventScript_Randomized_Item_Ball_Vitamins)
   }
   // not reached unless a plain item is found instead of a call
   finditem(VAR_RESULT, VAR_0x8009)
