@@ -107,13 +107,25 @@ Some tips before proceeding:
 
    ```bash
    sudo apt install wget
-   wget https://apt.devkitpro.org/install-devkitpro-pacman
-   chmod +x ./install-devkitpro-pacman
-   sudo ./install-devkitpro-pacman
-   sudo dkp-pacman -S gba-dev
    ```
 
-   The last command will ask for the selection of packages to install. Just press Enter to install all of them, followed by entering Y to proceed with the installation.
+   ```bash
+   wget https://apt.devkitpro.org/install-devkitpro-pacman
+   ```
+
+   ```bash
+   chmod +x ./install-devkitpro-pacman
+   ```
+
+   ```bash
+   sudo ./install-devkitpro-pacman
+   ```
+
+   When run, this last command will ask for the selection of packages to install. Just press `enter` to install all of them, followed by entering `y` to proceed with the installation.
+
+   ```bash
+   sudo dkp-pacman -S gba-dev
+   ```
 
 3. Run the following command to set devkitPro related environment variables (alternatively, close and re-open WSL):
 
