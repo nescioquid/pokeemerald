@@ -87,13 +87,13 @@ script Pory_EventScript_Randomized_Item_Hidden_Common {
   random(10)
   switch (var(VAR_RESULT)) {
     case 0: setvar(VAR_0x8005, ITEM_PRETTY_FEATHER)
-    case 1: setvar(VAR_0x8005, ITEM_PRETTY_FEATHER)
-    case 2: setvar(VAR_0x8005, ITEM_PRETTY_FEATHER)
+    case 1: setvar(VAR_0x8005, ITEM_RARE_CANDY)
+    case 2: setvar(VAR_0x8005, ITEM_RARE_CANDY)
     case 3: setvar(VAR_0x8005, ITEM_RARE_CANDY)
     case 4: setvar(VAR_0x8005, ITEM_RARE_CANDY)
     case 5: setvar(VAR_0x8005, ITEM_RARE_CANDY)
     case 6: setvar(VAR_0x8005, ITEM_RARE_CANDY)
-    case 7: setvar(VAR_0x8005, ITEM_RARE_CANDY)
+    case 7: setvar(VAR_0x8005, ITEM_LEFTOVERS)
     case 8: setvar(VAR_0x8005, ITEM_LUCKY_EGG)
     case 9: call(Pory_EventScript_Randomized_Item_Hidden_TypeBoosting)
   }
