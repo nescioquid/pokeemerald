@@ -18,7 +18,7 @@ script Pory_EventScript_Randomized_Item_Hidden {
       var(VAR_0x8005) == ITEM_FULL_RESTORE  ||
       var(VAR_0x8005) == ITEM_ENERGY_POWDER ||
       var(VAR_0x8005) == ITEM_ENERGY_ROOT) {
-    call(Pory_EventScript_Randomized_Item_Hidden_Health)
+    call(Pory_EventScript_Randomized_Item_Hidden_HerbalMedicine)
   }
   if (var(VAR_0x8005) == ITEM_ANTIDOTE      ||
       var(VAR_0x8005) == ITEM_AWAKENING     ||
@@ -27,12 +27,12 @@ script Pory_EventScript_Randomized_Item_Hidden {
       var(VAR_0x8005) == ITEM_PARALYZE_HEAL ||
       var(VAR_0x8005) == ITEM_FULL_HEAL     ||
       var(VAR_0x8005) == ITEM_HEAL_POWDER) {
-    call(Pory_EventScript_Randomized_Item_Hidden_Status)
+    call(Pory_EventScript_Randomized_Item_Hidden_HerbalMedicine)
   }
   if (var(VAR_0x8005) == ITEM_REVIVE     ||
       var(VAR_0x8005) == ITEM_MAX_REVIVE ||
       var(VAR_0x8005) == ITEM_REVIVAL_HERB) {
-    call(Pory_EventScript_Randomized_Item_Hidden_Revival)
+    call(Pory_EventScript_Randomized_Item_Hidden_HerbalMedicine)
   }
   if (var(VAR_0x8005) == ITEM_ETHER     ||
       var(VAR_0x8005) == ITEM_ELIXIR    ||
@@ -205,6 +205,23 @@ script Pory_EventScript_Randomized_Item_Hidden_Fossil {
     case 6: setvar(VAR_0x8005, ITEM_ROOT_FOSSIL)
     case 7: setvar(VAR_0x8005, ITEM_CLAW_FOSSIL)
     case 8: setvar(VAR_0x8005, ITEM_CLAW_FOSSIL)
+  }
+}
+
+script Pory_EventScript_Randomized_Item_Hidden_HerbalMedicine {
+  random(2)
+  switch (var(VAR_RESULT)) {
+      case 0:
+        call(Pory_EventScript_Randomized_Item_Hidden_Health)
+      case 1:
+        random(5)
+        switch (var(VAR_RESULT)) {
+          case 0: call(Pory_EventScript_Randomized_Item_Hidden_Revival)
+          case 1: call(Pory_EventScript_Randomized_Item_Hidden_Status)
+          case 2: call(Pory_EventScript_Randomized_Item_Hidden_Health)
+          case 3: call(Pory_EventScript_Randomized_Item_Hidden_BambooShoot)
+          case 4: call(Pory_EventScript_Randomized_Item_Hidden_Herbs)
+        }
   }
 }
 
