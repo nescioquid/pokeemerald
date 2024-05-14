@@ -168,14 +168,14 @@ script Pory_EventScript_Berries_Common {
 }
 
 script Pory_EventScript_Berries_Status {
-  random(7)
+  random(6)
   switch (var(VAR_RESULT)) {
     case 0: giveitem(ITEM_CHERI_BERRY,  3)
     case 1: giveitem(ITEM_CHESTO_BERRY, 3)
     case 2: giveitem(ITEM_PECHA_BERRY,  3)
     case 3: giveitem(ITEM_RAWST_BERRY,  3)
     case 4: giveitem(ITEM_ASPEAR_BERRY, 3)
-    case 6: giveitem(ITEM_PERSIM_BERRY, 3)
+    case 5: giveitem(ITEM_PERSIM_BERRY, 3)
   }
   goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
 }
