@@ -390,12 +390,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -406,11 +411,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 30,
@@ -544,12 +544,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -560,11 +565,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 25,
@@ -852,12 +852,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -868,11 +873,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 25,
@@ -887,7 +887,7 @@
               {
                 "min_level": 20,
                 "max_level": 25,
-                "species": "SPECIES_OCTILLERY"
+                "species": "SPECIES_GYARADOS"
               },
               {
                 "min_level": 35,
@@ -941,12 +941,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -957,11 +962,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 25,
@@ -1095,12 +1095,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -1111,11 +1116,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 25,
@@ -1948,12 +1948,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -1964,11 +1969,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 30,
@@ -2037,12 +2037,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -2053,11 +2058,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 30,
@@ -2643,12 +2643,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -2659,11 +2664,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 25,
@@ -3123,12 +3123,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -3139,11 +3144,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 25,
@@ -3212,12 +3212,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -3228,11 +3233,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 25,
@@ -3301,12 +3301,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -3317,11 +3322,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 25,
@@ -3390,12 +3390,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -3406,11 +3411,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 25,
@@ -3544,12 +3544,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -3560,11 +3565,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 25,
@@ -4075,12 +4075,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -4091,11 +4096,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 25,
@@ -4164,12 +4164,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -4180,11 +4185,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 30,
@@ -4318,12 +4318,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -4334,11 +4339,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 25,
@@ -4959,12 +4959,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -4975,11 +4980,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 30,
@@ -5048,12 +5048,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -5064,11 +5069,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 30,
@@ -5137,12 +5137,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -5153,11 +5158,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 30,
@@ -5226,12 +5226,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -5242,11 +5247,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 30,
@@ -5315,12 +5315,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -5331,11 +5336,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 30,
@@ -5469,12 +5469,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -5485,11 +5490,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 30,
@@ -5558,12 +5558,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -5574,11 +5579,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 30,
@@ -5647,12 +5647,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -5663,11 +5668,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 30,
@@ -5736,12 +5736,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -5752,11 +5757,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 30,
@@ -5825,12 +5825,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -5841,11 +5846,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 30,
@@ -5914,12 +5914,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -5930,11 +5935,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 25,
@@ -7742,12 +7742,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -7758,11 +7763,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 25,
@@ -7896,12 +7896,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -7912,11 +7917,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 25,
@@ -7985,12 +7985,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -8001,11 +8006,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 25,
@@ -8074,12 +8074,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -8090,11 +8095,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 25,
@@ -8163,12 +8163,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -8179,11 +8184,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 25,
@@ -8252,12 +8252,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -8268,11 +8273,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 30,
@@ -8341,12 +8341,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -8357,11 +8362,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 30,
@@ -8430,12 +8430,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -8446,11 +8451,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 30,
@@ -8780,12 +8780,17 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_KRABBY"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 10,
@@ -8796,11 +8801,6 @@
                 "min_level": 10,
                 "max_level": 30,
                 "species": "SPECIES_QWILFISH"
-              },
-              {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 30,
