@@ -11,7 +11,7 @@ u32 GetCurrentLevelCap(void)
     {
         // {FLAG_BADGE01_GET, 15},
         {FLAG_DEFEATED_RIVAL_ROUTE_104, 15 - 5 + 20}, // Level 30
-        {FLAG_BADGE02_GET, 19 - 4 + 20},              // Level 35
+        {FLAG_DELIVERED_DEVON_GOODS, 19 - 4 + 20},    // Level 35
         {FLAG_BADGE03_GET, 24 - 4 + 20},              // Level 40
         {FLAG_BADGE04_GET, 29 - 4 + 20},              // Level 45
         {FLAG_BADGE05_GET, 31 - 6 + 20},              // Level 45
