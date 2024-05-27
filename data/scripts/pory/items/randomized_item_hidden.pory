@@ -92,10 +92,10 @@ script Pory_EventScript_Randomized_Item_Hidden_Common {
     case 3: setvar(VAR_0x8005, ITEM_RARE_CANDY)
     case 4: setvar(VAR_0x8005, ITEM_RARE_CANDY)
     case 5: setvar(VAR_0x8005, ITEM_RARE_CANDY)
-    case 6: setvar(VAR_0x8005, ITEM_RARE_CANDY)
-    case 7: setvar(VAR_0x8005, ITEM_LEFTOVERS)
-    case 8: setvar(VAR_0x8005, ITEM_LUCKY_EGG)
-    case 9: call(Pory_EventScript_Randomized_Item_Hidden_TypeBoosting)
+    case 6: call(Pory_EventScript_Randomized_Item_Hidden_TypeBoosting)
+    case 7: call(Pory_EventScript_Randomized_Item_Hidden_TypeBoosting)
+    case 8: call(Pory_EventScript_Randomized_Item_Hidden_HeldItems)
+    case 9: call(Pory_EventScript_Randomized_Item_Hidden_HeldItems)
   }
 }
 
@@ -178,7 +178,7 @@ script Pory_EventScript_Randomized_Item_Hidden_Stardust {
 }
 
 script Pory_EventScript_Randomized_Item_Hidden_EvoStone {
-  random(9)
+  random(8)
   switch (var(VAR_RESULT)) {
     case 0: setvar(VAR_0x8005, ITEM_FIRE_STONE)
     case 1: setvar(VAR_0x8005, ITEM_WATER_STONE)
@@ -189,7 +189,7 @@ script Pory_EventScript_Randomized_Item_Hidden_EvoStone {
     case 6: setvar(VAR_0x8005, ITEM_SHINY_STONE)
     // case 7: setvar(VAR_0x8005, ITEM_DAWN_STONE)
     case 7: setvar(VAR_0x8005, ITEM_DUSK_STONE)
-    case 8: setvar(VAR_0x8005, ITEM_ICE_STONE)
+    // case 8: setvar(VAR_0x8005, ITEM_ICE_STONE)
   }
 }
 
@@ -209,77 +209,28 @@ script Pory_EventScript_Randomized_Item_Hidden_Fossil {
 }
 
 script Pory_EventScript_Randomized_Item_Hidden_HerbalMedicine {
-  random(2)
-  switch (var(VAR_RESULT)) {
-      case 0:
-        call(Pory_EventScript_Randomized_Item_Hidden_Health)
-      case 1:
-        random(5)
-        switch (var(VAR_RESULT)) {
-          case 0: call(Pory_EventScript_Randomized_Item_Hidden_Revival)
-          case 1: call(Pory_EventScript_Randomized_Item_Hidden_Status)
-          case 2: call(Pory_EventScript_Randomized_Item_Hidden_Health)
-          case 3: call(Pory_EventScript_Randomized_Item_Hidden_BambooShoot)
-          case 4: call(Pory_EventScript_Randomized_Item_Hidden_Herbs)
-        }
-  }
-}
-
-script Pory_EventScript_Randomized_Item_Hidden_Revival {
   random(6)
   switch (var(VAR_RESULT)) {
     case 0: setvar(VAR_0x8005, ITEM_REVIVAL_HERB)
-    case 1: setvar(VAR_0x8005, ITEM_REVIVAL_HERB)
-    case 2: setvar(VAR_0x8005, ITEM_REVIVAL_HERB)
-    case 3: setvar(VAR_0x8005, ITEM_REVIVAL_HERB)
-    case 4: call(Pory_EventScript_Randomized_Item_Hidden_BambooShoot)
-    case 5: call(Pory_EventScript_Randomized_Item_Hidden_Herbs)
-  }
-}
-
-script Pory_EventScript_Randomized_Item_Hidden_Status {
-  random(6)
-  switch (var(VAR_RESULT)) {
-    case 0: setvar(VAR_0x8005, ITEM_HEAL_POWDER)
     case 1: setvar(VAR_0x8005, ITEM_HEAL_POWDER)
-    case 2: setvar(VAR_0x8005, ITEM_HEAL_POWDER)
-    case 3: setvar(VAR_0x8005, ITEM_HEAL_POWDER)
-    case 4: call(Pory_EventScript_Randomized_Item_Hidden_BambooShoot)
+    case 2: call(Pory_EventScript_Randomized_Item_Hidden_BambooShoot)
+    case 3: call(Pory_EventScript_Randomized_Item_Hidden_Health)
+    case 4: call(Pory_EventScript_Randomized_Item_Hidden_Health)
     case 5: call(Pory_EventScript_Randomized_Item_Hidden_Herbs)
   }
 }
 
 script Pory_EventScript_Randomized_Item_Hidden_Health {
   if (flag(FLAG_BADGE04_GET)) {
-    random(6)
-    switch (var(VAR_RESULT)) {
-      case 0: setvar(VAR_0x8005, ITEM_ENERGY_ROOT)
-      case 1: setvar(VAR_0x8005, ITEM_ENERGY_ROOT)
-      case 2: setvar(VAR_0x8005, ITEM_ENERGY_ROOT)
-      case 3: setvar(VAR_0x8005, ITEM_ENERGY_ROOT)
-      case 4: call(Pory_EventScript_Randomized_Item_Hidden_BambooShoot)
-      case 5: call(Pory_EventScript_Randomized_Item_Hidden_Herbs)
-    }
+    setvar(VAR_0x8005, ITEM_ENERGY_ROOT)
   } elif (flag(FLAG_BADGE02_GET)) {
-    random(6)
+    random(2)
     switch (var(VAR_RESULT)) {
       case 0: setvar(VAR_0x8005, ITEM_ENERGY_POWDER)
-      case 1: setvar(VAR_0x8005, ITEM_ENERGY_POWDER)
-      case 2: setvar(VAR_0x8005, ITEM_ENERGY_ROOT)
-      case 3: setvar(VAR_0x8005, ITEM_ENERGY_ROOT)
-      case 4: call(Pory_EventScript_Randomized_Item_Hidden_BambooShoot)
-      case 5: call(Pory_EventScript_Randomized_Item_Hidden_Herbs)
+      case 1: setvar(VAR_0x8005, ITEM_ENERGY_ROOT)
     }
   } else {
-    random(6)
-    switch (var(VAR_RESULT)) {
-      case 0: setvar(VAR_0x8005, ITEM_ENERGY_POWDER)
-      case 1: setvar(VAR_0x8005, ITEM_ENERGY_POWDER)
-      case 2: setvar(VAR_0x8005, ITEM_ENERGY_POWDER)
-      case 3: setvar(VAR_0x8005, ITEM_ENERGY_POWDER)
-      case 4: call(Pory_EventScript_Randomized_Item_Hidden_BambooShoot)
-      case 5: call(Pory_EventScript_Randomized_Item_Hidden_Herbs)
-    }
+    setvar(VAR_0x8005, ITEM_ENERGY_POWDER)
   }
 }
 
@@ -313,5 +264,25 @@ script Pory_EventScript_Randomized_Item_Hidden_TypeBoosting {
     case 15: setvar(VAR_0x8005, ITEM_BLACK_GLASSES)
     case 16: setvar(VAR_0x8005, ITEM_METAL_COAT)
     case 17: setvar(VAR_0x8005, ITEM_FAIRY_FEATHER)
+  }
+}
+
+script Pory_EventScript_Randomized_Item_Hidden_HeldItems {
+  random(14)
+  switch (var(VAR_RESULT)) {
+    case  0: setvar(VAR_0x8005, ITEM_LUCKY_EGG)
+    case  1: setvar(VAR_0x8005, ITEM_DESTINY_KNOT)
+    case  2: setvar(VAR_0x8005, ITEM_LEFTOVERS)
+    case  3: setvar(VAR_0x8005, ITEM_DRAGON_SCALE)
+    case  4: setvar(VAR_0x8005, ITEM_ELECTIRIZER)
+    case  5: setvar(VAR_0x8005, ITEM_KINGS_ROCK)
+    case  6: setvar(VAR_0x8005, ITEM_MAGMARIZER)
+    case  7: setvar(VAR_0x8005, ITEM_METAL_COAT)
+    case  8: setvar(VAR_0x8005, ITEM_OVAL_STONE)
+    case  9: setvar(VAR_0x8005, ITEM_PROTECTOR)
+    case 10: setvar(VAR_0x8005, ITEM_RAZOR_CLAW)
+    case 11: setvar(VAR_0x8005, ITEM_RAZOR_FANG)
+    case 12: setvar(VAR_0x8005, ITEM_PRISM_SCALE)
+    case 13: setvar(VAR_0x8005, ITEM_REAPER_CLOTH)
   }
 }
