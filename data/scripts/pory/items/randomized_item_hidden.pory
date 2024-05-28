@@ -79,23 +79,19 @@ script Pory_EventScript_Randomized_Item_Hidden {
   }
   if (var(VAR_0x8005) == ITEM_STARDUST   ||
       var(VAR_0x8005) == ITEM_STAR_PIECE) {
-    call(Pory_EventScript_Randomized_Item_Hidden_Stardust)
+    call(Pory_EventScript_Randomized_Item_Hidden_Common)
   }
 }
 
 script Pory_EventScript_Randomized_Item_Hidden_Common {
-  random(10)
+  random(6)
   switch (var(VAR_RESULT)) {
-    case 0: setvar(VAR_0x8005, ITEM_PRETTY_FEATHER)
-    case 1: setvar(VAR_0x8005, ITEM_RARE_CANDY)
-    case 2: setvar(VAR_0x8005, ITEM_RARE_CANDY)
-    case 3: setvar(VAR_0x8005, ITEM_RARE_CANDY)
-    case 4: setvar(VAR_0x8005, ITEM_RARE_CANDY)
-    case 5: setvar(VAR_0x8005, ITEM_RARE_CANDY)
-    case 6: call(Pory_EventScript_Randomized_Item_Hidden_TypeBoosting)
-    case 7: call(Pory_EventScript_Randomized_Item_Hidden_TypeBoosting)
-    case 8: call(Pory_EventScript_Randomized_Item_Hidden_HeldItems)
-    case 9: call(Pory_EventScript_Randomized_Item_Hidden_HeldItems)
+    case 0: setvar(VAR_0x8005, ITEM_RARE_CANDY)
+    case 1: call(Pory_EventScript_Randomized_Item_Hidden_Stardust)
+    case 2: call(Pory_EventScript_Randomized_Item_Hidden_Stardust)
+    case 3: call(Pory_EventScript_Randomized_Item_Hidden_Stardust)
+    case 4: call(Pory_EventScript_Randomized_Item_Hidden_TypeBoosting)
+    case 5: call(Pory_EventScript_Randomized_Item_Hidden_HeldItems)
   }
 }
 
@@ -143,8 +139,8 @@ script Pory_EventScript_Randomized_Item_Hidden_Nugget {
     case 1: setvar(VAR_0x8005, ITEM_NUGGET)
     case 2: setvar(VAR_0x8005, ITEM_NUGGET)
     case 3: setvar(VAR_0x8005, ITEM_BIG_NUGGET)
-    case 4: call(Pory_EventScript_Randomized_Item_Hidden_EvoStone)
-    case 5: call(Pory_EventScript_Randomized_Item_Hidden_EvoStone)
+    case 4: call(Pory_EventScript_Randomized_Item_Hidden_Fossil)
+    case 5: call(Pory_EventScript_Randomized_Item_Hidden_Fossil)
   }
 }
 
@@ -167,13 +163,8 @@ script Pory_EventScript_Randomized_Item_Hidden_Stardust {
     case 1: setvar(VAR_0x8005, ITEM_STAR_PIECE)
     case 2: setvar(VAR_0x8005, ITEM_STAR_PIECE)
     case 3: setvar(VAR_0x8005, ITEM_STAR_PIECE)
-    case 4: setvar(VAR_0x8005, ITEM_COMET_SHARD)
-    case 5:
-      random(2)
-      switch (var(VAR_RESULT)) {
-        case 0: setvar(VAR_0x8005, ITEM_SUN_STONE)
-        case 1: setvar(VAR_0x8005, ITEM_MOON_STONE)
-      }
+    case 4: setvar(VAR_0x8005, ITEM_STAR_PIECE)
+    case 5: setvar(VAR_0x8005, ITEM_COMET_SHARD)
   }
 }
 
@@ -268,21 +259,23 @@ script Pory_EventScript_Randomized_Item_Hidden_TypeBoosting {
 }
 
 script Pory_EventScript_Randomized_Item_Hidden_HeldItems {
-  random(14)
+  random(16)
   switch (var(VAR_RESULT)) {
     case  0: setvar(VAR_0x8005, ITEM_LUCKY_EGG)
     case  1: setvar(VAR_0x8005, ITEM_DESTINY_KNOT)
     case  2: setvar(VAR_0x8005, ITEM_LEFTOVERS)
-    case  3: setvar(VAR_0x8005, ITEM_DRAGON_SCALE)
-    case  4: setvar(VAR_0x8005, ITEM_ELECTIRIZER)
-    case  5: setvar(VAR_0x8005, ITEM_KINGS_ROCK)
-    case  6: setvar(VAR_0x8005, ITEM_MAGMARIZER)
-    case  7: setvar(VAR_0x8005, ITEM_METAL_COAT)
-    case  8: setvar(VAR_0x8005, ITEM_OVAL_STONE)
-    case  9: setvar(VAR_0x8005, ITEM_PROTECTOR)
-    case 10: setvar(VAR_0x8005, ITEM_RAZOR_CLAW)
-    case 11: setvar(VAR_0x8005, ITEM_RAZOR_FANG)
-    case 12: setvar(VAR_0x8005, ITEM_PRISM_SCALE)
-    case 13: setvar(VAR_0x8005, ITEM_REAPER_CLOTH)
+    case  3: setvar(VAR_0x8005, ITEM_DEEP_SEA_SCALE)
+    case  4: setvar(VAR_0x8005, ITEM_DEEP_SEA_TOOTH)
+    case  5: setvar(VAR_0x8005, ITEM_DRAGON_SCALE)
+    case  6: setvar(VAR_0x8005, ITEM_ELECTIRIZER)
+    case  7: setvar(VAR_0x8005, ITEM_KINGS_ROCK)
+    case  8: setvar(VAR_0x8005, ITEM_MAGMARIZER)
+    case  9: setvar(VAR_0x8005, ITEM_METAL_COAT)
+    case 10: setvar(VAR_0x8005, ITEM_OVAL_STONE)
+    case 11: setvar(VAR_0x8005, ITEM_PROTECTOR)
+    case 12: setvar(VAR_0x8005, ITEM_RAZOR_CLAW)
+    case 13: setvar(VAR_0x8005, ITEM_RAZOR_FANG)
+    case 14: setvar(VAR_0x8005, ITEM_PRISM_SCALE)
+    case 15: setvar(VAR_0x8005, ITEM_REAPER_CLOTH)
   }
 }
