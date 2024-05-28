@@ -41,7 +41,7 @@
 const struct WildPokemon {{ encounter.base_label }}_LandMons[] =
 {
 ## for wild_mon in encounter.land_mons.mons
-    { {{ average_level - 2 + extra_levels }}, {{ average_level + 2 + extra_levels }}, {{ wild_mon.species }} },
+    { {{ average_level + extra_levels }}, {{ average_level + 2 + extra_levels }}, {{ wild_mon.species }} },
 ## endfor
 };
 
@@ -62,7 +62,7 @@ const struct WildPokemonInfo {{ encounter.base_label }}_LandMonsInfo = { {{encou
 const struct WildPokemon {{ encounter.base_label }}_WaterMons[] =
 {
 ## for wild_mon in encounter.water_mons.mons
-    { {{ average_level + extra_levels }}, {{ average_level + 10 + extra_levels }}, {{ wild_mon.species }} },
+    { {{ average_level + 2 + extra_levels }}, {{ average_level + 5 + extra_levels }}, {{ wild_mon.species }} },
 ## endfor
 };
 
@@ -83,7 +83,7 @@ const struct WildPokemonInfo {{ encounter.base_label }}_WaterMonsInfo = { {{enco
 const struct WildPokemon {{ encounter.base_label }}_RockSmashMons[] =
 {
 ## for wild_mon in encounter.rock_smash_mons.mons
-    { {{ average_level - 4 + extra_levels }}, {{ average_level + 4 + extra_levels }}, {{ wild_mon.species }} },
+    { {{ average_level + 7 + extra_levels }}, {{ average_level + 9 + extra_levels }}, {{ wild_mon.species }} },
 ## endfor
 };
 
@@ -121,11 +121,11 @@ const struct WildPokemon {{ encounter.base_label }}_FishingMons[] =
 {
 ## for wild_mon in encounter.fishing_mons.mons
 {% if loop.index <= 1 %}
-    { {{ average_level_old_rod - 3 + extra_levels }}, {{ average_level_old_rod + 7 + extra_levels }}, {{ wild_mon.species }} },
+    { {{ average_level_old_rod + 4 + extra_levels }}, {{ average_level_old_rod + 6 + extra_levels }}, {{ wild_mon.species }} },
 {% else if loop.index >= 5 %}
-    { {{ average_level_super_rod - 3 + extra_levels }}, {{ average_level_super_rod + 7 + extra_levels }}, {{ wild_mon.species }} },
+    { {{ average_level_super_rod + 1 + extra_levels }}, {{ average_level_super_rod + 3 + extra_levels }}, {{ wild_mon.species }} },
 {% else %}
-    { {{ average_level_good_rod - 3 + extra_levels }}, {{ average_level_good_rod + 7 + extra_levels }}, {{ wild_mon.species }} },
+    { {{ average_level_good_rod + 7 + extra_levels }}, {{ average_level_good_rod + 9 + extra_levels }}, {{ wild_mon.species }} },
 {% endif %}
 ## endfor
 };
