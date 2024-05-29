@@ -1268,27 +1268,27 @@
 #define FLAG_UNUSED_0x4C2                                           0x4C2 // Unused Flag
 #define FLAG_UNUSED_0x4C3                                           0x4C3 // Unused Flag
 #define FLAG_UNUSED_0x4C4                                           0x4C4 // Unused Flag
-#define FLAG_UNUSED_0x4C5                                           0x4C5 // Unused Flag
-#define FLAG_UNUSED_0x4C6                                           0x4C6 // Unused Flag
-#define FLAG_UNUSED_0x4C7                                           0x4C7 // Unused Flag
-#define FLAG_UNUSED_0x4C8                                           0x4C8 // Unused Flag
-#define FLAG_UNUSED_0x4C9                                           0x4C9 // Unused Flag
-#define FLAG_UNUSED_0x4CA                                           0x4CA // Unused Flag
-#define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
-#define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag
+#define FLAG_RECEIVED_RARE_CANDIES_RUSTBORO_GYM                     0x4C5
+#define FLAG_RECEIVED_RARE_CANDIES_DEWFORD_GYM                      0x4C6
+#define FLAG_RECEIVED_RARE_CANDIES_MAUVILLE_GYM                     0x4C7
+#define FLAG_RECEIVED_RARE_CANDIES_LAVARIDGE_GYM                    0x4C8
+#define FLAG_RECEIVED_RARE_CANDIES_PETALBURG_GYM                    0x4C9
+#define FLAG_RECEIVED_RARE_CANDIES_FORTREE_GYM                      0x4CA
+#define FLAG_RECEIVED_RARE_CANDIES_MOSSDEEP_GYM                     0x4CB
+#define FLAG_RECEIVED_RARE_CANDIES_SOOTOPOLIS_GYM                   0x4CC
 #define FLAG_UNUSED_0x4CD                                           0x4CD // Unused Flag
 #define FLAG_UNUSED_0x4CE                                           0x4CE // Unused Flag
 #define FLAG_RECEIVED_LINKING_CORD                                  0x4CF
 #define FLAG_META_BOY_ON_THE_BEACH                                  0x4D0
 #define FLAG_RECEIVED_JOHTO_STARTER                                 0x4D1
-#define FLAG_TALKED_TO_GYM_GUIDE_RUSTBORO_GYM                       0x4D2
-#define FLAG_TALKED_TO_GYM_GUIDE_DEWFORD_GYM                        0x4D3
-#define FLAG_TALKED_TO_GYM_GUIDE_MAUVILLE_GYM                       0x4D4
-#define FLAG_TALKED_TO_GYM_GUIDE_LAVARIDGE_GYM                      0x4D5
-#define FLAG_TALKED_TO_GYM_GUIDE_PETALBURG_GYM                      0x4D6
-#define FLAG_TALKED_TO_GYM_GUIDE_FORTREE_GYM                        0x4D7
-#define FLAG_TALKED_TO_GYM_GUIDE_MOSSDEEP_GYM                       0x4D8
-#define FLAG_TALKED_TO_GYM_GUIDE_SOOTOPOLIS_GYM                     0x4D9
+#define FLAG_RECEIVED_FRESH_WATER_RUSTBORO_GYM                      0x4D2
+#define FLAG_RECEIVED_FRESH_WATER_DEWFORD_GYM                       0x4D3
+#define FLAG_RECEIVED_FRESH_WATER_MAUVILLE_GYM                      0x4D4
+#define FLAG_RECEIVED_FRESH_WATER_LAVARIDGE_GYM                     0x4D5
+#define FLAG_RECEIVED_FRESH_WATER_PETALBURG_GYM                     0x4D6
+#define FLAG_RECEIVED_FRESH_WATER_FORTREE_GYM                       0x4D7
+#define FLAG_RECEIVED_FRESH_WATER_MOSSDEEP_GYM                      0x4D8
+#define FLAG_RECEIVED_FRESH_WATER_SOOTOPOLIS_GYM                    0x4D9
 #define FLAG_UNUSED_0x4DA                                           0x4DA // Unused Flag
 #define FLAG_UNUSED_0x4DB                                           0x4DB // Unused Flag
 #define FLAG_UNUSED_0x4DC                                           0x4DC // Unused Flag
