@@ -1,9 +1,8 @@
 // the Fossil Scientist now also restores gen 1 fossils
 
-const GIVEMON_HELPER_SPECIES = VAR_TEMP_9
-const GIVEMON_HELPER_ARTICLE = VAR_TEMP_8
-const FOSSIL_ITEM = VAR_TEMP_7
-const FOSSIL_SPECIES = VAR_TEMP_6
+const GIVEMON_HELPER_ARTICLE = VAR_TEMP_9
+const FOSSIL_ITEM = VAR_TEMP_8
+const FOSSIL_SPECIES = VAR_TEMP_7
 
 script Pory_EventScript_FossilScientist {
   lock
@@ -95,25 +94,25 @@ script Pory_EventScript_FossilMonReady {
   msgbox(format("Thanks for waiting! Your fossil came back to life, it was an ancient Pokémon!"))
   switch (var(VAR_WHICH_FOSSIL_REVIVED)) {
     case 0:
+      setvar(VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_OMANYTE)
+      setvar(GIVEMON_HELPER_ARTICLE, 2)
       givemon(SPECIES_OMANYTE, 20)
-      setvar(GIVEMON_HELPER_SPECIES, SPECIES_OMANYTE)
-      setvar(GIVEMON_HELPER_ARTICLE, 2)
     case 1:
+      setvar(VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_KABUTO)
+      setvar(GIVEMON_HELPER_ARTICLE, 1)
       givemon(SPECIES_KABUTO, 20)
-      setvar(GIVEMON_HELPER_SPECIES, SPECIES_KABUTO)
-      setvar(GIVEMON_HELPER_ARTICLE, 1)
     case 2:
+      setvar(VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_AERODACTYL)
+      setvar(GIVEMON_HELPER_ARTICLE, 2)
       givemon(SPECIES_AERODACTYL, 20)
-      setvar(GIVEMON_HELPER_SPECIES, SPECIES_AERODACTYL)
-      setvar(GIVEMON_HELPER_ARTICLE, 2)
     case 3:
-      givemon(SPECIES_LILEEP, 20)
-      setvar(GIVEMON_HELPER_SPECIES, SPECIES_LILEEP)
+      setvar(VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_LILEEP)
       setvar(GIVEMON_HELPER_ARTICLE, 1)
+      givemon(SPECIES_LILEEP, 20)
     case 4:
-      givemon(SPECIES_ANORITH, 20)
-      setvar(GIVEMON_HELPER_SPECIES, SPECIES_ANORITH)
+      setvar(VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_ANORITH)
       setvar(GIVEMON_HELPER_ARTICLE, 2)
+      givemon(SPECIES_ANORITH, 20)
   }
   call(Pory_EventScript_GiveMonHelper)
   setvar(VAR_FOSSIL_RESURRECTION_STATE, 0)
