@@ -58,26 +58,18 @@ script Pory_EventScript_EvoStoneManiac_GiveEvoStones {
       msgbox(format("{PLAYER} handed the {STR_VAR_3} to the strange rock enthusiast."))
       msgbox(format("Yesssss! Another for my collection!"))
       removeitem(VAR_TEMP_3)
-      random(4)
+      random(8)
       switch (var(VAR_RESULT)) {
         case 0: giveitem(ITEM_FIRE_STONE)
         case 1: giveitem(ITEM_WATER_STONE)
         case 2: giveitem(ITEM_THUNDER_STONE)
         case 3: giveitem(ITEM_LEAF_STONE)
-      }
-      goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
-      random(2)
-      switch (var(VAR_RESULT)) {
-        case 0: giveitem(ITEM_SUN_STONE)
-        case 1: giveitem(ITEM_MOON_STONE)
-      }
-      goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
-      random(2)
-      switch (var(VAR_RESULT)) {
-        case 0: giveitem(ITEM_SHINY_STONE)
-        // case 1: giveitem(ITEM_DAWN_STONE)
-        case 1: giveitem(ITEM_DUSK_STONE)
-        // case 2: giveitem(ITEM_ICE_STONE)
+        case 4: giveitem(ITEM_SUN_STONE)
+        case 5: giveitem(ITEM_MOON_STONE)
+        case 6: giveitem(ITEM_SHINY_STONE)
+        // case 7: giveitem(ITEM_DAWN_STONE)
+        case 7: giveitem(ITEM_DUSK_STONE)
+        // case 8: giveitem(ITEM_ICE_STONE)
       }
       goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
       msgbox(format("There you go! Bring me more of your rocks whenever you think you have something cool!"))
