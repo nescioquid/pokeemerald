@@ -41,3 +41,15 @@ script Pory_EventScript_GiveMonHelper {
       call(Common_EventScript_NoMoreRoomForPokemon)
   }
 }
+
+// makes pushing to dynmultistack easier
+
+const ITEM_TO_CHECK = VAR_TEMP_0
+
+script Pory_EventScript_PushItemIfOwned {
+  checkitem(ITEM_TO_CHECK)
+  if (var(VAR_RESULT) == TRUE) {
+    bufferitemname(STR_VAR_1, ITEM_TO_CHECK)
+    dynmultipush("{STR_VAR_1}", ITEM_TO_CHECK)
+  }
+}
