@@ -1,81 +1,136 @@
 // adds a maniac in Slateport who trades evo stones for fossils
 
 const EVO_STONE_MANIAC_ID = 36
+const ITEM_TO_CHECK = VAR_TEMP_0
 
 script Pory_EventScript_EvoStoneManiac {
   lock
   faceplayer
-  msgbox(format("I like rocks…\nDo you have any cool rocks?\pI'm thinking about trading some of mine…"))
+  if (!flag(FLAG_TEMP_1)) {
+    msgbox(format("I like rocks…\nDo you have any cool rocks?\pI'm thinking about trading some of mine…"))
+  } else {
+    msgbox(format("Do you have more cool rocks for me?"))
+  }
   checkitem(ITEM_HELIX_FOSSIL)
   if (var(VAR_RESULT)) {
-    setvar(VAR_TEMP_3, ITEM_HELIX_FOSSIL)
-    bufferitemname(STR_VAR_3, ITEM_HELIX_FOSSIL)
-    goto(Pory_EventScript_EvoStoneManiac_GiveEvoStones)
+    goto(Pory_EventScript_EvoStoneManiac_TradeEvoStones)
   }
   checkitem(ITEM_DOME_FOSSIL)
   if (var(VAR_RESULT)) {
-    setvar(VAR_TEMP_3, ITEM_DOME_FOSSIL)
-    bufferitemname(STR_VAR_3, ITEM_DOME_FOSSIL)
-    goto(Pory_EventScript_EvoStoneManiac_GiveEvoStones)
+    goto(Pory_EventScript_EvoStoneManiac_TradeEvoStones)
   }
   checkitem(ITEM_OLD_AMBER)
   if (var(VAR_RESULT)) {
-    setvar(VAR_TEMP_3, ITEM_OLD_AMBER)
-    bufferitemname(STR_VAR_3, ITEM_OLD_AMBER)
-    goto(Pory_EventScript_EvoStoneManiac_GiveEvoStones)
+    goto(Pory_EventScript_EvoStoneManiac_TradeEvoStones)
   }
   checkitem(ITEM_ROOT_FOSSIL)
   if (var(VAR_RESULT)) {
-    setvar(VAR_TEMP_3, ITEM_ROOT_FOSSIL)
-    bufferitemname(STR_VAR_3, ITEM_ROOT_FOSSIL)
-    goto(Pory_EventScript_EvoStoneManiac_GiveEvoStones)
+    goto(Pory_EventScript_EvoStoneManiac_TradeEvoStones)
   }
   checkitem(ITEM_CLAW_FOSSIL)
   if (var(VAR_RESULT)) {
-    setvar(VAR_TEMP_3, ITEM_CLAW_FOSSIL)
-    bufferitemname(STR_VAR_3, ITEM_CLAW_FOSSIL)
-    goto(Pory_EventScript_EvoStoneManiac_GiveEvoStones)
+    goto(Pory_EventScript_EvoStoneManiac_TradeEvoStones)
   }
   release
   end
 }
 
-script Pory_EventScript_EvoStoneManiac_GiveEvoStones {
+script Pory_EventScript_EvoStoneManiac_TradeEvoStones {
   if (var(VAR_RESULT)) {
     playse(SE_PIN)
     applymovement(EVO_STONE_MANIAC_ID, Common_Movement_ExclamationMark)
     waitmovement(0)
     applymovement(EVO_STONE_MANIAC_ID, Common_Movement_Delay48)
     waitmovement(0)
-    if (var(VAR_TEMP_3) == ITEM_HELIX_FOSSIL) {
-      msgbox(format("Hey, is that a {STR_VAR_3}?\nPraise Helix!\pDo you wanna trade something for it? I'll give you three of my rocks if you let me have it. I get to choose which ones though!"), MSGBOX_YESNO)
-    } elif (var(VAR_TEMP_3) == ITEM_OLD_AMBER) {
-      msgbox(format("Hey, is that an {STR_VAR_3}?\pDo you wanna trade something for it? I'll give you three of my rocks if you let me have it. I get to choose which ones though!"), MSGBOX_YESNO)
-    } else {
-      msgbox(format("Hey, is that a {STR_VAR_3}?\pDo you wanna trade something for it? I'll give you three of my rocks if you let me have it. I get to choose which ones though!"), MSGBOX_YESNO)
+    message(format("Hey, that's a cool rock!\pDo you wanna trade something for it? I'll give you one of my rocks if you let me have it."))
+    waitmessage
+    setvar(ITEM_TO_CHECK, ITEM_HELIX_FOSSIL)
+    call(Pory_EventScript_PushItemIfOwned)
+    setvar(ITEM_TO_CHECK, ITEM_DOME_FOSSIL)
+    call(Pory_EventScript_PushItemIfOwned)
+    setvar(ITEM_TO_CHECK, ITEM_OLD_AMBER)
+    call(Pory_EventScript_PushItemIfOwned)
+    setvar(ITEM_TO_CHECK, ITEM_ROOT_FOSSIL)
+    call(Pory_EventScript_PushItemIfOwned)
+    setvar(ITEM_TO_CHECK, ITEM_CLAW_FOSSIL)
+    call(Pory_EventScript_PushItemIfOwned)
+    dynmultistack(0, 0, FALSE, 6, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
+    switch (var(VAR_RESULT)) {
+      case ITEM_HELIX_FOSSIL:
+        setvar(VAR_WHICH_FOSSIL_REVIVED, ITEM_HELIX_FOSSIL)
+        bufferitemname(STR_VAR_1, ITEM_HELIX_FOSSIL)
+        msgbox(format("{PLAYER} handed the {STR_VAR_1} to the strange rock enthusiast."))
+        message(format("Praise Helix! Another for my collection! Which one of my cool rocks do you want?"))
+        waitmessage
+        removeitem(ITEM_HELIX_FOSSIL)
+      case ITEM_DOME_FOSSIL:
+        setvar(VAR_WHICH_FOSSIL_REVIVED, ITEM_DOME_FOSSIL)
+        bufferitemname(STR_VAR_1, ITEM_DOME_FOSSIL)
+        msgbox(format("{PLAYER} handed the {STR_VAR_1} to the strange rock enthusiast."))
+        message(format("Yesssss! Another for my collection! Which one of my cool rocks do you want?"))
+        waitmessage
+        removeitem(ITEM_DOME_FOSSIL)
+      case ITEM_OLD_AMBER:
+        setvar(VAR_WHICH_FOSSIL_REVIVED, ITEM_OLD_AMBER)
+        bufferitemname(STR_VAR_1, ITEM_OLD_AMBER)
+        msgbox(format("{PLAYER} handed the {STR_VAR_1} to the strange rock enthusiast."))
+        message(format("Yesssss! Another for my collection! Which one of my cool rocks do you want?"))
+        waitmessage
+        removeitem(ITEM_OLD_AMBER)
+      case ITEM_ROOT_FOSSIL:
+        setvar(VAR_WHICH_FOSSIL_REVIVED, ITEM_ROOT_FOSSIL)
+        bufferitemname(STR_VAR_1, ITEM_ROOT_FOSSIL)
+        msgbox(format("{PLAYER} handed the {STR_VAR_1} to the strange rock enthusiast."))
+        message(format("Yesssss! Another for my collection! Which one of my cool rocks do you want?"))
+        waitmessage
+        removeitem(ITEM_ROOT_FOSSIL)
+      case ITEM_CLAW_FOSSIL:
+        setvar(VAR_WHICH_FOSSIL_REVIVED, ITEM_CLAW_FOSSIL)
+        bufferitemname(STR_VAR_1, ITEM_CLAW_FOSSIL)
+        msgbox(format("{PLAYER} handed the {STR_VAR_1} to the strange rock enthusiast."))
+        message(format("Yesssss! Another for my collection! Which one of my cool rocks do you want?"))
+        waitmessage
+        removeitem(ITEM_CLAW_FOSSIL)
+      case MULTI_B_PRESSED:
+        msgbox(format("Aww that's too bad… Are you sure? I really wanted to trade you for it!"))
+        release
+        end
     }
-    if (var(VAR_RESULT)) {
-      msgbox(format("{PLAYER} handed the {STR_VAR_3} to the strange rock enthusiast."))
-      msgbox(format("Yesssss! Another for my collection!"))
-      removeitem(VAR_TEMP_3)
-      random(8)
-      switch (var(VAR_RESULT)) {
-        case 0: giveitem(ITEM_FIRE_STONE)
-        case 1: giveitem(ITEM_WATER_STONE)
-        case 2: giveitem(ITEM_THUNDER_STONE)
-        case 3: giveitem(ITEM_LEAF_STONE)
-        case 4: giveitem(ITEM_SUN_STONE)
-        case 5: giveitem(ITEM_MOON_STONE)
-        case 6: giveitem(ITEM_SHINY_STONE)
-        // case 7: giveitem(ITEM_DAWN_STONE)
-        case 7: giveitem(ITEM_DUSK_STONE)
-        // case 8: giveitem(ITEM_ICE_STONE)
-      }
-      goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
-      msgbox(format("There you go! Bring me more of your rocks whenever you think you have something cool!"))
-    } else {
-      msgbox(format("Aww that's too bad… Are you sure? I really wanted to trade you for it though!"))
+    bufferitemname(STR_VAR_1, ITEM_LEAF_STONE)
+    dynmultipush("{STR_VAR_1}", ITEM_LEAF_STONE)
+    bufferitemname(STR_VAR_1, ITEM_FIRE_STONE)
+    dynmultipush("{STR_VAR_1}", ITEM_FIRE_STONE)
+    bufferitemname(STR_VAR_1, ITEM_WATER_STONE)
+    dynmultipush("{STR_VAR_1}", ITEM_WATER_STONE)
+    bufferitemname(STR_VAR_1, ITEM_THUNDER_STONE)
+    dynmultipush("{STR_VAR_1}", ITEM_THUNDER_STONE)
+    bufferitemname(STR_VAR_1, ITEM_SUN_STONE)
+    dynmultipush("{STR_VAR_1}", ITEM_SUN_STONE)
+    bufferitemname(STR_VAR_1, ITEM_MOON_STONE)
+    dynmultipush("{STR_VAR_1}", ITEM_MOON_STONE)
+    bufferitemname(STR_VAR_1, ITEM_SHINY_STONE)
+    dynmultipush("{STR_VAR_1}", ITEM_SHINY_STONE)
+    // bufferitemname(STR_VAR_1, ITEM_DAWN_STONE)
+    // dynmultipush("{STR_VAR_1}", ITEM_DAWN_STONE)
+    bufferitemname(STR_VAR_1, ITEM_DUSK_STONE)
+    dynmultipush("{STR_VAR_1}", ITEM_DUSK_STONE)
+    // bufferitemname(STR_VAR_1, ITEM_ICE_STONE)
+    // dynmultipush("{STR_VAR_1}", ITEM_ICE_STONE)
+    dynmultistack(0, 0, FALSE, 6, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
+    switch (var(VAR_RESULT)) {
+      case ITEM_LEAF_STONE: giveitem(ITEM_LEAF_STONE)
+      case ITEM_FIRE_STONE: giveitem(ITEM_FIRE_STONE)
+      case ITEM_WATER_STONE: giveitem(ITEM_WATER_STONE)
+      case ITEM_THUNDER_STONE: giveitem(ITEM_THUNDER_STONE)
+      case ITEM_SUN_STONE: giveitem(ITEM_SUN_STONE)
+      case ITEM_MOON_STONE: giveitem(ITEM_MOON_STONE)
+      case ITEM_SHINY_STONE: giveitem(ITEM_SHINY_STONE)
+      // case ITEM_DAWN_STONE: giveitem(ITEM_DAWN_STONE)
+      case ITEM_DUSK_STONE: giveitem(ITEM_DUSK_STONE)
+      // case ITEM_ICE_STONE: giveitem(ITEM_ICE_STONE)
     }
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    msgbox(format("There you go! Bring me more of your rocks whenever you think you have something cool!"))
   }
   release
   end
