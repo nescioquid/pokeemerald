@@ -6,6 +6,7 @@ CaveOfOrigin_B1F_MapScripts::
 CaveOfOrigin_B1F_EventScript_Wallace::
 	lock
 	faceplayer
+	goto_if_set FLAG_SYS_GAME_CLEAR, Pory_EventScript_Wallace_Postgame
 	msgbox CaveOfOrigin_B1F_Text_WallaceStory_Pory, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_WALLACE, Common_Movement_WalkInPlaceFasterUp

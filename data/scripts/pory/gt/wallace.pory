@@ -1,0 +1,21 @@
+// adds a battle with Wallace in the postgame
+
+script Pory_EventScript_OpenCaveOfOrigin {
+  setflag(FLAG_HIDE_CAVE_OF_ORIGIN_EXPERT)
+  clearflag(FLAG_HIDE_CAVE_OF_ORIGIN_B1F_WALLACE)
+}
+
+script Pory_EventScript_Wallace_Postgame {
+  lock
+  faceplayer
+  if (flag(FLAG_DEFEATED_CAVE_OF_ORIGIN_WALLACE)) {
+    msgbox(format("You…\nI had no idea you'd become so strong…"))
+  } else {
+    msgbox(format("Oh, wow, {PLAYER}. I didn't think I'd be disturbed here.\pWe haven't known each other for long, but you should have an idea of how strong of a trainer I am.\pSo, {PLAYER}, if you're seriously going to challenge me, expect the worst!"))
+    trainerbattle_no_intro(TRAINER_WALLACE, format("You…\nI had no idea you'd become so strong…"))
+    msgbox(format("Come to think of it, ever since our paths first crossed, I had this feeling.\pI thought that you would eventually become the Champion.\pMy predictions usually come true.\pAnd where will you go from here?\p… … … … … …\n… … … … … …\pFufufu, even I couldn't tell you that."))
+    setflag(FLAG_DEFEATED_CAVE_OF_ORIGIN_WALLACE)
+  }
+  release
+  end
+}
