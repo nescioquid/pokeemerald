@@ -1,120 +1,112 @@
 // the Fossil Scientist now also restores gen 1 fossils
 
 const GIVEMON_HELPER_ARTICLE = VAR_TEMP_9
-const FOSSIL_ITEM = VAR_TEMP_8
-const FOSSIL_SPECIES = VAR_TEMP_7
+const ITEM_TO_CHECK = VAR_TEMP_0
 
 script Pory_EventScript_FossilScientist {
   lock
   faceplayer
-  if (var(VAR_FOSSIL_RESURRECTION_STATE) == 0) {
-  msgbox(format("I've been trying to develop a device that resurrects Pokémon from fossils…\pAnd, it's working!\pDo you happen to have any? I can bring them back to life with my new regenerator!"))
-    checkitem(ITEM_HELIX_FOSSIL)
-    if (var(VAR_RESULT)) {
-      msgbox(format("How about that Helix Fossil of yours?"), MSGBOX_YESNO)
-      if (var(VAR_RESULT)) {
-        setvar(FOSSIL_ITEM, ITEM_HELIX_FOSSIL)
-        bufferitemname(STR_VAR_1, ITEM_HELIX_FOSSIL)
-        setvar(VAR_WHICH_FOSSIL_REVIVED, 0)
-        goto(Pory_EventScript_GiveFossil)
-      } else {
-        msgbox(Pory_Text_DeclineGiveFossil)
-      }
-    }
-    checkitem(ITEM_DOME_FOSSIL)
-    if (var(VAR_RESULT)) {
-      msgbox(format("And what about that Dome Fossil you have?"), MSGBOX_YESNO)
-      if (var(VAR_RESULT)) {
-        setvar(FOSSIL_ITEM, ITEM_DOME_FOSSIL)
-        bufferitemname(STR_VAR_1, ITEM_DOME_FOSSIL)
-        setvar(VAR_WHICH_FOSSIL_REVIVED, 1)
-        goto(Pory_EventScript_GiveFossil)
-      } else {
-        msgbox(Pory_Text_DeclineGiveFossil)
-      }
-    }
-    checkitem(ITEM_OLD_AMBER)
-    if (var(VAR_RESULT)) {
-      msgbox(format("Hey… That Old Amber would be perfect!"), MSGBOX_YESNO)
-      if (var(VAR_RESULT)) {
-        setvar(FOSSIL_ITEM, ITEM_OLD_AMBER)
-        bufferitemname(STR_VAR_1, ITEM_OLD_AMBER)
-        setvar(VAR_WHICH_FOSSIL_REVIVED, 2)
-        goto(Pory_EventScript_GiveFossil)
-      } else {
-        msgbox(Pory_Text_DeclineGiveFossil)
-      }
-    }
-    checkitem(ITEM_ROOT_FOSSIL)
-    if (var(VAR_RESULT)) {
-      msgbox(format("How about that Root Fossil you have?"), MSGBOX_YESNO)
-      if (var(VAR_RESULT)) {
-        setvar(FOSSIL_ITEM, ITEM_ROOT_FOSSIL)
-        bufferitemname(STR_VAR_1, ITEM_ROOT_FOSSIL)
-        setvar(VAR_WHICH_FOSSIL_REVIVED, 3)
-        goto(Pory_EventScript_GiveFossil)
-      } else {
-        msgbox(Pory_Text_DeclineGiveFossil)
-      }
-    }
-    checkitem(ITEM_CLAW_FOSSIL)
-    if (var(VAR_RESULT)) {
-      msgbox(format("And what about that Claw Fossil of yours?"), MSGBOX_YESNO)
-      if (var(VAR_RESULT)) {
-        setvar(FOSSIL_ITEM, ITEM_CLAW_FOSSIL)
-        bufferitemname(STR_VAR_1, ITEM_CLAW_FOSSIL)
-        setvar(VAR_WHICH_FOSSIL_REVIVED, 4)
-        goto(Pory_EventScript_GiveFossil)
-      } else {
-        msgbox(Pory_Text_DeclineGiveFossil)
-      }
-    }
-  } elif (var(VAR_FOSSIL_RESURRECTION_STATE) == 1) {
-    msgbox(format("This fossil regenerator really is incredible, but it has one drawback --it takes a while to work.\pSo, uh… Why not go for a stroll and look around for a while?"))
-  } elif (var(VAR_FOSSIL_RESURRECTION_STATE) == 2) {
-    call(Pory_EventScript_FossilMonReady)
+  if (!flag(FLAG_TEMP_1)) {
+    message(format("I've been trying to develop a device that resurrects Pokémon from fossils…\pAnd, it's working!\pDo you happen to have any? I can bring them back to life with my regenerator!"))
+    waitmessage
+  } else {
+    message(format("Do you have another fossil for me?"))
+    waitmessage
+  }
+  checkitem(ITEM_HELIX_FOSSIL)
+  if (var(VAR_RESULT)) {
+    goto(Pory_EventScript_FossilScientist_ReviveFossil)
+  }
+  checkitem(ITEM_DOME_FOSSIL)
+  if (var(VAR_RESULT)) {
+    goto(Pory_EventScript_FossilScientist_ReviveFossil)
+  }
+  checkitem(ITEM_OLD_AMBER)
+  if (var(VAR_RESULT)) {
+    goto(Pory_EventScript_FossilScientist_ReviveFossil)
+  }
+  checkitem(ITEM_ROOT_FOSSIL)
+  if (var(VAR_RESULT)) {
+    goto(Pory_EventScript_FossilScientist_ReviveFossil)
+  }
+  checkitem(ITEM_CLAW_FOSSIL)
+  if (var(VAR_RESULT)) {
+    goto(Pory_EventScript_FossilScientist_ReviveFossil)
   }
   release
   end
 }
 
-script Pory_EventScript_GiveFossil {
-  msgbox(format("Excellent!\nLet's do it right away.\p{PLAYER} handed the {STR_VAR_1} to the Devon researcher."))
-  removeitem(FOSSIL_ITEM)
-  setvar(VAR_FOSSIL_RESURRECTION_STATE, 1)
-  release
-  end
-}
-
-text Pory_Text_DeclineGiveFossil {
-  format("Oh, is that so?\pOur technological expertise here at Devon is outstanding, I tell you.")
-}
-
-script Pory_EventScript_FossilMonReady {
-  msgbox(format("Thanks for waiting! Your fossil came back to life, it was an ancient Pokémon!"))
+script Pory_EventScript_FossilScientist_ReviveFossil {
+  setvar(ITEM_TO_CHECK, ITEM_HELIX_FOSSIL)
+  call(Pory_EventScript_PushItemIfOwned)
+  setvar(ITEM_TO_CHECK, ITEM_DOME_FOSSIL)
+  call(Pory_EventScript_PushItemIfOwned)
+  setvar(ITEM_TO_CHECK, ITEM_OLD_AMBER)
+  call(Pory_EventScript_PushItemIfOwned)
+  setvar(ITEM_TO_CHECK, ITEM_ROOT_FOSSIL)
+  call(Pory_EventScript_PushItemIfOwned)
+  setvar(ITEM_TO_CHECK, ITEM_CLAW_FOSSIL)
+  call(Pory_EventScript_PushItemIfOwned)
+  dynmultistack(0, 0, FALSE, 6, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
+  switch (var(VAR_RESULT)) {
+    case ITEM_HELIX_FOSSIL:
+      setvar(VAR_WHICH_FOSSIL_REVIVED, ITEM_HELIX_FOSSIL)
+      bufferitemname(STR_VAR_1, ITEM_HELIX_FOSSIL)
+      msgbox(format("Praise Helix! Let's do it right now.\p{PLAYER} handed the {STR_VAR_1} to the Devon researcher."))
+      removeitem(ITEM_HELIX_FOSSIL)
+    case ITEM_DOME_FOSSIL:
+      setvar(VAR_WHICH_FOSSIL_REVIVED, ITEM_DOME_FOSSIL)
+      bufferitemname(STR_VAR_1, ITEM_DOME_FOSSIL)
+      msgbox(format("Excellent! Let's do it right now.\p{PLAYER} handed the {STR_VAR_1} to the Devon researcher."))
+      removeitem(ITEM_DOME_FOSSIL)
+    case ITEM_OLD_AMBER:
+      setvar(VAR_WHICH_FOSSIL_REVIVED, ITEM_OLD_AMBER)
+      bufferitemname(STR_VAR_1, ITEM_OLD_AMBER)
+      msgbox(format("Excellent, let's do it!\p{PLAYER} handed the {STR_VAR_1} to the Devon researcher."))
+      removeitem(ITEM_OLD_AMBER)
+    case ITEM_ROOT_FOSSIL:
+      setvar(VAR_WHICH_FOSSIL_REVIVED, ITEM_ROOT_FOSSIL)
+      bufferitemname(STR_VAR_1, ITEM_ROOT_FOSSIL)
+      msgbox(format("Excellent! Let's do it right away.\p{PLAYER} handed the {STR_VAR_1} to the Devon researcher."))
+      removeitem(ITEM_ROOT_FOSSIL)
+    case ITEM_CLAW_FOSSIL:
+      setvar(VAR_WHICH_FOSSIL_REVIVED, ITEM_CLAW_FOSSIL)
+      bufferitemname(STR_VAR_1, ITEM_CLAW_FOSSIL)
+      msgbox(format("Excellent! Let's do it right away.\p{PLAYER} handed the {STR_VAR_1} to the Devon researcher."))
+      removeitem(ITEM_CLAW_FOSSIL)
+    case MULTI_B_PRESSED:
+      msgbox(format("Oh, is that so?\pOur technological expertise here at Devon is outstanding, I tell you."))
+      release
+      end
+  }
+  msgbox(format("… … … … … … … …\n… … … … … … … …\p… … … … … … … …\n… … … … … … … …\pThanks for waiting! Your fossil came back to life!"))
   switch (var(VAR_WHICH_FOSSIL_REVIVED)) {
-    case 0:
+    case ITEM_HELIX_FOSSIL:
       setvar(VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_OMANYTE)
       setvar(GIVEMON_HELPER_ARTICLE, 2)
-      givemon(SPECIES_OMANYTE, 20)
-    case 1:
+      givemon(SPECIES_OMANYTE, 25)
+    case ITEM_DOME_FOSSIL:
       setvar(VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_KABUTO)
       setvar(GIVEMON_HELPER_ARTICLE, 1)
-      givemon(SPECIES_KABUTO, 20)
-    case 2:
+      givemon(SPECIES_KABUTO, 25)
+    case ITEM_OLD_AMBER:
       setvar(VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_AERODACTYL)
       setvar(GIVEMON_HELPER_ARTICLE, 2)
-      givemon(SPECIES_AERODACTYL, 20)
-    case 3:
+      givemon(SPECIES_AERODACTYL, 25)
+    case ITEM_ROOT_FOSSIL:
       setvar(VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_LILEEP)
       setvar(GIVEMON_HELPER_ARTICLE, 1)
-      givemon(SPECIES_LILEEP, 20)
-    case 4:
+      givemon(SPECIES_LILEEP, 25)
+    case ITEM_CLAW_FOSSIL:
       setvar(VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_ANORITH)
       setvar(GIVEMON_HELPER_ARTICLE, 2)
-      givemon(SPECIES_ANORITH, 20)
+      givemon(SPECIES_ANORITH, 25)
   }
   call(Pory_EventScript_GiveMonHelper)
-  setvar(VAR_FOSSIL_RESURRECTION_STATE, 0)
   setflag(FLAG_RECEIVED_REVIVED_FOSSIL_MON)
+  setflag(FLAG_TEMP_1)
+  msgbox(format("Come back with more fossils!"))
+  release
+  end
 }
