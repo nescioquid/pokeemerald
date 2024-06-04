@@ -30,14 +30,10 @@ text MauvilleCity_House2_Text_BuyHarborMailAtLilycove_Pory {
   format("If could go to Lilycove for some shopping, I'd be able to buy Harbor Mail at the Department Store there…")
 }
 
-// removes mention of Numel (Team Magma mon only)
+// removes mention of Numel (Team Magma only)
 
-script Route113_Text_MadelineIntro_Pory {
-  lock
-  faceplayer
-  msgbox(format("I use this parasol to ward off this filthy, yucky volcanic ash from my dear Numel."))
-  release
-  end
+text Route113_Text_MadelineIntro_Pory {
+  format("I use this parasol to ward off this filthy, yucky volcanic ash from my dear Pokémon.")
 }
 
 // removes mention of X Special
