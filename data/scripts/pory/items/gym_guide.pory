@@ -1,17 +1,18 @@
-// the Gym Guide now gives you a Fresh Water in every Gym
+// the Gym Guide now gives you a Fresh Water and Rare Candies in every Gym
 
 const FRESH_WATER_AMOUNT = 6
+const RARE_CANDY_AMOUNT = 36
 
 script RustboroCity_Gym_EventScript_GymGuide_Pory {
   lock
   faceplayer
   if (flag(FLAG_DEFEATED_RUSTBORO_GYM)) {
     msgbox(RustboroCity_Gym_Text_GymGuidePostVictory)
-    if (!flag(FLAG_RECEIVED_RARE_CANDIES_RUSTBORO_GYM)) {
+    if (!flag(FLAG_RECEIVED_RARE_CANDY_RUSTBORO_GYM)) {
       msgbox(format("Oh, and take these!"))
-      giveitem(ITEM_RARE_CANDY, 30)
+      giveitem(ITEM_RARE_CANDY, RARE_CANDY_AMOUNT)
       goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
-      setflag(FLAG_RECEIVED_RARE_CANDIES_RUSTBORO_GYM)
+      setflag(FLAG_RECEIVED_RARE_CANDY_RUSTBORO_GYM)
       msgbox(format("Congrats on the big win!"))
     }
   } else {
@@ -33,11 +34,11 @@ script DewfordTown_Gym_EventScript_GymGuide_Pory {
   faceplayer
   if (flag(FLAG_DEFEATED_DEWFORD_GYM)) {
     msgbox(DewfordTown_Gym_Text_GymGuidePostVictory)
-    if (!flag(FLAG_RECEIVED_RARE_CANDIES_DEWFORD_GYM)) {
+    if (!flag(FLAG_RECEIVED_RARE_CANDY_DEWFORD_GYM)) {
       msgbox(format("Oh, and take these!"))
-      giveitem(ITEM_RARE_CANDY, 30)
+      giveitem(ITEM_RARE_CANDY, RARE_CANDY_AMOUNT)
       goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
-      setflag(FLAG_RECEIVED_RARE_CANDIES_DEWFORD_GYM)
+      setflag(FLAG_RECEIVED_RARE_CANDY_DEWFORD_GYM)
       msgbox(format("Congrats on the big win!"))
     }
   } else {
@@ -59,11 +60,11 @@ script MauvilleCity_Gym_EventScript_GymGuide_Pory {
   faceplayer
   if (flag(FLAG_DEFEATED_MAUVILLE_GYM)) {
     msgbox(MauvilleCity_Gym_Text_GymGuidePostVictory)
-    if (!flag(FLAG_RECEIVED_RARE_CANDIES_MAUVILLE_GYM)) {
+    if (!flag(FLAG_RECEIVED_RARE_CANDY_MAUVILLE_GYM)) {
       msgbox(format("Oh, and take these!"))
-      giveitem(ITEM_RARE_CANDY, 30)
+      giveitem(ITEM_RARE_CANDY, RARE_CANDY_AMOUNT)
       goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
-      setflag(FLAG_RECEIVED_RARE_CANDIES_MAUVILLE_GYM)
+      setflag(FLAG_RECEIVED_RARE_CANDY_MAUVILLE_GYM)
       msgbox(format("Congrats on the big win!"))
     }
   } else {
@@ -85,11 +86,11 @@ script LavaridgeTown_Gym_1F_EventScript_GymGuide_Pory {
   faceplayer
   if (flag(FLAG_DEFEATED_LAVARIDGE_GYM)) {
     msgbox(LavaridgeTown_Gym_1F_Text_GymGuidePostVictory)
-    if (!flag(FLAG_RECEIVED_RARE_CANDIES_LAVARIDGE_GYM)) {
+    if (!flag(FLAG_RECEIVED_RARE_CANDY_LAVARIDGE_GYM)) {
       msgbox(format("Oh, and take these!"))
-      giveitem(ITEM_RARE_CANDY, 30)
+      giveitem(ITEM_RARE_CANDY, RARE_CANDY_AMOUNT)
       goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
-      setflag(FLAG_RECEIVED_RARE_CANDIES_LAVARIDGE_GYM)
+      setflag(FLAG_RECEIVED_RARE_CANDY_LAVARIDGE_GYM)
       msgbox(format("Congrats on the big win!"))
     }
   } else {
@@ -111,11 +112,11 @@ script PetalburgCity_Gym_EventScript_GymGuide_Pory {
   faceplayer
   if (flag(FLAG_DEFEATED_PETALBURG_GYM)) {
     msgbox(PetalburgCity_Gym_Text_GymGuidePostVictory)
-    if (!flag(FLAG_RECEIVED_RARE_CANDIES_PETALBURG_GYM)) {
+    if (!flag(FLAG_RECEIVED_RARE_CANDY_PETALBURG_GYM)) {
       msgbox(format("Oh, and take these!"))
-      giveitem(ITEM_RARE_CANDY, 30)
+      giveitem(ITEM_RARE_CANDY, RARE_CANDY_AMOUNT)
       goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
-      setflag(FLAG_RECEIVED_RARE_CANDIES_PETALBURG_GYM)
+      setflag(FLAG_RECEIVED_RARE_CANDY_PETALBURG_GYM)
       msgbox(format("Congrats on the big win!"))
     }
   } else {
@@ -137,11 +138,11 @@ script FortreeCity_Gym_EventScript_GymGuide_Pory {
   faceplayer
   if (flag(FLAG_DEFEATED_FORTREE_GYM)) {
     msgbox(FortreeCity_Gym_Text_GymGuidePostVictory)
-    if (!flag(FLAG_RECEIVED_RARE_CANDIES_FORTREE_GYM)) {
+    if (!flag(FLAG_RECEIVED_RARE_CANDY_FORTREE_GYM)) {
       msgbox(format("Oh, and take these!"))
-      giveitem(ITEM_RARE_CANDY, 30)
+      giveitem(ITEM_RARE_CANDY, RARE_CANDY_AMOUNT)
       goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
-      setflag(FLAG_RECEIVED_RARE_CANDIES_FORTREE_GYM)
+      setflag(FLAG_RECEIVED_RARE_CANDY_FORTREE_GYM)
       msgbox(format("Congrats on the big win!"))
     }
   } else {
@@ -163,11 +164,11 @@ script MossdeepCity_Gym_EventScript_GymGuide_Pory {
   faceplayer
   if (flag(FLAG_DEFEATED_MOSSDEEP_GYM)) {
     msgbox(MossdeepCity_Gym_Text_GymGuidePostVictory)
-    if (!flag(FLAG_RECEIVED_RARE_CANDIES_MOSSDEEP_GYM)) {
+    if (!flag(FLAG_RECEIVED_RARE_CANDY_MOSSDEEP_GYM)) {
       msgbox(format("Oh, and take these!"))
-      giveitem(ITEM_RARE_CANDY, 30)
+      giveitem(ITEM_RARE_CANDY, RARE_CANDY_AMOUNT)
       goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
-      setflag(FLAG_RECEIVED_RARE_CANDIES_MOSSDEEP_GYM)
+      setflag(FLAG_RECEIVED_RARE_CANDY_MOSSDEEP_GYM)
       msgbox(format("Congrats on the big win!"))
     }
   } else {
@@ -189,11 +190,11 @@ script SootopolisCity_Gym_1F_EventScript_GymGuide_Pory {
   faceplayer
   if (flag(FLAG_DEFEATED_SOOTOPOLIS_GYM)) {
     msgbox(SootopolisCity_Gym_1F_Text_GymGuidePostVictory)
-    if (!flag(FLAG_RECEIVED_RARE_CANDIES_SOOTOPOLIS_GYM)) {
+    if (!flag(FLAG_RECEIVED_RARE_CANDY_SOOTOPOLIS_GYM)) {
       msgbox(format("Oh, and take these!"))
-      giveitem(ITEM_RARE_CANDY, 30)
+      giveitem(ITEM_RARE_CANDY, RARE_CANDY_AMOUNT)
       goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
-      setflag(FLAG_RECEIVED_RARE_CANDIES_SOOTOPOLIS_GYM)
+      setflag(FLAG_RECEIVED_RARE_CANDY_SOOTOPOLIS_GYM)
       msgbox(format("Congrats on the big win!"))
     }
   } else {
