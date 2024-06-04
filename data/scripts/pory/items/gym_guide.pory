@@ -1,5 +1,7 @@
 // the Gym Guide now gives you a Fresh Water in every Gym
 
+const FRESH_WATER_AMOUNT = 6
+
 script RustboroCity_Gym_EventScript_GymGuide_Pory {
   lock
   faceplayer
@@ -16,7 +18,7 @@ script RustboroCity_Gym_EventScript_GymGuide_Pory {
     msgbox(format("Yo, how's it going?\pListen, my friend!\nWould you like to become the Champion?\pI'm no Trainer, not me, but I can\nsure give you winning advice.\pThat's settled, then! We'll aim for the\nPokémon Championship together!\pIt's your job as a Trainer to collect\nGym Badges, am I right?\pBut Gym Leaders aren't pushovers!\pAnd that's where I come in!\nI'm here to provide expert advice!\pRoxanne, the Gym Leader, is a user\nof Rock-type Pokémon.\pThe Rock type is very durable, but\nit can't stand Water-type and\lGrass-type moves.\pCome see me afterwards, if you beat\nthe Gym Leader."))
     if (!flag(FLAG_RECEIVED_FRESH_WATER_RUSTBORO_GYM)) {
       msgbox(format("Oh, and take this!"))
-      giveitem(ITEM_FRESH_WATER)
+      giveitem(ITEM_FRESH_WATER, FRESH_WATER_AMOUNT)
       goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
       setflag(FLAG_RECEIVED_FRESH_WATER_RUSTBORO_GYM)
       msgbox(format("Well, go for it!"))
@@ -42,7 +44,7 @@ script DewfordTown_Gym_EventScript_GymGuide_Pory {
     msgbox(format("Hey, how's it going, Champion-\nbound {PLAYER}?\pDewford's Gym Leader Brawly commands\nFighting-type Pokémon.\pGoing against him with NORMAL-type\nPokémon is asking for trouble.\pFighting Pokémon will lay a serious\nsmack down on Normal Pokémon,\lso be careful!\pWhat's worse, the Gym is as dark as\nthe ocean floor.\pBut it will get brighter after defeating\nthe Trainers in your way."))
     if (!flag(FLAG_RECEIVED_FRESH_WATER_DEWFORD_GYM)) {
       msgbox(format("Oh, and take this!"))
-      giveitem(ITEM_FRESH_WATER)
+      giveitem(ITEM_FRESH_WATER, FRESH_WATER_AMOUNT)
       goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
       setflag(FLAG_RECEIVED_FRESH_WATER_DEWFORD_GYM)
       msgbox(format("Hey, okay, go for it!"))
@@ -68,7 +70,7 @@ script MauvilleCity_Gym_EventScript_GymGuide_Pory {
     msgbox(format("Hey, how's it going, Champion-\nbound {PLAYER}?\pWATTSON, the Leader of Mauville\nGym, uses Electric-type Pokémon.\pIf you challenge him with Water-type\nPokémon, he'll zap them! Bzzt!\pAnd, he's put in switch-controlled\ndoors all over his Gym! Eccentric!"))
     if (!flag(FLAG_RECEIVED_FRESH_WATER_MAUVILLE_GYM)) {
       msgbox(format("Oh, and take this!"))
-      giveitem(ITEM_FRESH_WATER)
+      giveitem(ITEM_FRESH_WATER, FRESH_WATER_AMOUNT)
       goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
       setflag(FLAG_RECEIVED_FRESH_WATER_MAUVILLE_GYM)
       msgbox(format("Hey, go for it!"))
@@ -94,7 +96,7 @@ script LavaridgeTown_Gym_1F_EventScript_GymGuide_Pory {
     msgbox(format("Hey, how's it going, Champion-\nbound {PLAYER}?\pLavaridge's Gym Leader Flannery\nuses Fire-type Pokémon.\pHer passion for Pokémon burns stronger\nand hotter than a volcano.\pDon't get too close to her--you'll burn!\nHose her down with water and then\lgo for it!"))
     if (!flag(FLAG_RECEIVED_FRESH_WATER_LAVARIDGE_GYM)) {
       msgbox(format("Oh, and take this!"))
-      giveitem(ITEM_FRESH_WATER)
+      giveitem(ITEM_FRESH_WATER, FRESH_WATER_AMOUNT)
       goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
       setflag(FLAG_RECEIVED_FRESH_WATER_LAVARIDGE_GYM)
       msgbox(format("Good luck!"))
@@ -120,7 +122,7 @@ script PetalburgCity_Gym_EventScript_GymGuide_Pory {
     msgbox(format("Hey, how's it going, Champion-\nbound {PLAYER}?\pThe doors in this Gym open when you\nbeat the awaiting Trainers.\pWhoops! The doors in this room are\nalready open, so don't attack me!\pThe Trainers of Petalburg Gym\nuse all kinds of items.\pThe door at the left leads to\nthe Speed Room.\pThe door at the right leads to\nthe Accuracy Room.\pThe room's name will be on\nthe door, so choose carefully.\pOnce you've chosen the door…"))
     if (!flag(FLAG_RECEIVED_FRESH_WATER_PETALBURG_GYM)) {
       msgbox(format("Oh, and take this!"))
-      giveitem(ITEM_FRESH_WATER)
+      giveitem(ITEM_FRESH_WATER, FRESH_WATER_AMOUNT)
       goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
       setflag(FLAG_RECEIVED_FRESH_WATER_PETALBURG_GYM)
       msgbox(format("Well, hey, go for it!"))
@@ -146,7 +148,7 @@ script FortreeCity_Gym_EventScript_GymGuide_Pory {
     msgbox(format("Yo, how's it going, Champion-\nbound {PLAYER}?\pFortree Gym Leader Winona is\na master of Flying-type Pokémon.\pShe's waiting at the back of this Gym,\nbehind the rotating doors.\pShe's waiting for new challengers\nwho are trying to take wing!"))
     if (!flag(FLAG_RECEIVED_FRESH_WATER_FORTREE_GYM)) {
       msgbox(format("Oh, and take this!"))
-      giveitem(ITEM_FRESH_WATER)
+      giveitem(ITEM_FRESH_WATER, FRESH_WATER_AMOUNT)
       goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
       setflag(FLAG_RECEIVED_FRESH_WATER_FORTREE_GYM)
       msgbox(format("Okay, go for it!"))
@@ -172,7 +174,7 @@ script MossdeepCity_Gym_EventScript_GymGuide_Pory {
     msgbox(format("Yo, how's it going, Champion-bound\n{PLAYER}?\pThe Gym Leaders here use\nPsychic-type Pokémon.\pIf you go up against them with\nFighting- or Poison-type Pokémon,\lthey'll inflict horrible damage!\pPlus, they'll come at you with\noutstanding combination attacks.\pIf you want to win, you'll need to show\nthem how tight you are with your\lPokémon."))
     if (!flag(FLAG_RECEIVED_FRESH_WATER_MOSSDEEP_GYM)) {
       msgbox(format("Oh, and take this!"))
-      giveitem(ITEM_FRESH_WATER)
+      giveitem(ITEM_FRESH_WATER, FRESH_WATER_AMOUNT)
       goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
       setflag(FLAG_RECEIVED_FRESH_WATER_MOSSDEEP_GYM)
       msgbox(format("Go for it!"))
@@ -198,7 +200,7 @@ script SootopolisCity_Gym_1F_EventScript_GymGuide_Pory {
     msgbox(format("Yo! How's it going, Champion-\nbound {PLAYER}?\pSootopolis's Gym Leader Juan is\na master of WATER-type Pokémon.\pAnd, to get to Juan, an icy floor\nwill hamper your progress…\pListen, I'm sorry, but that's all the\nadvice that I have for you.\pThe rest of the way, you have to\ngo for it yourself!"))
     if (!flag(FLAG_RECEIVED_FRESH_WATER_SOOTOPOLIS_GYM)) {
       msgbox(format("Oh, and take this!"))
-      giveitem(ITEM_FRESH_WATER)
+      giveitem(ITEM_FRESH_WATER, FRESH_WATER_AMOUNT)
       goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
       setflag(FLAG_RECEIVED_FRESH_WATER_SOOTOPOLIS_GYM)
       msgbox(format("Good luck!"))
