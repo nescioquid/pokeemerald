@@ -1320,7 +1320,7 @@
 #define FLAG_DEFEATED_FORTREE_GYM                                   0x4F5
 #define FLAG_DEFEATED_MOSSDEEP_GYM                                  0x4F6
 #define FLAG_DEFEATED_SOOTOPOLIS_GYM                                0x4F7
-#define FLAG_DEFEATED_METEOR_FALLS_STEVEN                           0x4F8
+#define FLAG_DEFEATED_METEOR_FALLS_META_BOY                         0x4F8
 #define FLAG_DEFEATED_RIVAL_ROUTE103_POSTGAME                       0x4F9
 #define FLAG_DEFEATED_CAVE_OF_ORIGIN_WALLACE                        0x4FA
 

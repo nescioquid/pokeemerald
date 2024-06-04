@@ -1,4 +1,3 @@
-
 // adds an NPC that gives a Johto Starter in Dewford's Pokémon Center
 
 const GIVEMON_HELPER_ARTICLE = VAR_TEMP_9
@@ -67,6 +66,33 @@ script Pory_EventScript_MetaBoy_WhatsUp {
   msgbox(format("Seriously though, in the newer games Game Freak has actually coded this item into the game.\pI'll let you figure out what it does on your own time."))
   } else {
     msgbox(format("Hey… You don't happen to know any good mojito recipes, do you?"))
+  }
+  release
+  end
+}
+
+// replaces Steven with Meta Boy in Meteor Falls
+
+const METEOR_FALLS_META_BOY_ID = 1
+
+script MeteorFalls_StevensCave_EventScript_MetaBoy_Pory {
+  lock
+  faceplayer
+  if (flag(FLAG_DEFEATED_METEOR_FALLS_META_BOY)) {
+    msgbox(format("Nice battling! I guess you're that much more powerful than the guy that literally made the game you're playing!"))
+  } else {
+    waitse
+    playse(SE_PIN)
+    applymovement(METEOR_FALLS_META_BOY_ID, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(METEOR_FALLS_META_BOY_ID, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(METEOR_FALLS_META_BOY_ID, Common_Movement_FacePlayer)
+    waitmovement(0)
+    msgbox(format("{PLAYER}. We meet again.\pThanks to you I not only finished my mod of Pokémon Emerald for the Game Boy Advance, but was able to catch and train some way cooler Pokémon than that lame one I ditched you with back in Dewford. Wanna see?")) 
+    trainerbattle_no_intro(TRAINER_META_BOY, format("Hey, you actually beat me!"))
+    msgbox(format("Nice battling! I guess you're that much more powerful than the guy that literally made the game you're playing!"))
+    setflag(FLAG_DEFEATED_METEOR_FALLS_META_BOY)
   }
   release
   end
