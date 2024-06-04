@@ -38,7 +38,7 @@ script Pory_EventScript_MetaBoy_GiveJohtoStarter {
         }
         call(Pory_EventScript_GiveMonHelper)
         setflag(FLAG_RECEIVED_JOHTO_STARTER)
-        clearflag(FLAG_META_BOY_ON_THE_BEACH)
+        clearflag(FLAG_HIDE_ROUTE_109_META_BOY)
         setflag(FLAG_TEMP_1)
         msgbox(format("Now I can finally spend the summer at my family's beach house in peace!"))
       } else {
@@ -72,6 +72,10 @@ script Pory_EventScript_MetaBoy_WhatsUp {
 }
 
 // replaces Steven with Meta Boy in Meteor Falls
+
+script Pory_EventScript_HideMetaBoyRoute109 {
+  setflag(FLAG_HIDE_ROUTE_109_META_BOY)
+}
 
 const METEOR_FALLS_META_BOY_ID = 1
 

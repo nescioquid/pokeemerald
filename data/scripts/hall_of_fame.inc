@@ -24,6 +24,7 @@ EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags::
 	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 0, EverGrandeCity_HallOfFame_EventScript_ReadyDexUpgradeEvent
 	call Pory_EventScript_UnhideRivalRoute103
 	call Pory_EventScript_OpenCaveOfOrigin
+	call Pory_EventScript_HideMetaBoyRoute109
 	return
 
 EverGrandeCity_HallOfFame_EventScript_ResetDefeatedEventLegendaries::

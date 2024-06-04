@@ -348,7 +348,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Pory_EventScript_MetaBoy_WhatsUp",
-      "flag": "FLAG_META_BOY_ON_THE_BEACH"
+      "flag": "FLAG_HIDE_ROUTE_109_META_BOY"
     }
   ],
   "warp_events": [
