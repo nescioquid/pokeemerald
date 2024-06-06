@@ -62,7 +62,7 @@ const struct WildPokemonInfo {{ encounter.base_label }}_LandMonsInfo = { {{encou
 const struct WildPokemon {{ encounter.base_label }}_WaterMons[] =
 {
 ## for wild_mon in encounter.water_mons.mons
-    { {{ average_level + 2 + extra_levels }}, {{ average_level + 5 + extra_levels }}, {{ wild_mon.species }} },
+    { {{ average_level + 3 + extra_levels }}, {{ average_level + 5 + extra_levels }}, {{ wild_mon.species }} },
 ## endfor
 };
 
