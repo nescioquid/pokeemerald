@@ -13,8 +13,6 @@ Route104_MrBrineysHouse_EventScript_HideRustboroRival::
 	return
 
 Route104_MrBrineysHouse_EventScript_SetBrineyPeekoPos::
-	setobjectxyperm LOCALID_BRINEYS_HOUSE_BRINEY, 9, 3
-	setobjectmovementtype LOCALID_BRINEYS_HOUSE_BRINEY, MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_LEFT_UP_RIGHT
 	setobjectxyperm LOCALID_BRINEYS_HOUSE_PEEKO, 9, 6
 	setobjectmovementtype LOCALID_BRINEYS_HOUSE_PEEKO, MOVEMENT_TYPE_WALK_SEQUENCE_LEFT_UP_RIGHT_DOWN
 	return
