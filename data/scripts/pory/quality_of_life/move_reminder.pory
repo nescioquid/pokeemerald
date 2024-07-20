@@ -4,7 +4,7 @@ script FallarborTown_MoveRelearnersHouse_EventScript_MoveRelearner_Pory {
   lock
   faceplayer
   if (!flag(FLAG_TEMP_1)) {
-    msgbox(format("I'm the Move Reminder.\pI know all the moves that Pokémon\nlearn--every one of them--and I can\lmake Pokémon remember those moves.\pI can do it with some of yours if you'd like."))
+    msgbox(format("I'm a Move Reminder.\pI know all the moves that Pokémon\nlearn--every one of them--and I can\lmake Pokémon remember those moves.\pI can do it with some of yours if you'd like."))
   }
   setflag(FLAG_TEMP_1)
   msgbox(format("You want me to remind one of them?"), MSGBOX_YESNO)
