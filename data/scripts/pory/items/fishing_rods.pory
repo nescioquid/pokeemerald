@@ -24,7 +24,11 @@ script MossdeepCity_House3_EventScript_SuperRodFisherman_Pory {
       release
       end
     }
-    msgbox(format("You bet, you bet!\nAfter all, a Super Rod is really super!\p…If only I had an extra one to give you. But here, take these instead!"))
+    if(!flag(FLAG_RECEIVED_OLD_ROD)) {
+      msgbox(format("You bet, you bet!\nAfter all, a Super Rod is really super!\p…If only I had an extra one to give you. But here, take these instead!"))
+    } else {
+      msgbox(format("You bet, you bet!\nAfter all, a Super Rod is really super!\p…Oh! You already have one!\nA kindred soul. Well then, take these instead!"))
+    }
     giveitem(ITEM_RARE_CANDY, 36)
     goto_if_eq (VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
     setflag(FLAG_RECEIVED_SUPER_ROD)
