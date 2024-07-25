@@ -2,7 +2,7 @@
 
 script Route118_EventScript_ReceiveGoodRod_Pory {
   msgbox(format("Hmm!\nWe're of identical minds!\pHmm!\nWell, I'm fresh out of Good Rods, but you can have these instead!"))
-  giveitem(ITEM_RARE_CANDY, 6)
+  giveitem(ITEM_RARE_CANDY, 36)
   goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
   setflag(FLAG_RECEIVED_GOOD_ROD)
   msgbox(Route118_Text_TryYourLuckFishing)
@@ -25,7 +25,7 @@ script MossdeepCity_House3_EventScript_SuperRodFisherman_Pory {
       end
     }
     msgbox(format("You bet, you bet!\nAfter all, a Super Rod is really super!\p…If only I had an extra one to give you. But here, take these instead!"))
-    giveitem(ITEM_RARE_CANDY, 6)
+    giveitem(ITEM_RARE_CANDY, 36)
     goto_if_eq (VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
     setflag(FLAG_RECEIVED_SUPER_ROD)
     msgbox(format("If there's any water, try dropping in\na Rod and see what bites!"))
