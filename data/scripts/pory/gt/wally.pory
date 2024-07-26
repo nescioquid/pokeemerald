@@ -96,7 +96,7 @@ script VictoryRoad_1F_EventScript_Wally_Pory {
   setflag(FLAG_DEFEATED_WALLY_VICTORY_ROAD)
   release
   end
-  } elif (!flag(FLAG_IS_CHAMPION)) {
+  } elif (!flag(FLAG_SYS_GAME_CLEAR)) {
     lock
     faceplayer
     msgbox(VictoryRoad_1F_Text_WallyPostEntranceBattle)
