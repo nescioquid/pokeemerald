@@ -132,209 +132,243 @@ Pokemart_Mulches:
 	.2byte ITEM_DAMP_MULCH
 	.2byte ITEM_NONE
 
-# 76 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-
+Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl::
 # 77 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-.set LOCALID_OWNER, 1
+	lock
 # 78 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-
+	faceplayer
 # 79 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-Route104_PrettyPetalFlowerShop_MapScripts::
+	dotimebasedevents
 # 80 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	map_script MAP_SCRIPT_ON_TRANSITION, Route104_PrettyPetalFlowerShop_OnTransition
-# 81 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	.byte 0
-# 82 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-
-# 83 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ Route104_PrettyPetalFlowerShop_OnTransition:
-# 84 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ 	setflag FLAG_LANDMARK_FLOWER_SHOP
-# 85 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ 	goto_if_unset FLAG_MET_PRETTY_PETAL_SHOP_OWNER, Route104_PrettyPetalFlowerShop_EventScript_MoveShopOwner
-# 86 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ 	goto_if_unset FLAG_BADGE03_GET, Route104_PrettyPetalFlowerShop_EventScript_MoveShopOwner
-# 87 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ 	setflag FLAG_TEMP_1
-# 88 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ 	end
+	goto_if_unset FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY, Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl_2
+Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl_1:
 # 89 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-
+	msgbox Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl_Text_1
 # 90 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-Route104_PrettyPetalFlowerShop_EventScript_MoveShopOwner::
-# 91 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	setobjectxyperm LOCALID_OWNER, 4, 6
-# 92 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	release
 	end
-# 93 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+
+Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl_2:
+# 81 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	msgbox Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl_Text_0
+# 82 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	goto_if_unset FLAG_BADGE02_GET, Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl_5
+# 85 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	call Common_PoryScript_GiveBerry_Generic
+Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl_4:
+# 87 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	setflag FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY
+	goto Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl_1
+
+Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl_5:
+# 83 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	call Common_PoryScript_GiveBerry_Status
+	goto Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl_4
+
 
 # 94 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ Route104_PrettyPetalFlowerShop_EventScript_ShopOwner::
+
 # 95 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ 	lock
+.set LOCALID_OWNER, 1
 # 96 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ 	faceplayer
+
 # 97 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ 	goto_if_set FLAG_TEMP_1, Route104_PrettyPetalFlowerShop_EventScript_SellDecorations
+Route104_PrettyPetalFlowerShop_MapScripts::
 # 98 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ 	msgbox Route104_PrettyPetalFlowerShop_Text_ThisIsPrettyPetalFlowerShop, MSGBOX_DEFAULT
+	map_script MAP_SCRIPT_ON_TRANSITION, Route104_PrettyPetalFlowerShop_OnTransition
 # 99 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ 	goto_if_set FLAG_MET_PRETTY_PETAL_SHOP_OWNER, Route104_PrettyPetalFlowerShop_EventScript_AlreadyMet
+	.byte 0
 # 100 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ 	setflag FLAG_MET_PRETTY_PETAL_SHOP_OWNER
+
 # 101 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ 	msgbox Route104_PrettyPetalFlowerShop_Text_IntroLearnAboutBerries, MSGBOX_YESNO
+@ Route104_PrettyPetalFlowerShop_OnTransition:
 # 102 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ 	call_if_eq VAR_RESULT, YES, Route104_PrettyPetalFlowerShop_EventScript_ExplainBerries
+@ 	setflag FLAG_LANDMARK_FLOWER_SHOP
 # 103 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ 	call_if_eq VAR_RESULT, NO, Route104_PrettyPetalFlowerShop_EventScript_DontExplainBerries
+@ 	goto_if_unset FLAG_MET_PRETTY_PETAL_SHOP_OWNER, Route104_PrettyPetalFlowerShop_EventScript_MoveShopOwner
 # 104 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ 	release
+@ 	goto_if_unset FLAG_BADGE03_GET, Route104_PrettyPetalFlowerShop_EventScript_MoveShopOwner
 # 105 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ 	end
+@ 	setflag FLAG_TEMP_1
 # 106 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-
-# 107 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-Route104_PrettyPetalFlowerShop_EventScript_AlreadyMet::
-# 108 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	msgbox Route104_PrettyPetalFlowerShop_Text_LearnAboutBerries, MSGBOX_YESNO
-# 109 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	call_if_eq VAR_RESULT, YES, Route104_PrettyPetalFlowerShop_EventScript_ExplainBerries
-# 110 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	call_if_eq VAR_RESULT, NO, Route104_PrettyPetalFlowerShop_EventScript_DontExplainBerries
-# 111 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	release
-# 112 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	end
-# 113 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-
-# 114 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-Route104_PrettyPetalFlowerShop_EventScript_ExplainBerries::
-# 115 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	msgbox Route104_PrettyPetalFlowerShop_Text_BerriesExplanation, MSGBOX_DEFAULT
-# 116 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	return
-# 117 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-
-# 118 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-Route104_PrettyPetalFlowerShop_EventScript_DontExplainBerries::
-# 119 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	msgbox Route104_PrettyPetalFlowerShop_Text_FlowersBringHappiness, MSGBOX_DEFAULT
-# 120 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	return
-# 121 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-
-# 122 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-Route104_PrettyPetalFlowerShop_EventScript_SellDecorations::
-# 123 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	message gText_PlayerWhatCanIDoForYou
-# 124 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	waitmessage
-# 125 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	pokemartdecoration2 Route104_PrettyPetalFlowerShop_Pokemart_Plants
-# 126 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
-# 127 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	release
-# 128 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	end
-# 129 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-
-# 130 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	.align 2
-# 131 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-Route104_PrettyPetalFlowerShop_Pokemart_Plants:
-# 132 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	.2byte DECOR_RED_PLANT
-# 133 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	.2byte DECOR_TROPICAL_PLANT
-# 134 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	.2byte DECOR_PRETTY_FLOWERS
-# 135 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	.2byte DECOR_COLORFUL_PLANT
-# 136 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	.2byte DECOR_BIG_PLANT
-# 137 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	.2byte DECOR_GORGEOUS_PLANT
-# 138 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	.2byte DECOR_NONE
-# 139 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	release
-# 140 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	end
-# 141 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-
-# 142 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ Route104_PrettyPetalFlowerShop_EventScript_WailmerPailGirl::
-# 143 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ 	lock
-# 144 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ 	faceplayer
-# 145 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ 	goto_if_unset FLAG_RECEIVED_WAILMER_PAIL, Route104_PrettyPetalFlowerShop_EventScript_GiveWailmerPail
-# 146 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ 	msgbox Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation, MSGBOX_DEFAULT
-# 147 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-@ 	release
-# 148 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
 @ 	end
+# 107 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+
+# 108 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+Route104_PrettyPetalFlowerShop_EventScript_MoveShopOwner::
+# 109 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	setobjectxyperm LOCALID_OWNER, 4, 6
+# 110 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	end
+# 111 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+
+# 112 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ Route104_PrettyPetalFlowerShop_EventScript_ShopOwner::
+# 113 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	lock
+# 114 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	faceplayer
+# 115 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	goto_if_set FLAG_TEMP_1, Route104_PrettyPetalFlowerShop_EventScript_SellDecorations
+# 116 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	msgbox Route104_PrettyPetalFlowerShop_Text_ThisIsPrettyPetalFlowerShop, MSGBOX_DEFAULT
+# 117 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	goto_if_set FLAG_MET_PRETTY_PETAL_SHOP_OWNER, Route104_PrettyPetalFlowerShop_EventScript_AlreadyMet
+# 118 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	setflag FLAG_MET_PRETTY_PETAL_SHOP_OWNER
+# 119 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	msgbox Route104_PrettyPetalFlowerShop_Text_IntroLearnAboutBerries, MSGBOX_YESNO
+# 120 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	call_if_eq VAR_RESULT, YES, Route104_PrettyPetalFlowerShop_EventScript_ExplainBerries
+# 121 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	call_if_eq VAR_RESULT, NO, Route104_PrettyPetalFlowerShop_EventScript_DontExplainBerries
+# 122 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	release
+# 123 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	end
+# 124 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+
+# 125 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+Route104_PrettyPetalFlowerShop_EventScript_AlreadyMet::
+# 126 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	msgbox Route104_PrettyPetalFlowerShop_Text_LearnAboutBerries, MSGBOX_YESNO
+# 127 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	call_if_eq VAR_RESULT, YES, Route104_PrettyPetalFlowerShop_EventScript_ExplainBerries
+# 128 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	call_if_eq VAR_RESULT, NO, Route104_PrettyPetalFlowerShop_EventScript_DontExplainBerries
+# 129 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	release
+# 130 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	end
+# 131 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+
+# 132 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+Route104_PrettyPetalFlowerShop_EventScript_ExplainBerries::
+# 133 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	msgbox Route104_PrettyPetalFlowerShop_Text_BerriesExplanation, MSGBOX_DEFAULT
+# 134 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	return
+# 135 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+
+# 136 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+Route104_PrettyPetalFlowerShop_EventScript_DontExplainBerries::
+# 137 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	msgbox Route104_PrettyPetalFlowerShop_Text_FlowersBringHappiness, MSGBOX_DEFAULT
+# 138 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	return
+# 139 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+
+# 140 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+Route104_PrettyPetalFlowerShop_EventScript_SellDecorations::
+# 141 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	message gText_PlayerWhatCanIDoForYou
+# 142 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	waitmessage
+# 143 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	pokemartdecoration2 Route104_PrettyPetalFlowerShop_Pokemart_Plants
+# 144 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+# 145 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	release
+# 146 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	end
+# 147 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+
+# 148 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	.align 2
 # 149 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-
+Route104_PrettyPetalFlowerShop_Pokemart_Plants:
 # 150 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-Route104_PrettyPetalFlowerShop_EventScript_GiveWailmerPail::
+	.2byte DECOR_RED_PLANT
 # 151 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	msgbox Route104_PrettyPetalFlowerShop_Text_YouCanHaveThis, MSGBOX_DEFAULT
+	.2byte DECOR_TROPICAL_PLANT
 # 152 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	giveitem ITEM_WAILMER_PAIL
+	.2byte DECOR_PRETTY_FLOWERS
 # 153 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	.2byte DECOR_COLORFUL_PLANT
 # 154 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	msgbox Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation, MSGBOX_DEFAULT
+	.2byte DECOR_BIG_PLANT
 # 155 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	setflag FLAG_RECEIVED_WAILMER_PAIL
+	.2byte DECOR_GORGEOUS_PLANT
 # 156 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	release
+	.2byte DECOR_NONE
 # 157 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	end
+	release
 # 158 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-
-# 159 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl::
-# 160 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	lock
-# 161 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	faceplayer
-# 162 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	dotimebasedevents
-# 163 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	goto_if_set FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY, Route104_PrettyPetalFlowerShop_EventScript_AlreadyReceivedBerry
-# 164 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	msgbox Route104_PrettyPetalFlowerShop_Text_ImGrowingFlowers, MSGBOX_DEFAULT
-# 165 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	random 8
-# 166 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	addvar VAR_RESULT, FIRST_BERRY_INDEX
-# 167 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	giveitem VAR_RESULT
-# 168 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
-# 169 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	setflag FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY
-# 170 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	msgbox Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries, MSGBOX_DEFAULT
-# 171 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	release
-# 172 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
 	end
-# 173 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+# 159 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
 
+# 160 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ Route104_PrettyPetalFlowerShop_EventScript_WailmerPailGirl::
+# 161 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	lock
+# 162 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	faceplayer
+# 163 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	goto_if_unset FLAG_RECEIVED_WAILMER_PAIL, Route104_PrettyPetalFlowerShop_EventScript_GiveWailmerPail
+# 164 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	msgbox Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation, MSGBOX_DEFAULT
+# 165 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	release
+# 166 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	end
+# 167 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+
+# 168 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+Route104_PrettyPetalFlowerShop_EventScript_GiveWailmerPail::
+# 169 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	msgbox Route104_PrettyPetalFlowerShop_Text_YouCanHaveThis, MSGBOX_DEFAULT
+# 170 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	giveitem ITEM_WAILMER_PAIL
+# 171 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+# 172 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	msgbox Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation, MSGBOX_DEFAULT
+# 173 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	setflag FLAG_RECEIVED_WAILMER_PAIL
 # 174 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-Route104_PrettyPetalFlowerShop_EventScript_AlreadyReceivedBerry::
-# 175 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	msgbox Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries, MSGBOX_DEFAULT
-# 176 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
 	release
+# 175 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	end
+# 176 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+
 # 177 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl::
+# 178 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	lock
+# 179 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	faceplayer
+# 180 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	dotimebasedevents
+# 181 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	goto_if_set FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY, Route104_PrettyPetalFlowerShop_EventScript_AlreadyReceivedBerry
+# 182 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	msgbox Route104_PrettyPetalFlowerShop_Text_ImGrowingFlowers, MSGBOX_DEFAULT
+# 183 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	random 8
+# 184 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	addvar VAR_RESULT, FIRST_BERRY_INDEX
+# 185 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	giveitem VAR_RESULT
+# 186 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
+# 187 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	setflag FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY
+# 188 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	msgbox Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries, MSGBOX_DEFAULT
+# 189 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	release
+# 190 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+@ 	end
+# 191 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+
+# 192 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+Route104_PrettyPetalFlowerShop_EventScript_AlreadyReceivedBerry::
+# 193 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	msgbox Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries, MSGBOX_DEFAULT
+# 194 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	release
+# 195 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
 	end
 
 Route104_PrettyPetalFlowerShop_EventScript_WailmerPailGirl_Text_0:
@@ -345,3 +379,18 @@ Route104_PrettyPetalFlowerShop_EventScript_WailmerPailGirl_Text_0:
 Route104_PrettyPetalFlowerShop_EventScript_WailmerPailGirl_Text_1:
 # 63 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
 	.string "Until next time!$"
+
+Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl_Text_0:
+# 81 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	.string "I'm trying to be like my big sisters. I'm\n"
+	.string "growing flowers, too!\p"
+	.string "Here you go! They're for you!$"
+
+Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl_Text_1:
+# 89 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	.string "You can plant a Berry and grow it big, or\n"
+	.string "you can make a Pokémon hold it.\p"
+	.string "But now they have a machine that mixes\n"
+	.string "up different Berries and makes candies\l"
+	.string "for Pokémon.\p"
+	.string "I want some candy, too.$"
