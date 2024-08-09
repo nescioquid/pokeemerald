@@ -1,0 +1,11 @@
+script BattleFrontier_Mart_EventScript_Clerk_Pory {
+  lock
+  faceplayer
+  msgbox(format("You're here! At the Battle Frontier! Haha!"))
+  call(Common_PoryScript_Clerk_Hello)
+  waitmessage
+  call(Common_PoryScript_Clerk_PokemartByBadges)
+  call(Common_PoryScript_Clerk_Goodbye)
+  release
+  end
+}

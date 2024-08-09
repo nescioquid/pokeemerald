@@ -1,0 +1,23 @@
+script EverGrandeCity_PokemonLeague_1F_EventScript_Clerk_Pory {
+  lock
+  faceplayer
+  if (!flag(FLAG_SYS_GAME_CLEAR)) {
+    msgbox(format("You made it to Ever Grande! Nice!"))
+    call(Common_PoryScript_Clerk_Hello)
+  } else {
+    message(format("Wow, you JUST made it to Ever Grande and you're already the Champion?!\p{FONT_SMALL}I've been here three years and they haven't even given me a raise…\p{FONT_NORMAL}What did you still need exactly?"))
+  }
+  waitmessage
+  call(Common_PoryScript_Clerk_PokemartByBadges)
+  if (!flag(FLAG_SYS_GAME_CLEAR)) {
+    call(Common_PoryScript_Clerk_Goodbye)
+  } else {
+    random(2)
+    switch (var(VAR_RESULT)) {
+      case 0: msgbox(format("See you later!\n{FONT_SMALL}…Hopefully much later…"))
+      case 1: msgbox(format("Good luck!\n{FONT_SMALL}…Like you need it anyway…"))
+    }
+  }
+  release
+  end
+}
