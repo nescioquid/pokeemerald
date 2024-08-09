@@ -1,0 +1,283 @@
+script Common_PoryScript_Clerk {
+  lock
+  faceplayer
+  call(Common_PoryScript_Clerk_Hello)
+  waitmessage
+  call(Common_PoryScript_Clerk_PokemartByBadges)
+  call(Common_PoryScript_Clerk_Goodbye)
+  release
+  end
+}
+
+script Common_PoryScript_Clerk_Hello {
+  if (flag(FLAG_SYS_GAME_CLEAR)) {
+    random(8)
+    switch (var(VAR_RESULT)) {
+      case 0: msgbox(format("{FONT_SMALL}…Is …Is that the league champion?!"))
+      case 1: msgbox(format("{FONT_SMALL}…I'm pretty sure that's the champion!"))
+    }
+  }
+  if (!flag(FLAG_BADGE01_GET)) {
+    random(3)
+    switch (var(VAR_RESULT)) {
+      case 0: message(format("Welcome! How may I serve you?"))
+      case 1: message(format("Hello! What can I do for you?"))
+      case 2: message(format("Hi! How can I help you?"))
+    }
+  } else {
+    random(16)
+    switch (var(VAR_RESULT)) {
+      case  0: message(format("Welcome! How may I serve you?"))
+      case  1: message(format("Welcome! How may I serve you?"))
+      case  2: message(format("Welcome! How may I serve you?"))
+      case  3: message(format("Hello! What can I do for you?"))
+      case  4: message(format("Hello! What can I do for you?"))
+      case  5: message(format("Hello! What can I do for you?"))
+      case  6: message(format("Hi! How can I help you?"))
+      case  7: message(format("Hi! How can I help you?"))
+      case  8: message(format("Hi! How can I help you?"))
+      case  9: message(format("Hey! What can I get you?"))
+      case 10: message(format("Hey! What can I get you?"))
+      case 11: message(format("How's it going? Know what you want already?"))
+      case 12: message(format("How's it going? Know what you want already?"))
+      case 13: message(format("Hello, hello! What did you need?"))
+      case 14: message(format("Hello, hello! What did you need?"))
+      case 15: message(format("{FONT_SMALL}Man, X items are so busted now, it's a joke…\p{FONT_NORMAL}Hey, what's up?"))
+    }
+  }
+}
+
+script Common_PoryScript_Clerk_Goodbye {
+  if (!flag(FLAG_BADGE01_GET)) {
+    random(4)
+    switch (var(VAR_RESULT)) {
+      case 0: msgbox(format("Please come again!"))
+      case 1: msgbox(format("Until next time!"))
+      case 2: msgbox(format("See you later!"))
+      case 3: msgbox(format("Goodbye!"))
+    }
+  } else {
+    random(11)
+    switch (var(VAR_RESULT)) {
+      case  0: msgbox(format("Please come again!"))
+      case  1: msgbox(format("Until next time!"))
+      case  2: msgbox(format("See you later!"))
+      case  3: msgbox(format("Goodbye!"))
+      case  4: msgbox(format("Bye bye!"))
+      case  5: msgbox(format("Bye now!"))
+      case  6: msgbox(format("Bye!"))
+      case  7: msgbox(format("Ciao!"))
+      case  8: msgbox(format("Have fun out there!"))
+      case  9: msgbox(format("Good luck!"))
+      case 10: msgbox(format("You'll do great!"))
+    }
+  }
+}
+
+script Common_PoryScript_Clerk_PokemartByBadges {
+  if (!flag(FLAG_SYS_GAME_CLEAR)) {
+    call(Common_PoryScript_GetBadgeCount)
+    switch(var(VAR_RESULT)) {
+      case 0: pokemart(Pokemart_ZeroBadges_All)
+      case 1: pokemart(Pokemart_OneBadge)
+      case 2: pokemart(Pokemart_TwoBadges)
+      case 3: pokemart(Pokemart_ThreeBadges)
+      case 4: pokemart(Pokemart_FourBadges)
+      case 5: pokemart(Pokemart_FiveBadges)
+      case 6: pokemart(Pokemart_SixBadges)
+      case 7: pokemart(Pokemart_SevenBadges)
+      case 8: pokemart(Pokemart_EightBadges)
+    }
+  } else {
+    pokemart(Pokemart_Postgame)
+  }
+}
+
+mart Pokemart_ZeroBadges_All {
+  ITEM_POKE_BALL     // new
+  ITEM_POTION
+  ITEM_POKE_DOLL
+  ITEM_X_ACCURACY
+  ITEM_GUARD_SPEC
+  ITEM_DIRE_HIT
+}
+
+mart Pokemart_OneBadge {
+  ITEM_POKE_BALL
+  ITEM_QUICK_BALL    // new
+  ITEM_POTION
+  ITEM_REPEL         // new
+  ITEM_POKE_DOLL
+  ITEM_X_ACCURACY
+  ITEM_GUARD_SPEC
+  ITEM_DIRE_HIT
+}
+
+mart Pokemart_TwoBadges {
+  ITEM_POKE_BALL
+  ITEM_QUICK_BALL
+  ITEM_SUPER_POTION  // new
+  ITEM_FULL_HEAL     // new
+  ITEM_REVIVE        // new
+  ITEM_REPEL
+  ITEM_POKE_DOLL
+  ITEM_X_ACCURACY
+  ITEM_GUARD_SPEC
+  ITEM_DIRE_HIT
+  ITEM_POTION        // demoted
+
+}
+
+mart Pokemart_ThreeBadges {
+  ITEM_GREAT_BALL    // new
+  ITEM_QUICK_BALL
+  ITEM_SUPER_POTION
+  ITEM_FULL_HEAL
+  ITEM_REVIVE
+  ITEM_SUPER_REPEL   // new
+  ITEM_POKE_DOLL
+  ITEM_X_ACCURACY
+  ITEM_GUARD_SPEC
+  ITEM_DIRE_HIT
+  ITEM_POKE_BALL     // demoted
+  ITEM_POTION
+  ITEM_REPEL         // demoted
+}
+
+mart Pokemart_FourBadges {
+  ITEM_GREAT_BALL
+  ITEM_QUICK_BALL
+  ITEM_HYPER_POTION  // new
+  ITEM_FULL_HEAL
+  ITEM_REVIVE
+  ITEM_SUPER_REPEL
+  ITEM_POKE_DOLL
+  ITEM_X_ACCURACY
+  ITEM_GUARD_SPEC
+  ITEM_DIRE_HIT
+  ITEM_POKE_BALL
+  ITEM_SUPER_POTION  // demoted
+  ITEM_POTION
+  ITEM_REPEL
+}
+
+mart Pokemart_FiveBadges {
+  ITEM_GREAT_BALL
+  ITEM_QUICK_BALL
+  ITEM_HYPER_POTION
+  ITEM_FULL_HEAL
+  ITEM_REVIVE
+  ITEM_MAX_REPEL     // new
+  ITEM_POKE_DOLL
+  ITEM_X_ACCURACY
+  ITEM_GUARD_SPEC
+  ITEM_DIRE_HIT
+  ITEM_POKE_BALL
+  ITEM_SUPER_POTION
+  ITEM_POTION
+  ITEM_SUPER_REPEL   // demoted
+  ITEM_REPEL
+}
+
+mart Pokemart_SixBadges {
+  ITEM_ULTRA_BALL    // new
+  ITEM_QUICK_BALL
+  ITEM_MAX_POTION    // new
+  ITEM_HYPER_POTION
+  ITEM_FULL_HEAL
+  ITEM_REVIVE
+  ITEM_MAX_REPEL
+  ITEM_POKE_DOLL
+  ITEM_X_ACCURACY
+  ITEM_GUARD_SPEC
+  ITEM_DIRE_HIT
+  ITEM_GREAT_BALL    // demoted
+  ITEM_POKE_BALL
+  ITEM_SUPER_POTION
+  ITEM_POTION
+  ITEM_SUPER_REPEL
+  ITEM_REPEL
+}
+
+mart Pokemart_SevenBadges {
+  ITEM_ULTRA_BALL
+  ITEM_QUICK_BALL
+  ITEM_MAX_POTION
+  ITEM_HYPER_POTION
+  ITEM_FULL_HEAL
+  ITEM_REVIVE
+  ITEM_MAX_REPEL
+  ITEM_POKE_DOLL
+  ITEM_X_ATTACK      // new
+  ITEM_X_DEFENSE     // new
+  ITEM_X_SP_ATK      // new
+  ITEM_X_SP_DEF      // new
+  ITEM_X_SPEED       // new
+  ITEM_X_ACCURACY
+  ITEM_GUARD_SPEC
+  ITEM_DIRE_HIT
+  ITEM_GREAT_BALL
+  ITEM_POKE_BALL
+  ITEM_SUPER_POTION
+  ITEM_POTION
+  ITEM_SUPER_REPEL
+  ITEM_REPEL
+}
+
+mart Pokemart_EightBadges {
+  ITEM_ULTRA_BALL
+  ITEM_QUICK_BALL
+  ITEM_FULL_RESTORE  // new
+  ITEM_MAX_POTION
+  ITEM_HYPER_POTION
+  ITEM_FULL_HEAL
+  ITEM_REVIVE
+  ITEM_MAX_REPEL
+  ITEM_POKE_DOLL
+  ITEM_X_ATTACK
+  ITEM_X_DEFENSE
+  ITEM_X_SP_ATK
+  ITEM_X_SP_DEF
+  ITEM_X_SPEED
+  ITEM_X_ACCURACY
+  ITEM_GUARD_SPEC
+  ITEM_DIRE_HIT
+  ITEM_GREAT_BALL
+  ITEM_POKE_BALL
+  ITEM_SUPER_POTION
+  ITEM_POTION
+  ITEM_SUPER_REPEL
+  ITEM_REPEL
+}
+
+mart Pokemart_Postgame {
+  ITEM_ULTRA_BALL
+  ITEM_QUICK_BALL
+  ITEM_FULL_RESTORE
+  ITEM_MAX_POTION
+  ITEM_HYPER_POTION
+  ITEM_FULL_HEAL
+  ITEM_REVIVE
+  ITEM_MAX_REPEL
+  ITEM_POKE_DOLL
+  ITEM_PROTEIN       // new
+  ITEM_IRON          // new
+  ITEM_CALCIUM       // new
+  ITEM_ZINC          // new
+  ITEM_CARBOS        // new
+  ITEM_HP_UP         // new
+  ITEM_X_ATTACK
+  ITEM_X_DEFENSE
+  ITEM_X_SP_ATK
+  ITEM_X_SP_DEF
+  ITEM_X_SPEED
+  ITEM_X_ACCURACY
+  ITEM_GUARD_SPEC
+  ITEM_DIRE_HIT
+  ITEM_GREAT_BALL
+  ITEM_POKE_BALL
+  ITEM_SUPER_POTION
+  ITEM_POTION
+  ITEM_SUPER_REPEL
+  ITEM_REPEL
+}

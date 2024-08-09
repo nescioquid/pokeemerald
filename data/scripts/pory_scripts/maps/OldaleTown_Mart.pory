@@ -1,0 +1,30 @@
+script OldaleTown_Mart_EventScript_Clerk_Pory {
+  lock
+  faceplayer
+  if (!flag(FLAG_ADVENTURE_STARTED)) {
+    msgbox(format("Sorry, but we're all out of Poké Balls at the moment."))
+    message(format("…anything else I can do for you?"))
+    waitmessage
+    pokemart(Pokemart_ZeroBadges_Some)
+    msgbox(format("We'll be getting more in soon. See you then!"))
+  } else {
+    if (!flag(FLAG_BADGE01_GET)) {
+      message(format("We just got some balls back in stock! Would you like to get some now?"))
+    } else {
+      call(Common_PoryScript_Clerk_Hello)
+    }
+    waitmessage
+    call(Common_PoryScript_Clerk_PokemartByBadges)
+    call(Common_PoryScript_Clerk_Goodbye)
+  }
+  release
+  end
+}
+
+mart Pokemart_ZeroBadges_Some {
+  ITEM_POTION
+  ITEM_POKE_DOLL
+  ITEM_X_ACCURACY
+  ITEM_GUARD_SPEC
+  ITEM_DIRE_HIT
+}
