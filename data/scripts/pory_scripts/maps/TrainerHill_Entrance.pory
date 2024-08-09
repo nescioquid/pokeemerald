@@ -1,0 +1,11 @@
+script TrainerHill_Entrance_EventScript_Clerk_Pory {
+  lock
+  faceplayer
+  msgbox(format("It's the Hill, Baby!\N{FONT_SMALL}…Why do they make me say that every time?"))
+  call(Common_PoryScript_Clerk_Hello)
+  waitmessage
+  call(Common_PoryScript_Clerk_PokemartByBadges)
+  call(Common_PoryScript_Clerk_Goodbye)
+  release
+  end
+}
