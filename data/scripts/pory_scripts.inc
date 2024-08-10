@@ -3,6 +3,7 @@
 
 .include "data/scripts/pory_scripts/getbadgecount.inc"
 .include "data/scripts/pory_scripts/pokemart.inc"
+.include "data/scripts/pory_scripts/vending_machine.inc"
 
 .include "data/scripts/pory_scripts/maps/BattleFrontier_Mart.inc"
 .include "data/scripts/pory_scripts/maps/EverGrandeCity_PokemonLeague_1F.inc"
