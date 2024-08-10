@@ -1,0 +1,75 @@
+const DRINK_CHOSEN = VAR_TEMP_1
+
+script Common_PoryScript_VendingMachine {
+  lockall
+  message(format("Which one do you want?"))
+  waitmessage
+  showmoneybox(0, 0)
+  dynmultipush("FRESH WATER{CLEAR_TO 0x48}¥200", ITEM_FRESH_WATER)
+  dynmultipush("SODA POP{CLEAR_TO 0x48}¥300", ITEM_SODA_POP)
+  dynmultipush("LEMONADE{CLEAR_TO 0x48}¥400", ITEM_LEMONADE)
+  dynmultistack(0, 4, FALSE, 4, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
+  if (var(VAR_RESULT) == MULTI_B_PRESSED) {
+    msgbox(format("Decided against buying a drink."))
+    hidemoneybox
+    releaseall
+    end
+  }
+  copyvar(DRINK_CHOSEN, VAR_RESULT)
+  switch (var(DRINK_CHOSEN)) {
+    case ITEM_FRESH_WATER: checkmoney(200)
+    case ITEM_SODA_POP: checkmoney(300)
+    case ITEM_LEMONADE: checkmoney(400)
+  }
+  if (!var(VAR_RESULT)) {
+    msgbox(format("Not enough money…"))
+    hidemoneybox
+    releaseall
+    end
+  }
+  checkitemspace(DRINK_CHOSEN)
+  if (!var(VAR_RESULT)) {
+    msgbox(gText_TheBagIsFull)
+    hidemoneybox
+    releaseall
+    end
+  }
+  switch (var(DRINK_CHOSEN)) {
+    case ITEM_FRESH_WATER: removemoney(200)
+    case ITEM_SODA_POP: removemoney(300)
+    case ITEM_LEMONADE: removemoney(400)
+  }
+  updatemoneybox
+  bufferitemname(STR_VAR_1, DRINK_CHOSEN)
+  playse(SE_VEND)
+  switch (var(DRINK_CHOSEN)) {
+    case ITEM_FRESH_WATER: msgbox(format("Clang!\pA bottle of {STR_VAR_1} dropped down."))
+    case ITEM_SODA_POP: msgbox(format("Clang!\pA bottle of {STR_VAR_1} dropped down."))
+    case ITEM_LEMONADE: msgbox(format("Clang!\pA can of {STR_VAR_1} dropped down."))
+  }
+  additem(DRINK_CHOSEN)
+  msgbox(format("{PLAYER} put away the {STR_VAR_1} in the Bag."))
+  call(Common_PoryScript_VendingMachine_ExtraCanOfDrinkDroppedDown)
+  hidemoneybox
+  releaseall
+  end
+}
+
+script Common_PoryScript_VendingMachine_ExtraCanOfDrinkDroppedDown {
+  // 1/50 chance of an additional drink dropping
+  random(50)
+  switch (var(VAR_RESULT)) {
+    case 0:
+      playse(SE_VEND)
+      switch (var(DRINK_CHOSEN)) {
+        case ITEM_FRESH_WATER: msgbox(format("Clang!\pScore! Another bottle of {STR_VAR_1} dropped down!"))
+        case ITEM_SODA_POP: msgbox(format("Clang!\pScore! Another bottle of {STR_VAR_1} dropped down!"))
+        case ITEM_LEMONADE: msgbox(format("Clang!\pScore! Another can of {STR_VAR_1} dropped down!"))
+      }
+      additem(DRINK_CHOSEN)
+      msgbox(format("{PLAYER} put away the {STR_VAR_1} in the Bag."))
+      msgbox(gText_PutItemInPocket)
+      // 1/50 * the prev 1/50 chance of a third additional drink dropping, 0.04% chance
+      call(Common_PoryScript_VendingMachine_ExtraCanOfDrinkDroppedDown)
+  }
+}
