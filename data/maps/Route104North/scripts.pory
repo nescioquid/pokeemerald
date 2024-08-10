@@ -6,3 +6,16 @@ script _Route104North_OnTransition {
   call(Route104_EventScript_ShowOrHideWhiteHerbFlorist)
   end
 }
+
+script Route104North_EventScript_ExpertF {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_BERRY_ROUTE_104)) {
+    msgbox(format("If you see Berries growing in loamy soil, feel free to take them.\pBut, make sure you plant a Berry in the same spot. That's common courtesy.\pHere, I'll share these with you."))
+    call(Common_PoryScript_GiveBerry_Retaliatory)
+    setflag(FLAG_RECEIVED_BERRY_ROUTE_104)
+  }
+  msgbox(format("The way you look, you must be a Trainer, no?\pTrainers often make Pokémon hold Berries.\pIt's up to you whether to grow Berries or use them."))
+  release
+  end
+}
