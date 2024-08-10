@@ -1,3 +1,27 @@
+const LOCALID_OWNER = 1
+const LOCALID_WAILMER_PAIL_GIRL = 2
+
+script Route104_PrettyPetalFlowerShop_OnTransition_Pory {
+  setflag(FLAG_LANDMARK_FLOWER_SHOP)
+  if (!flag(FLAG_MET_PRETTY_PETAL_SHOP_OWNER)) {
+    setobjectxyperm(LOCALID_OWNER, 4, 6)
+    setflag(FLAG_TEMP_1)
+  }
+  if (!flag(FLAG_RECEIVED_WAILMER_PAIL)) {
+    setobjectxyperm(LOCALID_WAILMER_PAIL_GIRL, 7, 3)
+    setobjectmovementtype(LOCALID_WAILMER_PAIL_GIRL, MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT)
+    setflag(FLAG_TEMP_2)
+  }
+  if (!flag(FLAG_BADGE03_GET)) {
+    setobjectxyperm(LOCALID_OWNER, 4, 6)
+    setobjectxyperm(LOCALID_WAILMER_PAIL_GIRL, 7, 3)
+    setobjectmovementtype(LOCALID_WAILMER_PAIL_GIRL, MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT)
+    setflag(FLAG_TEMP_1)
+    setflag(FLAG_TEMP_2)
+  }
+  end
+}
+
 script Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl_Pory {
   lock
   faceplayer
@@ -14,4 +38,53 @@ script Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl_Pory {
   msgbox(format("You can plant a Berry and grow it big, or you can make a Pokémon hold it.\pBut now they have a machine that mixes up different Berries and makes candies for Pokémon.\pI want some candy, too."))
   release
   end
+}
+
+script Route104_PrettyPetalFlowerShop_EventScript_ShopOwner_Pory {
+  lock
+  faceplayer
+  if (flag(FLAG_TEMP_1)) {
+    if (!flag(FLAG_MET_PRETTY_PETAL_SHOP_OWNER)) {
+      msgbox(Route104_PrettyPetalFlowerShop_Text_ThisIsPrettyPetalFlowerShop)
+      msgbox(Route104_PrettyPetalFlowerShop_Text_IntroLearnAboutBerries, MSGBOX_YESNO)
+      if (var(VAR_RESULT)) {
+        call(Route104_PrettyPetalFlowerShop_EventScript_ExplainBerries)
+      } else {
+        call(Route104_PrettyPetalFlowerShop_EventScript_DontExplainBerries)
+      }
+      setflag(FLAG_MET_PRETTY_PETAL_SHOP_OWNER)
+    } else {
+      goto(Route104_PrettyPetalFlowerShop_EventScript_AlreadyMet)
+    }
+    } else {
+      goto(Route104_PrettyPetalFlowerShop_EventScript_SellDecorations)
+    }
+  release
+  end
+}
+
+script Route104_PrettyPetalFlowerShop_EventScript_WailmerPailGirl_Pory {
+  lock
+  faceplayer
+  if (flag(FLAG_TEMP_2)) {
+    if (!flag(FLAG_RECEIVED_WAILMER_PAIL)) {
+      goto(Route104_PrettyPetalFlowerShop_EventScript_GiveWailmerPail)
+    } else {
+      msgbox(Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation)
+    }
+  } else {
+    message(format("Been watering your Berries like I taught you? How can I help you?"))
+    waitmessage
+    pokemart(Pokemart_Mulches)
+    msgbox(format("Until next time!"))
+  }
+  release
+  end
+}
+
+mart Pokemart_Mulches {
+  ITEM_GROWTH_MULCH
+  ITEM_STABLE_MULCH
+  ITEM_GOOEY_MULCH
+  ITEM_DAMP_MULCH
 }
