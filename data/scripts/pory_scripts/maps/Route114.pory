@@ -1,0 +1,15 @@
+script Route114_EventScript_Man_Pory {
+  lock
+  faceplayer
+  dotimebasedevents
+  if (!flag(FLAG_DAILY_ROUTE_114_RECEIVED_BERRY)) {
+    msgbox(format("I love using the Berry Crush machine, so I'm collecting Berries.\pI'll share some with you, if you'd like."))
+    call(Common_PoryScript_GiveBerry_Generic)
+    setflag(FLAG_DAILY_ROUTE_114_RECEIVED_BERRY)
+    msgbox(format("You should try the Berry Crush machine with your friends."))
+  } else {
+    msgbox(format("Which Berry should you plant? Should you use or hoard Berries?\pIt's fun to think about."))
+  }
+  release
+  end
+}
