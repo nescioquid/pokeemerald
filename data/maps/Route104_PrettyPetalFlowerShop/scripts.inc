@@ -1,5 +1,5 @@
 Route104_PrettyPetalFlowerShop_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, Route104_PrettyPetalFlowerShop_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, Route104_PrettyPetalFlowerShop_OnTransition_Pory
 	.byte 0
 
 Route104_PrettyPetalFlowerShop_OnTransition:
