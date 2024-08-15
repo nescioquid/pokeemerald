@@ -48,6 +48,7 @@
 .include "data/scripts/pory_scripts/maps/Route133.inc"
 .include "data/scripts/pory_scripts/maps/RustboroCity.inc"
 .include "data/scripts/pory_scripts/maps/RustboroCity_CuttersHouse.inc"
+.include "data/scripts/pory_scripts/maps/RustboroCity_DevonCorp_2F.inc"
 .include "data/scripts/pory_scripts/maps/RustboroCity_DevonCorp_3F.inc"
 .include "data/scripts/pory_scripts/maps/RustboroCity_Mart.inc"
 .include "data/scripts/pory_scripts/maps/SlateportCity.inc"
