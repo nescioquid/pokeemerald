@@ -33,3 +33,24 @@ script Pory_EventScript_GiveTMEchoedVoice {
   release
   end
 }
+
+script Route104North_EventScript_WhiteHerbFlorist {
+  lock
+  faceplayer
+  if (!flag(FLAG_MET_WHITE_HERB_FLORIST)) {
+    msgbox(format("This Flower Shop started selling Mulch and saplings recently.\pIt made me so happy, I went overboard shopping.\pI don't need so many of these berries, could I heal your Pokémon with some of them please?"), MSGBOX_YESNO)
+    setflag(FLAG_MET_WHITE_HERB_FLORIST)
+  } else {
+    msgbox(format("Hey there! I still have too many berries, can I heal your Pokémon for you again?"), MSGBOX_YESNO)
+  }
+  if (var(VAR_RESULT)) {
+    msgbox(format("Oh, thank you so much!"))
+    closemessage
+    call(Common_EventScript_OutOfCenterPartyHeal)
+    msgbox(format("All healed up!\NThere's lots of icky bugs in Petalburg Woods, so make sure your Pokémon stay healthy!"))
+  } else {
+    msgbox(format("Well, what am I gonna do with all these berries then?"))
+  }
+  release
+  end
+}
