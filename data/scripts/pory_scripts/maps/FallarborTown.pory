@@ -1,0 +1,5 @@
+script FallarborTown_EventScript_MoveTutorSign_Pory {
+  msgbox(format("Original Move Reminder's House\n“Moves taught to Pokémon.”"), MSGBOX_SIGN)
+  release
+  end
+}
