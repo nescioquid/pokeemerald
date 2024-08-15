@@ -9,6 +9,7 @@
 .include "data/scripts/pory_scripts/gym_guide.inc"
 .include "data/scripts/pory_scripts/match_call.inc"
 .include "data/scripts/pory_scripts/move_reminder.inc"
+.include "data/scripts/pory_scripts/players_house.inc"
 .include "data/scripts/pory_scripts/pokemart.inc"
 .include "data/scripts/pory_scripts/randomized_item_ball.inc"
 .include "data/scripts/pory_scripts/randomized_item_hidden.inc"
