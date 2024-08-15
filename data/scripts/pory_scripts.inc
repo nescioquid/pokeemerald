@@ -2,6 +2,7 @@
 .include "data/maps/Route104South/scripts.inc"
 
 .include "data/scripts/pory_scripts/berry.inc"
+.include "data/scripts/pory_scripts/dynmultistack.inc"
 .include "data/scripts/pory_scripts/getbadgecount.inc"
 .include "data/scripts/pory_scripts/pokemart.inc"
 .include "data/scripts/pory_scripts/vending_machine.inc"
