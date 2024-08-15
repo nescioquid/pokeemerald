@@ -676,5 +676,5 @@ PlayersHouse_1F_Movement_PlayerApproachTVForLatiFemale:
 	step_end
 
 EventScript_RunningShoesManual::
-	msgbox PlayersHouse_1F_Text_RunningShoesManual, MSGBOX_SIGN
+	msgbox PlayersHouse_1F_Text_RunningShoesManual_Pory, MSGBOX_SIGN
 	end
