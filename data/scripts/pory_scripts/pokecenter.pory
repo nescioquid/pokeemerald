@@ -1,4 +1,5 @@
 const LOCAL_ID_NURSE = VAR_0x800B
+const SERVICE_CHARGE_AMOUNT = VAR_TEMP_1
 
 script Common_PoryScript_PkmnCenterNurse {
   lock
@@ -6,6 +7,9 @@ script Common_PoryScript_PkmnCenterNurse {
   call(Common_PoryScript_PkmnCenterNurse_CheckGoldCard)
   if (!flag(FLAG_NURSE_MENTIONS_GOLD_CARD)) {
     call(Common_PoryScript_PkmnCenterNurse_Hello)
+    if (flag(FLAG_BADGE01_GET)) {
+      call(Common_PoryScript_PkmnCenterNurse_ServiceCharge)
+    }
   }
   call(Common_PoryScript_PkmnCenterNurse_HealPkmn)
   call(Common_PoryScript_PkmnCenterNurse_Goodbye)
@@ -82,6 +86,69 @@ script Common_PoryScript_PkmnCenterNurse_CheckPlayerWaitingInUnionRoom {
         setflag(FLAG_NURSE_UNION_ROOM_REMINDER)
       }
     }
+  }
+}
+
+script Common_PoryScript_PkmnCenterNurse_ServiceCharge {
+  showmoneybox(0, 0)
+  call(Common_PoryScript_GetBadgeCount)
+  switch(var(VAR_RESULT)) {
+    case 0: setvar(SERVICE_CHARGE_AMOUNT, 1000)
+    case 1: setvar(SERVICE_CHARGE_AMOUNT, 1000)
+    case 2: setvar(SERVICE_CHARGE_AMOUNT, 2000)
+    case 3: setvar(SERVICE_CHARGE_AMOUNT, 3000)
+    case 4: setvar(SERVICE_CHARGE_AMOUNT, 4000)
+    case 5: setvar(SERVICE_CHARGE_AMOUNT, 5000)
+    case 6: setvar(SERVICE_CHARGE_AMOUNT, 6000)
+    case 7: setvar(SERVICE_CHARGE_AMOUNT, 7000)
+    case 8: setvar(SERVICE_CHARGE_AMOUNT, 8000)
+  }
+  buffernumberstring(STR_VAR_1, SERVICE_CHARGE_AMOUNT)
+  random(3)
+  switch (var(VAR_RESULT)) {
+    case 0: msgbox(format("We now charge a modest fee of ¥{STR_VAR_1} for our services, ¥100 for each Gym Badge you have.\NIs that ok?"), MSGBOX_YESNO)
+    case 1: msgbox(format("That'll be ¥{STR_VAR_1}, ok?"), MSGBOX_YESNO)
+    case 2: msgbox(format("Our services now cost ¥100 per Badge obtained, so that'll be ¥{STR_VAR_1} today. Would you like us to heal your Pokémon?"), MSGBOX_YESNO)
+  }
+  if (var(VAR_RESULT)) {
+  call(Common_PoryScript_GetBadgeCount)
+  switch(var(VAR_RESULT)) {
+    case 0: checkmoney(1000)
+    case 1: checkmoney(1000)
+    case 2: checkmoney(2000)
+    case 3: checkmoney(3000)
+    case 4: checkmoney(4000)
+    case 5: checkmoney(5000)
+    case 6: checkmoney(6000)
+    case 7: checkmoney(7000)
+    case 8: checkmoney(8000)
+  }
+  if (!var(VAR_RESULT)) {
+    msgbox(format("I'm sorry, but that's unfortunately not enough."))
+    hidemoneybox
+    release
+    end
+  }
+  call(Common_PoryScript_GetBadgeCount)
+  switch(var(VAR_RESULT)) {
+    case 0: removemoney(1000)
+    case 1: removemoney(1000)
+    case 2: removemoney(2000)
+    case 3: removemoney(3000)
+    case 4: removemoney(4000)
+    case 5: removemoney(5000)
+    case 6: removemoney(6000)
+    case 7: removemoney(7000)
+    case 8: removemoney(8000)
+  }
+    updatemoneybox
+    msgbox(format("Thank you!"))
+    hidemoneybox
+  } else {
+    msgbox(format("Ok! Maybe next time then."))
+    hidemoneybox
+    release
+    end
   }
 }
 
