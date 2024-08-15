@@ -1,0 +1,3 @@
+text PlayersHouse_1F_Text_RunningShoesManual_Pory {
+  format("It's the instruction booklet for the Running Shoes.\p“RUN!\p“Press the B Button to walk while wearing your Running Shoes.\p“Lace up your Running Shoes and hit the road running!”")
+}
