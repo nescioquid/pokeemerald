@@ -1,0 +1,11 @@
+script Common_PoryScript_GameCube {
+  msgbox(format("It's a Nintendo GameCube.\p… … … … … … … …\n… … … … … … … …\pSeriously? I spent all this time modding this game, and you want to play a different one?"), MSGBOX_SIGN)
+  release
+  end
+}
+
+script Common_PoryScript_GameCube_Orange {
+  msgbox(format("It's a Nintendo GameCube.\p… … … … … … … …\n… … … … … … … …\pYes, they came in orange.\nBut seriously? I spent all this time modding this game, and you want to play a different one?"), MSGBOX_SIGN)
+  release
+  end
+}
