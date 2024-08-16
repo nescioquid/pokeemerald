@@ -1,0 +1,15 @@
+script VerdanturfTown_Mart_EventScript_Boy_Pory {
+  lock
+  faceplayer
+  msgbox(format("For any Pokémon match, X Attack is crucial.\pIt jacks up the power of some moves even though it's only for one battle."))
+  release
+  end
+}
+
+script VerdanturfTown_Mart_EventScript_Lass_Pory {
+  lock
+  faceplayer
+  msgbox(format("The Nest Ball works better on weakened Pokémon.\pVerdanturf used to be the only place you could buy it."))
+  release
+  end
+}
