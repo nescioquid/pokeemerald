@@ -1,0 +1,45 @@
+const LOCALID_CAPT_STERN = 4
+const GIVEMON_HELPER_ARTICLE = VAR_TEMP_9
+
+script SlateportCity_Harbor_EventScript_CaptStern_Pory {
+  lock
+  faceplayer
+  if (flag(FLAG_BADGE07_GET)) {
+    goto_if_eq(VAR_TEMP_1, 1, SlateportCity_Harbor_EventScript_TradedScanner)
+    checkitem(ITEM_SCANNER)
+    if (var(VAR_RESULT)) {
+      goto(SlateportCity_Harbor_EventScript_AskToTradeScanner_Pory)
+    }
+    goto_if_set(FLAG_SYS_GAME_CLEAR, SlateportCity_Harbor_EventScript_FerryFinished)
+    msgbox(SlateportCity_Harbor_Text_WontBeLongBeforeWeFinishFerry)
+    release
+    end
+  }
+  goto_if_set(FLAG_EVIL_TEAM_ESCAPED_STERN_SPOKE, SlateportCity_Harbor_EventScript_NeedDive)
+  goto_if_set(FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE, SlateportCity_Harbor_EventScript_TeamAquaLeftNeedDive)
+  goto_if_eq(VAR_SLATEPORT_HARBOR_STATE, 2, SlateportCity_Harbor_EventScript_WhyStealSubmarine)
+  msgbox(SlateportCity_Harbor_Text_SameThugsTriedToRobAtMuseum)
+  closemessage
+  applymovement(VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection)
+  waitmovement(0)
+  release
+  end
+}
+
+script SlateportCity_Harbor_EventScript_AskToTradeScanner_Pory {
+  msgbox(format("Capt. Stern: Oh?\n{PLAYER}{KUN}, that item you have…\pThat's a Scanner! That would sure help us on our explorations.\p{PLAYER}{KUN}, would you trade that Scanner for something?\pLike, say, this Porygon I have? A researcher friend at Devon gave it to me, but I'm not much of a Trainer."), MSGBOX_YESNO)
+  if (!var(VAR_RESULT)) {
+    msgbox(SlateportCity_Harbor_Text_IfYouWantToTradeLetMeKnow)
+    release
+    end
+  }
+  msgbox(format("Capt. Stern: Really? Thank you so much!"))
+  setvar(VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_PORYGON)
+  setvar(GIVEMON_HELPER_ARTICLE, 3)
+  givemon(SPECIES_PORYGON, 25)
+  call(Common_PoryScript_GivemonHelper)
+  removeitem(ITEM_SCANNER)
+  msgbox(SlateportCity_Harbor_Text_HandedScannerToStern)
+  setflag(FLAG_EXCHANGED_SCANNER)
+  goto(SlateportCity_Harbor_EventScript_TradedScanner)
+}
