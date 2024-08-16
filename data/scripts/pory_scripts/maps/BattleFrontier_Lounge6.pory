@@ -1,0 +1,7 @@
+script BattleFrontier_Lounge6_EventScript_Trader_Pory {
+  lock
+  faceplayer
+  msgbox(format("Giggle!\nMy Pokémon is so much cuter than I had\limagined. I'm delighted!"))
+  release
+  end
+}
