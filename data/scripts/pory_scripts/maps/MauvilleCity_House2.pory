@@ -1,0 +1,15 @@
+script MauvilleCity_House2_EventScript_Woman_Pory {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_COIN_CASE)) {
+    msgbox(format("If could go to Lilycove for some shopping, I'd be able to buy Harbor Mail at the Department Store there…"))
+    checkitem(ITEM_HARBOR_MAIL)
+    if (var(VAR_RESULT)) {
+      goto(MauvilleCity_House2_EventScript_AskToTradeForHarborMail)
+    }
+  } else {
+    msgbox(MauvilleCity_House2_Text_UseCoinCaseAtGameCorner)
+  }
+  release
+  end
+}
