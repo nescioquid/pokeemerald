@@ -1,0 +1,14 @@
+script Route113_EventScript_Madeline_Pory {
+  trainerbattle_single(TRAINER_MADELINE_1, Route113_Text_MadelineIntro_Pory, Route113_Text_MadelineDefeat, Route113_EventScript_RegisterMadeline)
+  specialvar(VAR_RESULT, ShouldTryRematchBattle)
+  if (var(VAR_RESULT)) {
+    goto(Route113_EventScript_RematchMadeline)
+  }
+  msgbox(Route113_Text_MadelinePostBattle)
+  release
+  end
+}
+
+text Route113_Text_MadelineIntro_Pory {
+  format("I use this parasol to ward off this filthy, yucky volcanic ash from my dear Pokémon.")
+}
