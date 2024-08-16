@@ -1,0 +1,44 @@
+// helper script for getting a count of how many badges the player currently has
+
+// credits to SBird (Discord: karathan)
+
+// example:
+
+// script SetItemPriceFoo {
+//   call(Common_PoryScript_GetBadgeCount)
+//   switch(var(VAR_RESULT)) {
+//     case 0:
+//       setvar(VAR_MONEY, 1000)
+//     case 1:
+//       setvar(VAR_MONEY, 800)
+//     // etc
+//   }
+// }
+
+script Common_PoryScript_GetBadgeCount {
+  setvar(VAR_RESULT, 0)
+  if (flag(FLAG_BADGE01_GET)) {
+    addvar(VAR_RESULT, 1)
+  }
+  if (flag(FLAG_BADGE02_GET)) {
+    addvar(VAR_RESULT, 1)
+  }
+  if (flag(FLAG_BADGE03_GET)) {
+    addvar(VAR_RESULT, 1)
+  }
+  if (flag(FLAG_BADGE04_GET)) {
+    addvar(VAR_RESULT, 1)
+  }
+  if (flag(FLAG_BADGE05_GET)) {
+    addvar(VAR_RESULT, 1)
+  }
+  if (flag(FLAG_BADGE06_GET)) {
+    addvar(VAR_RESULT, 1)
+  }
+  if (flag(FLAG_BADGE07_GET)) {
+    addvar(VAR_RESULT, 1)
+  }
+  if (flag(FLAG_BADGE08_GET)) {
+    addvar(VAR_RESULT, 1)
+  }
+}
