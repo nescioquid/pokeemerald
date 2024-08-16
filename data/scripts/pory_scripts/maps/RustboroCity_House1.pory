@@ -1,0 +1,7 @@
+script RustboroCity_House1_EventScript_Trader_Pory {
+  lock
+  faceplayer
+  msgbox(format("Any Pokémon can be cute if you raise\nit with care and kindness."))
+  release
+  end
+}
