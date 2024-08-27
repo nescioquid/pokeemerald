@@ -75,3 +75,101 @@ mart Pory_Pokemart_SlateportCity_Market_TMs_All {
   ITEM_TM_POWER_UP_PUNCH // TM98
   ITEM_TM_CONFIDE        // TM100
 }
+
+const LOCALID_FOSSIL_MANIAC = 36
+const PUSH_TO_DYNMULTISTACK_IF_OWNED = VAR_TEMP_8
+const FOSSIL_TO_TRADE = VAR_TEMP_7
+const EVO_STONE_CHOSEN = VAR_TEMP_6
+
+script PoryScript_FossilManiac {
+  lock
+  faceplayer
+  if (!flag(FLAG_TEMP_1)) {
+    msgbox(format("I like rocks…\nDo you have any cool rocks?\pI'm thinking about trading some of mine…"))
+  } else {
+    msgbox(format("Do you have more cool rocks for me?"))
+  }
+  checkitem(ITEM_HELIX_FOSSIL)
+  if (!var(VAR_RESULT)) {
+    checkitem(ITEM_DOME_FOSSIL)
+    if (!var(VAR_RESULT)) {
+      checkitem(ITEM_OLD_AMBER)
+      if (!var(VAR_RESULT)) {
+        checkitem(ITEM_ROOT_FOSSIL)
+        if (!var(VAR_RESULT)) {
+          checkitem(ITEM_CLAW_FOSSIL)
+          if (!var(VAR_RESULT)) {
+            release
+            end
+          }
+        }
+      }
+    }
+  }
+  playse(SE_PIN)
+  applymovement(LOCALID_FOSSIL_MANIAC, Common_Movement_ExclamationMark)
+  waitmovement(0)
+  applymovement(LOCALID_FOSSIL_MANIAC, Common_Movement_Delay48)
+  waitmovement(0)
+  setflag(FLAG_TEMP_1)
+  message(format("Hey, that's a cool rock!\pDo you wanna trade something for it? I'll give you one of my rocks if you let me have it."))
+  waitmessage
+  setvar(PUSH_TO_DYNMULTISTACK_IF_OWNED, ITEM_HELIX_FOSSIL)
+  call(Common_PoryScript_PushItemToDynmultistackIfOwned)
+  setvar(PUSH_TO_DYNMULTISTACK_IF_OWNED, ITEM_DOME_FOSSIL)
+  call(Common_PoryScript_PushItemToDynmultistackIfOwned)
+  setvar(PUSH_TO_DYNMULTISTACK_IF_OWNED, ITEM_OLD_AMBER)
+  call(Common_PoryScript_PushItemToDynmultistackIfOwned)
+  setvar(PUSH_TO_DYNMULTISTACK_IF_OWNED, ITEM_ROOT_FOSSIL)
+  call(Common_PoryScript_PushItemToDynmultistackIfOwned)
+  setvar(PUSH_TO_DYNMULTISTACK_IF_OWNED, ITEM_CLAW_FOSSIL)
+  call(Common_PoryScript_PushItemToDynmultistackIfOwned)
+  dynmultistack(0, 0, FALSE, 6, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
+  if (var(VAR_RESULT) == MULTI_B_PRESSED) {
+    msgbox(format("Aww that's too bad… Are you sure? I really wanted to trade you for it!"))
+    release
+    end
+  }
+  copyvar(FOSSIL_TO_TRADE, VAR_RESULT)
+  bufferitemname(STR_VAR_1, FOSSIL_TO_TRADE)
+  if (var(FOSSIL_TO_TRADE) == ITEM_HELIX_FOSSIL) {
+    message(format("Praise Helix! Another for my collection! Which one of my cool rocks do you want?"))
+  } else {
+    message(format("Yesssss! Another for my collection! Which one of my cool rocks do you want?"))
+  }
+  waitmessage
+  bufferitemname(STR_VAR_2,   ITEM_LEAF_STONE)
+  dynmultipush("{STR_VAR_2}", ITEM_LEAF_STONE)
+  bufferitemname(STR_VAR_2,   ITEM_FIRE_STONE)
+  dynmultipush("{STR_VAR_2}", ITEM_FIRE_STONE)
+  bufferitemname(STR_VAR_2,   ITEM_WATER_STONE)
+  dynmultipush("{STR_VAR_2}", ITEM_WATER_STONE)
+  bufferitemname(STR_VAR_2,   ITEM_THUNDER_STONE)
+  dynmultipush("{STR_VAR_2}", ITEM_THUNDER_STONE)
+  bufferitemname(STR_VAR_2,   ITEM_SUN_STONE)
+  dynmultipush("{STR_VAR_2}", ITEM_SUN_STONE)
+  bufferitemname(STR_VAR_2,   ITEM_MOON_STONE)
+  dynmultipush("{STR_VAR_2}", ITEM_MOON_STONE)
+  bufferitemname(STR_VAR_2,   ITEM_SHINY_STONE)
+  dynmultipush("{STR_VAR_2}", ITEM_SHINY_STONE)
+  // bufferitemname(STR_VAR_2,   ITEM_DAWN_STONE)
+  // dynmultipush("{STR_VAR_2}", ITEM_DAWN_STONE)
+  bufferitemname(STR_VAR_2,   ITEM_DUSK_STONE)
+  dynmultipush("{STR_VAR_2}", ITEM_DUSK_STONE)
+  // bufferitemname(STR_VAR_2,   ITEM_ICE_STONE)
+  // dynmultipush("{STR_VAR_2}", ITEM_ICE_STONE)
+  dynmultistack(0, 0, FALSE, 6, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
+  if (var(VAR_RESULT) == MULTI_B_PRESSED) {
+    msgbox(format("Aww that's too bad… Are you sure? I really wanted to trade you for it!"))
+    release
+    end
+  }
+  copyvar(EVO_STONE_CHOSEN, VAR_RESULT)
+  giveitem(EVO_STONE_CHOSEN)
+  goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+  msgbox(format("{PLAYER} handed the {STR_VAR_1} to the strange rock enthusiast."))
+  removeitem(FOSSIL_TO_TRADE)
+  msgbox(format("There you go! Bring me more of your rocks whenever you think you have something cool!"))
+  release
+  end
+}
