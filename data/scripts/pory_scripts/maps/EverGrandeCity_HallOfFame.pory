@@ -1,0 +1,7 @@
+text EverGrandeCity_HallOfFame_Text_HereWeHonorLeagueChampions_Pory {
+  format("This room…\pThis is where we keep records of Pokémon that prevailed through harsh battles.\pIt is here that the League Champions are honored.")
+}
+
+text EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames_Pory {
+  format("Come on, let's record your name as a Trainer who triumphed over the Pokémon League, and the names of the partners who battled with you.")
+}
