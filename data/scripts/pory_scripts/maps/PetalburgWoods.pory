@@ -1,0 +1,5 @@
+script PoryScript_ThatWasAwfullyClose {
+  msgbox(format("Whew…\nThat was awfully close!\pThanks to you, he didn't rob me of these important papers.\pI know, I'll give you this Net Ball I found as my thanks!"))
+  giveitem(ITEM_NET_BALL)
+  goto_if_eq(VAR_RESULT, FALSE, PetalburgWoods_EventScript_BagFull)
+}
