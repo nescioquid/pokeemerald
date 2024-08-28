@@ -1,0 +1,53 @@
+const LOCALID_META_BOY = 1
+const GIVEMON_HELPER_ARTICLE = VAR_TEMP_9
+
+script PoryScript_MetaBoy_Postgame {
+  lock
+  faceplayer
+  if (!flag(FLAG_DEFEATED_METEOR_FALLS_META_BOY)) {
+    waitse
+    playse(SE_PIN)
+    applymovement(LOCALID_META_BOY, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(LOCALID_META_BOY, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(LOCALID_META_BOY, Common_Movement_FacePlayer)
+    waitmovement(0)
+    if (!flag(FLAG_RECEIVED_JOHTO_STARTER)) {
+      msgbox(format("{PLAYER}. Hey!\nI just finished my mod of Pokémon Emerald for the Game Boy Advance and was able to catch and train some really cool Pokémon. Wanna see them?"))
+    } else {
+      msgbox(format("{PLAYER}. We meet again.\pThanks to you I not only finished my mod of Pokémon Emerald for the Game Boy Advance, but was able to catch and train some way cooler Pokémon than that one I left you with back in Dewford. Wanna see?"))
+    }
+    trainerbattle_no_intro(TRAINER_META_BOY, format("Hey, you actually beat me!"))
+    setflag(FLAG_DEFEATED_METEOR_FALLS_META_BOY)
+  }
+  msgbox(format("Nice battling! I guess you're that much more powerful than the guy that literally made the game you're playing!"))
+  if (!flag(FLAG_RECEIVED_JOHTO_STARTER)) {
+      msgbox(format("Hey… My parents got me this cool, rare Pokémon from Johto, but I think I'm done with video games for a while.\pWould you take care of my Pokémon for me? Pleasy please?"), MSGBOX_YESNO)
+    if (!var(VAR_RESULT)) {
+      msgbox(format("But… It's a free Pokémon, and you're the supposed to be protagonist, right?"))
+      release
+      end
+    }
+    msgbox(format("Yay! Take good care of them!"))
+    switch (var(VAR_STARTER_MON)) {
+      case 0:
+        setvar(VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_CROCONAW)
+        setvar(GIVEMON_HELPER_ARTICLE, 1)
+        givemon(SPECIES_CROCONAW, 30)
+      case 1:
+        setvar(VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_BAYLEEF)
+        setvar(GIVEMON_HELPER_ARTICLE, 1)
+        givemon(SPECIES_BAYLEEF, 30)
+      case 2:
+        setvar(VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_QUILAVA)
+        setvar(GIVEMON_HELPER_ARTICLE, 1)
+        givemon(SPECIES_QUILAVA, 30)
+    }
+    call(Common_PoryScript_GivemonHelper)
+    setflag(FLAG_RECEIVED_JOHTO_STARTER)
+    msgbox(format("Now I can finally spend the summer at my family's beach house in peace!"))
+  }
+  release
+  end
+}
