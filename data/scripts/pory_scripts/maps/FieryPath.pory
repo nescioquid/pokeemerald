@@ -1,0 +1,22 @@
+const LOCALID_LOST_HIKER = 9
+
+script Pory_EventScript_GiveTMNaturePower {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_TM_NATURE_POWER)) {
+    playse(SE_PIN)
+    applymovement(LOCALID_LOST_HIKER, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(LOCALID_LOST_HIKER, Common_Movement_Delay48)
+    waitmovement(0)
+    msgbox(format("Oh?!"))
+    giveitem(ITEM_TM_NATURE_POWER)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_TM_NATURE_POWER)
+    msgbox(format("That move there will change its effect based on where you are. Pretty neat, huh?\p…Also, speaking of where we are, where are we exactly? I'm a little lost here."))
+  } else {
+    msgbox(format("That Nature Power move there will change its effect based on where you are. Pretty neat, huh?\p…Also, speaking of where we are, where are we exactly? I'm a little lost here."))
+  }
+  release
+  end
+}

@@ -1,0 +1,19 @@
+script Pory_EventScript_GiveTMSwordsDance {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_TM_SWORDS_DANCE)) {
+    msgbox(format("Dance and soul make power!\pSoul is way of karate for me!\pYou understand, yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT)) {
+      msgbox(format("Ok! Ok!\nYou good kid!"))
+    } else {
+      msgbox(format("Oh…\nI so sad and wretched…\pYou take this and you understand way of karate of me, fool Trainer!"))
+      giveitem(ITEM_TM_SWORDS_DANCE)
+      goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+      setflag(FLAG_RECEIVED_TM_SWORDS_DANCE)
+    }
+  } else {
+    msgbox(format("You understand way of karate now?"))
+  }
+  release
+  end
+}

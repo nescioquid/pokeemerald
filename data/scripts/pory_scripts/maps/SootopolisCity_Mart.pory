@@ -1,0 +1,20 @@
+script Pory_EventScript_GiveTMInfestation {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_TM_INFESTATION)) {
+    msgbox(format("You there! You call yourself a fan? Then answer this!\pIs this the best Pokémon game you've ever played?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT)) {
+      msgbox(format("What?! How dare you sound so unsure!\pBut at least you answered the question right. I'll give you this as a reward for having such great taste!"))
+      giveitem(ITEM_TM_INFESTATION)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+      setflag(FLAG_RECEIVED_TM_INFESTATION)
+      msgbox(format("You know, this game took longer to make than you think. Make sure to thank those behind it all!"))
+    } else {
+      msgbox(format("What?! How dare you!"))
+    }
+  } else {
+    msgbox(format("You know, this game took longer to make than you think. Make sure to thank those behind it all!"))
+  }
+  release
+  end
+}

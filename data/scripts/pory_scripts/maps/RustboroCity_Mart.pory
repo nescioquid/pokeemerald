@@ -1,0 +1,13 @@
+script Pory_EventScript_GiveTMFalseSwipe {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_TM_FALSE_SWIPE)) {
+    msgbox(format("Excuse me, Trainer over there!\nDo you have a minute?\pYou know, sometimes moves are too strong to catch a Pokémon. You end up making them faint even when you don't want to.\pFor such a common problem, use this!"))
+    giveitem(ITEM_TM_FALSE_SWIPE)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_TM_FALSE_SWIPE)
+  }
+  msgbox(format("False Swipe is a very handy move. No matter how many times it's used on the opposing Pokémon, it won't faint!\pI'm offering it for free right now. It's a limited-time promotion!"))
+  release
+  end
+}

@@ -1,0 +1,18 @@
+script Pory_EventScript_GiveTMRestTMSleepTalk {
+  lock
+  faceplayer
+  if(!flag(FLAG_RECEIVED_TM_REST)) {
+    msgbox(format("Huh? What? What's that?\pI'm not near awake yet…\nYou can have this…"))
+    giveitem(ITEM_TM_REST)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_TM_REST)
+  } elif(!flag(FLAG_RECEIVED_TM_SLEEP_TALK)) {
+    msgbox(format("Zzz… Hm?\nLemme be… I'm still half-asleep…\lHere… take this, too…"))
+    giveitem(ITEM_TM_SLEEP_TALK)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_TM_SLEEP_TALK)
+  }
+  msgbox(format("Yawn…\pSleep is essential for good health…\nSleep and regain health…"))
+  release
+  end
+}
