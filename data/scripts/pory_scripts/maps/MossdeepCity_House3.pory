@@ -1,0 +1,26 @@
+script MossdeepCity_House3_EventScript_SuperRodFisherman_Pory {
+  lock
+  faceplayer
+  if(!flag(FLAG_RECEIVED_SUPER_ROD)) {
+  	msgbox(format("Hey there, Trainer!\nA Super Rod really is super!\pSay all you want, but those babies can\ncatch Pokémon off the seafloor!\pWhat do you think?\nYou want one, don't you?"), MSGBOX_YESNO)
+	  if (!var(VAR_RESULT)) {
+      msgbox(format("Hunh?\nDon't you like to fish?"))
+      release
+      end
+    }
+    if(!flag(FLAG_RECEIVED_OLD_ROD)) {
+      msgbox(format("You bet, you bet!\nAfter all, a Super Rod is really super!\p…If only I had an extra one to give you. But here, take these instead!"))
+    } else {
+      msgbox(format("You bet, you bet!\nAfter all, a Super Rod is really super!\p…Oh! You already have one!\nA kindred soul. Well then, take these instead!"))
+    }
+    giveitem(ITEM_RARE_CANDY, 36)
+    goto_if_eq (VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_SUPER_ROD)
+    msgbox(format("If there's any water, try dropping in\na Rod and see what bites!"))
+    release
+    end
+  }
+  msgbox(format("Go after seafloor Pokémon by fishing!"))
+  release
+  end
+}
