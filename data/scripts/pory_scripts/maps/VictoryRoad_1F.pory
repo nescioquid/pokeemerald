@@ -1,0 +1,86 @@
+const LOCALID_WALLY = 6
+
+script VictoryRoad_1F_OnTransition_Pory {
+  if (var(VAR_VICTORY_ROAD_1F_STATE) == 1) {
+    setobjectxyperm(LOCALID_WALLY, 31, 9)
+    setobjectmovementtype(LOCALID_WALLY, MOVEMENT_TYPE_LOOK_AROUND)
+  }
+  end
+}
+
+script VictoryRoad_1F_EventScript_WallyTriggerLeft_Pory {
+  lock
+  addobject(LOCALID_WALLY)
+  applymovement(LOCALID_WALLY, VictoryRoad_1F_Movement_WallyApproachPlayerLeft_Pory)
+  waitmovement(0)
+  faceplayer
+  applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight)
+  waitmovement(0)
+  setvar(VAR_VICTORY_ROAD_1F_STATE, 1)
+  goto(VictoryRoad_1F_EventScript_Wally_Pory)
+  release
+  end
+}
+
+script VictoryRoad_1F_EventScript_WallyTriggerCenter_Pory {
+  lock
+  addobject(LOCALID_WALLY)
+  applymovement(LOCALID_WALLY, VictoryRoad_1F_Movement_WallyApproachPlayerCenter_Pory)
+  waitmovement(0)
+  faceplayer
+  applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown)
+  waitmovement(0)
+  setvar(VAR_VICTORY_ROAD_1F_STATE, 1)
+  goto(VictoryRoad_1F_EventScript_Wally_Pory)
+  release
+  end
+}
+
+script VictoryRoad_1F_EventScript_WallyTriggerRight_Pory {
+  lock
+  addobject(LOCALID_WALLY)
+  applymovement(LOCALID_WALLY, VictoryRoad_1F_Movement_WallyApproachPlayerRight_Pory)
+  waitmovement(0)
+  faceplayer
+  applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft)
+  waitmovement(0)
+  setvar(VAR_VICTORY_ROAD_1F_STATE, 1)
+  goto(VictoryRoad_1F_EventScript_Wally_Pory)
+  release
+  end
+}
+
+movement VictoryRoad_1F_Movement_WallyApproachPlayerLeft_Pory {
+  walk_up * 6
+  face_left
+}
+
+movement VictoryRoad_1F_Movement_WallyApproachPlayerCenter_Pory {
+  walk_up * 6
+}
+
+movement VictoryRoad_1F_Movement_WallyApproachPlayerRight_Pory {
+  walk_up * 6
+  face_right
+}
+
+script VictoryRoad_1F_EventScript_Wally_Pory {
+  if (!flag(FLAG_DEFEATED_WALLY_VICTORY_ROAD)) {
+  msgbox(VictoryRoad_1F_Text_WallyNotGoingToLoseAnymore)
+  trainerbattle_no_intro(TRAINER_WALLY_VR_1, VictoryRoad_1F_Text_WallyEntranceDefeat)
+  msgbox(VictoryRoad_1F_Text_WallyPostEntranceBattle)
+  clearflag(FLAG_HIDE_VICTORY_ROAD_EXIT_WALLY)
+  copyobjectxytoperm(LOCALID_WALLY)
+  setflag(FLAG_DEFEATED_WALLY_VICTORY_ROAD)
+  release
+  end
+  } elif (!flag(FLAG_SYS_GAME_CLEAR)) {
+    lock
+    faceplayer
+    msgbox(VictoryRoad_1F_Text_WallyPostEntranceBattle)
+    release
+    end
+  } else {
+    goto(VictoryRoad_1F_EventScript_ExitWally)
+  }
+}
