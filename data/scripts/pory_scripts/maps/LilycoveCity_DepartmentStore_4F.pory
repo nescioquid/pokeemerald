@@ -59,3 +59,46 @@ mart Pokemart_DefenseTMs {
   ITEM_TM_REFLECT      // TM33
   ITEM_TM_LIGHT_SCREEN // TM16
 }
+
+script LilycoveCity_DepartmentStore_4F_EventScript_ClerkLeft_Pory_ORAS {
+  lock
+  faceplayer
+  call(Common_PoryScript_Clerk_Hello)
+  waitmessage
+  pokemart(Pory_Pokemart_AttackTMsORAS)
+  checkitem(ITEM_TM_FIRE_BLAST) // TM38
+  if (var(VAR_RESULT)) {
+    checkitem(ITEM_TM_THUNDER) // TM25
+    if (var(VAR_RESULT)) {
+      checkitem(ITEM_TM_BLIZZARD) // TM14
+      if (var(VAR_RESULT)) {
+        checkitem(ITEM_TM_FOCUS_BLAST) // TM52
+        if (var(VAR_RESULT)) {
+          checkitem(ITEM_TM_STONE_EDGE) // TM71
+          if (var(VAR_RESULT)) {
+            checkitem(ITEM_TM_HYPER_BEAM) // TM15
+            if (var(VAR_RESULT)) {
+              checkitem(ITEM_TM_GIGA_IMPACT) // TM68
+              if (var(VAR_RESULT)) {
+                msgbox(format("Dang, you bought them all? Nice!"))
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  call(Common_PoryScript_Clerk_Goodbye)
+  release
+  end
+}
+
+mart Pory_Pokemart_AttackTMsORAS {
+  ITEM_TM_FIRE_BLAST  // TM38
+  ITEM_TM_THUNDER     // TM25
+  ITEM_TM_BLIZZARD    // TM14
+  ITEM_TM_FOCUS_BLAST // TM52
+  ITEM_TM_STONE_EDGE  // TM71
+  ITEM_TM_HYPER_BEAM  // TM15
+  ITEM_TM_GIGA_IMPACT // TM68
+}
