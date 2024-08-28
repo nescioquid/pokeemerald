@@ -23,6 +23,8 @@ EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags::
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM
 	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 0, EverGrandeCity_HallOfFame_EventScript_ReadyDexUpgradeEvent
 	clearflag FLAG_HIDE_ROUTE_103_RIVAL
+	setflag(FLAG_HIDE_CAVE_OF_ORIGIN_EXPERT)
+	clearflag(FLAG_HIDE_CAVE_OF_ORIGIN_B1F_WALLACE)
 	return
 
 EverGrandeCity_HallOfFame_EventScript_ResetDefeatedEventLegendaries::
