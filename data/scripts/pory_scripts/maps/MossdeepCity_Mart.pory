@@ -1,0 +1,19 @@
+script Pory_EventScript_GiveTMQuash {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_TM_QUASH)) {
+    msgbox(format("Hey, you! Quick question!\nDo you want a TM?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT)) {
+      giveitem(ITEM_TM_QUASH)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+      setflag(FLAG_RECEIVED_TM_QUASH)
+      msgbox(format("That's the TM that my sweetie gave me when I proposed.\pBut I'm not a Trainer, so I don't know how to use those things. Hahaha!"))
+    } else {
+      msgbox(format("Huh…\nOkie dokie then!"))
+    }
+  } else {
+    msgbox(format("That's the TM that my sweetie gave me when I proposed.\pBut I'm not a Trainer, so I don't know how to use those things. Hahaha!"))
+  }
+  release
+  end
+}

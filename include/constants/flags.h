@@ -283,9 +283,9 @@
 #define FLAG_RECEIVED_OLD_ROD                0x101
 #define FLAG_RECEIVED_COIN_CASE              0x102
 #define FLAG_RETURNED_RED_OR_BLUE_ORB        0x103
-#define FLAG_RECEIVED_TM_SNATCH              0x104
+#define FLAG_RECEIVED_TM_EMBARGO             0x104
 #define FLAG_RECEIVED_TM_DIG                 0x105
-#define FLAG_RECEIVED_TM_BULLET_SEED         0x106
+#define FLAG_RECEIVED_TM_ECHOED_VOICE        0x106
 #define FLAG_ENTERED_ELITE_FOUR              0x107
 #define FLAG_RECEIVED_TM_HIDDEN_POWER        0x108
 #define FLAG_RECEIVED_TM_TORMENT             0x109
@@ -1222,19 +1222,19 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
-#define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
-#define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
-#define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
-#define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
-#define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
-#define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
-#define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
-#define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
-#define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
-#define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
-#define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
+#define FLAG_RECEIVED_TM_PSYSHOCK                                   0x493
+#define FLAG_RECEIVED_TM_FALSE_SWIPE                                0x494
+#define FLAG_RECEIVED_TM_FLING                                      0x495
+#define FLAG_RECEIVED_TM_SKY_DROP                                   0x496
+#define FLAG_RECEIVED_TM_QUASH                                      0x497
+#define FLAG_RECEIVED_TM_SWORDS_DANCE                               0x498
+#define FLAG_RECEIVED_TM_PSYCH_UP                                   0x499
+#define FLAG_RECEIVED_TM_INFESTATION                                0x49A
+#define FLAG_RECEIVED_TM_DREAM_EATER                                0x49B
+#define FLAG_RECEIVED_TM_SWAGGER                                    0x49C
+#define FLAG_RECEIVED_TM_SLEEP_TALK                                 0x49D
+#define FLAG_RECEIVED_TM_NATURE_POWER                               0x49E
+#define FLAG_RECEIVED_TM_DAZZLING_GLEAM                             0x49F
 #define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
 #define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
 #define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
