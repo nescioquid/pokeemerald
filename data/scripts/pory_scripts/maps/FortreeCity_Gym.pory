@@ -20,3 +20,27 @@ script FortreeCity_Gym_EventScript_GymGuide_Pory {
   release
   end
 }
+
+text FortreeCity_Gym_Text_WinonaIntro_Pory {
+  format("I am Winona. I am the Leader of the Fortree Pokémon Gym.\pI have become one with Bird Pokémon and have soared the skies…\pHowever grueling the battle, we have triumphed with grace…\pWitness our elegant choreography!")
+}
+
+text FortreeCity_Gym_Text_WinonaDefeat_Pory {
+  format("Never before have I seen a Trainer command Pokémon with more grace than I…")
+}
+
+text Pory_Text_WinonaDefeated {
+  format("In recognition of your prowess,\nI present to you this Gym Badge.")
+}
+
+text FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis_Pory {
+  format("With the Feather Badge, you will be able to use the HM move Fly outside of battle.\pAnd this…\nThis is a gift from me.")
+}
+
+text Pory_Text_WinonaExplainRoost {
+  format("Roost…\pWith this move, the user can restore its HP by up to half by landing on the ground and resting its injured body.\pHowever, the user loses its Flying-type designation during the turn, so be cautious.")
+}
+
+text FortreeCity_Gym_Text_WinonaPostBattle_Pory {
+  format("You won against me…\pI know you'll keep aiming higher and higher. Someday, you may even fly up into the sky!")
+}
