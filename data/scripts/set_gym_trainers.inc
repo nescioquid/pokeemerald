@@ -30,7 +30,7 @@ MauvilleCity_Gym_SetGymTrainers::
 	settrainerflag TRAINER_SHAWN
 	settrainerflag TRAINER_BEN
 	settrainerflag TRAINER_VIVIAN
-	settrainerflag TRAINER_ANGELO
+	settrainerflag TRAINER_DALTON_1
 	return
 
 LavaridgeTown_Gym_SetGymTrainers::
