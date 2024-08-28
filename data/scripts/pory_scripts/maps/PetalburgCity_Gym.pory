@@ -24,3 +24,23 @@ script PetalburgCity_Gym_EventScript_GymGuide_Pory {
   release
   end
 }
+
+text PetalburgCity_Gym_Text_NormanIntro_Pory {
+  format("Dad: {PLAYER}…\nSo, you did get four Gym Badges.\pIt makes me happier than I can really describe.\pBeing able to have a real battle with my own child like this.\pBut a battle is a battle!\pI will do everything within my power as a Gym Leader to win!\pYou'd better give it your best shot, too, {PLAYER}!")
+}
+
+text PetalburgCity_Gym_Text_NormanDefeat_Pory {
+  format("…!\pI… I can't…")
+}
+
+text Pory_Text_NormanDefeated {
+  format("I can't believe it. {PLAYER}…\pI've lost to {PLAYER}?\p… … … … … …\p… … … … … …\pYou've come this far…\pThat's how it is then!\pHere, take this.")
+}
+
+text PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis_Pory {
+  format("Dad: Having that Badge will insure that Pokémon that know the HM move Surf will also be able to travel over water now.\pAnd this is my gift to you, {PLAYER}. I'm sure you'll be able to use it well.")
+}
+
+text Pory_Text_NormanExplainRetaliate {
+  format("Retaliate will allow you to take revenge for a fallen team member.\pIts power will be doubled if you have a Pokémon use it in the very next turn after an ally faints.\p I hope you and your Pokémon will be diligent enough to use it wisely.\p… … … … … …")
+}

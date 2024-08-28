@@ -20,3 +20,19 @@ script SootopolisCity_Gym_1F_EventScript_GymGuide_Pory {
   release
   end
 }
+
+text SootopolisCity_Gym_1F_Text_JuanDefeat_Pory {
+  format("Ahahaha, excellent!\nVery well, you are the winner.")
+}
+
+text Pory_Text_JuanDefeated {
+  format("From you, I sense the brilliant shine of skill that will overcome all.\pHowever, compared with me or even Wallace, you are lacking in elegance.\pPerhaps I should make you a loan of my outfit?\p… … … … … …\n… … … … … …\pHahaha, I merely jest!\pRather than my clothes, I shall reward you with this, the Rain Badge!")
+}
+
+text SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis_Pory {
+  format("Having the Rain Badge shall allow you the use\nof the HM move Waterfall to scale\lwalls of cascading water.\pAnd, so that you never forget the\nbattle we shared, take this…")
+}
+
+text Pory_Text_JuanExplainScald {
+  format("The Technical Machine I handed you contains the move Scald.\pIn use, it will occasionally burn the target with boiling hot water.")
+}
