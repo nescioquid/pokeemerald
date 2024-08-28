@@ -1,0 +1,54 @@
+const COINS_REQUIRED = 1000
+const PRIZE_CHOSEN = VAR_TEMP_1
+const COINS_OWNED = VAR_TEMP_2
+
+script PoryScript_PrizeCornerItems {
+  lock
+  faceplayer
+  msgbox(MauvilleCity_GameCorner_Text_ExchangeCoinsForPrizes)
+  checkitem(ITEM_COIN_CASE)
+  if (!var(VAR_RESULT)) {
+    release
+    end
+  }
+  message(MauvilleCity_GameCorner_Text_WhichPrize)
+  waitmessage
+  showcoinsbox(1, 1)
+  dynmultipush("Silk Scarf{CLEAR_TO 0x48}1,000 Coins", ITEM_SILK_SCARF)
+  dynmultipush("Wide Lens{CLEAR_TO 0x48}1,000 Coins", ITEM_WIDE_LENS)
+  dynmultipush("Zoom Lens{CLEAR_TO 0x48}1,000 Coins", ITEM_ZOOM_LENS)
+  dynmultipush("Metronome{CLEAR_TO 0x48}1,000 Coins", ITEM_METRONOME)
+  dynmultistack(0, 4, FALSE, 4, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
+  if (var(VAR_RESULT) == MULTI_B_PRESSED) {
+    msgbox(MauvilleCity_GameCorner_Text_OhIsThatSo)
+    hidecoinsbox(0, 0)
+    release
+    end
+  }
+  copyvar(PRIZE_CHOSEN, VAR_RESULT)
+  bufferitemname(STR_VAR_1, PRIZE_CHOSEN)
+  msgbox(format("You'd like the {STR_VAR_1}?"), MSGBOX_YESNO)
+  if (!var(VAR_RESULT)) {
+    msgbox(MauvilleCity_GameCorner_Text_OhIsThatSo)
+    hidecoinsbox(0, 0)
+    release
+    end
+  }
+  checkcoins(COINS_OWNED)
+  if (var(COINS_OWNED) < COINS_REQUIRED) {
+    msgbox(MauvilleCity_GameCorner_Text_NotEnoughCoins)
+    hidecoinsbox(0, 0)
+    release
+    end
+  }
+  checkitemspace(PRIZE_CHOSEN)
+  goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_BagIsFull)
+  removecoins(COINS_REQUIRED)
+  additem(PRIZE_CHOSEN)
+  updatecoinsbox(1, 1)
+  playse(SE_SHOP)
+  msgbox(MauvilleCity_GameCorner_Text_HereYouGo)
+  hidecoinsbox(0, 0)
+  release
+  end
+}
