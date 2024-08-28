@@ -1,0 +1,259 @@
+script Pory_EventScript_Randomized_Item_Ball {
+  if (var(VAR_RESULT) == ITEM_POKE_BALL   ||
+      var(VAR_RESULT) == ITEM_GREAT_BALL  ||
+      var(VAR_RESULT) == ITEM_ULTRA_BALL  ||
+      var(VAR_RESULT) == ITEM_MASTER_BALL ||
+      var(VAR_RESULT) == ITEM_DIVE_BALL   ||
+      var(VAR_RESULT) == ITEM_LUXURY_BALL ||
+      var(VAR_RESULT) == ITEM_NET_BALL    ||
+      var(VAR_RESULT) == ITEM_NEST_BALL   ||
+      var(VAR_RESULT) == ITEM_REPEAT_BALL ||
+      var(VAR_RESULT) == ITEM_TIMER_BALL) {
+    call(Pory_EventScript_Randomized_Item_Ball_PokeBall)
+  }
+  if (var(VAR_RESULT) == ITEM_POTION        ||
+      var(VAR_RESULT) == ITEM_SUPER_POTION  ||
+      var(VAR_RESULT) == ITEM_HYPER_POTION  ||
+      var(VAR_RESULT) == ITEM_MAX_POTION    ||
+      var(VAR_RESULT) == ITEM_FULL_RESTORE  ||
+      var(VAR_RESULT) == ITEM_ENERGY_POWDER ||
+      var(VAR_RESULT) == ITEM_ENERGY_ROOT) {
+    call(Pory_EventScript_Randomized_Item_Ball_Common)
+  }
+  if (var(VAR_RESULT) == ITEM_ANTIDOTE      ||
+      var(VAR_RESULT) == ITEM_AWAKENING     ||
+      var(VAR_RESULT) == ITEM_BURN_HEAL     ||
+      var(VAR_RESULT) == ITEM_ICE_HEAL      ||
+      var(VAR_RESULT) == ITEM_PARALYZE_HEAL ||
+      var(VAR_RESULT) == ITEM_FULL_HEAL     ||
+      var(VAR_RESULT) == ITEM_HEAL_POWDER) {
+    call(Pory_EventScript_Randomized_Item_Ball_Repel)
+  }
+  if (var(VAR_RESULT) == ITEM_REVIVE     ||
+      var(VAR_RESULT) == ITEM_MAX_REVIVE ||
+      var(VAR_RESULT) == ITEM_REVIVAL_HERB) {
+    call(Pory_EventScript_Randomized_Item_Ball_Common)
+  }
+  if (var(VAR_RESULT) == ITEM_ETHER     ||
+      var(VAR_RESULT) == ITEM_ELIXIR    ||
+      var(VAR_RESULT) == ITEM_MAX_ETHER ||
+      var(VAR_RESULT) == ITEM_MAX_ELIXIR) {
+    call(Pory_EventScript_Randomized_Item_Ball_Common)
+  }
+  if (var(VAR_RESULT) == ITEM_PROTEIN ||
+      var(VAR_RESULT) == ITEM_IRON    ||
+      var(VAR_RESULT) == ITEM_CALCIUM ||
+      var(VAR_RESULT) == ITEM_ZINC    ||
+      var(VAR_RESULT) == ITEM_CARBOS  ||
+      var(VAR_RESULT) == ITEM_HP_UP   ||
+      var(VAR_RESULT) == ITEM_PP_UP   ||
+      var(VAR_RESULT) == ITEM_PP_MAX) {
+    call(Pory_EventScript_Randomized_Item_Ball_Common)
+  }
+  if (var(VAR_RESULT) == ITEM_X_ATTACK   ||
+      var(VAR_RESULT) == ITEM_X_DEFENSE  ||
+      var(VAR_RESULT) == ITEM_X_SP_ATK   ||
+      var(VAR_RESULT) == ITEM_X_SP_DEF   ||
+      var(VAR_RESULT) == ITEM_X_SPEED    ||
+      var(VAR_RESULT) == ITEM_X_ACCURACY ||
+      var(VAR_RESULT) == ITEM_GUARD_SPEC ||
+      var(VAR_RESULT) == ITEM_DIRE_HIT) {
+    call(Pory_EventScript_Randomized_Item_Ball_Common)
+  }
+  if (var(VAR_RESULT) == ITEM_RED_SHARD    ||
+      var(VAR_RESULT) == ITEM_BLUE_SHARD   ||
+      var(VAR_RESULT) == ITEM_GREEN_SHARD  ||
+      var(VAR_RESULT) == ITEM_YELLOW_SHARD ||
+      var(VAR_RESULT) == ITEM_HEART_SCALE  ||
+      var(VAR_RESULT) == ITEM_PEARL        ||
+      var(VAR_RESULT) == ITEM_BIG_PEARL) {
+    call(Pory_EventScript_Randomized_Item_Ball_Common)
+  }
+  if (var(VAR_RESULT) == ITEM_TINY_MUSHROOM ||
+      var(VAR_RESULT) == ITEM_BIG_MUSHROOM) {
+    call(Pory_EventScript_Randomized_Item_Ball_Common)
+  }
+  if (var(VAR_RESULT) == ITEM_NUGGET ||
+      var(VAR_RESULT) == ITEM_BIG_NUGGET) {
+    call(Pory_EventScript_Randomized_Item_Ball_Common)
+  }
+  if (var(VAR_RESULT) == ITEM_STARDUST   ||
+      var(VAR_RESULT) == ITEM_STAR_PIECE) {
+    call(Pory_EventScript_Randomized_Item_Ball_Common)
+  }
+  if (var(VAR_RESULT) == ITEM_REPEL       ||
+      var(VAR_RESULT) == ITEM_SUPER_REPEL ||
+      var(VAR_RESULT) == ITEM_MAX_REPEL) {
+    call(Pory_EventScript_Randomized_Item_Ball_Common)
+  }
+  if (var(VAR_RESULT) == ITEM_FIRE_STONE    ||
+      var(VAR_RESULT) == ITEM_WATER_STONE   ||
+      var(VAR_RESULT) == ITEM_THUNDER_STONE ||
+      var(VAR_RESULT) == ITEM_LEAF_STONE    ||
+      var(VAR_RESULT) == ITEM_SUN_STONE     ||
+      var(VAR_RESULT) == ITEM_MOON_STONE) {
+    call(Pory_EventScript_Randomized_Item_Ball_Common)
+  }
+  if (var(VAR_RESULT) == ITEM_ORANGE_MAIL  ||
+      var(VAR_RESULT) == ITEM_HARBOR_MAIL  ||
+      var(VAR_RESULT) == ITEM_GLITTER_MAIL ||
+      var(VAR_RESULT) == ITEM_MECH_MAIL    ||
+      var(VAR_RESULT) == ITEM_WOOD_MAIL    ||
+      var(VAR_RESULT) == ITEM_WAVE_MAIL    ||
+      var(VAR_RESULT) == ITEM_BEAD_MAIL    ||
+      var(VAR_RESULT) == ITEM_SHADOW_MAIL  ||
+      var(VAR_RESULT) == ITEM_TROPIC_MAIL) {
+    call(Pory_EventScript_Randomized_Item_Ball_Common)
+  }
+  if (var(VAR_RESULT) == ITEM_ESCAPE_ROPE ||
+      var(VAR_RESULT) == ITEM_RARE_CANDY  ||
+      var(VAR_RESULT) == ITEM_SEA_INCENSE ||
+      var(VAR_RESULT) == ITEM_LAX_INCENSE) {
+    call(Pory_EventScript_Randomized_Item_Ball_Common)
+  }
+}
+
+script Pory_EventScript_Randomized_Item_Ball_Common {
+  random(10)
+  switch (var(VAR_RESULT)) {
+    case 0: call(Pory_EventScript_Randomized_Item_Ball_Snacks)
+    case 1: call(Pory_EventScript_Randomized_Item_Ball_Snacks)
+    case 2: call(Pory_EventScript_Randomized_Item_Ball_Snacks)
+    case 3: call(Pory_EventScript_Randomized_Item_Ball_Snacks)
+    case 4: call(Pory_EventScript_Randomized_Item_Ball_XItem)
+    case 5: call(Pory_EventScript_Randomized_Item_Ball_XItem)
+    case 6: call(Pory_EventScript_Randomized_Item_Ball_Ether)
+    case 7: call(Pory_EventScript_Randomized_Item_Ball_Ether)
+    case 8: call(Pory_EventScript_Randomized_Item_Ball_Ether)
+    case 9: call(Pory_EventScript_Randomized_Item_Ball_Vitamins)
+  }
+  // not reached unless a plain item is found instead of a call
+  finditem(VAR_RESULT, VAR_0x8009)
+  end
+}
+
+script Pory_EventScript_Randomized_Item_Ball_PokeBall {
+  random(8)
+  switch (var(VAR_RESULT)) {
+    case 0: setvar(VAR_RESULT, ITEM_DIVE_BALL)
+    case 1: setvar(VAR_RESULT, ITEM_DUSK_BALL)
+    case 2: setvar(VAR_RESULT, ITEM_HEAL_BALL)
+    case 3: setvar(VAR_RESULT, ITEM_LUXURY_BALL)
+    case 4: setvar(VAR_RESULT, ITEM_NET_BALL)
+    case 5: setvar(VAR_RESULT, ITEM_NEST_BALL)
+    case 6: setvar(VAR_RESULT, ITEM_REPEAT_BALL)
+    case 7: setvar(VAR_RESULT, ITEM_TIMER_BALL)
+  }
+  finditem(VAR_RESULT, VAR_0x8009)
+  end
+}
+
+script Pory_EventScript_Randomized_Item_Ball_Repel {
+  if (flag(FLAG_BADGE05_GET)) {
+    setvar(VAR_RESULT, ITEM_MAX_REPEL)
+  } elif (flag(FLAG_BADGE03_GET)) {
+    setvar(VAR_RESULT, ITEM_SUPER_REPEL)
+  } else {
+    setvar(VAR_RESULT, ITEM_REPEL)
+  }
+  finditem(VAR_RESULT, VAR_0x8009)
+  end
+}
+
+script Pory_EventScript_Randomized_Item_Ball_XItem {
+  random(13)
+  switch (var(VAR_RESULT)) {
+    case  0: setvar(VAR_RESULT, ITEM_X_ATTACK)
+    case  1: setvar(VAR_RESULT, ITEM_X_ATTACK)
+    case  2: setvar(VAR_RESULT, ITEM_X_DEFENSE)
+    case  3: setvar(VAR_RESULT, ITEM_X_DEFENSE)
+    case  4: setvar(VAR_RESULT, ITEM_X_SP_ATK)
+    case  5: setvar(VAR_RESULT, ITEM_X_SP_ATK)
+    case  6: setvar(VAR_RESULT, ITEM_X_SP_DEF)
+    case  7: setvar(VAR_RESULT, ITEM_X_SP_DEF)
+    case  8: setvar(VAR_RESULT, ITEM_X_SPEED)
+    case  9: setvar(VAR_RESULT, ITEM_X_SPEED)
+    case 10: setvar(VAR_RESULT, ITEM_X_ACCURACY)
+    case 11: setvar(VAR_RESULT, ITEM_GUARD_SPEC)
+    case 12: setvar(VAR_RESULT, ITEM_DIRE_HIT)
+  }
+  finditem(VAR_RESULT, VAR_0x8009)
+  end
+}
+
+script Pory_EventScript_Randomized_Item_Ball_Ether {
+  random(10)
+  switch (var(VAR_RESULT)) {
+    case 0: setvar(VAR_RESULT, ITEM_ETHER)
+    case 1: setvar(VAR_RESULT, ITEM_ETHER)
+    case 2: setvar(VAR_RESULT, ITEM_ETHER)
+    case 3: setvar(VAR_RESULT, ITEM_ETHER)
+    case 4: setvar(VAR_RESULT, ITEM_MAX_ETHER)
+    case 5: setvar(VAR_RESULT, ITEM_MAX_ETHER)
+    case 6: setvar(VAR_RESULT, ITEM_MAX_ETHER)
+    case 7: setvar(VAR_RESULT, ITEM_ELIXIR)
+    case 8: setvar(VAR_RESULT, ITEM_ELIXIR)
+    case 9: setvar(VAR_RESULT, ITEM_MAX_ELIXIR)
+  }
+  finditem(VAR_RESULT, VAR_0x8009)
+  end
+}
+
+script Pory_EventScript_Randomized_Item_Ball_Vitamins {
+  random(6)
+  switch (var(VAR_RESULT)) {
+    // case 0: setvar(VAR_RESULT, ITEM_PROTEIN)
+    // case 1: setvar(VAR_RESULT, ITEM_IRON)
+    // case 2: setvar(VAR_RESULT, ITEM_CALCIUM)
+    // case 3: setvar(VAR_RESULT, ITEM_ZINC)
+    // case 4: setvar(VAR_RESULT, ITEM_CARBOS)
+    // case 5: setvar(VAR_RESULT, ITEM_HP_UP)
+    case 0: setvar(VAR_RESULT, ITEM_PP_UP)
+    case 1: setvar(VAR_RESULT, ITEM_PP_UP)
+    case 2: setvar(VAR_RESULT, ITEM_PP_UP)
+    case 3: setvar(VAR_RESULT, ITEM_PP_UP)
+    case 4: setvar(VAR_RESULT, ITEM_PP_UP)
+    case 5: setvar(VAR_RESULT, ITEM_PP_MAX)
+  }
+  finditem(VAR_RESULT, VAR_0x8009)
+  end
+}
+
+script Pory_EventScript_Randomized_Item_Ball_Snacks {
+  if (flag(FLAG_BADGE04_GET)) {
+    random(7)
+    switch (var(VAR_RESULT)) {
+      case 0: setvar(VAR_RESULT, ITEM_LAVA_COOKIE)
+      case 1: setvar(VAR_RESULT, ITEM_FRESH_WATER)
+      case 2: setvar(VAR_RESULT, ITEM_SODA_POP)
+      case 3: setvar(VAR_RESULT, ITEM_SODA_POP)
+      case 4: setvar(VAR_RESULT, ITEM_LEMONADE)
+      case 5: setvar(VAR_RESULT, ITEM_LEMONADE)
+      case 6: setvar(VAR_RESULT, ITEM_LEMONADE)
+    }
+  } elif (flag(FLAG_BADGE02_GET)) {
+    random(7)
+    switch (var(VAR_RESULT)) {
+      case 0: setvar(VAR_RESULT, ITEM_LAVA_COOKIE)
+      case 1: setvar(VAR_RESULT, ITEM_FRESH_WATER)
+      case 2: setvar(VAR_RESULT, ITEM_FRESH_WATER)
+      case 3: setvar(VAR_RESULT, ITEM_SODA_POP)
+      case 4: setvar(VAR_RESULT, ITEM_SODA_POP)
+      case 5: setvar(VAR_RESULT, ITEM_LEMONADE)
+      case 6: setvar(VAR_RESULT, ITEM_LEMONADE)
+    }
+  } else {
+    random(7)
+    switch (var(VAR_RESULT)) {
+      case 0: setvar(VAR_RESULT, ITEM_LAVA_COOKIE)
+      case 1: setvar(VAR_RESULT, ITEM_FRESH_WATER)
+      case 2: setvar(VAR_RESULT, ITEM_FRESH_WATER)
+      case 3: setvar(VAR_RESULT, ITEM_FRESH_WATER)
+      case 4: setvar(VAR_RESULT, ITEM_SODA_POP)
+      case 5: setvar(VAR_RESULT, ITEM_SODA_POP)
+      case 6: setvar(VAR_RESULT, ITEM_LEMONADE)
+    }
+  }
+  finditem(VAR_RESULT, VAR_0x8009)
+  end
+}
