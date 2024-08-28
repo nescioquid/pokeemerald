@@ -9,6 +9,8 @@
 .include "data/scripts/pory_scripts/gym_guide.inc"
 .include "data/scripts/pory_scripts/match_call.inc"
 .include "data/scripts/pory_scripts/pokemart.inc"
+.include "data/scripts/pory_scripts/randomized_item_ball.inc"
+.include "data/scripts/pory_scripts/randomized_item_hidden.inc"
 .include "data/scripts/pory_scripts/vending_machine.inc"
 
 .include "data/scripts/pory_scripts/maps/BattleFrontier_Lounge6.inc"
