@@ -1,0 +1,14 @@
+script LavaridgeTown_HerbShop_EventScript_OldMan_Pory {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_REVIVAL_HERB)) {
+    msgbox(format("You've come to look at herbal medicine in Lavaridge?\pThat's rather commendable.\pI like you! Take this!"))
+    giveitem(ITEM_REVIVAL_HERB)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_REVIVAL_HERB)
+  } else {
+    msgbox(format("That Revival Herb I gave you, it's used as an herbal medicine. It does wonders for healing Pokémon, too."))
+  }
+  release
+  end
+}
