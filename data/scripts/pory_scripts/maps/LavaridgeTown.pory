@@ -17,3 +17,43 @@ script Pory_EventScript_GiveTMSwordsDance {
   release
   end
 }
+
+script LavaridgeTown_EventScript_EggWoman_Pory {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_LAVARIDGE_EGG)) {
+    msgbox(LavaridgeTown_Text_HaveEggWillYouTakeIt, MSGBOX_YESNO)
+    if (!var(VAR_RESULT)) {
+      msgbox(LavaridgeTown_Text_AsYouWishThen)
+      release
+      end
+    }
+    getpartysize
+    if (var(VAR_RESULT) == PARTY_SIZE) {
+      msgbox(LavaridgeTown_Text_NoRoomForThisEgg)
+      release
+      end
+    }
+    msgbox(LavaridgeTown_Text_HopeYoullWalkPlentyWithEgg)
+    setflag(FLAG_RECEIVED_LAVARIDGE_EGG)
+    playfanfare(MUS_OBTAIN_ITEM)
+    message(LavaridgeTown_Text_ReceivedTheEgg)
+    waitfanfare
+    random(3)
+    switch (var(VAR_RESULT)) {
+      case 0:giveegg(SPECIES_TOGEPI)
+      case 1:giveegg(SPECIES_WYNAUT)
+      case 2:
+        // stores the result (MALE (0) or FEMALE (1)) in VAR_RESULT
+        checkplayergender
+        switch (var(VAR_RESULT)) {
+          case   MALE: giveegg(SPECIES_TOGEPI)
+          case FEMALE: giveegg(SPECIES_WYNAUT)
+        }
+    }
+  } else {
+    msgbox(LavaridgeTown_Text_EverySoOftenEggFoundAtDayCare)
+  }
+  release
+  end
+}
