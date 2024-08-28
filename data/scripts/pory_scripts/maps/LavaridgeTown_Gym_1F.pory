@@ -20,3 +20,23 @@ script LavaridgeTown_Gym_1F_EventScript_GymGuide_Pory {
   release
   end
 }
+
+text LavaridgeTown_Gym_1F_Text_FlanneryIntro_Pory {
+  format("WELCOME!\pNo, wait. I mean…\nPuny Trainer, you've done well to make it this far!\pLet's see. I'm uh, honored to be serving as the Gym Leader of…\pNo, I mean…\nI'm Flannery, and I'm in charge here!\pUh…\nYou'd better not underestimate me just 'cause I've only been Leader a short time!\pWith skills inherited from my grandfather, I'm gonna, uh, demonstrate the hot moves we've honed in this land!\p… … … … … …\n… … … … … …\pHAIYAAAAAAAAAAAAA!")
+}
+
+text LavaridgeTown_Gym_1F_Text_FlanneryDefeat_Pory {
+  format("Oh…\nI guess I was trying too hard…")
+}
+
+text Pory_Text_FlanneryDefeated {
+  format("I… I've only recently become a Gym Leader.\pI guess I was trying too hard to be someone I'm not.\pWhen I don't act like myself, no wonder the Pokémon that battle at my side confused.\pThanks for teaching me that.\nYou deserve this.")
+}
+
+text LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis_Pory {
+  format("If you have a Heat Badge, it lets Pokémon use the HM move Strength outside of battle.\pThis is a token of my appreciation.\nDon't be shy about taking it!")
+}
+
+text LavaridgeTown_Gym_1F_Text_ExplainOverheat_Pory {
+  format("Overheat is a Fire-type move that inflicts serious damage on the opponent.\pBut it also sharply cuts the Sp. Atk of the Pokémon using it. It might not be suitable for longer battles.")
+}
