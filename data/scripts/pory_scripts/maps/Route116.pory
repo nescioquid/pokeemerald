@@ -17,7 +17,35 @@ script Route116_EventScript_DevonEmployee_Pory {
   call_if_eq(VAR_FACING, DIR_EAST, Route116_EventScript_DevonEmployeeExitEast)
   removeobject(VAR_LAST_TALKED)
   clearflag(FLAG_HIDE_RUSTBORO_CITY_DEVON_CORP_3F_EMPLOYEE)
-  setflag(FLAG_RECEIVED_REPEAT_BALL)
+  setflag(FLAG_RECEIVED_MASTER_BALL)
+  release
+  end
+}
+
+script Route116_EventScript_GlassesMan_Pory {
+  lock
+  faceplayer
+  checkitem(ITEM_WISE_GLASSES)
+  if (var(VAR_RESULT)) {
+    msgbox(Route116_Text_CanYouHelpMeFindGlasses)
+    msgbox(Route116_Text_MayISeeThoseGlasses)
+    specialvar(VAR_RESULT, FoundWiseGlasses)
+    if (var(VAR_RESULT)) {
+      msgbox(format("Hmm…\nThese are Wise Glasses.\lThey're not what I'm looking for…\pMaybe my glasses aren't around here…\p… … … … … …\n… … … … … …\pWait… They're still on my face! Haha, oops!"))
+      closemessage
+      goto(Route116_EventScript_GlassesManExit)
+    }
+    msgbox(format("Hmm…\nThese are Wise Glasses.\lThey're not what I'm looking for…"))
+    release
+    end
+  }
+  specialvar(VAR_RESULT, FoundWiseGlasses)
+  if (var(VAR_RESULT)) {
+    msgbox(format("Hmm…\nI can't find my glasses anywhere…\lMaybe they're not around here…\p… … … … … …\n… … … … … …\pWait… They're still on my face! Haha, oops!"))
+    closemessage
+    goto(Route116_EventScript_GlassesManExit)
+  }
+  msgbox(Route116_Text_CanYouHelpMeFindGlasses)
   release
   end
 }
