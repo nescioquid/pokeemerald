@@ -76,3 +76,4 @@
 .include "data/scripts/pory_scripts/maps/TrainerHill_Entrance.inc"
 .include "data/scripts/pory_scripts/maps/VerdanturfTown_Mart.inc"
 .include "data/scripts/pory_scripts/maps/VerdanturfTown_WandasHouse.inc"
+.include "data/scripts/pory_scripts/maps/VictoryRoad_1F.inc"
