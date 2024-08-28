@@ -24,6 +24,7 @@
 .include "data/scripts/pory_scripts/maps/MauvilleCity_GameCorner.inc"
 .include "data/scripts/pory_scripts/maps/MauvilleCity_Mart.inc"
 .include "data/scripts/pory_scripts/maps/MossdeepCity_Mart.inc"
+.include "data/scripts/pory_scripts/maps/MossdeepCity_SpaceCenter_1F.inc"
 .include "data/scripts/pory_scripts/maps/MossdeepCity_StevensHouse.inc"
 .include "data/scripts/pory_scripts/maps/OldaleTown_Mart.inc"
 .include "data/scripts/pory_scripts/maps/PacifidlogTown_House4.inc"
