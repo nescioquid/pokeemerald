@@ -1,0 +1,15 @@
+script Pory_EventScript_GiveTMPsychUp {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_TM_PSYCH_UP)) {
+    msgbox(format("Why hello, hellooo, little visiting Trainer! Greetings to you out here in the big blue!\pNow, I know you know that a Psychic Trainer like me can see riiiiiight through any foe.\pI can tell exactly how strong you are and how a battle between us would go…\pJust by lookin' at you! It's eerie, right?\pNow stand back and watch as I battle you within my mind!\p… … … … … … … …\n… … … … … … … …\pYowza! You did me right in!\nTake this, and have mercy!"))
+    giveitem(ITEM_TM_PSYCH_UP)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_TM_PSYCH_UP)
+
+  } else {
+    msgbox(format("Phew… That was bad. So eerie.\pI couldn't even get a hit in on you! Seriously, tell me: What are you?"))
+  }
+  release
+  end
+}
