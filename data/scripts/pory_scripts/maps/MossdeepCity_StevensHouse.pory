@@ -1,0 +1,6 @@
+script PoryScript_StevenGiveOldAmber {
+  msgbox(format("Steven: {PLAYER}{KUN}…\pAs you can see, there's not much here, but this is my home.\pThank you for all that you've done. This is my token of appreciation.\pNo need to be shy you've earned it."))
+  giveitem(ITEM_OLD_AMBER)
+  goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+  msgbox(format("Steven: That's an ancient stone formed from fossilized tree sap. \pWhile we're not certain, someone in the lab ad headquarters told me the DNA of an ancient Pokémon trapped inside it.\pI'm sure you can find the potential in it. And, thanks again."))
+}
