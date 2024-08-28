@@ -20,3 +20,23 @@ script MauvilleCity_Gym_EventScript_GymGuide_Pory {
   release
   end
 }
+
+text MauvilleCity_Gym_Text_WattsonIntro_Pory {
+  format("Oh? Now, what are you doing here?\pWhat's that? You say you've gotten past all my rigged doors?\pWahahahah!\nNow, that is amusing!\pI've given up on my plans to reform the city, I have.\pMaking traps for my Gym and battling with young Trainers like you are what I live for now!\pSo then, I, Wattson, the Leader of Mauville Gym, shall electrify you!")
+}
+
+text MauvilleCity_Gym_Text_WattsonDefeat_Pory {
+  format("Wahahahah!\nFine, I lost!")
+}
+
+text Pory_Text_WattsonDefeated {
+  format("You wound up electrifying me!\nNow, take this Badge!")
+}
+
+text MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis_Pory {
+  format("With the Dynamo Badge, Pokémon can use the HM for Rock Smash outside of battle.\pAlrighty then, this here's for you, too!\nGo on, take it with you!")
+}
+
+text Pory_Text_WattsonExplainVoltSwitch {
+  format("Volt Switch is a move where your Pokémon attacks the opponent and then rushes back to switch places with a party Pokémon in waiting!")
+}
