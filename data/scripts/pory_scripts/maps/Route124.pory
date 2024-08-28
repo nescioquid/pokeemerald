@@ -1,0 +1,5 @@
+script Route124_EventScript_HuntersHouseSign_Pory {
+  msgbox(format("Diving Treasure Hunter's House\n“We buy Pearls!”"))
+  release
+  end
+}
