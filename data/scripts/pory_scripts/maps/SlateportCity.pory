@@ -1,0 +1,77 @@
+script Pory_EventScript_PowerTMClerk {
+  lock
+  faceplayer
+  random(5)
+  switch (var(VAR_RESULT)) {
+    case 0: msgbox(format("You interested in some TMs, kid? Well then, do I have the selection for you!"))
+    case 1: msgbox(format("You interested in some TMs, kid? Well then, do I have the selection for you!"))
+    case 2: msgbox(format("Technical Machines! Technical Maaaaaaachines! Get your TMs here! Get 'em while you can!"))
+    case 3: msgbox(format("Technical Machines! Technical Maaaaaaachines! Get your TMs here! Get 'em while you can!"))
+    case 4: msgbox(format("Beautiful day today isn't it? It's always perfect here… Almost as if it were programmed that way… Hmm…"))
+  }
+  random(5)
+  switch (var(VAR_RESULT)) {
+    case 0: message(format("How may I serve you?"))
+    case 1: message(format("What can I do for you?"))
+    case 2: message(format("How can I help you?"))
+    case 3: message(format("What can I get you?"))
+    case 4: message(format("Know what you want already?"))
+  }
+  waitmessage
+  if (!flag(FLAG_BADGE04_GET)) {
+    pokemart(Pory_Pokemart_SlateportCity_Market_TMs_Some)
+  } elif (!flag(FLAG_BADGE07_GET)) {
+    pokemart(Pory_Pokemart_SlateportCity_Market_TMs_Most)
+  } else {
+    pokemart(Pory_Pokemart_SlateportCity_Market_TMs_All)
+  }
+  if (!flag(FLAG_BADGE07_GET)) {
+    msgbox(format("Come back and check out what else's in stock later!"))
+  }
+  call(Common_PoryScript_Clerk_Goodbye)
+  release
+  end
+}
+
+mart Pory_Pokemart_SlateportCity_Market_TMs_Some {
+  ITEM_TM_HONE_CLAWS     // TM01
+  ITEM_TM_THUNDER_WAVE   // TM73
+  ITEM_TM_STRUGGLE_BUG   // TM76
+  ITEM_TM_CONFIDE        // TM100
+}
+
+mart Pory_Pokemart_SlateportCity_Market_TMs_Most {
+  ITEM_TM_HONE_CLAWS     // TM01
+  ITEM_TM_VENOSHOCK      // TM09  // ORAS Mauville Pokemart
+  ITEM_TM_AERIAL_ACE     // TM40  // ORAS Mauville Pokemart
+  ITEM_TM_FACADE         // TM42  // ORAS Mauville Pokemart
+  ITEM_TM_LOW_SWEEP      // TM47  // ORAS Mauville Pokemart
+  ITEM_TM_CHARGE_BEAM    // TM57  // ORAS Mauville Pokemart
+  ITEM_TM_THUNDER_WAVE   // TM73
+  ITEM_TM_STRUGGLE_BUG   // TM76
+  ITEM_TM_BULLDOZE       // TM78  // ORAS Mauville Pokemart
+  ITEM_TM_DRAGON_TAIL    // TM82  // ORAS Mauville Pokemart
+  ITEM_TM_POWER_UP_PUNCH // TM98  // ORAS Mauville Pokemart
+  ITEM_TM_CONFIDE        // TM100
+}
+
+mart Pory_Pokemart_SlateportCity_Market_TMs_All {
+  ITEM_TM_HONE_CLAWS     // TM01
+  ITEM_TM_VENOSHOCK      // TM09
+  ITEM_TM_AERIAL_ACE     // TM40
+  ITEM_TM_FACADE         // TM42
+  ITEM_TM_LOW_SWEEP      // TM47
+  ITEM_TM_ROUND          // TM48  // ORAS Mirage
+  ITEM_TM_CHARGE_BEAM    // TM57
+  ITEM_TM_FOCUS_PUNCH    // TM70  // ORAS TM70 Flash
+  ITEM_TM_THUNDER_WAVE   // TM73
+  ITEM_TM_STRUGGLE_BUG   // TM76
+  ITEM_TM_BULLDOZE       // TM78
+  ITEM_TM_DRAGON_TAIL    // TM82
+  ITEM_TM_POISON_JAB     // TM84  // ORAS Mirage
+  ITEM_TM_SUBSTITUTE     // TM90  // ORAS Mirage
+  ITEM_TM_FLASH_CANNON   // TM91  // ORAS Mirage
+  ITEM_TM_SNARL          // TM95  // ORAS Mirage
+  ITEM_TM_POWER_UP_PUNCH // TM98
+  ITEM_TM_CONFIDE        // TM100
+}
