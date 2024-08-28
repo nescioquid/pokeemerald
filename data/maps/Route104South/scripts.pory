@@ -60,6 +60,10 @@ script _Route104South_EventScript_RivalTrigger {
   }
 }
 
+const STARTER_GRASS = 0
+const STARTER_FIRE  = 1
+const STARTER_WATER = 2
+
 script _Route104South_EventScript_MayEncounter {
   if (flag(FLAG_DEFEATED_RIVAL_ROUTE_104)) {
     goto(Route104_EventScript_MayDefeated)
@@ -85,10 +89,12 @@ script _Route104South_EventScript_MayEncounter {
   applymovement(LOCALID_ROUTE104SOUTH_RIVAL, Route104_Movement_RivalApproachPlayer)
   waitmovement(0)
   copyobjectxytoperm(LOCALID_ROUTE104SOUTH_RIVAL)
-  msgbox(Route104_Text_MayMinesDecentLetsBattle, MSGBOX_YESNO)
-  goto_if_eq(VAR_RESULT, YES, Route104_EventScript_BattleMay)
-  msgbox(Route104_Text_MayHaventRaisedPokemon, MSGBOX_DEFAULT)
-  call(Route104_EventScript_RestoreMusic)
+  msgbox(format("Mine's looking pretty decent.\nSo…\lHow about a little battle?"))
+  switch(var(VAR_STARTER_MON)) {
+    case STARTER_GRASS: call(Route104_EventScript_BattleMayTreecko)
+    case STARTER_FIRE:  call(Route104_EventScript_BattleMayTorchic)
+    case STARTER_WATER: call(Route104_EventScript_BattleMayMudkip)
+  }
   releaseall
   end
 }
@@ -118,10 +124,12 @@ script _Route104South_EventScript_BrendanEncounter {
   applymovement(LOCALID_ROUTE104SOUTH_RIVAL, Route104_Movement_RivalApproachPlayer)
   waitmovement(0)
   copyobjectxytoperm(LOCALID_ROUTE104SOUTH_RIVAL)
-  msgbox(Route104_Text_BrendanDoingGreatLetsBattle, MSGBOX_YESNO)
-  goto_if_eq(VAR_RESULT, YES, Route104_EventScript_BattleBrendan)
-  msgbox(Route104_Text_BrendanNoConfidence, MSGBOX_DEFAULT)
-  call(Route104_EventScript_RestoreMusic)
+  msgbox(format("Me, I'm doing great!\pWanna check out how good I am with\na battle?"))
+  switch(var(VAR_STARTER_MON)) {
+    case STARTER_GRASS: call(Route104_EventScript_BattleBrendanTreecko)
+    case STARTER_FIRE:  call(Route104_EventScript_BattleBrendanTorchic)
+    case STARTER_WATER: call(Route104_EventScript_BattleBrendanMudkip)
+  }
   releaseall
   end
 }
