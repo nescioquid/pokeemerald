@@ -1,0 +1,12 @@
+script RustboroCity_CuttersHouse_EventScript_Cutter_Pory {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_HM_CUT)){
+    msgbox(RustboroCity_CuttersHouse_Text_YouCanPutThisHMToGoodUse)
+    giveitem(ITEM_HM_CUT)
+    setflag(FLAG_RECEIVED_HM_CUT)
+  }
+  msgbox(format("That Hidden Machine, or HM for short, contains a move called Cut.\pAn HM move is one that can be used by Pokémon outside of battle.\pAny Pokémon that's learned Cut can chop down small trees if the Trainer has earned the Stone Badge.\pAnd, like a TM, an HM can be used more than once."))
+  release
+  end
+}

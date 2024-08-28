@@ -1,0 +1,13 @@
+script Pory_EventScript_GiveTMDazzlingGleam {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_TM_DAZZLING_GLEAM)) {
+    msgbox(format("Hey, hey!\pFairy types sure are cute, but they can be strong, too! I bet you already knew that, eh?"))
+    giveitem(ITEM_TM_DAZZLING_GLEAM)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_TM_DAZZLING_GLEAM)
+  }
+  msgbox(format("There's no Fairy-type Gym in Hoenn, eh?\pMaybe I'll go ahead and start one! Before anyone else even gets a chance!"))
+  release
+  end
+}
