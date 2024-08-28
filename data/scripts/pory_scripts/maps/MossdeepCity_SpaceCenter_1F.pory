@@ -1,0 +1,7 @@
+script Pory_EventScript_SunStoneMan_GiveSunMoonStone {
+  random(2)
+    switch (var(VAR_RESULT)) {
+      case 0: giveitem(ITEM_SUN_STONE)
+      case 1: giveitem(ITEM_MOON_STONE)
+    }
+}
