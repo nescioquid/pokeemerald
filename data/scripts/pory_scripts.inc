@@ -15,6 +15,7 @@
 .include "data/scripts/pory_scripts/maps/LilycoveCity_DepartmentStore_3F.inc"
 .include "data/scripts/pory_scripts/maps/LilycoveCity_DepartmentStore_4F.inc"
 .include "data/scripts/pory_scripts/maps/LilycoveCity_DepartmentStore_5F.inc"
+.include "data/scripts/pory_scripts/maps/MossdeepCity_StevensHouse.inc"
 .include "data/scripts/pory_scripts/maps/OldaleTown_Mart.inc"
 .include "data/scripts/pory_scripts/maps/PetalburgWoods.inc"
 .include "data/scripts/pory_scripts/maps/Route104_PrettyPetalFlowerShop.inc"
