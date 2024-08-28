@@ -7,6 +7,7 @@
 .include "data/scripts/pory_scripts/vending_machine.inc"
 
 .include "data/scripts/pory_scripts/maps/BattleFrontier_Mart.inc"
+.include "data/scripts/pory_scripts/maps/DewfordTown_House2.inc"
 .include "data/scripts/pory_scripts/maps/EverGrandeCity_PokemonLeague_1F.inc"
 .include "data/scripts/pory_scripts/maps/LilycoveCity.inc"
 .include "data/scripts/pory_scripts/maps/LilycoveCity_DepartmentStore_2F.inc"

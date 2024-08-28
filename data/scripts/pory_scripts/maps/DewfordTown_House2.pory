@@ -1,0 +1,14 @@
+script DewfordTown_House2_EventScript_Man_Pory {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_CHOICE_SCARF)) {
+    msgbox(format("Gorge your eyes on this!\pIt's a Choice Scarf. It's right at the cutting edge of fashion, yeah!\pOh, I can see your eyes twinkling!\nYou appreciate my dazzling style!\pOh, you're a delight!\nHere you go. I want you to have it!"))
+    giveitem(ITEM_CHOICE_SCARF)
+    goto_if_eq(VAR_RESULT, FALSE, DewfordTown_House2_EventScript_NoRoomForScarf)
+    setflag(FLAG_RECEIVED_CHOICE_SCARF)
+  } else {
+    msgbox(format("The Choice Scarf raises its holder's Speed, but only allows the use of the first move selected. The effect resets when the holder is withdrawn.\pIt's a marvelous Scarf that will go\nwith almost all Pokémon!"))
+  }
+  release
+  end
+}
