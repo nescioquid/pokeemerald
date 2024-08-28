@@ -30,6 +30,7 @@
 .include "data/scripts/pory_scripts/maps/PacifidlogTown_House4.inc"
 .include "data/scripts/pory_scripts/maps/PacifidlogTown_House5.inc"
 .include "data/scripts/pory_scripts/maps/PetalburgWoods.inc"
+.include "data/scripts/pory_scripts/maps/Route103.inc"
 .include "data/scripts/pory_scripts/maps/Route104_PrettyPetalFlowerShop.inc"
 .include "data/scripts/pory_scripts/maps/Route111.inc"
 .include "data/scripts/pory_scripts/maps/Route111_WinstrateFamilysHouse.inc"
