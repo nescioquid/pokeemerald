@@ -9,3 +9,43 @@ script BattleFrontier_Mart_EventScript_Clerk_Pory {
   release
   end
 }
+
+const LOCALID_RICH_LADY = 5
+
+script Pory_EventScript_GiveTMSwagger {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_TM_SWAGGER)) {
+    msgbox(format("{FONT_SMALL}How might I have been so heedless…"))
+    playse(SE_PIN)
+    applymovement(LOCALID_RICH_LADY, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(LOCALID_RICH_LADY, Common_Movement_Delay48)
+    waitmovement(0)
+    msgbox(format("You there!\nI've left my purse back on the yacht, and I find myself in somewhat compromised circumstances."))
+    showmoneybox(0, 0)
+    msgbox(format("Well, shall I allow you to furnish me the remuneration I require?\lYes, ¥100 would indeed suffice."), MSGBOX_YESNO)
+    if (var(VAR_RESULT)) {
+      checkmoney(100)
+      if (var(VAR_RESULT)) {
+        removemoney(100)
+        updatemoneybox
+        hidemoneybox
+        msgbox(format("Fine. You may assist me.\nHowever, my dignity won't allow me to accept your charity outright. Therefore, I will demonstrate my generosity by bestowing this upon you in return."))
+        giveitem(ITEM_TM_SWAGGER)
+        goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+        setflag(FLAG_RECEIVED_TM_SWAGGER)
+      } else {
+        hidemoneybox
+        msgbox(format("Oh dear, you don't even have a measly ¥100? I recall why it is that I now so rarely interact with the poors these days."))
+      }
+    } else {
+      hidemoneybox
+      msgbox(format("Oh dear, you don't even have a measly ¥100? I recall why it is that I now so rarely interact with the poors these days."))
+    }
+  } else {
+    msgbox(format("You may embrace the happiness, and express your gratitude, for having been able to assist me every time you use the item."))
+  }
+  release
+  end
+}

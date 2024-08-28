@@ -1,0 +1,19 @@
+script Pory_EventScript_GiveTMSkyDrop {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_TM_SKY_DROP)) {
+    msgbox(format("Hey, you. Do you like scary rides? You know, like roller coasters and stuff?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT)) {
+      msgbox(format("…Hey, you're cool.\nLike, we are so totally BFFs now.\pAnd like as proof or whatever, I'm gonna give you my favorite TM."))
+      giveitem(ITEM_TM_SKY_DROP)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+      setflag(FLAG_RECEIVED_TM_SKY_DROP)
+    } else {
+      msgbox(format("…Tsk.\nYou're sooo lame."))
+    }
+  } else {
+    msgbox(format("Sky Drop is seriously sick.\nIt totally like, messes with your inner ear and everything!"))
+  }
+  release
+  end
+}

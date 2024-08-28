@@ -19,3 +19,17 @@ script Route104North_EventScript_ExpertF {
   release
   end
 }
+
+script Pory_EventScript_GiveTMEchoedVoice {
+  lock
+  faceplayer
+  if(!flag(FLAG_RECEIVED_TM_ECHOED_VOICE)) {
+    msgbox(format("Wassup!\nI like to shout my lungs out!\lIt feels so good!\pYou can have this, so you try it out!\pUse it on a Pokémon, and it will learn a move that attacks with its voice.\pIf the move is used several times in a row, it becomes more powerful!"))
+    giveitem(ITEM_TM_ECHOED_VOICE)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_TM_ECHOED_VOICE)
+  }
+  msgbox(format("A word of advice!\nA TM, or Technical Machine, can be used many times.\pIt won't go away.\nSo try it out as many times as you want!"))
+  release
+  end
+}

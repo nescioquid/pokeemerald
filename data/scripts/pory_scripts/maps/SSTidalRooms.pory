@@ -1,0 +1,13 @@
+script Pory_EventScript_GiveTMEmbargo {
+  lock
+  faceplayer
+  if(!flag(FLAG_RECEIVED_TM_EMBARGO)) {
+    msgbox(format("Uh… Hi! I… I'm not acting suspicious!\nUh… You can have this! For free!\pIt… Honestly, it's not an unlicensed item that's been embargoed or anything.\l It's totally legal! You can use it!"))
+    giveitem(ITEM_TM_EMBARGO)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_TM_EMBARGO)
+  }
+  msgbox(format("Embargo prevents the target from\nusing its held item!"))
+  release
+  end
+}
