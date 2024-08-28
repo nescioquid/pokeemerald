@@ -25,7 +25,7 @@ Route118_EventScript_GoodRodFisherman::
 	faceplayer
 	goto_if_set FLAG_RECEIVED_GOOD_ROD, Route118_EventScript_ReceivedGoodRod
 	msgbox Route118_Text_YouAgreeGoodRodIsGood, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, Route118_EventScript_ReceiveGoodRod
+	goto_if_eq VAR_RESULT, YES, Route118_EventScript_ReceiveGoodRod_Pory
 	goto_if_eq VAR_RESULT, NO, Route118_EventScript_DeclineGoodRod
 	end
 
@@ -44,7 +44,7 @@ Route118_EventScript_DeclineGoodRod::
 	end
 
 Route118_EventScript_ReceivedGoodRod::
-	msgbox Route118_Text_TryCatchingMonWithGoodRod, MSGBOX_DEFAULT
+	msgbox Route118_Text_TryCatchingMonWithGoodRod_Pory, MSGBOX_DEFAULT
 	release
 	end
 
