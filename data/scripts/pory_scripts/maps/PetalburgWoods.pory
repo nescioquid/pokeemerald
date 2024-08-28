@@ -3,3 +3,19 @@ script PoryScript_ThatWasAwfullyClose {
   giveitem(ITEM_NET_BALL)
   goto_if_eq(VAR_RESULT, FALSE, PetalburgWoods_EventScript_BagFull)
 }
+
+script PetalburgWoods_EventScript_Girl_Pory {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_EXP_CHARM)) {
+    msgbox(format("Oh, neat!\nThat's the Badge from Rustboro Gym!\pYou must be a Trainer.\nI want you to have this!"))
+    giveitem(ITEM_EXP_CHARM)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    msgbox(format("That's an Experience Charm.\nIt helps your Pokémon grow big and strong a lot faster. I'm sure a Trainer like you can make better use of it than me."))
+    setflag(FLAG_RECEIVED_EXP_CHARM)
+  } else {
+    msgbox(format("So, are your Pokémon growing big and strong?"))
+  }
+  release
+  end
+}
