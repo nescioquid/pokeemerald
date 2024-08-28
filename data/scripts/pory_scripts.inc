@@ -18,6 +18,7 @@
 .include "data/scripts/pory_scripts/maps/OldaleTown_Mart.inc"
 .include "data/scripts/pory_scripts/maps/Route104_PrettyPetalFlowerShop.inc"
 .include "data/scripts/pory_scripts/maps/Route111.inc"
+.include "data/scripts/pory_scripts/maps/Route111_WinstrateFamilysHouse.inc"
 .include "data/scripts/pory_scripts/maps/Route114.inc"
 .include "data/scripts/pory_scripts/maps/Route120.inc"
 .include "data/scripts/pory_scripts/maps/Route123_BerryMastersHouse.inc"
