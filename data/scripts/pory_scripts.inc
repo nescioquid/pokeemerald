@@ -6,6 +6,7 @@
 .include "data/scripts/pory_scripts/gamecube.inc"
 .include "data/scripts/pory_scripts/getbadgecount.inc"
 .include "data/scripts/pory_scripts/givemon.inc"
+.include "data/scripts/pory_scripts/match_call.inc"
 .include "data/scripts/pory_scripts/pokemart.inc"
 .include "data/scripts/pory_scripts/vending_machine.inc"
 
@@ -25,6 +26,7 @@
 .include "data/scripts/pory_scripts/maps/LilycoveCity_DepartmentStore_5F.inc"
 .include "data/scripts/pory_scripts/maps/LilycoveCity_House2.inc"
 .include "data/scripts/pory_scripts/maps/LittlerootTown.inc"
+.include "data/scripts/pory_scripts/maps/MauvilleCity.inc"
 .include "data/scripts/pory_scripts/maps/MauvilleCity_GameCorner.inc"
 .include "data/scripts/pory_scripts/maps/MauvilleCity_House2.inc"
 .include "data/scripts/pory_scripts/maps/MauvilleCity_Mart.inc"
@@ -66,3 +68,4 @@
 .include "data/scripts/pory_scripts/maps/SSTidalRooms.inc"
 .include "data/scripts/pory_scripts/maps/TrainerHill_Entrance.inc"
 .include "data/scripts/pory_scripts/maps/VerdanturfTown_Mart.inc"
+.include "data/scripts/pory_scripts/maps/VerdanturfTown_WandasHouse.inc"
