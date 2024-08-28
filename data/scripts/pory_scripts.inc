@@ -43,6 +43,7 @@
 .include "data/scripts/pory_scripts/maps/RustboroCity_CuttersHouse.inc"
 .include "data/scripts/pory_scripts/maps/RustboroCity_DevonCorp_3F.inc"
 .include "data/scripts/pory_scripts/maps/RustboroCity_Mart.inc"
+.include "data/scripts/pory_scripts/maps/SlateportCity.inc"
 .include "data/scripts/pory_scripts/maps/SootopolisCity.inc"
 .include "data/scripts/pory_scripts/maps/SootopolisCity_Mart.inc"
 .include "data/scripts/pory_scripts/maps/SSTidalRooms.inc"
