@@ -13,6 +13,7 @@
 .include "data/scripts/pory_scripts/maps/FieryPath.inc"
 .include "data/scripts/pory_scripts/maps/GraniteCave_1F.inc"
 .include "data/scripts/pory_scripts/maps/LavaridgeTown.inc"
+.include "data/scripts/pory_scripts/maps/LavaridgeTown_HerbShop.inc"
 .include "data/scripts/pory_scripts/maps/LilycoveCity.inc"
 .include "data/scripts/pory_scripts/maps/LilycoveCity_DepartmentStore_2F.inc"
 .include "data/scripts/pory_scripts/maps/LilycoveCity_DepartmentStore_3F.inc"

@@ -71,5 +71,14 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 6,
+      "y": 8,
+      "elevation": 0,
+      "item": "ITEM_RARE_BONE",
+      "flag": "FLAG_HIDDEN_ITEM_MT_PYRE_6F_RARE_BONE"
+    }
+  ]
 }
