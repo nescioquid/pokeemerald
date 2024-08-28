@@ -1,0 +1,13 @@
+script Route118_EventScript_ReceiveGoodRod_Pory {
+  msgbox(format("Hmm!\nWe're of identical minds!\pHmm!\nWell, I'm fresh out of Good Rods, but you can have these instead!"))
+  giveitem(ITEM_RARE_CANDY, 36)
+  goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+  setflag(FLAG_RECEIVED_GOOD_ROD)
+  msgbox(Route118_Text_TryYourLuckFishing)
+  release
+  end
+}
+
+text Route118_Text_TryCatchingMonWithGoodRod_Pory {
+  format("Try fishing to catch all sorts of Pokémon!")
+}
