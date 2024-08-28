@@ -1,0 +1,13 @@
+script Pory_EventScript_GiveTMPsyshock {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_TM_PSYSHOCK)) {
+    msgbox(format("I've been to Mirage Island…\nI'm sure of it. But I forgot where it is…\pI used to be really good at remembering things…\pI'm so shocked I can't remember…"))
+    giveitem(ITEM_TM_PSYSHOCK)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_TM_PSYSHOCK)
+  }
+  msgbox(format("Mirage Island…\pIt must become visible and invisible depending on the weather conditions that make mirages appear.\pOr is it really appearing and disappearing?"))
+  release
+  end
+}
