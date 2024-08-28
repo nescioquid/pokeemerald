@@ -1,0 +1,281 @@
+script Pory_EventScript_Randomized_Item_Hidden {
+  if (var(VAR_0x8005) == ITEM_POKE_BALL   ||
+      var(VAR_0x8005) == ITEM_GREAT_BALL  ||
+      var(VAR_0x8005) == ITEM_ULTRA_BALL  ||
+      var(VAR_0x8005) == ITEM_MASTER_BALL ||
+      var(VAR_0x8005) == ITEM_DIVE_BALL   ||
+      var(VAR_0x8005) == ITEM_LUXURY_BALL ||
+      var(VAR_0x8005) == ITEM_NET_BALL    ||
+      var(VAR_0x8005) == ITEM_NEST_BALL   ||
+      var(VAR_0x8005) == ITEM_REPEAT_BALL ||
+      var(VAR_0x8005) == ITEM_TIMER_BALL) {
+    call(Pory_EventScript_Randomized_Item_Hidden_Common)
+  }
+  if (var(VAR_0x8005) == ITEM_POTION        ||
+      var(VAR_0x8005) == ITEM_SUPER_POTION  ||
+      var(VAR_0x8005) == ITEM_HYPER_POTION  ||
+      var(VAR_0x8005) == ITEM_MAX_POTION    ||
+      var(VAR_0x8005) == ITEM_FULL_RESTORE  ||
+      var(VAR_0x8005) == ITEM_ENERGY_POWDER ||
+      var(VAR_0x8005) == ITEM_ENERGY_ROOT) {
+    call(Pory_EventScript_Randomized_Item_Hidden_HerbalMedicine)
+  }
+  if (var(VAR_0x8005) == ITEM_ANTIDOTE      ||
+      var(VAR_0x8005) == ITEM_AWAKENING     ||
+      var(VAR_0x8005) == ITEM_BURN_HEAL     ||
+      var(VAR_0x8005) == ITEM_ICE_HEAL      ||
+      var(VAR_0x8005) == ITEM_PARALYZE_HEAL ||
+      var(VAR_0x8005) == ITEM_FULL_HEAL     ||
+      var(VAR_0x8005) == ITEM_HEAL_POWDER) {
+    call(Pory_EventScript_Randomized_Item_Hidden_HerbalMedicine)
+  }
+  if (var(VAR_0x8005) == ITEM_REVIVE     ||
+      var(VAR_0x8005) == ITEM_MAX_REVIVE ||
+      var(VAR_0x8005) == ITEM_REVIVAL_HERB) {
+    call(Pory_EventScript_Randomized_Item_Hidden_HerbalMedicine)
+  }
+  if (var(VAR_0x8005) == ITEM_ETHER     ||
+      var(VAR_0x8005) == ITEM_ELIXIR    ||
+      var(VAR_0x8005) == ITEM_MAX_ETHER ||
+      var(VAR_0x8005) == ITEM_MAX_ELIXIR) {
+    call(Pory_EventScript_Randomized_Item_Hidden_Common)
+  }
+  if (var(VAR_0x8005) == ITEM_PROTEIN ||
+      var(VAR_0x8005) == ITEM_IRON    ||
+      var(VAR_0x8005) == ITEM_CALCIUM ||
+      var(VAR_0x8005) == ITEM_ZINC    ||
+      var(VAR_0x8005) == ITEM_CARBOS  ||
+      var(VAR_0x8005) == ITEM_HP_UP   ||
+      var(VAR_0x8005) == ITEM_PP_UP   ||
+      var(VAR_0x8005) == ITEM_PP_MAX) {
+    call(Pory_EventScript_Randomized_Item_Hidden_Common)
+  }
+  if (var(VAR_0x8005) == ITEM_X_ATTACK   ||
+      var(VAR_0x8005) == ITEM_X_DEFENSE  ||
+      var(VAR_0x8005) == ITEM_X_SP_ATK   ||
+      var(VAR_0x8005) == ITEM_X_SP_DEF   ||
+      var(VAR_0x8005) == ITEM_X_SPEED    ||
+      var(VAR_0x8005) == ITEM_X_ACCURACY ||
+      var(VAR_0x8005) == ITEM_GUARD_SPEC ||
+      var(VAR_0x8005) == ITEM_DIRE_HIT) {
+    call(Pory_EventScript_Randomized_Item_Hidden_Common)
+  }
+  if (var(VAR_0x8005) == ITEM_RED_SHARD    ||
+      var(VAR_0x8005) == ITEM_BLUE_SHARD   ||
+      var(VAR_0x8005) == ITEM_GREEN_SHARD  ||
+      var(VAR_0x8005) == ITEM_YELLOW_SHARD ||
+      var(VAR_0x8005) == ITEM_HEART_SCALE  ||
+      var(VAR_0x8005) == ITEM_PEARL        ||
+      var(VAR_0x8005) == ITEM_BIG_PEARL) {
+    call(Pory_EventScript_Randomized_Item_Hidden_Pearl)
+  }
+  if (var(VAR_0x8005) == ITEM_TINY_MUSHROOM ||
+      var(VAR_0x8005) == ITEM_BIG_MUSHROOM) {
+    call(Pory_EventScript_Randomized_Item_Hidden_Mushroom)
+  }
+  if (var(VAR_0x8005) == ITEM_NUGGET ||
+      var(VAR_0x8005) == ITEM_BIG_NUGGET) {
+    call(Pory_EventScript_Randomized_Item_Hidden_Nugget)
+  }
+  if (var(VAR_0x8005) == ITEM_STARDUST   ||
+      var(VAR_0x8005) == ITEM_STAR_PIECE) {
+    call(Pory_EventScript_Randomized_Item_Hidden_Common)
+  }
+}
+
+script Pory_EventScript_Randomized_Item_Hidden_Common {
+  random(6)
+  switch (var(VAR_RESULT)) {
+    case 0: setvar(VAR_0x8005, ITEM_RARE_CANDY)
+    case 1: call(Pory_EventScript_Randomized_Item_Hidden_Stardust)
+    case 2: call(Pory_EventScript_Randomized_Item_Hidden_Stardust)
+    case 3: call(Pory_EventScript_Randomized_Item_Hidden_Stardust)
+    case 4: call(Pory_EventScript_Randomized_Item_Hidden_TypeBoosting)
+    case 5: call(Pory_EventScript_Randomized_Item_Hidden_HeldItems)
+  }
+}
+
+script Pory_EventScript_Randomized_Item_Hidden_BambooShoot {
+  random(6)
+  switch (var(VAR_RESULT)) {
+    case 0: setvar(VAR_0x8005, ITEM_TINY_BAMBOO_SHOOT)
+    case 1: setvar(VAR_0x8005, ITEM_BIG_BAMBOO_SHOOT)
+    case 2: setvar(VAR_0x8005, ITEM_BIG_BAMBOO_SHOOT)
+    case 3: setvar(VAR_0x8005, ITEM_BIG_BAMBOO_SHOOT)
+    case 4: setvar(VAR_0x8005, ITEM_BIG_BAMBOO_SHOOT)
+    case 5: setvar(VAR_0x8005, ITEM_BIG_BAMBOO_SHOOT)
+  }
+}
+
+script Pory_EventScript_Randomized_Item_Hidden_Mushroom {
+  random(6)
+  switch (var(VAR_RESULT)) {
+    case 0: setvar(VAR_0x8005, ITEM_TINY_MUSHROOM)
+    case 1: setvar(VAR_0x8005, ITEM_BIG_MUSHROOM)
+    case 2: setvar(VAR_0x8005, ITEM_BIG_MUSHROOM)
+    case 3: setvar(VAR_0x8005, ITEM_BIG_MUSHROOM)
+    case 4: setvar(VAR_0x8005, ITEM_BIG_MUSHROOM)
+    case 5: setvar(VAR_0x8005, ITEM_BALM_MUSHROOM)
+  }
+}
+
+script Pory_EventScript_Randomized_Item_Hidden_Feather {
+  random(7)
+  switch (var(VAR_RESULT)) {
+    case 0: setvar(VAR_0x8005, ITEM_HEALTH_FEATHER)
+    case 1: setvar(VAR_0x8005, ITEM_MUSCLE_FEATHER)
+    case 2: setvar(VAR_0x8005, ITEM_RESIST_FEATHER)
+    case 3: setvar(VAR_0x8005, ITEM_GENIUS_FEATHER)
+    case 4: setvar(VAR_0x8005, ITEM_CLEVER_FEATHER)
+    case 5: setvar(VAR_0x8005, ITEM_SWIFT_FEATHER)
+    case 6: setvar(VAR_0x8005, ITEM_PRETTY_FEATHER)
+  }
+}
+
+script Pory_EventScript_Randomized_Item_Hidden_Nugget {
+  random(6)
+  switch (var(VAR_RESULT)) {
+    case 0: setvar(VAR_0x8005, ITEM_NUGGET)
+    case 1: setvar(VAR_0x8005, ITEM_NUGGET)
+    case 2: setvar(VAR_0x8005, ITEM_NUGGET)
+    case 3: setvar(VAR_0x8005, ITEM_BIG_NUGGET)
+    case 4: call(Pory_EventScript_Randomized_Item_Hidden_Fossil)
+    case 5: call(Pory_EventScript_Randomized_Item_Hidden_Fossil)
+  }
+}
+
+script Pory_EventScript_Randomized_Item_Hidden_Pearl {
+  random(6)
+  switch (var(VAR_RESULT)) {
+    case 0: setvar(VAR_0x8005, ITEM_PEARL)
+    case 1: setvar(VAR_0x8005, ITEM_PEARL)
+    case 2: setvar(VAR_0x8005, ITEM_PEARL)
+    case 3: setvar(VAR_0x8005, ITEM_BIG_PEARL)
+    case 4: call(Pory_EventScript_Randomized_Item_Hidden_Fossil)
+    case 5: call(Pory_EventScript_Randomized_Item_Hidden_Fossil)
+  }
+}
+
+script Pory_EventScript_Randomized_Item_Hidden_Stardust {
+  random(6)
+  switch (var(VAR_RESULT)) {
+    case 0: setvar(VAR_0x8005, ITEM_STARDUST)
+    case 1: setvar(VAR_0x8005, ITEM_STAR_PIECE)
+    case 2: setvar(VAR_0x8005, ITEM_STAR_PIECE)
+    case 3: setvar(VAR_0x8005, ITEM_STAR_PIECE)
+    case 4: setvar(VAR_0x8005, ITEM_STAR_PIECE)
+    case 5: setvar(VAR_0x8005, ITEM_COMET_SHARD)
+  }
+}
+
+script Pory_EventScript_Randomized_Item_Hidden_EvoStone {
+  random(8)
+  switch (var(VAR_RESULT)) {
+    case 0: setvar(VAR_0x8005, ITEM_FIRE_STONE)
+    case 1: setvar(VAR_0x8005, ITEM_WATER_STONE)
+    case 2: setvar(VAR_0x8005, ITEM_THUNDER_STONE)
+    case 3: setvar(VAR_0x8005, ITEM_LEAF_STONE)
+    case 4: setvar(VAR_0x8005, ITEM_SUN_STONE)
+    case 5: setvar(VAR_0x8005, ITEM_MOON_STONE)
+    case 6: setvar(VAR_0x8005, ITEM_SHINY_STONE)
+    // case 7: setvar(VAR_0x8005, ITEM_DAWN_STONE)
+    case 7: setvar(VAR_0x8005, ITEM_DUSK_STONE)
+    // case 8: setvar(VAR_0x8005, ITEM_ICE_STONE)
+  }
+}
+
+script Pory_EventScript_Randomized_Item_Hidden_Fossil {
+  random(9)
+  switch (var(VAR_RESULT)) {
+    case 0: setvar(VAR_0x8005, ITEM_HELIX_FOSSIL)
+    case 1: setvar(VAR_0x8005, ITEM_HELIX_FOSSIL)
+    case 2: setvar(VAR_0x8005, ITEM_DOME_FOSSIL)
+    case 3: setvar(VAR_0x8005, ITEM_DOME_FOSSIL)
+    case 4: setvar(VAR_0x8005, ITEM_OLD_AMBER)
+    case 5: setvar(VAR_0x8005, ITEM_ROOT_FOSSIL)
+    case 6: setvar(VAR_0x8005, ITEM_ROOT_FOSSIL)
+    case 7: setvar(VAR_0x8005, ITEM_CLAW_FOSSIL)
+    case 8: setvar(VAR_0x8005, ITEM_CLAW_FOSSIL)
+  }
+}
+
+script Pory_EventScript_Randomized_Item_Hidden_HerbalMedicine {
+  random(6)
+  switch (var(VAR_RESULT)) {
+    case 0: setvar(VAR_0x8005, ITEM_REVIVAL_HERB)
+    case 1: setvar(VAR_0x8005, ITEM_HEAL_POWDER)
+    case 2: call(Pory_EventScript_Randomized_Item_Hidden_BambooShoot)
+    case 3: call(Pory_EventScript_Randomized_Item_Hidden_Health)
+    case 4: call(Pory_EventScript_Randomized_Item_Hidden_Health)
+    case 5: call(Pory_EventScript_Randomized_Item_Hidden_Herbs)
+  }
+}
+
+script Pory_EventScript_Randomized_Item_Hidden_Health {
+  if (flag(FLAG_BADGE04_GET)) {
+    setvar(VAR_0x8005, ITEM_ENERGY_ROOT)
+  } elif (flag(FLAG_BADGE02_GET)) {
+    random(2)
+    switch (var(VAR_RESULT)) {
+      case 0: setvar(VAR_0x8005, ITEM_ENERGY_POWDER)
+      case 1: setvar(VAR_0x8005, ITEM_ENERGY_ROOT)
+    }
+  } else {
+    setvar(VAR_0x8005, ITEM_ENERGY_POWDER)
+  }
+}
+
+script Pory_EventScript_Randomized_Item_Hidden_Herbs {
+  random(3)
+  switch (var(VAR_RESULT)) {
+    case 0: setvar(VAR_0x8005, ITEM_MENTAL_HERB)
+    case 1: setvar(VAR_0x8005, ITEM_POWER_HERB)
+    case 2: setvar(VAR_0x8005, ITEM_WHITE_HERB)
+  }
+}
+
+script Pory_EventScript_Randomized_Item_Hidden_TypeBoosting {
+  random(18)
+  switch (var(VAR_RESULT)) {
+    case  0: setvar(VAR_0x8005, ITEM_SILK_SCARF)
+    case  1: setvar(VAR_0x8005, ITEM_CHARCOAL)
+    case  2: setvar(VAR_0x8005, ITEM_MYSTIC_WATER)
+    case  3: setvar(VAR_0x8005, ITEM_MAGNET)
+    case  4: setvar(VAR_0x8005, ITEM_MIRACLE_SEED)
+    case  5: setvar(VAR_0x8005, ITEM_NEVER_MELT_ICE)
+    case  6: setvar(VAR_0x8005, ITEM_BLACK_BELT)
+    case  7: setvar(VAR_0x8005, ITEM_POISON_BARB)
+    case  8: setvar(VAR_0x8005, ITEM_SOFT_SAND)
+    case  9: setvar(VAR_0x8005, ITEM_SHARP_BEAK)
+    case 10: setvar(VAR_0x8005, ITEM_TWISTED_SPOON)
+    case 11: setvar(VAR_0x8005, ITEM_SILVER_POWDER)
+    case 12: setvar(VAR_0x8005, ITEM_HARD_STONE)
+    case 13: setvar(VAR_0x8005, ITEM_SPELL_TAG)
+    case 14: setvar(VAR_0x8005, ITEM_DRAGON_FANG)
+    case 15: setvar(VAR_0x8005, ITEM_BLACK_GLASSES)
+    case 16: setvar(VAR_0x8005, ITEM_METAL_COAT)
+    case 17: setvar(VAR_0x8005, ITEM_FAIRY_FEATHER)
+  }
+}
+
+script Pory_EventScript_Randomized_Item_Hidden_HeldItems {
+  random(16)
+  switch (var(VAR_RESULT)) {
+    case  0: setvar(VAR_0x8005, ITEM_LUCKY_EGG)
+    case  1: setvar(VAR_0x8005, ITEM_DESTINY_KNOT)
+    case  2: setvar(VAR_0x8005, ITEM_LEFTOVERS)
+    case  3: setvar(VAR_0x8005, ITEM_DEEP_SEA_SCALE)
+    case  4: setvar(VAR_0x8005, ITEM_DEEP_SEA_TOOTH)
+    case  5: setvar(VAR_0x8005, ITEM_DRAGON_SCALE)
+    case  6: setvar(VAR_0x8005, ITEM_ELECTIRIZER)
+    case  7: setvar(VAR_0x8005, ITEM_KINGS_ROCK)
+    case  8: setvar(VAR_0x8005, ITEM_MAGMARIZER)
+    case  9: setvar(VAR_0x8005, ITEM_METAL_COAT)
+    case 10: setvar(VAR_0x8005, ITEM_OVAL_STONE)
+    case 11: setvar(VAR_0x8005, ITEM_PROTECTOR)
+    case 12: setvar(VAR_0x8005, ITEM_RAZOR_CLAW)
+    case 13: setvar(VAR_0x8005, ITEM_RAZOR_FANG)
+    case 14: setvar(VAR_0x8005, ITEM_PRISM_SCALE)
+    case 15: setvar(VAR_0x8005, ITEM_REAPER_CLOTH)
+  }
+}
