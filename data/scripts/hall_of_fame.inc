@@ -25,6 +25,8 @@ EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags::
 	clearflag FLAG_HIDE_ROUTE_103_RIVAL
 	setflag(FLAG_HIDE_CAVE_OF_ORIGIN_EXPERT)
 	clearflag(FLAG_HIDE_CAVE_OF_ORIGIN_B1F_WALLACE)
+	setflag FLAG_HIDE_DEWFORD_POKEMON_CENTER_META_BOY
+	setflag FLAG_HIDE_ROUTE_109_META_BOY
 	return
 
 EverGrandeCity_HallOfFame_EventScript_ResetDefeatedEventLegendaries::

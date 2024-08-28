@@ -35,6 +35,7 @@
 .include "data/scripts/pory_scripts/maps/MauvilleCity_Gym.inc"
 .include "data/scripts/pory_scripts/maps/MauvilleCity_House2.inc"
 .include "data/scripts/pory_scripts/maps/MauvilleCity_Mart.inc"
+.include "data/scripts/pory_scripts/maps/MeteorFalls_StevensCave.inc"
 .include "data/scripts/pory_scripts/maps/MossdeepCity_House3.inc"
 .include "data/scripts/pory_scripts/maps/MossdeepCity_Mart.inc"
 .include "data/scripts/pory_scripts/maps/MossdeepCity_SpaceCenter_1F.inc"
