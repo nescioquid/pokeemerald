@@ -25,5 +25,6 @@
 .include "data/scripts/pory_scripts/maps/Route120.inc"
 .include "data/scripts/pory_scripts/maps/Route123_BerryMastersHouse.inc"
 .include "data/scripts/pory_scripts/maps/RustboroCity.inc"
+.include "data/scripts/pory_scripts/maps/RustboroCity_DevonCorp_3F.inc"
 .include "data/scripts/pory_scripts/maps/SootopolisCity.inc"
 .include "data/scripts/pory_scripts/maps/TrainerHill_Entrance.inc"
