@@ -11,3 +11,13 @@ script Route118_EventScript_ReceiveGoodRod_Pory {
 text Route118_Text_TryCatchingMonWithGoodRod_Pory {
   format("Try fishing to catch all sorts of Pokémon!")
 }
+
+script PoryScript_Angelo {
+  trainerbattle_single(TRAINER_ANGELO, PoryText_AngeloIntro, MauvilleCity_Gym_Text_AngeloDefeat)
+  msgbox(MauvilleCity_Gym_Text_AngeloPostBattle, MSGBOX_AUTOCLOSE)
+  end
+}
+
+text PoryText_AngeloIntro {
+  format("Hey, remember me? I'm that Bug Maniac from the Mauville Gym. I got some guy with a guitar to take my spot.\pAlso, I still love shiny things!")
+}
