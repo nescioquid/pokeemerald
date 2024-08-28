@@ -1,0 +1,12 @@
+script VerdanturfTown_WandasHouse_EventScript_Wally_Pory {
+  lock
+  faceplayer
+  if (!flag(FLAG_WALLY_SPEECH)) {
+    msgbox(format("Wally: I lost to you, {PLAYER}, but I'm not feeling down anymore.\pBecause I have a new purpose in life. Together with my Pokémon, I'm going to challenge Pokémon Gyms and become a great Trainer.\pPlease watch me, {PLAYER}.\nI'm going to be stronger than you.\pWhen I do, I'm going to challenge you to another battle."))
+    setflag(FLAG_WALLY_SPEECH)
+  } else {
+    msgbox(VerdanturfTown_WandasHouse_Text_StrongerSpeechShort)
+  }
+  release
+  end
+}
