@@ -20,3 +20,23 @@ script DewfordTown_Gym_EventScript_GymGuide_Pory {
   release
   end
 }
+
+text DewfordTown_Gym_Text_BrawlyDefeat_Pory {
+  format("Whoah, wow! You made a much bigger splash than I expected!")
+}
+
+text Pory_Text_BrawlyDefeated {
+  format("Okay, you've got me.\nTake this Gym Badge!")
+}
+
+text DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis_Pory {
+  format("With the Knuckle Badge, you'll be able to use the HM move Flash outside of battle.\pHmm… You know what?\n I think you can make full use of this, too. I'm sure it will help your Pokémon bulk up muscle!")
+}
+
+text DewfordTown_Gym_Text_ExplainBulkUp_Pory {
+  format("Bulk Up temporarily enhances the Pokémon's muscle power.\pThe move boosts both the Attack and Defense of the Pokémon.")
+}
+
+text DewfordTown_Gym_Text_BrawlyPostBattle_Pory {
+  format("I can see your talent becoming a giant wave that causes a storm of astonishment among Trainers one day!")
+}

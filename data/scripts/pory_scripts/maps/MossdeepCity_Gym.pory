@@ -20,3 +20,27 @@ script MossdeepCity_Gym_EventScript_GymGuide_Pory {
   release
   end
 }
+
+text MossdeepCity_Gym_Text_TateAndLizaIntro_Pory {
+  format("Heh heh heh…\nTee hee hee…\pTate: Are you surprised?\nLiza: Are you surprised?\pTate: That there are two Gym Leaders?\nLiza: That there are two Gym Leaders?\pTate: We're twins!\nLiza: We're twins!\pTate: We don't need to talk because…\nLiza: …We can each tell…\pTate: …What the other is thinking…\nLiza: …All in our minds!\pTate: This combination of ours…\nLiza: …Can you beat it?")
+}
+
+text MossdeepCity_Gym_Text_TateAndLizaDefeat_Pory {
+  format("Tate: What?! Our combination…\nLiza: …Was shattered!")
+}
+
+text Pory_Text_TateAndLizaDefeated {
+  format("Tate: It can't be helped. You've won…\nLiza: …So take this in recognition.")
+}
+
+text MossdeepCity_Gym_Text_ExplainMindBadgeTakeThis_Pory {
+  format("Tate: The Mind Badge has the power to enable Pokémon to use the HM move called Dive outside of battle!\pLiza: And take this too!")
+}
+
+text MossdeepCity_Gym_Text_ExplainCalmMind_Pory {
+  format("Tate: Calm Mind…\nLiza: …Comes from relaxing your mind and concentrating.\pTate: It raises Sp. Atk…\nLiza: …It raises Sp. Def!\pTate: It's the perfect move…\nLiza: …For Psychic Pokémon!")
+}
+
+text MossdeepCity_Gym_Text_TateAndLizaNeedTwoMons_Pory {
+  format("Tate: Heh heh heh… Are you surprised?\nLiza: …That there are two Gym Leaders?\pTate: Oops, you have only one…\nLiza: …Pokémon that can battle.\pTate: We can't battle that way!\pLiza: If you want to challenge us,\nbring some more Pokémon.")
+}
