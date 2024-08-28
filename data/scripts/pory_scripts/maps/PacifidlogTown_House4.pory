@@ -1,0 +1,13 @@
+script Pory_EventScript_GiveTMFling {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_TM_FLING)) {
+    msgbox(format("…Would you take this from me?\nI no longer have any use for it."))
+    giveitem(ITEM_TM_FLING)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_TM_FLING)
+  }
+  msgbox(format("That Big Stadium over in the Unova region… I always dreamed of standing on the mound there…\pBut no matter how much I struggled, my abilities couldn't keep up with my ambitions.\pMy dream wouldn't die, but before I knew it, I was a family man in my 50s.\pNot just for me, but for my family, too, it's time for me to wake up from my dream."))
+  release
+  end
+}
