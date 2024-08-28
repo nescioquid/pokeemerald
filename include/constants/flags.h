@@ -1239,7 +1239,7 @@
 #define FLAG_ITEM_MT_CHIMNEY_TM_INCINERATE                          0x4A1
 #define FLAG_ITEM_SKY_PILLAR_TM_EXPLOSION                           0x4A2
 #define FLAG_ITEM_JAGGED_PASS_TM_ROCK_POLISH                        0x4A3
-#define FLAG_UNUSED_0x4A4                                           0x4A4 // Unused Flag
+#define FLAG_HIDE_CAVE_OF_ORIGIN_EXPERT                             0x4A4
 #define FLAG_UNUSED_0x4A5                                           0x4A5 // Unused Flag
 #define FLAG_UNUSED_0x4A6                                           0x4A6 // Unused Flag
 #define FLAG_UNUSED_0x4A7                                           0x4A7 // Unused Flag
@@ -1326,8 +1326,7 @@
 #define FLAG_DEFEATED_SOOTOPOLIS_GYM                                0x4F7
 #define FLAG_DEFEATED_METEOR_FALLS_STEVEN                           0x4F8
 #define FLAG_DEFEATED_RIVAL_ROUTE_103_POSTGAME                      0x4F9
-
-#define FLAG_UNUSED_0x4FA                                           0x4FA // Unused Flag
+#define FLAG_DEFEATED_WALLACE_CAVE_OF_ORIGIN                        0x4FA
 
 #define FLAG_DEFEATED_ELITE_4_SIDNEY                                0x4FB
 #define FLAG_DEFEATED_ELITE_4_PHOEBE                                0x4FC
