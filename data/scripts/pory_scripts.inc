@@ -11,6 +11,7 @@
 .include "data/scripts/pory_scripts/pokemart.inc"
 .include "data/scripts/pory_scripts/randomized_item_ball.inc"
 .include "data/scripts/pory_scripts/randomized_item_hidden.inc"
+.include "data/scripts/pory_scripts/tv.inc"
 .include "data/scripts/pory_scripts/vending_machine.inc"
 
 .include "data/scripts/pory_scripts/maps/BattleFrontier_Lounge6.inc"
@@ -41,6 +42,7 @@
 .include "data/scripts/pory_scripts/maps/MauvilleCity_Gym.inc"
 .include "data/scripts/pory_scripts/maps/MauvilleCity_House2.inc"
 .include "data/scripts/pory_scripts/maps/MauvilleCity_Mart.inc"
+.include "data/scripts/pory_scripts/maps/MauvilleCity_PokemonCenter_1F.inc"
 .include "data/scripts/pory_scripts/maps/MeteorFalls_StevensCave.inc"
 .include "data/scripts/pory_scripts/maps/MossdeepCity_Gym.inc"
 .include "data/scripts/pory_scripts/maps/MossdeepCity_House3.inc"
@@ -57,6 +59,7 @@
 .include "data/scripts/pory_scripts/maps/Route103.inc"
 .include "data/scripts/pory_scripts/maps/Route104_PrettyPetalFlowerShop.inc"
 .include "data/scripts/pory_scripts/maps/Route109.inc"
+.include "data/scripts/pory_scripts/maps/Route110.inc"
 .include "data/scripts/pory_scripts/maps/Route111.inc"
 .include "data/scripts/pory_scripts/maps/Route111_WinstrateFamilysHouse.inc"
 .include "data/scripts/pory_scripts/maps/Route113.inc"

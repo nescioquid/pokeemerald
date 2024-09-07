@@ -1,0 +1,7 @@
+text gTVHoennTreasureInvestigatorsText01_Pory {
+  format("Wow, we'd better check this letter out! Let me read it to you.\p…Dear INVESTIGATORS, I hope you are well.\pI recently saw {STR_VAR_2} somewhere around {STR_VAR_3}.\pThe TRAINER found the item {STR_VAR_1}. It made me envious.\p…Well, good going, {STR_VAR_2}!\pViewers, let that motivate you to fire up your Dowsing Machines and search!\pI'll be waiting for exciting news from all of you!")
+}
+
+text gTVHoennTreasureInvestigatorsText02_Pory {
+  format("Wow, we'd better check this letter out! Let me read it to you.\p…Dear INVESTIGATORS, I hope you are well.\pI recently saw {STR_VAR_2} on a ferry.\pThe TRAINER found the item {STR_VAR_1}. It made me envious.\p…Well, good going, {STR_VAR_2}!\pViewers, let that motivate you to fire up your Dowsing Machines and search!\pI'll be waiting for exciting news from all of you!")
+}

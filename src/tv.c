@@ -520,8 +520,8 @@ static const u8 *const sTVDewfordTrendWatcherNetworkTextGroup[] = {
 
 static const u8 *const sTVHoennTreasureInvestisatorsTextGroup[] = {
     gTVHoennTreasureInvestigatorsText00,
-    gTVHoennTreasureInvestigatorsText01,
-    gTVHoennTreasureInvestigatorsText02
+    gTVHoennTreasureInvestigatorsText01_Pory,
+    gTVHoennTreasureInvestigatorsText02_Pory
 };
 
 static const u8 *const sTVFindThatGamerTextGroup[] = {
