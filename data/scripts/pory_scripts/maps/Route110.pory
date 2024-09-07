@@ -1,0 +1,7 @@
+text Route110_Text_MayExplainItemfinder_Pory {
+  format("MAY: That's a Dowsing Machine.\pTry it out. If there is an item that's not visible, it emits a sound.\pOkay, {PLAYER}, let's meet again!\pI know it's a little silly coming from me, but I think you should train a lot harder for the next time.")
+}
+
+text Route110_Text_BrendanExplainItemfinder_Pory {
+  format("BRENDAN: That's a Dowsing Machine.\pUse it to root around for items that aren't visible.\pIf it senses something, it emits a sound.\pAnyway, I'm off to look for new Pokémon.")
+}
