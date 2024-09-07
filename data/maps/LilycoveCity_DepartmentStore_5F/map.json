@@ -50,7 +50,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LilycoveCity_DepartmentStore_5F_EventScript_ClerkFarLeft",
+      "script": "LilycoveCity_DepartmentStore_5F_EventScript_ClerkFarLeft_Pory",
       "flag": "0"
     },
     {
@@ -63,7 +63,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LilycoveCity_DepartmentStore_5F_EventScript_ClerkMidLeft",
+      "script": "LilycoveCity_DepartmentStore_5F_EventScript_ClerkMidLeft_Pory",
       "flag": "0"
     },
     {
@@ -76,7 +76,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LilycoveCity_DepartmentStore_5F_EventScript_ClerkMidRight",
+      "script": "LilycoveCity_DepartmentStore_5F_EventScript_ClerkMidRight_Pory",
       "flag": "0"
     },
     {
@@ -89,7 +89,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LilycoveCity_DepartmentStore_5F_EventScript_ClerkFarRight",
+      "script": "LilycoveCity_DepartmentStore_5F_EventScript_ClerkFarRight_Pory",
       "flag": "0"
     },
     {
