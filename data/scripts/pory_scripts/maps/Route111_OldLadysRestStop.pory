@@ -1,0 +1,14 @@
+script Route111_OldLadysRestStop_EventScript_OldLady_Pory {
+  lock
+  faceplayer
+  if (!flag(FLAG_MET_ARCHIE_METEOR_FALLS)) {
+    msgbox(Route111_OldLadysRestStop_Text_RestUpHere, MSGBOX_YESNO)
+    if (!var(VAR_RESULT)) {
+      goto(Route111_OldLadysRestStop_EventScript_DeclineRest)
+    }
+    goto(Route111_OldLadysRestStop_EventScript_Rest)
+  }
+  msgbox(format("So kind of you to visit me. I love the young people!"))
+  release
+  end
+}
