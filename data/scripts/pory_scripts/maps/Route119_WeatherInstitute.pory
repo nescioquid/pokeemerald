@@ -1,0 +1,11 @@
+script Route119_WeatherInstitute_1F_EventScript_Bed_Pory {
+  lockall
+  if (!flag(FLAG_VISITED_FORTREE_CITY)) {
+    msgbox(format("There's a bed…\nLet's take a rest."))
+    closemessage
+    call(Common_EventScript_OutOfCenterPartyHeal)
+  }
+  msgbox(format("There's a bed…\nIt's a really nice bed."))
+  releaseall
+  end
+}
