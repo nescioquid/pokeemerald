@@ -1,0 +1,61 @@
+script LilycoveCity_DepartmentStore_4F_EventScript_ClerkLeft_Pory {
+  lock
+  faceplayer
+  call(Common_PoryScript_Clerk_Hello)
+  waitmessage
+  pokemart(Pokemart_AttackTMs)
+  checkitem(ITEM_TM_FIRE_BLAST) // TM38
+  if (var(VAR_RESULT)) {
+    checkitem(ITEM_TM_THUNDER) // TM25
+    if (var(VAR_RESULT)) {
+      checkitem(ITEM_TM_BLIZZARD) // TM14
+      if (var(VAR_RESULT)) {
+      checkitem(ITEM_TM_HYPER_BEAM) // TM15
+        if (var(VAR_RESULT)) {
+          msgbox(format("Dang, you bought them all? Nice!"))
+        }
+      }
+    }
+  }
+  call(Common_PoryScript_Clerk_Goodbye)
+  release
+  end
+}
+
+mart Pokemart_AttackTMs {
+  ITEM_TM_FIRE_BLAST  // TM38
+  ITEM_TM_THUNDER     // TM25
+  ITEM_TM_BLIZZARD    // TM14
+  ITEM_TM_HYPER_BEAM  // TM15
+}
+
+script LilycoveCity_DepartmentStore_4F_EventScript_ClerkRight_Pory {
+  lock
+  faceplayer
+  call(Common_PoryScript_Clerk_Hello)
+  waitmessage
+  pokemart(Pokemart_DefenseTMs)
+  checkitem(ITEM_TM_PROTECT) // TM17
+  if (var(VAR_RESULT)) {
+    checkitem(ITEM_TM_SAFEGUARD) // TM20
+    if (var(VAR_RESULT)) {
+      checkitem(ITEM_TM_REFLECT) // TM33
+      if (var(VAR_RESULT)) {
+        checkitem(ITEM_TM_LIGHT_SCREEN) // TM16
+        if (var(VAR_RESULT)) {
+          msgbox(format("Wow! You have all of them! That's so cool!"))
+        }
+      }
+    }
+  }
+  call(Common_PoryScript_Clerk_Goodbye)
+  release
+  end
+}
+
+mart Pokemart_DefenseTMs {
+  ITEM_TM_PROTECT      // TM17
+  ITEM_TM_SAFEGUARD    // TM20
+  ITEM_TM_REFLECT      // TM33
+  ITEM_TM_LIGHT_SCREEN // TM16
+}
