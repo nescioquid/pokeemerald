@@ -1,9 +1,9 @@
-script LilycoveCity_DepartmentStore_4F_EventScript_ClerkLeft_Pory {
+script _LilycoveCity_DepartmentStore_4F_EventScript_ClerkLeft {
   lock
   faceplayer
-  call(Common_PoryScript_Clerk_Hello)
+  call(_Common_EventScript_Clerk_Hello)
   waitmessage
-  pokemart(Pokemart_AttackTMs)
+  pokemart(_LilycoveCity_DepartmentStore_4F_Pokemart_AttackTMs)
   checkitem(ITEM_TM_FIRE_BLAST) // TM38
   if (var(VAR_RESULT)) {
     checkitem(ITEM_TM_THUNDER) // TM25
@@ -17,24 +17,24 @@ script LilycoveCity_DepartmentStore_4F_EventScript_ClerkLeft_Pory {
       }
     }
   }
-  call(Common_PoryScript_Clerk_Goodbye)
+  call(_Common_EventScript_Clerk_Goodbye)
   release
   end
 }
 
-mart Pokemart_AttackTMs {
+mart _LilycoveCity_DepartmentStore_4F_Pokemart_AttackTMs {
   ITEM_TM_FIRE_BLAST  // TM38
   ITEM_TM_THUNDER     // TM25
   ITEM_TM_BLIZZARD    // TM14
   ITEM_TM_HYPER_BEAM  // TM15
 }
 
-script LilycoveCity_DepartmentStore_4F_EventScript_ClerkRight_Pory {
+script _LilycoveCity_DepartmentStore_4F_EventScript_ClerkRight {
   lock
   faceplayer
-  call(Common_PoryScript_Clerk_Hello)
+  call(_Common_EventScript_Clerk_Hello)
   waitmessage
-  pokemart(Pokemart_DefenseTMs)
+  pokemart(_LilycoveCity_DepartmentStore_4F_Pokemart_DefenseTMs)
   checkitem(ITEM_TM_PROTECT) // TM17
   if (var(VAR_RESULT)) {
     checkitem(ITEM_TM_SAFEGUARD) // TM20
@@ -48,24 +48,24 @@ script LilycoveCity_DepartmentStore_4F_EventScript_ClerkRight_Pory {
       }
     }
   }
-  call(Common_PoryScript_Clerk_Goodbye)
+  call(_Common_EventScript_Clerk_Goodbye)
   release
   end
 }
 
-mart Pokemart_DefenseTMs {
+mart _LilycoveCity_DepartmentStore_4F_Pokemart_DefenseTMs {
   ITEM_TM_PROTECT      // TM17
   ITEM_TM_SAFEGUARD    // TM20
   ITEM_TM_REFLECT      // TM33
   ITEM_TM_LIGHT_SCREEN // TM16
 }
 
-script LilycoveCity_DepartmentStore_4F_EventScript_ClerkLeft_Pory_ORAS {
+script _LilycoveCity_DepartmentStore_4F_EventScript_ClerkLeft_ORAS {
   lock
   faceplayer
-  call(Common_PoryScript_Clerk_Hello)
+  call(_Common_EventScript_Clerk_Hello)
   waitmessage
-  pokemart(Pory_Pokemart_AttackTMsORAS)
+  pokemart(_LilycoveCity_DepartmentStore_4F_Pokemart_AttackTMs_ORAS)
   checkitem(ITEM_TM_FIRE_BLAST) // TM38
   if (var(VAR_RESULT)) {
     checkitem(ITEM_TM_THUNDER) // TM25
@@ -88,12 +88,12 @@ script LilycoveCity_DepartmentStore_4F_EventScript_ClerkLeft_Pory_ORAS {
       }
     }
   }
-  call(Common_PoryScript_Clerk_Goodbye)
+  call(_Common_EventScript_Clerk_Goodbye)
   release
   end
 }
 
-mart Pory_Pokemart_AttackTMsORAS {
+mart _LilycoveCity_DepartmentStore_4F_Pokemart_AttackTMs_ORAS {
   ITEM_TM_FIRE_BLAST  // TM38
   ITEM_TM_THUNDER     // TM25
   ITEM_TM_BLIZZARD    // TM14

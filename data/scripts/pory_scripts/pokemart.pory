@@ -1,15 +1,15 @@
-script Common_PoryScript_Clerk {
+script _Common_EventScript_Clerk {
   lock
   faceplayer
-  call(Common_PoryScript_Clerk_Hello)
+  call(_Common_EventScript_Clerk_Hello)
   waitmessage
-  call(Common_PoryScript_Clerk_PokemartByBadges)
-  call(Common_PoryScript_Clerk_Goodbye)
+  call(_Common_EventScript_Clerk_PokemartByBadges)
+  call(_Common_EventScript_Clerk_Goodbye)
   release
   end
 }
 
-script Common_PoryScript_Clerk_Hello {
+script _Common_EventScript_Clerk_Hello {
   if (flag(FLAG_SYS_GAME_CLEAR)) {
     random(8)
     switch (var(VAR_RESULT)) {
@@ -47,7 +47,7 @@ script Common_PoryScript_Clerk_Hello {
   }
 }
 
-script Common_PoryScript_Clerk_Goodbye {
+script _Common_EventScript_Clerk_Goodbye {
   if (!flag(FLAG_BADGE01_GET)) {
     random(4)
     switch (var(VAR_RESULT)) {
@@ -74,26 +74,26 @@ script Common_PoryScript_Clerk_Goodbye {
   }
 }
 
-script Common_PoryScript_Clerk_PokemartByBadges {
+script _Common_EventScript_Clerk_PokemartByBadges {
   if (!flag(FLAG_SYS_GAME_CLEAR)) {
-    call(Common_PoryScript_GetBadgeCount)
+    call(_Common_EventScript_GetBadgeCount)
     switch(var(VAR_RESULT)) {
-      case 0: pokemart(Pokemart_ZeroBadges_All)
-      case 1: pokemart(Pokemart_OneBadge)
-      case 2: pokemart(Pokemart_TwoBadges)
-      case 3: pokemart(Pokemart_ThreeBadges)
-      case 4: pokemart(Pokemart_FourBadges)
-      case 5: pokemart(Pokemart_FiveBadges)
-      case 6: pokemart(Pokemart_SixBadges)
-      case 7: pokemart(Pokemart_SevenBadges)
-      case 8: pokemart(Pokemart_EightBadges)
+      case 0: pokemart(_Common_Pokemart_ZeroBadges)
+      case 1: pokemart(_Common_Pokemart_OneBadge)
+      case 2: pokemart(_Common_Pokemart_TwoBadges)
+      case 3: pokemart(_Common_Pokemart_ThreeBadges)
+      case 4: pokemart(_Common_Pokemart_FourBadges)
+      case 5: pokemart(_Common_Pokemart_FiveBadges)
+      case 6: pokemart(_Common_Pokemart_SixBadges)
+      case 7: pokemart(_Common_Pokemart_SevenBadges)
+      case 8: pokemart(_Common_Pokemart_EightBadges)
     }
   } else {
-    pokemart(Pokemart_Postgame)
+    pokemart(_Common_Pokemart_Postgame)
   }
 }
 
-mart Pokemart_ZeroBadges_All {
+mart _Common_Pokemart_ZeroBadges {
   ITEM_POKE_BALL     // new
   ITEM_POTION
   ITEM_POKE_DOLL
@@ -102,7 +102,7 @@ mart Pokemart_ZeroBadges_All {
   ITEM_DIRE_HIT
 }
 
-mart Pokemart_OneBadge {
+mart _Common_Pokemart_OneBadge {
   ITEM_POKE_BALL
   ITEM_QUICK_BALL    // new
   ITEM_POTION
@@ -113,7 +113,7 @@ mart Pokemart_OneBadge {
   ITEM_DIRE_HIT
 }
 
-mart Pokemart_TwoBadges {
+mart _Common_Pokemart_TwoBadges {
   ITEM_POKE_BALL
   ITEM_QUICK_BALL
   ITEM_SUPER_POTION  // new
@@ -128,7 +128,7 @@ mart Pokemart_TwoBadges {
 
 }
 
-mart Pokemart_ThreeBadges {
+mart _Common_Pokemart_ThreeBadges {
   ITEM_GREAT_BALL    // new
   ITEM_QUICK_BALL
   ITEM_SUPER_POTION
@@ -144,7 +144,7 @@ mart Pokemart_ThreeBadges {
   ITEM_REPEL         // demoted
 }
 
-mart Pokemart_FourBadges {
+mart _Common_Pokemart_FourBadges {
   ITEM_GREAT_BALL
   ITEM_QUICK_BALL
   ITEM_HYPER_POTION  // new
@@ -161,7 +161,7 @@ mart Pokemart_FourBadges {
   ITEM_REPEL
 }
 
-mart Pokemart_FiveBadges {
+mart _Common_Pokemart_FiveBadges {
   ITEM_GREAT_BALL
   ITEM_QUICK_BALL
   ITEM_HYPER_POTION
@@ -179,7 +179,7 @@ mart Pokemart_FiveBadges {
   ITEM_REPEL
 }
 
-mart Pokemart_SixBadges {
+mart _Common_Pokemart_SixBadges {
   ITEM_ULTRA_BALL    // new
   ITEM_QUICK_BALL
   ITEM_MAX_POTION    // new
@@ -199,7 +199,7 @@ mart Pokemart_SixBadges {
   ITEM_REPEL
 }
 
-mart Pokemart_SevenBadges {
+mart _Common_Pokemart_SevenBadges {
   ITEM_ULTRA_BALL
   ITEM_QUICK_BALL
   ITEM_MAX_POTION
@@ -224,7 +224,7 @@ mart Pokemart_SevenBadges {
   ITEM_REPEL
 }
 
-mart Pokemart_EightBadges {
+mart _Common_Pokemart_EightBadges {
   ITEM_ULTRA_BALL
   ITEM_QUICK_BALL
   ITEM_FULL_RESTORE  // new
@@ -250,7 +250,7 @@ mart Pokemart_EightBadges {
   ITEM_REPEL
 }
 
-mart Pokemart_Postgame {
+mart _Common_Pokemart_Postgame {
   ITEM_ULTRA_BALL
   ITEM_QUICK_BALL
   ITEM_FULL_RESTORE

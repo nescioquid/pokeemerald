@@ -10,11 +10,11 @@
 // setvar(VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_EEVEE)
 // setvar(GIVEMON_HELPER_ARTICLE, 2)
 // givemon(SPECIES_EEVEE, 20)
-// call(Common_PoryScript_GivemonHelper)
+// call(_Common_EventScript_GivemonHelper)
 
 const GIVEMON_HELPER_ARTICLE = VAR_TEMP_9
 
-script Common_PoryScript_GivemonHelper {
+script _Common_EventScript_GivemonHelper {
   // must be STR_VAR_1 for gText_NicknameThisPokemon etc. to work
   bufferspeciesname(STR_VAR_1, VAR_TEMP_TRANSFERRED_SPECIES)
   playfanfare(MUS_OBTAIN_ITEM)

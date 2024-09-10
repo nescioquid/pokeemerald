@@ -1,4 +1,4 @@
-script Pory_EventScript_GiveTMRestTMSleepTalk {
+script _LilycoveCity_House2_EventScript_GiveTMRestTMSleepTalk {
   lock
   faceplayer
   if(!flag(FLAG_RECEIVED_TM_REST)) {

@@ -1,4 +1,4 @@
-script GraniteCave_1F_EventScript_Hiker_Pory {
+script _GraniteCave_1F_EventScript_Hiker {
   lock
   faceplayer
   if(!flag(FLAG_RECEIVED_HM_FLASH)) {

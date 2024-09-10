@@ -1,4 +1,4 @@
-script Pory_EventScript_GiveTMInfestation {
+script _SootopolisCity_Mart_EventScript_GiveTMInfestation {
   lock
   faceplayer
   if (!flag(FLAG_RECEIVED_TM_INFESTATION)) {

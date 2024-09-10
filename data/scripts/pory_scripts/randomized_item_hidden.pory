@@ -1,4 +1,4 @@
-script Pory_EventScript_Randomized_Item_Hidden {
+script _Common_EventScript_RandomizedItemHidden {
   if (var(VAR_0x8005) == ITEM_POKE_BALL   ||
       var(VAR_0x8005) == ITEM_GREAT_BALL  ||
       var(VAR_0x8005) == ITEM_ULTRA_BALL  ||
@@ -9,7 +9,7 @@ script Pory_EventScript_Randomized_Item_Hidden {
       var(VAR_0x8005) == ITEM_NEST_BALL   ||
       var(VAR_0x8005) == ITEM_REPEAT_BALL ||
       var(VAR_0x8005) == ITEM_TIMER_BALL) {
-    call(Pory_EventScript_Randomized_Item_Hidden_Common)
+    call(_Common_EventScript_RandomizedItemHidden_Generic)
   }
   if (var(VAR_0x8005) == ITEM_POTION        ||
       var(VAR_0x8005) == ITEM_SUPER_POTION  ||
@@ -18,7 +18,7 @@ script Pory_EventScript_Randomized_Item_Hidden {
       var(VAR_0x8005) == ITEM_FULL_RESTORE  ||
       var(VAR_0x8005) == ITEM_ENERGY_POWDER ||
       var(VAR_0x8005) == ITEM_ENERGY_ROOT) {
-    call(Pory_EventScript_Randomized_Item_Hidden_HerbalMedicine)
+    call(_Common_EventScript_RandomizedItemHidden_HerbalMedicine)
   }
   if (var(VAR_0x8005) == ITEM_ANTIDOTE      ||
       var(VAR_0x8005) == ITEM_AWAKENING     ||
@@ -27,18 +27,18 @@ script Pory_EventScript_Randomized_Item_Hidden {
       var(VAR_0x8005) == ITEM_PARALYZE_HEAL ||
       var(VAR_0x8005) == ITEM_FULL_HEAL     ||
       var(VAR_0x8005) == ITEM_HEAL_POWDER) {
-    call(Pory_EventScript_Randomized_Item_Hidden_HerbalMedicine)
+    call(_Common_EventScript_RandomizedItemHidden_HerbalMedicine)
   }
   if (var(VAR_0x8005) == ITEM_REVIVE     ||
       var(VAR_0x8005) == ITEM_MAX_REVIVE ||
       var(VAR_0x8005) == ITEM_REVIVAL_HERB) {
-    call(Pory_EventScript_Randomized_Item_Hidden_HerbalMedicine)
+    call(_Common_EventScript_RandomizedItemHidden_HerbalMedicine)
   }
   if (var(VAR_0x8005) == ITEM_ETHER     ||
       var(VAR_0x8005) == ITEM_ELIXIR    ||
       var(VAR_0x8005) == ITEM_MAX_ETHER ||
       var(VAR_0x8005) == ITEM_MAX_ELIXIR) {
-    call(Pory_EventScript_Randomized_Item_Hidden_Common)
+    call(_Common_EventScript_RandomizedItemHidden_Generic)
   }
   if (var(VAR_0x8005) == ITEM_PROTEIN ||
       var(VAR_0x8005) == ITEM_IRON    ||
@@ -48,7 +48,7 @@ script Pory_EventScript_Randomized_Item_Hidden {
       var(VAR_0x8005) == ITEM_HP_UP   ||
       var(VAR_0x8005) == ITEM_PP_UP   ||
       var(VAR_0x8005) == ITEM_PP_MAX) {
-    call(Pory_EventScript_Randomized_Item_Hidden_Common)
+    call(_Common_EventScript_RandomizedItemHidden_Generic)
   }
   if (var(VAR_0x8005) == ITEM_X_ATTACK   ||
       var(VAR_0x8005) == ITEM_X_DEFENSE  ||
@@ -58,7 +58,7 @@ script Pory_EventScript_Randomized_Item_Hidden {
       var(VAR_0x8005) == ITEM_X_ACCURACY ||
       var(VAR_0x8005) == ITEM_GUARD_SPEC ||
       var(VAR_0x8005) == ITEM_DIRE_HIT) {
-    call(Pory_EventScript_Randomized_Item_Hidden_Common)
+    call(_Common_EventScript_RandomizedItemHidden_Generic)
   }
   if (var(VAR_0x8005) == ITEM_RED_SHARD    ||
       var(VAR_0x8005) == ITEM_BLUE_SHARD   ||
@@ -67,35 +67,35 @@ script Pory_EventScript_Randomized_Item_Hidden {
       var(VAR_0x8005) == ITEM_HEART_SCALE  ||
       var(VAR_0x8005) == ITEM_PEARL        ||
       var(VAR_0x8005) == ITEM_BIG_PEARL) {
-    call(Pory_EventScript_Randomized_Item_Hidden_Pearl)
+    call(_Common_EventScript_RandomizedItemHidden_Pearl)
   }
   if (var(VAR_0x8005) == ITEM_TINY_MUSHROOM ||
       var(VAR_0x8005) == ITEM_BIG_MUSHROOM) {
-    call(Pory_EventScript_Randomized_Item_Hidden_Mushroom)
+    call(_Common_EventScript_RandomizedItemHidden_Mushroom)
   }
   if (var(VAR_0x8005) == ITEM_NUGGET ||
       var(VAR_0x8005) == ITEM_BIG_NUGGET) {
-    call(Pory_EventScript_Randomized_Item_Hidden_Nugget)
+    call(_Common_EventScript_RandomizedItemHidden_Nugget)
   }
   if (var(VAR_0x8005) == ITEM_STARDUST   ||
       var(VAR_0x8005) == ITEM_STAR_PIECE) {
-    call(Pory_EventScript_Randomized_Item_Hidden_Common)
+    call(_Common_EventScript_RandomizedItemHidden_Generic)
   }
 }
 
-script Pory_EventScript_Randomized_Item_Hidden_Common {
+script _Common_EventScript_RandomizedItemHidden_Generic {
   random(6)
   switch (var(VAR_RESULT)) {
     case 0: setvar(VAR_0x8005, ITEM_RARE_CANDY)
-    case 1: call(Pory_EventScript_Randomized_Item_Hidden_Stardust)
-    case 2: call(Pory_EventScript_Randomized_Item_Hidden_Stardust)
-    case 3: call(Pory_EventScript_Randomized_Item_Hidden_Stardust)
-    case 4: call(Pory_EventScript_Randomized_Item_Hidden_TypeBoosting)
-    case 5: call(Pory_EventScript_Randomized_Item_Hidden_HeldItems)
+    case 1: call(_Common_EventScript_RandomizedItemHidden_Stardust)
+    case 2: call(_Common_EventScript_RandomizedItemHidden_Stardust)
+    case 3: call(_Common_EventScript_RandomizedItemHidden_Stardust)
+    case 4: call(_Common_EventScript_RandomizedItemHidden_TypeBoosting)
+    case 5: call(_Common_EventScript_RandomizedItemHidden_HeldItems)
   }
 }
 
-script Pory_EventScript_Randomized_Item_Hidden_BambooShoot {
+script _Common_EventScript_RandomizedItemHidden_BambooShoot {
   random(6)
   switch (var(VAR_RESULT)) {
     case 0: setvar(VAR_0x8005, ITEM_TINY_BAMBOO_SHOOT)
@@ -107,7 +107,7 @@ script Pory_EventScript_Randomized_Item_Hidden_BambooShoot {
   }
 }
 
-script Pory_EventScript_Randomized_Item_Hidden_Mushroom {
+script _Common_EventScript_RandomizedItemHidden_Mushroom {
   random(6)
   switch (var(VAR_RESULT)) {
     case 0: setvar(VAR_0x8005, ITEM_TINY_MUSHROOM)
@@ -119,7 +119,7 @@ script Pory_EventScript_Randomized_Item_Hidden_Mushroom {
   }
 }
 
-script Pory_EventScript_Randomized_Item_Hidden_Feather {
+script _Common_EventScript_RandomizedItemHidden_Feather {
   random(7)
   switch (var(VAR_RESULT)) {
     case 0: setvar(VAR_0x8005, ITEM_HEALTH_FEATHER)
@@ -132,31 +132,31 @@ script Pory_EventScript_Randomized_Item_Hidden_Feather {
   }
 }
 
-script Pory_EventScript_Randomized_Item_Hidden_Nugget {
+script _Common_EventScript_RandomizedItemHidden_Nugget {
   random(6)
   switch (var(VAR_RESULT)) {
     case 0: setvar(VAR_0x8005, ITEM_NUGGET)
     case 1: setvar(VAR_0x8005, ITEM_NUGGET)
     case 2: setvar(VAR_0x8005, ITEM_NUGGET)
     case 3: setvar(VAR_0x8005, ITEM_BIG_NUGGET)
-    case 4: call(Pory_EventScript_Randomized_Item_Hidden_Fossil)
-    case 5: call(Pory_EventScript_Randomized_Item_Hidden_Fossil)
+    case 4: call(_Common_EventScript_RandomizedItemHidden_Fossil)
+    case 5: call(_Common_EventScript_RandomizedItemHidden_Fossil)
   }
 }
 
-script Pory_EventScript_Randomized_Item_Hidden_Pearl {
+script _Common_EventScript_RandomizedItemHidden_Pearl {
   random(6)
   switch (var(VAR_RESULT)) {
     case 0: setvar(VAR_0x8005, ITEM_PEARL)
     case 1: setvar(VAR_0x8005, ITEM_PEARL)
     case 2: setvar(VAR_0x8005, ITEM_PEARL)
     case 3: setvar(VAR_0x8005, ITEM_BIG_PEARL)
-    case 4: call(Pory_EventScript_Randomized_Item_Hidden_Fossil)
-    case 5: call(Pory_EventScript_Randomized_Item_Hidden_Fossil)
+    case 4: call(_Common_EventScript_RandomizedItemHidden_Fossil)
+    case 5: call(_Common_EventScript_RandomizedItemHidden_Fossil)
   }
 }
 
-script Pory_EventScript_Randomized_Item_Hidden_Stardust {
+script _Common_EventScript_RandomizedItemHidden_Stardust {
   random(6)
   switch (var(VAR_RESULT)) {
     case 0: setvar(VAR_0x8005, ITEM_STARDUST)
@@ -168,7 +168,7 @@ script Pory_EventScript_Randomized_Item_Hidden_Stardust {
   }
 }
 
-script Pory_EventScript_Randomized_Item_Hidden_EvoStone {
+script _Common_EventScript_RandomizedItemHidden_EvoStone {
   random(8)
   switch (var(VAR_RESULT)) {
     case 0: setvar(VAR_0x8005, ITEM_FIRE_STONE)
@@ -184,7 +184,7 @@ script Pory_EventScript_Randomized_Item_Hidden_EvoStone {
   }
 }
 
-script Pory_EventScript_Randomized_Item_Hidden_Fossil {
+script _Common_EventScript_RandomizedItemHidden_Fossil {
   random(9)
   switch (var(VAR_RESULT)) {
     case 0: setvar(VAR_0x8005, ITEM_HELIX_FOSSIL)
@@ -199,19 +199,19 @@ script Pory_EventScript_Randomized_Item_Hidden_Fossil {
   }
 }
 
-script Pory_EventScript_Randomized_Item_Hidden_HerbalMedicine {
+script _Common_EventScript_RandomizedItemHidden_HerbalMedicine {
   random(6)
   switch (var(VAR_RESULT)) {
     case 0: setvar(VAR_0x8005, ITEM_REVIVAL_HERB)
     case 1: setvar(VAR_0x8005, ITEM_HEAL_POWDER)
-    case 2: call(Pory_EventScript_Randomized_Item_Hidden_BambooShoot)
-    case 3: call(Pory_EventScript_Randomized_Item_Hidden_Health)
-    case 4: call(Pory_EventScript_Randomized_Item_Hidden_Health)
-    case 5: call(Pory_EventScript_Randomized_Item_Hidden_Herbs)
+    case 2: call(_Common_EventScript_RandomizedItemHidden_BambooShoot)
+    case 3: call(_Common_EventScript_RandomizedItemHidden_Health)
+    case 4: call(_Common_EventScript_RandomizedItemHidden_Health)
+    case 5: call(_Common_EventScript_RandomizedItemHidden_Herbs)
   }
 }
 
-script Pory_EventScript_Randomized_Item_Hidden_Health {
+script _Common_EventScript_RandomizedItemHidden_Health {
   if (flag(FLAG_BADGE04_GET)) {
     setvar(VAR_0x8005, ITEM_ENERGY_ROOT)
   } elif (flag(FLAG_BADGE02_GET)) {
@@ -225,7 +225,7 @@ script Pory_EventScript_Randomized_Item_Hidden_Health {
   }
 }
 
-script Pory_EventScript_Randomized_Item_Hidden_Herbs {
+script _Common_EventScript_RandomizedItemHidden_Herbs {
   random(3)
   switch (var(VAR_RESULT)) {
     case 0: setvar(VAR_0x8005, ITEM_MENTAL_HERB)
@@ -234,7 +234,7 @@ script Pory_EventScript_Randomized_Item_Hidden_Herbs {
   }
 }
 
-script Pory_EventScript_Randomized_Item_Hidden_TypeBoosting {
+script _Common_EventScript_RandomizedItemHidden_TypeBoosting {
   random(18)
   switch (var(VAR_RESULT)) {
     case  0: setvar(VAR_0x8005, ITEM_SILK_SCARF)
@@ -258,7 +258,7 @@ script Pory_EventScript_Randomized_Item_Hidden_TypeBoosting {
   }
 }
 
-script Pory_EventScript_Randomized_Item_Hidden_HeldItems {
+script _Common_EventScript_RandomizedItemHidden_HeldItems {
   random(16)
   switch (var(VAR_RESULT)) {
     case  0: setvar(VAR_0x8005, ITEM_LUCKY_EGG)

@@ -1,7 +1,7 @@
-text MauvilleCity_PokemonCenter_1F_Text_UsedItemFinderAction_Pory {
+text _MauvilleCity_PokemonCenter_1F_Text_UsedItemFinderAction {
   format("Used a Dowsing Machine")
 }
 
-text MauvilleCity_PokemonCenter_1F_Text_UsedItemFinderStory_Pory {
+text _MauvilleCity_PokemonCenter_1F_Text_UsedItemFinderStory {
   format("This is a tale of a Trainer named {STR_VAR_3}.\pThis Trainer used a Dowsing Machine {STR_VAR_1} times!\p{STR_VAR_3} must enjoy scouring the ground for hidden items!")
 }

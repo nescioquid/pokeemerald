@@ -1,10 +1,10 @@
-script RustboroCity_Gym_EventScript_GymGuide_Pory {
+script _RustboroCity_Gym_EventScript_GymGuide {
   lock
   faceplayer
   if (!flag(FLAG_DEFEATED_RUSTBORO_GYM)) {
     msgbox(format("Yo, how's it going?\pListen, my friend!\nWould you like to become the Champion?\pI'm no Trainer, not me, but I can\nsure give you winning advice.\pThat's settled, then! We'll aim for the\nPokémon Championship together!\pIt's your job as a Trainer to collect\nGym Badges, am I right?\pBut Gym Leaders aren't pushovers!\pAnd that's where I come in!\nI'm here to provide expert advice!\pRoxanne, the Gym Leader, is a user\nof Rock-type Pokémon.\pThe Rock type is very durable, but\nit can't stand Water-type and\lGrass-type moves.\pCome see me afterwards, if you beat\nthe Gym Leader."))
     if (!flag(FLAG_RECEIVED_FRESH_WATER_RUSTBORO_GYM)) {
-      call(PoryScript_GymGuide_GiveFreshWater)
+      call(_Common_EventScript_GymGuide_GiveFreshWater)
       setflag(FLAG_RECEIVED_FRESH_WATER_RUSTBORO_GYM)
       msgbox(format("Well, go for it!"))
     }
@@ -12,7 +12,7 @@ script RustboroCity_Gym_EventScript_GymGuide_Pory {
     msgbox(RustboroCity_Gym_Text_GymGuidePostVictory)
     if (!flag(FLAG_RECEIVED_RARE_CANDY_RUSTBORO_GYM)) {
       msgbox(format("Oh, and take these!"))
-      call(PoryScript_GymGuide_GiveRareCandy)
+      call(_Common_EventScript_GymGuide_GiveRareCandy)
       setflag(FLAG_RECEIVED_RARE_CANDY_RUSTBORO_GYM)
       msgbox(format("Congrats on the big win!"))
     }
@@ -21,18 +21,18 @@ script RustboroCity_Gym_EventScript_GymGuide_Pory {
   end
 }
 
-text RustboroCity_Gym_Text_RoxanneDefeat_Pory {
+text _RustboroCity_Gym_Text_RoxanneDefeat {
   format("So…\nI lost…\pIt seems that I still have much more to learn…")
 }
 
-text Pory_Text_RoxanneDefeated {
+text _RustboroCity_Gym_Text_RoxanneDefeated {
   format("I understand.\pThe Pokémon League's rules state that Trainers are to be given this if they defeat a Gym Leader.\pPlease accept the official Pokémon League Stone Badge.")
 }
 
-text RustboroCity_Gym_Text_StoneBadgeInfoTakeThis_Pory {
+text _RustboroCity_Gym_Text_StoneBadgeInfoTakeThis {
   format("The Stone Badge enables your Pokémon to use the HM move Cut outside of battle.\pAnd…\nPlease take this with you, too.")
 }
 
-text RustboroCity_Gym_Text_ExplainRockTomb_Pory {
+text _RustboroCity_Gym_Text_ExplainRockTomb {
   format("The move Rock Tomb not only inflicts damage by dropping rocks, it also lowers the target's Speed.\pIf you use a TM, it instantly teaches the move to a Pokémon.\pYou can use a TM as many times as you want, so please try it out!")
 }

@@ -1,6 +1,4 @@
-// Mr. Stone now gives a Fossil for delivering the Letter
-
-script Pory_EventScript_MrStoneGiveFossil {
+script _RustboroCity_DevonCorp_3F_EventScript_GiveFossil {
   msgbox(RustboroCity_DevonCorp_3F_Text_ThankYouForDeliveringLetter)
   random(2)
   switch (var(VAR_RESULT)) {

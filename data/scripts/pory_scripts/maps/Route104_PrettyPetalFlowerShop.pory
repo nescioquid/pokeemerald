@@ -1,7 +1,7 @@
 const LOCALID_OWNER = 1
 const LOCALID_WAILMER_PAIL_GIRL = 2
 
-script Route104_PrettyPetalFlowerShop_OnTransition_Pory {
+script _Route104_PrettyPetalFlowerShop_OnTransition {
   setflag(FLAG_LANDMARK_FLOWER_SHOP)
   if (!flag(FLAG_MET_PRETTY_PETAL_SHOP_OWNER)) {
     setobjectxyperm(LOCALID_OWNER, 4, 6)
@@ -22,16 +22,16 @@ script Route104_PrettyPetalFlowerShop_OnTransition_Pory {
   end
 }
 
-script Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl_Pory {
+script _Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl {
   lock
   faceplayer
   dotimebasedevents
   if (!flag(FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY)) {
     msgbox(format("I'm trying to be like my big sisters. I'm growing flowers, too!\pHere you go! They're for you!"))
     if (!flag(FLAG_BADGE02_GET)) {
-      call(Common_PoryScript_GiveBerry_Status)
+      call(_Common_EventScript_GiveBerry_Status)
     } else {
-      call(Common_PoryScript_GiveBerry_Generic)
+      call(_Common_EventScript_GiveBerry_Generic)
     }
     setflag(FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY)
   }
@@ -40,7 +40,7 @@ script Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl_Pory {
   end
 }
 
-script Route104_PrettyPetalFlowerShop_EventScript_ShopOwner_Pory {
+script _Route104_PrettyPetalFlowerShop_EventScript_ShopOwner {
   lock
   faceplayer
   if (flag(FLAG_TEMP_1)) {
@@ -63,7 +63,7 @@ script Route104_PrettyPetalFlowerShop_EventScript_ShopOwner_Pory {
   end
 }
 
-script Route104_PrettyPetalFlowerShop_EventScript_WailmerPailGirl_Pory {
+script _Route104_PrettyPetalFlowerShop_EventScript_WailmerPailGirl {
   lock
   faceplayer
   if (flag(FLAG_TEMP_2)) {
@@ -75,14 +75,14 @@ script Route104_PrettyPetalFlowerShop_EventScript_WailmerPailGirl_Pory {
   } else {
     message(format("Been watering your Berries like I taught you? How can I help you?"))
     waitmessage
-    pokemart(Pokemart_Mulches)
+    pokemart(_Route104_PrettyPetalFlowerShop_Pokemart_Mulches)
     msgbox(format("Until next time!"))
   }
   release
   end
 }
 
-mart Pokemart_Mulches {
+mart _Route104_PrettyPetalFlowerShop_Pokemart_Mulches {
   ITEM_GROWTH_MULCH
   ITEM_STABLE_MULCH
   ITEM_GOOEY_MULCH
