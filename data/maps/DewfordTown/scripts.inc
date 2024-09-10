@@ -181,7 +181,7 @@ DewfordTown_EventScript_SailToSlateport::
 	end
 
 DewfordTown_EventScript_LandedSlateportDeliverGoods::
-	msgbox DewfordTown_Text_BrineyLandedInSlateportDeliverGoods_Pory, MSGBOX_DEFAULT
+	msgbox _DewfordTown_Text_BrineyLandedInSlateportDeliverGoods, MSGBOX_DEFAULT
 	return
 
 DewfordTown_EventScript_LandedSlateport::

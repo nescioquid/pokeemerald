@@ -1,4 +1,4 @@
-script Pory_EventScript_GiveTMSwordsDance {
+script _LavaridgeTown_EventScript_GiveTMSwordsDance {
   lock
   faceplayer
   if (!flag(FLAG_RECEIVED_TM_SWORDS_DANCE)) {
@@ -18,7 +18,7 @@ script Pory_EventScript_GiveTMSwordsDance {
   end
 }
 
-script LavaridgeTown_EventScript_EggWoman_Pory {
+script _LavaridgeTown_EventScript_EggWoman {
   lock
   faceplayer
   if (!flag(FLAG_RECEIVED_LAVARIDGE_EGG)) {

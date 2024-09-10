@@ -1,4 +1,4 @@
-script Route118_EventScript_ReceiveGoodRod_Pory {
+script _Route118_EventScript_ReceiveGoodRod {
   msgbox(format("Hmm!\nWe're of identical minds!\pHmm!\nWell, I'm fresh out of Good Rods, but you can have these instead!"))
   giveitem(ITEM_RARE_CANDY, 36)
   goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
@@ -8,16 +8,16 @@ script Route118_EventScript_ReceiveGoodRod_Pory {
   end
 }
 
-text Route118_Text_TryCatchingMonWithGoodRod_Pory {
+text _Route118_Text_TryCatchingMonWithGoodRod {
   format("Try fishing to catch all sorts of Pokémon!")
 }
 
-script PoryScript_Angelo {
-  trainerbattle_single(TRAINER_ANGELO, PoryText_AngeloIntro, MauvilleCity_Gym_Text_AngeloDefeat)
+script _Route118_EventScript_Angelo {
+  trainerbattle_single(TRAINER_ANGELO, _Route118_Text_AngeloIntro, MauvilleCity_Gym_Text_AngeloDefeat)
   msgbox(MauvilleCity_Gym_Text_AngeloPostBattle, MSGBOX_AUTOCLOSE)
   end
 }
 
-text PoryText_AngeloIntro {
+text _Route118_Text_AngeloIntro {
   format("Hey, remember me? I'm that Bug Maniac from the Mauville Gym. I got some guy with a guitar to take my spot.\pAlso, I still love shiny things!")
 }

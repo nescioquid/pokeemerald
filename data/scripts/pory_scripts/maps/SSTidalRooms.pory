@@ -1,4 +1,4 @@
-script Pory_EventScript_GiveTMEmbargo {
+script _SSTidalRooms_EventScript_GiveTMEmbargo {
   lock
   faceplayer
   if(!flag(FLAG_RECEIVED_TM_EMBARGO)) {

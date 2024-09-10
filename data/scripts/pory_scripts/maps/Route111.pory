@@ -1,9 +1,9 @@
-script Route111_EventScript_Girl_Pory {
+script _Route111_EventScript_BerryGirl {
   lock
   faceplayer
   if (!flag(FLAG_DAILY_ROUTE_111_RECEIVED_BERRY)) {
     msgbox(format("I watered the plants every day. They grew lots of flowers.\pAnd they gave me lots of Berries, too.\pHere you go! You can have these!"))
-    call(Common_PoryScript_GiveBerry_Generic)
+    call(_Common_EventScript_GiveBerry_Generic)
     setflag(FLAG_DAILY_ROUTE_111_RECEIVED_BERRY)
     msgbox(format("I'm going to try really hard and make Berries in different colors.\pI hope you try hard, too!"))
   } else {

@@ -1,4 +1,4 @@
-script Pory_EventScript_GiveTMQuash {
+script _MossdeepCity_Mart_EventScript_GiveTMQuash {
   lock
   faceplayer
   if (!flag(FLAG_RECEIVED_TM_QUASH)) {

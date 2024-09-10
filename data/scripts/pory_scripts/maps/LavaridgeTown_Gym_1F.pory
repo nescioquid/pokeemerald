@@ -1,10 +1,10 @@
-script LavaridgeTown_Gym_1F_EventScript_GymGuide_Pory {
+script _LavaridgeTown_Gym_1F_EventScript_GymGuide {
   lock
   faceplayer
   if (!flag(FLAG_DEFEATED_LAVARIDGE_GYM)) {
     msgbox(format("Hey, how's it going, Champion-\nbound {PLAYER}?\pLavaridge's Gym Leader Flannery\nuses Fire-type Pokémon.\pHer passion for Pokémon burns stronger\nand hotter than a volcano.\pDon't get too close to her--you'll burn!\nHose her down with water and then\lgo for it!"))
     if (!flag(FLAG_RECEIVED_FRESH_WATER_LAVARIDGE_GYM)) {
-      call(PoryScript_GymGuide_GiveFreshWater)
+      call(_Common_EventScript_GymGuide_GiveFreshWater)
       setflag(FLAG_RECEIVED_FRESH_WATER_LAVARIDGE_GYM)
       msgbox(format("Good luck!"))
     }
@@ -12,7 +12,7 @@ script LavaridgeTown_Gym_1F_EventScript_GymGuide_Pory {
     msgbox(LavaridgeTown_Gym_1F_Text_GymGuidePostVictory)
     if (!flag(FLAG_RECEIVED_RARE_CANDY_LAVARIDGE_GYM)) {
       msgbox(format("Oh, and take these!"))
-      call(PoryScript_GymGuide_GiveRareCandy)
+      call(_Common_EventScript_GymGuide_GiveRareCandy)
       setflag(FLAG_RECEIVED_RARE_CANDY_LAVARIDGE_GYM)
       msgbox(format("Congrats on the big win!"))
     }
@@ -21,22 +21,22 @@ script LavaridgeTown_Gym_1F_EventScript_GymGuide_Pory {
   end
 }
 
-text LavaridgeTown_Gym_1F_Text_FlanneryIntro_Pory {
+text _LavaridgeTown_Gym_1F_Text_FlanneryIntro {
   format("WELCOME!\pNo, wait. I mean…\nPuny Trainer, you've done well to make it this far!\pLet's see. I'm uh, honored to be serving as the Gym Leader of…\pNo, I mean…\nI'm Flannery, and I'm in charge here!\pUh…\nYou'd better not underestimate me just 'cause I've only been Leader a short time!\pWith skills inherited from my grandfather, I'm gonna, uh, demonstrate the hot moves we've honed in this land!\p… … … … … …\n… … … … … …\pHAIYAAAAAAAAAAAAA!")
 }
 
-text LavaridgeTown_Gym_1F_Text_FlanneryDefeat_Pory {
+text _LavaridgeTown_Gym_1F_Text_FlanneryDefeat {
   format("Oh…\nI guess I was trying too hard…")
 }
 
-text Pory_Text_FlanneryDefeated {
+text _LavaridgeTown_Gym_1F_Text_FlanneryDefeated {
   format("I… I've only recently become a Gym Leader.\pI guess I was trying too hard to be someone I'm not.\pWhen I don't act like myself, no wonder the Pokémon that battle at my side confused.\pThanks for teaching me that.\nYou deserve this.")
 }
 
-text LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis_Pory {
+text _LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis {
   format("If you have a Heat Badge, it lets Pokémon use the HM move Strength outside of battle.\pThis is a token of my appreciation.\nDon't be shy about taking it!")
 }
 
-text LavaridgeTown_Gym_1F_Text_ExplainOverheat_Pory {
+text _LavaridgeTown_Gym_1F_Text_ExplainOverheat {
   format("Overheat is a Fire-type move that inflicts serious damage on the opponent.\pBut it also sharply cuts the Sp. Atk of the Pokémon using it. It might not be suitable for longer battles.")
 }

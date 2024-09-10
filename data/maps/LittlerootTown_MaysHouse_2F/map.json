@@ -242,7 +242,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Common_PoryScript_GameCube_Orange"
+      "script": "_PlayersHouse_2F_EventScript_GameCube_Orange"
     },
     {
       "type": "sign",

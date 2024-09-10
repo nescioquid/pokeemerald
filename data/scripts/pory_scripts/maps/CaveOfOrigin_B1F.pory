@@ -1,8 +1,8 @@
-text CaveOfOrigin_B1F_Text_WallaceStory_Pory {
+text _CaveOfOrigin_B1F_Text_WallaceStory {
 format("Ah, so you are {PLAYER}{KUN}?\nI've heard tales of your exploits.\pMy name is Wallace.\pI was once the Gym Leader of Sootopolis, but I've been entrusted with the protection of this cave, and now this has come up.\pSo, I've handed over the Gym's operation to my mentor Juan.\p… … … … … …\n… … … … … …\pGroudon and Kyogre, the two Pokémon wreaking havoc here, are considered to be super-ancient Pokémon.\pBut there aren't just two super-ancient Pokémon.\pThere is one more somewhere.\pSomewhere, there is a super-ancient Pokémon named Rayquaza.\pIt's said that it was Rayquaza that becalmed the two combatants in the distant past.\pBut even I have no clue as to Rayquaza's whereabouts…")
 }
 
-script PoryScript_Wallace_Postgame {
+script _CaveOfOrigin_B1F_EventScript_Wallace_Postgame {
   if (!flag(FLAG_DEFEATED_WALLACE_CAVE_OF_ORIGIN)) {
     msgbox(format("Oh, wow, {PLAYER}. I didn't think I'd be disturbed here.\pWe haven't known each other for long, but you should have an idea of how strong of a trainer I am.\pSo, {PLAYER}, if you're seriously going to challenge me, expect the worst!"))
     trainerbattle_no_intro(TRAINER_WALLACE, format("You…\nI had no idea you'd become so strong…"))

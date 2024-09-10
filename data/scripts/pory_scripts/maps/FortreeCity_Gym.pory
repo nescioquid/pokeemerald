@@ -1,10 +1,10 @@
-script FortreeCity_Gym_EventScript_GymGuide_Pory {
+script _FortreeCity_Gym_EventScript_GymGuide {
   lock
   faceplayer
   if (!flag(FLAG_DEFEATED_FORTREE_GYM)) {
     msgbox(format("Yo, how's it going, Champion-\nbound {PLAYER}?\pFortree Gym Leader Winona is\na master of Flying-type Pokémon.\pShe's waiting at the back of this Gym,\nbehind the rotating doors.\pShe's waiting for new challengers\nwho are trying to take wing!"))
     if (!flag(FLAG_RECEIVED_FRESH_WATER_FORTREE_GYM)) {
-      call(PoryScript_GymGuide_GiveFreshWater)
+      call(_Common_EventScript_GymGuide_GiveFreshWater)
       setflag(FLAG_RECEIVED_FRESH_WATER_FORTREE_GYM)
       msgbox(format("Okay, go for it!"))
     }
@@ -12,7 +12,7 @@ script FortreeCity_Gym_EventScript_GymGuide_Pory {
     msgbox(FortreeCity_Gym_Text_GymGuidePostVictory)
     if (!flag(FLAG_RECEIVED_RARE_CANDY_FORTREE_GYM)) {
       msgbox(format("Oh, and take these!"))
-      call(PoryScript_GymGuide_GiveRareCandy)
+      call(_Common_EventScript_GymGuide_GiveRareCandy)
       setflag(FLAG_RECEIVED_RARE_CANDY_FORTREE_GYM)
       msgbox(format("Congrats on the big win!"))
     }
@@ -21,26 +21,26 @@ script FortreeCity_Gym_EventScript_GymGuide_Pory {
   end
 }
 
-text FortreeCity_Gym_Text_WinonaIntro_Pory {
+text _FortreeCity_Gym_Text_WinonaIntro {
   format("I am Winona. I am the Leader of the Fortree Pokémon Gym.\pI have become one with Bird Pokémon and have soared the skies…\pHowever grueling the battle, we have triumphed with grace…\pWitness our elegant choreography!")
 }
 
-text FortreeCity_Gym_Text_WinonaDefeat_Pory {
+text _FortreeCity_Gym_Text_WinonaDefeat {
   format("Never before have I seen a Trainer command Pokémon with more grace than I…")
 }
 
-text Pory_Text_WinonaDefeated {
+text _FortreeCity_Gym_Text_WinonaDefeated {
   format("In recognition of your prowess,\nI present to you this Gym Badge.")
 }
 
-text FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis_Pory {
+text _FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis {
   format("With the Feather Badge, you will be able to use the HM move Fly outside of battle.\pAnd this…\nThis is a gift from me.")
 }
 
-text Pory_Text_WinonaExplainRoost {
+text _FortreeCity_Gym_Text_ExplainRoost {
   format("Roost…\pWith this move, the user can restore its HP by up to half by landing on the ground and resting its injured body.\pHowever, the user loses its Flying-type designation during the turn, so be cautious.")
 }
 
-text FortreeCity_Gym_Text_WinonaPostBattle_Pory {
+text _FortreeCity_Gym_Text_WinonaPostBattle {
   format("You won against me…\pI know you'll keep aiming higher and higher. Someday, you may even fly up into the sky!")
 }
