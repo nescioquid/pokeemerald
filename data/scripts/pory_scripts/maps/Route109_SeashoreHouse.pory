@@ -1,4 +1,4 @@
-script Route109_SeashoreHouse_EventScript_Owner_Pory {
+script _Route109_SeashoreHouse_EventScript_Owner {
   lock
   faceplayer
   if (!flag(FLAG_RECEIVED_6_SODA_POP)) {

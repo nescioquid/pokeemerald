@@ -1,6 +1,6 @@
 const LOCALID_WALLY = 6
 
-script MauvilleCity_EventScript_Wally_Pory {
+script _MauvilleCity_EventScript_Wally {
   lockall
   if (flag(FLAG_DECLINED_WALLY_BATTLE_MAUVILLE)) {
     goto(MauvilleCity_EventScript_WallyRequestBattleAgain)

@@ -1,4 +1,4 @@
-script Pory_EventScript_GiveTMPsyshock {
+script _PacifidlogTown_House5_EventScript_GiveTMPsyshock {
   lock
   faceplayer
   if (!flag(FLAG_RECEIVED_TM_PSYSHOCK)) {

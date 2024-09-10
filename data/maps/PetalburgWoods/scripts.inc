@@ -90,7 +90,7 @@ PetalburgWoods_EventScript_DevonResearcherPostBattle::
 	@ msgbox PetalburgWoods_Text_ThatWasAwfullyClose, MSGBOX_DEFAULT
 	@ giveitem ITEM_GREAT_BALL
 	@ goto_if_eq VAR_RESULT, FALSE, PetalburgWoods_EventScript_BagFull
-	call PoryScript_ThatWasAwfullyClose
+	call _PetalburgWoods_EventScript_ThatWasAwfullyClose
 	goto PetalburgWoods_EventScript_DevonResearcherFinish
 	end
 

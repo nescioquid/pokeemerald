@@ -1,4 +1,4 @@
-script Route119_WeatherInstitute_1F_EventScript_Bed_Pory {
+script _Route119_WeatherInstitute_1F_EventScript_Bed {
   lockall
   if (!flag(FLAG_VISITED_FORTREE_CITY)) {
     msgbox(format("There's a bed…\nLet's take a rest."))
