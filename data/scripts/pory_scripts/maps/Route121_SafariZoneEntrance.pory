@@ -1,4 +1,4 @@
-script Pory_EventScript_GiveTMDreamEater {
+script _Route121_SafariZoneEntrance_EventScript_GiveTMDreamEater {
   lock
   faceplayer
   if (!flag(FLAG_RECEIVED_TM_DREAM_EATER)) {

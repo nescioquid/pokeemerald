@@ -1,4 +1,4 @@
-script PoryScript_YouGotItThankYou {
+script _RustboroCity_EventScript_YouGotItThankYou {
   msgbox(format("Oh! How did it go? The Devon Parts?\pYou did!\nYou got them back!\pYou really are a great Trainer!\pI know! As my thanks, I'll give you this!"))
   giveitem(ITEM_EXP_SHARE)
   goto_if_eq(VAR_RESULT, FALSE, RustboroCity_EventScript_BagFull)
@@ -7,7 +7,7 @@ script PoryScript_YouGotItThankYou {
 
 const LOCALID_SCIENTIST = 15
 
-script RustboroCity_EventScript_MatchCallTutorial_Pory {
+script _RustboroCity_EventScript_MatchCallTutorial {
   setflag(FLAG_ADDED_MATCH_CALL_TO_POKENAV)
   msgbox(RustboroCity_Text_IdBetterGetBackToWork)
   closemessage
@@ -23,18 +23,18 @@ script RustboroCity_EventScript_MatchCallTutorial_Pory {
   end
 }
 
-text RustboroCity_Text_HelpMeIWasRobbed_Pory {
+text _RustboroCity_Text_HelpMeIWasRobbed {
   "Oh, it's you!\pYou're that fantastic Trainer who\nhelped me in Petalburg Woods!\pHelp me! I was robbed by Team Aqua!\nI have to get the Devon Parts back!\pIf I don't…\nI'm going to be in serious trouble."
 }
 
-text RustboroCity_Text_YouGotItThankYou_Pory {
+text _RustboroCity_Text_YouGotItThankYou {
   "Oh! How did it go?\nThe Devon Parts?\pYou did!\nYou got them back!\pYou really are a great Trainer!\pI know! As my thanks, I'll give you\nanother Great Ball!"
 }
 
-text RustboroCity_Text_WaitDontTakeMyGoods_Pory {
+text _RustboroCity_Text_WaitDontTakeMyGoods {
 	"Wait! Pleeeaaase!\pDon't take my Parts!"
 }
 
-text RustboroCity_DevonCorp_1F_Text_SoundsLikeStolenGoodsRecovered_Pory {
+text _RustboroCity_DevonCorp_1F_Text_SoundsLikeStolenGoodsRecovered {
   "It sounds like they've recovered\nthe stolen Devon Parts."
 }

@@ -1,4 +1,4 @@
-script LilycoveCity_DepartmentStore_2F_EventScript_ClerkLeft_Pory {
+script _LilycoveCity_DepartmentStore_2F_EventScript_ClerkLeft {
   lock
   faceplayer
   random(2)
@@ -7,75 +7,31 @@ script LilycoveCity_DepartmentStore_2F_EventScript_ClerkLeft_Pory {
       case 0: message(format("We got some awesome new snacks in! The crunchies are my favorite!"))
     }
   } else {
-    call(Common_PoryScript_Clerk_Hello)
+    call(_Common_EventScript_Clerk_Hello)
   }
   waitmessage
-  call(Common_PoryScript_GetBadgeCount)
+  call(_Common_EventScript_GetBadgeCount)
   switch(var(VAR_RESULT)) {
-    case 0: pokemart(Pokemart_Items_Some)
-    case 1: pokemart(Pokemart_Items_Some)
-    case 2: pokemart(Pokemart_Items_Some)
-    case 3: pokemart(Pokemart_Items_Some)
-    case 4: pokemart(Pokemart_Items_Some)
-    case 5: pokemart(Pokemart_Items_Some)
-    case 6: pokemart(Pokemart_Items_Most)
-    case 7: pokemart(Pokemart_Items_Most)
-    case 8: pokemart(Pokemart_Items_All)
+    case 0: pokemart(_LilycoveCity_DepartmentStore_2F_Pokemart_Items_Some)
+    case 1: pokemart(_LilycoveCity_DepartmentStore_2F_Pokemart_Items_Some)
+    case 2: pokemart(_LilycoveCity_DepartmentStore_2F_Pokemart_Items_Some)
+    case 3: pokemart(_LilycoveCity_DepartmentStore_2F_Pokemart_Items_Some)
+    case 4: pokemart(_LilycoveCity_DepartmentStore_2F_Pokemart_Items_Some)
+    case 5: pokemart(_LilycoveCity_DepartmentStore_2F_Pokemart_Items_Some)
+    case 6: pokemart(_LilycoveCity_DepartmentStore_2F_Pokemart_Items_Most)
+    case 7: pokemart(_LilycoveCity_DepartmentStore_2F_Pokemart_Items_Most)
+    case 8: pokemart(_LilycoveCity_DepartmentStore_2F_Pokemart_Items_All)
   }
   if (var(VAR_RESULT) == 0) {
     msgbox(format("{FONT_SHORT}…munch… …munch…"))
   } else {
-    call(Common_PoryScript_Clerk_Goodbye)
+    call(_Common_EventScript_Clerk_Goodbye)
   }
   release
   end
 }
 
-mart Pokemart_Items_All {
-  ITEM_PEWTER_CRUNCHIES
-  ITEM_RAGE_CANDY_BAR
-  ITEM_POTION
-  ITEM_SUPER_POTION
-  ITEM_HYPER_POTION
-  ITEM_MAX_POTION
-  ITEM_FULL_RESTORE
-  ITEM_ANTIDOTE
-  ITEM_PARALYZE_HEAL
-  ITEM_AWAKENING
-  ITEM_BURN_HEAL
-  ITEM_ICE_HEAL
-  ITEM_FULL_HEAL
-  ITEM_REVIVE
-  ITEM_REPEL
-  ITEM_SUPER_REPEL
-  ITEM_MAX_REPEL
-  ITEM_POKE_DOLL
-  ITEM_FLUFFY_TAIL
-}
-
-mart Pokemart_Items_Most {
-  ITEM_PEWTER_CRUNCHIES
-  ITEM_RAGE_CANDY_BAR
-  ITEM_POTION
-  ITEM_SUPER_POTION
-  ITEM_HYPER_POTION
-  ITEM_MAX_POTION
-  // ITEM_FULL_RESTORE
-  ITEM_ANTIDOTE
-  ITEM_PARALYZE_HEAL
-  ITEM_AWAKENING
-  ITEM_BURN_HEAL
-  ITEM_ICE_HEAL
-  ITEM_FULL_HEAL
-  ITEM_REVIVE
-  ITEM_REPEL
-  ITEM_SUPER_REPEL
-  ITEM_MAX_REPEL
-  ITEM_POKE_DOLL
-  ITEM_FLUFFY_TAIL
-}
-
-mart Pokemart_Items_Some {
+mart _LilycoveCity_DepartmentStore_2F_Pokemart_Items_Some {
   ITEM_PEWTER_CRUNCHIES
   ITEM_RAGE_CANDY_BAR
   ITEM_POTION
@@ -97,7 +53,51 @@ mart Pokemart_Items_Some {
   ITEM_FLUFFY_TAIL
 }
 
-script LilycoveCity_DepartmentStore_2F_EventScript_ClerkRight_Pory {
+mart _LilycoveCity_DepartmentStore_2F_Pokemart_Items_Most {
+  ITEM_PEWTER_CRUNCHIES
+  ITEM_RAGE_CANDY_BAR
+  ITEM_POTION
+  ITEM_SUPER_POTION
+  ITEM_HYPER_POTION
+  ITEM_MAX_POTION
+  // ITEM_FULL_RESTORE
+  ITEM_ANTIDOTE
+  ITEM_PARALYZE_HEAL
+  ITEM_AWAKENING
+  ITEM_BURN_HEAL
+  ITEM_ICE_HEAL
+  ITEM_FULL_HEAL
+  ITEM_REVIVE
+  ITEM_REPEL
+  ITEM_SUPER_REPEL
+  ITEM_MAX_REPEL
+  ITEM_POKE_DOLL
+  ITEM_FLUFFY_TAIL
+}
+
+mart _LilycoveCity_DepartmentStore_2F_Pokemart_Items_All {
+  ITEM_PEWTER_CRUNCHIES
+  ITEM_RAGE_CANDY_BAR
+  ITEM_POTION
+  ITEM_SUPER_POTION
+  ITEM_HYPER_POTION
+  ITEM_MAX_POTION
+  ITEM_FULL_RESTORE
+  ITEM_ANTIDOTE
+  ITEM_PARALYZE_HEAL
+  ITEM_AWAKENING
+  ITEM_BURN_HEAL
+  ITEM_ICE_HEAL
+  ITEM_FULL_HEAL
+  ITEM_REVIVE
+  ITEM_REPEL
+  ITEM_SUPER_REPEL
+  ITEM_MAX_REPEL
+  ITEM_POKE_DOLL
+  ITEM_FLUFFY_TAIL
+}
+
+script _LilycoveCity_DepartmentStore_2F_EventScript_ClerkRight {
   lock
   faceplayer
   random(3)
@@ -106,34 +106,34 @@ script LilycoveCity_DepartmentStore_2F_EventScript_ClerkRight_Pory {
       case 0: message(format("Sure, I'll let you touch my balls… But only if you ask nicely! Haha!"))
     }
   } else {
-    call(Common_PoryScript_Clerk_Hello)
+    call(_Common_EventScript_Clerk_Hello)
   }
   waitmessage
-  call(Common_PoryScript_GetBadgeCount)
+  call(_Common_EventScript_GetBadgeCount)
   switch(var(VAR_RESULT)) {
-    case 0: pokemart(Pokemart_PokeBalls_Some)
-    case 1: pokemart(Pokemart_PokeBalls_Some)
-    case 2: pokemart(Pokemart_PokeBalls_Some)
-    case 3: pokemart(Pokemart_PokeBalls_Some)
-    case 4: pokemart(Pokemart_PokeBalls_Some)
-    case 5: pokemart(Pokemart_PokeBalls_Some)
-    case 6: pokemart(Pokemart_PokeBalls_All)
-    case 7: pokemart(Pokemart_PokeBalls_All)
-    case 8: pokemart(Pokemart_PokeBalls_All)
+    case 0: pokemart(_LilycoveCity_DepartmentStore_2F_Pokemart_PokeBalls_Some)
+    case 1: pokemart(_LilycoveCity_DepartmentStore_2F_Pokemart_PokeBalls_Some)
+    case 2: pokemart(_LilycoveCity_DepartmentStore_2F_Pokemart_PokeBalls_Some)
+    case 3: pokemart(_LilycoveCity_DepartmentStore_2F_Pokemart_PokeBalls_Some)
+    case 4: pokemart(_LilycoveCity_DepartmentStore_2F_Pokemart_PokeBalls_Some)
+    case 5: pokemart(_LilycoveCity_DepartmentStore_2F_Pokemart_PokeBalls_Some)
+    case 6: pokemart(_LilycoveCity_DepartmentStore_2F_Pokemart_PokeBalls_All)
+    case 7: pokemart(_LilycoveCity_DepartmentStore_2F_Pokemart_PokeBalls_All)
+    case 8: pokemart(_LilycoveCity_DepartmentStore_2F_Pokemart_PokeBalls_All)
   }
   if (var(VAR_RESULT) == 0) {
     msgbox(format("Seriously though, you're not gonna tell my boss I said that, are you?"))
   } else {
-    call(Common_PoryScript_Clerk_Goodbye)
+    call(_Common_EventScript_Clerk_Goodbye)
   }
   release
   end
 }
 
-mart Pokemart_PokeBalls_All {
+mart _LilycoveCity_DepartmentStore_2F_Pokemart_PokeBalls_Some {
   ITEM_POKE_BALL
   ITEM_GREAT_BALL
-  ITEM_ULTRA_BALL
+  // ITEM_ULTRA_BALL
   ITEM_QUICK_BALL
   ITEM_DIVE_BALL
   ITEM_DUSK_BALL
@@ -145,10 +145,10 @@ mart Pokemart_PokeBalls_All {
   ITEM_TIMER_BALL
 }
 
-mart Pokemart_PokeBalls_Some {
+mart _LilycoveCity_DepartmentStore_2F_Pokemart_PokeBalls_All {
   ITEM_POKE_BALL
   ITEM_GREAT_BALL
-  // ITEM_ULTRA_BALL
+  ITEM_ULTRA_BALL
   ITEM_QUICK_BALL
   ITEM_DIVE_BALL
   ITEM_DUSK_BALL

@@ -1,10 +1,10 @@
-script MauvilleCity_Gym_EventScript_GymGuide_Pory {
+script _MauvilleCity_Gym_EventScript_GymGuide {
   lock
   faceplayer
   if (!flag(FLAG_DEFEATED_MAUVILLE_GYM)) {
     msgbox(format("Hey, how's it going, Champion-\nbound {PLAYER}?\pWATTSON, the Leader of Mauville\nGym, uses Electric-type Pokémon.\pIf you challenge him with Water-type\nPokémon, he'll zap them! Bzzt!\pAnd, he's put in switch-controlled\ndoors all over his Gym! Eccentric!"))
     if (!flag(FLAG_RECEIVED_FRESH_WATER_MAUVILLE_GYM)) {
-      call(PoryScript_GymGuide_GiveFreshWater)
+      call(_Common_EventScript_GymGuide_GiveFreshWater)
       setflag(FLAG_RECEIVED_FRESH_WATER_MAUVILLE_GYM)
       msgbox(format("Hey, go for it!"))
     }
@@ -12,7 +12,7 @@ script MauvilleCity_Gym_EventScript_GymGuide_Pory {
     msgbox(MauvilleCity_Gym_Text_GymGuidePostVictory)
     if (!flag(FLAG_RECEIVED_RARE_CANDY_MAUVILLE_GYM)) {
       msgbox(format("Oh, and take these!"))
-      call(PoryScript_GymGuide_GiveRareCandy)
+      call(_Common_EventScript_GymGuide_GiveRareCandy)
       setflag(FLAG_RECEIVED_RARE_CANDY_MAUVILLE_GYM)
       msgbox(format("Congrats on the big win!"))
     }
@@ -21,22 +21,22 @@ script MauvilleCity_Gym_EventScript_GymGuide_Pory {
   end
 }
 
-text MauvilleCity_Gym_Text_WattsonIntro_Pory {
+text _MauvilleCity_Gym_Text_WattsonIntro {
   format("Oh? Now, what are you doing here?\pWhat's that? You say you've gotten past all my rigged doors?\pWahahahah!\nNow, that is amusing!\pI've given up on my plans to reform the city, I have.\pMaking traps for my Gym and battling with young Trainers like you are what I live for now!\pSo then, I, Wattson, the Leader of Mauville Gym, shall electrify you!")
 }
 
-text MauvilleCity_Gym_Text_WattsonDefeat_Pory {
+text _MauvilleCity_Gym_Text_WattsonDefeat {
   format("Wahahahah!\nFine, I lost!")
 }
 
-text Pory_Text_WattsonDefeated {
+text _MauvilleCity_Gym_Text_WattsonDefeated {
   format("You wound up electrifying me!\nNow, take this Badge!")
 }
 
-text MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis_Pory {
+text _MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis {
   format("With the Dynamo Badge, Pokémon can use the HM for Rock Smash outside of battle.\pAlrighty then, this here's for you, too!\nGo on, take it with you!")
 }
 
-text Pory_Text_WattsonExplainVoltSwitch {
+text _MauvilleCity_Gym_Text_ExplainVoltSwitch {
   format("Volt Switch is a move where your Pokémon attacks the opponent and then rushes back to switch places with a party Pokémon in waiting!")
 }

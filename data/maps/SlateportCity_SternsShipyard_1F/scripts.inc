@@ -10,7 +10,7 @@ SlateportCity_SternsShipyard_1F_EventScript_Dock::
 	msgbox SlateportCity_SternsShipyard_1F_Text_CantMakeHeadsOrTails, MSGBOX_DEFAULT
 	applymovement LOCALID_DOCK, Common_Movement_FacePlayer
 	waitmovement 0
-	msgbox SlateportCity_SternsShipyard_1F_Text_MeetDockDeliverToStern_Pory, MSGBOX_DEFAULT
+	msgbox _SlateportCity_SternsShipyard_1F_Text_MeetDockDeliverToStern, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_DOCK, Common_Movement_FaceOriginalDirection
 	waitmovement 0

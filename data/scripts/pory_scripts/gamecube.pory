@@ -1,10 +1,10 @@
-script Common_PoryScript_GameCube {
+script _PlayersHouse_2F_EventScript_GameCube {
   msgbox(format("It's a Nintendo GameCube.\p… … … … … … … …\n… … … … … … … …\pSeriously? I spent all this time modding this game, and you want to play a different one?"), MSGBOX_SIGN)
   release
   end
 }
 
-script Common_PoryScript_GameCube_Orange {
+script _PlayersHouse_2F_EventScript_GameCube_Orange {
   msgbox(format("It's a Nintendo GameCube.\p… … … … … … … …\n… … … … … … … …\pYes, they came in orange.\nBut seriously? I spent all this time modding this game, and you want to play a different one?"), MSGBOX_SIGN)
   release
   end

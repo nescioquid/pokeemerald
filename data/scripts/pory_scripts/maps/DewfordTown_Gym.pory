@@ -1,10 +1,10 @@
-script DewfordTown_Gym_EventScript_GymGuide_Pory {
+script _DewfordTown_Gym_EventScript_GymGuide {
   lock
   faceplayer
   if (!flag(FLAG_DEFEATED_DEWFORD_GYM)) {
     msgbox(format("Hey, how's it going, Champion-\nbound {PLAYER}?\pDewford's Gym Leader Brawly commands\nFighting-type Pokémon.\pGoing against him with NORMAL-type\nPokémon is asking for trouble.\pFighting Pokémon will lay a serious\nsmack down on Normal Pokémon,\lso be careful!\pWhat's worse, the Gym is as dark as\nthe ocean floor.\pBut it will get brighter after defeating\nthe Trainers in your way."))
     if (!flag(FLAG_RECEIVED_FRESH_WATER_DEWFORD_GYM)) {
-      call(PoryScript_GymGuide_GiveFreshWater)
+      call(_Common_EventScript_GymGuide_GiveFreshWater)
       setflag(FLAG_RECEIVED_FRESH_WATER_DEWFORD_GYM)
       msgbox(format("Hey, okay, go for it!"))
     }
@@ -12,7 +12,7 @@ script DewfordTown_Gym_EventScript_GymGuide_Pory {
     msgbox(DewfordTown_Gym_Text_GymGuidePostVictory)
     if (!flag(FLAG_RECEIVED_RARE_CANDY_DEWFORD_GYM)) {
       msgbox(format("Oh, and take these!"))
-      call(PoryScript_GymGuide_GiveRareCandy)
+      call(_Common_EventScript_GymGuide_GiveRareCandy)
       setflag(FLAG_RECEIVED_RARE_CANDY_DEWFORD_GYM)
       msgbox(format("Congrats on the big win!"))
     }
@@ -21,22 +21,22 @@ script DewfordTown_Gym_EventScript_GymGuide_Pory {
   end
 }
 
-text DewfordTown_Gym_Text_BrawlyDefeat_Pory {
+text _DewfordTown_Gym_Text_BrawlyDefeat {
   format("Whoah, wow! You made a much bigger splash than I expected!")
 }
 
-text Pory_Text_BrawlyDefeated {
+text _DewfordTown_Gym_Text_BrawlyDefeated {
   format("Okay, you've got me.\nTake this Gym Badge!")
 }
 
-text DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis_Pory {
+text _DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis {
   format("With the Knuckle Badge, you'll be able to use the HM move Flash outside of battle.\pHmm… You know what?\n I think you can make full use of this, too. I'm sure it will help your Pokémon bulk up muscle!")
 }
 
-text DewfordTown_Gym_Text_ExplainBulkUp_Pory {
+text _DewfordTown_Gym_Text_ExplainBulkUp {
   format("Bulk Up temporarily enhances the Pokémon's muscle power.\pThe move boosts both the Attack and Defense of the Pokémon.")
 }
 
-text DewfordTown_Gym_Text_BrawlyPostBattle_Pory {
+text _DewfordTown_Gym_Text_BrawlyPostBattle {
   format("I can see your talent becoming a giant wave that causes a storm of astonishment among Trainers one day!")
 }

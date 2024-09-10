@@ -1,4 +1,4 @@
-script VerdanturfTown_WandasHouse_EventScript_Wally_Pory {
+script _VerdanturfTown_WandasHouse_EventScript_Wally {
   lock
   faceplayer
   if (!flag(FLAG_WALLY_SPEECH)) {

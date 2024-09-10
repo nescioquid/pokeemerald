@@ -1,4 +1,4 @@
-script PoryScript_MetaBoy_RelaxingOnBeach {
+script _Route109_EventScript_MetaBoy_RelaxingOnBeach {
   lock
   faceplayer
   if (!flag(FLAG_RECEIVED_LINKING_CORD)) {
@@ -15,10 +15,10 @@ script PoryScript_MetaBoy_RelaxingOnBeach {
   end
 }
 
-text Route109_Text_BrineySailToDewfordQuestion_Pory {
+text _Route109_Text_BrineySailToDewfordQuestion {
   "Mr. Briney: I thought you're supposed\nto deliver the Devon Parts.\pWould you like to sail back to\nDewford, then?"
 }
 
-text Route109_Text_BrineyDeliverDevonGoods_Pory {
+text _Route109_Text_BrineyDeliverDevonGoods {
   "Mr. Briney: Then you go on and deliver\nthe Devon Parts. I'll be waiting."
 }

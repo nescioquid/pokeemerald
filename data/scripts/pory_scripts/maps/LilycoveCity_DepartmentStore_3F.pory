@@ -1,25 +1,25 @@
-script LilycoveCity_DepartmentStore_3F_EventScript_ClerkLeft_Pory {
+script _LilycoveCity_DepartmentStore_3F_EventScript_ClerkLeft {
   lock
   faceplayer
   checkitem(ITEM_HARBOR_MAIL)
   if (!var(VAR_RESULT)) {
     message(format("Let me guess… You're looking for Harbor Mail? Was I right?"))
   } else {
-    call(Common_PoryScript_Clerk_Hello)
+    call(_Common_EventScript_Clerk_Hello)
   }
   waitmessage
-  pokemart(Pokemart_Mail)
+  pokemart(_LilycoveCity_DepartmentStore_3F_Pokemart_Mail)
   checkitem(ITEM_HARBOR_MAIL)
   if (var(VAR_RESULT)) {
     msgbox(format("{FONT_SMALL}Enjoy gambling without me…"))
   } else {
-    call(Common_PoryScript_Clerk_Goodbye)
+    call(_Common_EventScript_Clerk_Goodbye)
   }
   release
   end
 }
 
-mart Pokemart_Mail {
+mart _LilycoveCity_DepartmentStore_3F_Pokemart_Mail {
   ITEM_ORANGE_MAIL
   ITEM_HARBOR_MAIL
   ITEM_GLITTER_MAIL
@@ -34,7 +34,7 @@ mart Pokemart_Mail {
   ITEM_RETRO_MAIL
 }
 
-script LilycoveCity_DepartmentStore_3F_EventScript_ClerkRight_Pory {
+script _LilycoveCity_DepartmentStore_3F_EventScript_ClerkRight {
   lock
   faceplayer
   random(3)
@@ -43,47 +43,30 @@ script LilycoveCity_DepartmentStore_3F_EventScript_ClerkRight_Pory {
       case 0: message(format("Hey kid, you wanna buy some drugs? Haha! Of course you do.\p{FONT_SMALL}It's the only reason anyone ever talks to me here…"))
     }
   } else {
-    call(Common_PoryScript_Clerk_Hello)
+    call(_Common_EventScript_Clerk_Hello)
   }
   waitmessage
   switch(var(VAR_RESULT)) {
-    case 0: pokemart(Pokemart_StatBoosters_Some)
-    case 1: pokemart(Pokemart_StatBoosters_Some)
-    case 2: pokemart(Pokemart_StatBoosters_Some)
-    case 3: pokemart(Pokemart_StatBoosters_Some)
-    case 4: pokemart(Pokemart_StatBoosters_Some)
-    case 5: pokemart(Pokemart_StatBoosters_Some)
-    case 6: pokemart(Pokemart_StatBoosters_Some)
-    case 7: pokemart(Pokemart_StatBoosters_All)
-    case 8: pokemart(Pokemart_StatBoosters_All)
+    case 0: pokemart(_LilycoveCity_DepartmentStore_3F_Pokemart_StatBoosters_Some)
+    case 1: pokemart(_LilycoveCity_DepartmentStore_3F_Pokemart_StatBoosters_Some)
+    case 2: pokemart(_LilycoveCity_DepartmentStore_3F_Pokemart_StatBoosters_Some)
+    case 3: pokemart(_LilycoveCity_DepartmentStore_3F_Pokemart_StatBoosters_Some)
+    case 4: pokemart(_LilycoveCity_DepartmentStore_3F_Pokemart_StatBoosters_Some)
+    case 5: pokemart(_LilycoveCity_DepartmentStore_3F_Pokemart_StatBoosters_Some)
+    case 6: pokemart(_LilycoveCity_DepartmentStore_3F_Pokemart_StatBoosters_Some)
+    case 7: pokemart(_LilycoveCity_DepartmentStore_3F_Pokemart_StatBoosters_All)
+    case 8: pokemart(_LilycoveCity_DepartmentStore_3F_Pokemart_StatBoosters_All)
   }
   if (var(VAR_RESULT) == 0) {
     msgbox(format("{FONT_SMALL}…I'm so lonely… Maybe I should get a hobby or something…"))
   } else {
-    call(Common_PoryScript_Clerk_Goodbye)
+    call(_Common_EventScript_Clerk_Goodbye)
   }
   release
   end
 }
 
-mart Pokemart_StatBoosters_All {
-  ITEM_PROTEIN
-  ITEM_IRON
-  ITEM_CALCIUM
-  ITEM_ZINC
-  ITEM_CARBOS
-  ITEM_HP_UP
-  ITEM_X_ATTACK
-  ITEM_X_DEFENSE
-  ITEM_X_SP_ATK
-  ITEM_X_SP_DEF
-  ITEM_X_SPEED
-  ITEM_X_ACCURACY
-  ITEM_GUARD_SPEC
-  ITEM_DIRE_HIT
-}
-
-mart Pokemart_StatBoosters_Some {
+mart _LilycoveCity_DepartmentStore_3F_Pokemart_StatBoosters_Some {
   ITEM_PROTEIN
   ITEM_IRON
   ITEM_CALCIUM
@@ -95,6 +78,23 @@ mart Pokemart_StatBoosters_Some {
   // ITEM_X_SP_ATK
   // ITEM_X_SP_DEF
   // ITEM_X_SPEED
+  ITEM_X_ACCURACY
+  ITEM_GUARD_SPEC
+  ITEM_DIRE_HIT
+}
+
+mart _LilycoveCity_DepartmentStore_3F_Pokemart_StatBoosters_All {
+  ITEM_PROTEIN
+  ITEM_IRON
+  ITEM_CALCIUM
+  ITEM_ZINC
+  ITEM_CARBOS
+  ITEM_HP_UP
+  ITEM_X_ATTACK
+  ITEM_X_DEFENSE
+  ITEM_X_SP_ATK
+  ITEM_X_SP_DEF
+  ITEM_X_SPEED
   ITEM_X_ACCURACY
   ITEM_GUARD_SPEC
   ITEM_DIRE_HIT

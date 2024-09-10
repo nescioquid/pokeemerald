@@ -4,7 +4,7 @@ const STARTER_GRASS = 0
 const STARTER_FIRE  = 1
 const STARTER_WATER = 2
 
-script PoryScript_MetaBoy_GiveJohtoStarter {
+script _DewfordTown_PokemonCenter_1F_EventScript_MetaBoy {
   lock
   faceplayer
   if (!flag(FLAG_RECEIVED_JOHTO_STARTER)) {
@@ -14,7 +14,7 @@ script PoryScript_MetaBoy_GiveJohtoStarter {
     } else {
       msgbox(format("I just don't think I'm cut out to be a Trainer.\pI'd give my Pokémon to a strong enough Trainer right now…\p{FONT_SMALL}…I could be laying on the beach right now, modding my video games…"))
     }
-    call(Common_PoryScript_GetBadgeCount)
+    call(_Common_EventScript_GetBadgeCount)
     if (var(VAR_RESULT) >= 2) {
       playse(SE_PIN)
       applymovement(LOCALID_META_BOY, Common_Movement_ExclamationMark)
@@ -42,7 +42,7 @@ script PoryScript_MetaBoy_GiveJohtoStarter {
           setvar(GIVEMON_HELPER_ARTICLE, 1)
           givemon(SPECIES_QUILAVA, 30)
       }
-      call(Common_PoryScript_GivemonHelper)
+      call(_Common_EventScript_GivemonHelper)
       setflag(FLAG_RECEIVED_JOHTO_STARTER)
       setflag(FLAG_HIDE_DEWFORD_POKEMON_CENTER_META_BOY)
       clearflag(FLAG_HIDE_ROUTE_109_META_BOY)

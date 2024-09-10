@@ -1,12 +1,12 @@
-script SootopolisCity_EventScript_KiriGiveBerry_Pory {
+script _SootopolisCity_EventScript_KiriGiveBerry {
   dotimebasedevents
   special(GetPlayerBigGuyGirlString)
   if (!flag(FLAG_DAILY_SOOTOPOLIS_RECEIVED_BERRY)) {
     msgbox(format("Hi, what your name?\p… … …  … … …  … … …\nOkay!\pI'm Kiri. Mommy and Daddy named me so I grow big and strong. They wished!\pHere, you have it!"))
-    call(Common_PoryScript_GiveBerry_Generic)
+    call(_Common_EventScript_GiveBerry_Generic)
     setflag(FLAG_DAILY_SOOTOPOLIS_RECEIVED_BERRY)
     msgbox(format("Give you this, too! I like it lots!"))
-    call(Common_PoryScript_GiveBerry_Generic)
+    call(_Common_EventScript_GiveBerry_Generic)
     msgbox(format("What wish is your name?"))
   } else {
     msgbox(format("Spring, summer, fall, winter.\pBorn in spring, you like spring? You born in summer, you like summer?"), MSGBOX_YESNO)

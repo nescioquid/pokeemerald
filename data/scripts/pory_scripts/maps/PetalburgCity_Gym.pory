@@ -1,14 +1,14 @@
-text PetalburgCity_Gym_Text_IllLoanYouMyChansey_Pory {
+text _PetalburgCity_Gym_Text_IllLoanYouMyChansey {
   format("Wally, here, I'll loan you my Pokémon.\pWally received a Chansey!")
 }
 
-script PetalburgCity_Gym_EventScript_GymGuide_Pory {
+script _PetalburgCity_Gym_EventScript_GymGuide {
   lock
   faceplayer
   if (!flag(FLAG_DEFEATED_PETALBURG_GYM)) {
     msgbox(format("Hey, how's it going, Champion-\nbound {PLAYER}?\pThe doors in this Gym open when you\nbeat the awaiting Trainers.\pWhoops! The doors in this room are\nalready open, so don't attack me!\pThe Trainers of Petalburg Gym\nuse all kinds of items.\pThe door at the left leads to\nthe Speed Room.\pThe door at the right leads to\nthe Accuracy Room.\pThe room's name will be on\nthe door, so choose carefully.\pOnce you've chosen the door…"))
     if (!flag(FLAG_RECEIVED_FRESH_WATER_PETALBURG_GYM)) {
-      call(PoryScript_GymGuide_GiveFreshWater)
+      call(_Common_EventScript_GymGuide_GiveFreshWater)
       setflag(FLAG_RECEIVED_FRESH_WATER_PETALBURG_GYM)
       msgbox(format("Well, hey, go for it!"))
     }
@@ -16,7 +16,7 @@ script PetalburgCity_Gym_EventScript_GymGuide_Pory {
     msgbox(PetalburgCity_Gym_Text_GymGuidePostVictory)
     if (!flag(FLAG_RECEIVED_RARE_CANDY_PETALBURG_GYM)) {
       msgbox(format("Oh, and take these!"))
-      call(PoryScript_GymGuide_GiveRareCandy)
+      call(_Common_EventScript_GymGuide_GiveRareCandy)
       setflag(FLAG_RECEIVED_RARE_CANDY_PETALBURG_GYM)
       msgbox(format("Congrats on the big win!"))
     }
@@ -25,22 +25,22 @@ script PetalburgCity_Gym_EventScript_GymGuide_Pory {
   end
 }
 
-text PetalburgCity_Gym_Text_NormanIntro_Pory {
+text _PetalburgCity_Gym_Text_NormanIntro {
   format("Dad: {PLAYER}…\nSo, you did get four Gym Badges.\pIt makes me happier than I can really describe.\pBeing able to have a real battle with my own child like this.\pBut a battle is a battle!\pI will do everything within my power as a Gym Leader to win!\pYou'd better give it your best shot, too, {PLAYER}!")
 }
 
-text PetalburgCity_Gym_Text_NormanDefeat_Pory {
+text _PetalburgCity_Gym_Text_NormanDefeat {
   format("…!\pI… I can't…")
 }
 
-text Pory_Text_NormanDefeated {
+text _PetalburgCity_Gym_Text_NormanDefeated {
   format("I can't believe it. {PLAYER}…\pI've lost to {PLAYER}?\p… … … … … …\p… … … … … …\pYou've come this far…\pThat's how it is then!\pHere, take this.")
 }
 
-text PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis_Pory {
+text _PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis {
   format("Dad: Having that Badge will insure that Pokémon that know the HM move Surf will also be able to travel over water now.\pAnd this is my gift to you, {PLAYER}. I'm sure you'll be able to use it well.")
 }
 
-text Pory_Text_NormanExplainRetaliate {
+text _PetalburgCity_Gym_Text_ExplainRetaliate {
   format("Retaliate will allow you to take revenge for a fallen team member.\pIts power will be doubled if you have a Pokémon use it in the very next turn after an ally faints.\p I hope you and your Pokémon will be diligent enough to use it wisely.\p… … … … … …")
 }

@@ -1,4 +1,4 @@
-script PoryScript_Steven_ChampionsRoom {
+script _EverGrandeCity_ChampionsRoom_EventScript_Steven {
   playbgm(MUS_ENCOUNTER_CHAMPION, FALSE)
   msgbox(format("Welcome, {PLAYER}{KUN}.\pI was hoping I would get to see you make it here one day.\pTell me…\pWhat have you seen on your journey with your Pokémon?\pWhat have you felt, meeting so many other Trainers out there?\pTraveling this rich land of Hoenn… has it awoken something inside you?\pI want you to come at me with all that you've learned.\pMy Pokémon and I will respond in turn with all that we know!\pLet it begin!"))
   trainerbattle_no_intro(TRAINER_STEVEN, format("So I, the Champion, fall in defeat…"))
@@ -6,14 +6,14 @@ script PoryScript_Steven_ChampionsRoom {
   end
 }
 
-text EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech_Pory {
+text _EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech {
   format("Just as I have come to expect.\p{PLAYER}{KUN}, you are truly an excellent Pokémon Trainer.\pCongratulations to you!\pAnd thank you…I had wanted to learn how you feel about this world, what kinds of ideals you have developed with you Pokémon…\pI feel I was able to find the answer in our battle.\pThe feelings you have for your Pokémon…\pAnd the way that your Pokémon gave their all in battle in response to those feelings…\pThose two together created a great power.\pThat is how you seized victory today.\pI felt a thrill of excitement in my chest when we first met, and now I know for sure that feeling was not misplaced!\pYou are rightfully the Hoenn regions new…")
 }
 
-text EverGrandeCity_ChampionsRoom_Text_StevenComeWithMe_Pory {
+text _EverGrandeCity_ChampionsRoom_Text_StevenComeWithMe {
   format("Steven: {PLAYER}{KUN}…\pNo, let me rephrase that properly.\pThe new Champion!\pCome with me.")
 }
 
-text EverGrandeCity_ChampionsRoom_Text_StevenWaitOutside_Pory {
+text _EverGrandeCity_ChampionsRoom_Text_StevenWaitOutside {
   format("Steven: I'm sorry, but…\pFrom here on, only those Trainers who\nhave become Champions may enter.\pYou'll have to wait outside with\nProf. Birch.")
 }

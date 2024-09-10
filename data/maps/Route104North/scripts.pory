@@ -7,12 +7,12 @@ script _Route104North_OnTransition {
   end
 }
 
-script Route104North_EventScript_ExpertF {
+script _Route104North_EventScript_ExpertF {
   lock
   faceplayer
   if (!flag(FLAG_RECEIVED_BERRY_ROUTE_104)) {
     msgbox(format("If you see Berries growing in loamy soil, feel free to take them.\pBut, make sure you plant a Berry in the same spot. That's common courtesy.\pHere, I'll share these with you."))
-    call(Common_PoryScript_GiveBerry_Retaliatory)
+    call(_Common_EventScript_GiveBerry_Retaliatory)
     setflag(FLAG_RECEIVED_BERRY_ROUTE_104)
   }
   msgbox(format("The way you look, you must be a Trainer, no?\pTrainers often make Pokémon hold Berries.\pIt's up to you whether to grow Berries or use them."))
@@ -20,7 +20,7 @@ script Route104North_EventScript_ExpertF {
   end
 }
 
-script Pory_EventScript_GiveTMEchoedVoice {
+script _Route104North_EventScript_GiveTMEchoedVoice {
   lock
   faceplayer
   if(!flag(FLAG_RECEIVED_TM_ECHOED_VOICE)) {
@@ -48,7 +48,7 @@ script Route104North_EventScript_WhiteHerbFlorist {
       msgbox(format("Oh, thank you so much!"))
       closemessage
       call(Common_EventScript_OutOfCenterPartyHeal)
-      msgbox(format("All healed up!\NThere's lots of icky bugs in Petalburg Woods, so make sure your Pokémon stay healthy!"))
+      msgbox(format("All healed up!\nThere's lots of icky bugs in Petalburg Woods, so make sure your Pokémon stay healthy!"))
     } else {
       msgbox(format("Well, what am I gonna do with all these berries then?"))
     }

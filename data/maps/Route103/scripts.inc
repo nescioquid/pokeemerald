@@ -25,7 +25,7 @@ Route103_EventScript_Rival::
 	end
 
 Route103_EventScript_RivalMay::
-	goto_if_set FLAG_SYS_GAME_CLEAR, PoryScript_May_Postgame
+	goto_if_set FLAG_SYS_GAME_CLEAR, _Route103_EventScript_May_Postgame
 	msgbox Route103_Text_MayRoute103Pokemon, MSGBOX_DEFAULT
 	closemessage
 	playbgm MUS_ENCOUNTER_MAY, TRUE
@@ -43,7 +43,7 @@ Route103_EventScript_RivalMay::
 	end
 
 Route103_EventScript_RivalBrendan::
-	goto_if_set FLAG_SYS_GAME_CLEAR, PoryScript_Brendan_Postgame
+	goto_if_set FLAG_SYS_GAME_CLEAR, _Route103_EventScript_Brendan_Postgame
 	msgbox Route103_Text_BrendanRoute103Pokemon, MSGBOX_DEFAULT
 	closemessage
 	playbgm MUS_ENCOUNTER_BRENDAN, TRUE

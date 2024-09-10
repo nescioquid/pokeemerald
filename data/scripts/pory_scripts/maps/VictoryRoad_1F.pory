@@ -1,6 +1,6 @@
 const LOCALID_WALLY = 6
 
-script VictoryRoad_1F_OnTransition_Pory {
+script _VictoryRoad_1F_OnTransition {
   if (var(VAR_VICTORY_ROAD_1F_STATE) == 1) {
     setobjectxyperm(LOCALID_WALLY, 31, 9)
     setobjectmovementtype(LOCALID_WALLY, MOVEMENT_TYPE_LOOK_AROUND)
@@ -8,63 +8,63 @@ script VictoryRoad_1F_OnTransition_Pory {
   end
 }
 
-script VictoryRoad_1F_EventScript_WallyTriggerLeft_Pory {
+script _VictoryRoad_1F_EventScript_WallyTriggerLeft {
   lock
   addobject(LOCALID_WALLY)
-  applymovement(LOCALID_WALLY, VictoryRoad_1F_Movement_WallyApproachPlayerLeft_Pory)
+  applymovement(LOCALID_WALLY, _VictoryRoad_1F_Movement_WallyApproachPlayerLeft)
   waitmovement(0)
   faceplayer
   applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight)
   waitmovement(0)
   setvar(VAR_VICTORY_ROAD_1F_STATE, 1)
-  goto(VictoryRoad_1F_EventScript_Wally_Pory)
+  goto(_VictoryRoad_1F_EventScript_Wally)
   release
   end
 }
 
-script VictoryRoad_1F_EventScript_WallyTriggerCenter_Pory {
+script _VictoryRoad_1F_EventScript_WallyTriggerCenter {
   lock
   addobject(LOCALID_WALLY)
-  applymovement(LOCALID_WALLY, VictoryRoad_1F_Movement_WallyApproachPlayerCenter_Pory)
+  applymovement(LOCALID_WALLY, _VictoryRoad_1F_Movement_WallyApproachPlayerCenter)
   waitmovement(0)
   faceplayer
   applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown)
   waitmovement(0)
   setvar(VAR_VICTORY_ROAD_1F_STATE, 1)
-  goto(VictoryRoad_1F_EventScript_Wally_Pory)
+  goto(_VictoryRoad_1F_EventScript_Wally)
   release
   end
 }
 
-script VictoryRoad_1F_EventScript_WallyTriggerRight_Pory {
+script _VictoryRoad_1F_EventScript_WallyTriggerRight {
   lock
   addobject(LOCALID_WALLY)
-  applymovement(LOCALID_WALLY, VictoryRoad_1F_Movement_WallyApproachPlayerRight_Pory)
+  applymovement(LOCALID_WALLY, _VictoryRoad_1F_Movement_WallyApproachPlayerRight)
   waitmovement(0)
   faceplayer
   applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft)
   waitmovement(0)
   setvar(VAR_VICTORY_ROAD_1F_STATE, 1)
-  goto(VictoryRoad_1F_EventScript_Wally_Pory)
+  goto(_VictoryRoad_1F_EventScript_Wally)
   release
   end
 }
 
-movement VictoryRoad_1F_Movement_WallyApproachPlayerLeft_Pory {
+movement _VictoryRoad_1F_Movement_WallyApproachPlayerLeft {
   walk_up * 6
   face_left
 }
 
-movement VictoryRoad_1F_Movement_WallyApproachPlayerCenter_Pory {
+movement _VictoryRoad_1F_Movement_WallyApproachPlayerCenter {
   walk_up * 6
 }
 
-movement VictoryRoad_1F_Movement_WallyApproachPlayerRight_Pory {
+movement _VictoryRoad_1F_Movement_WallyApproachPlayerRight {
   walk_up * 6
   face_right
 }
 
-script VictoryRoad_1F_EventScript_Wally_Pory {
+script _VictoryRoad_1F_EventScript_Wally {
   if (!flag(FLAG_DEFEATED_WALLY_VICTORY_ROAD)) {
   msgbox(VictoryRoad_1F_Text_WallyNotGoingToLoseAnymore)
   trainerbattle_no_intro(TRAINER_WALLY_VR_1, VictoryRoad_1F_Text_WallyEntranceDefeat)
