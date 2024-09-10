@@ -1,13 +1,13 @@
-script Route123_BerryMastersHouse_EventScript_BerryMaster_Pory {
+script _Route123_BerryMastersHouse_EventScript_BerryMaster {
   lock
   faceplayer
   dotimebasedevents
   if (!flag(FLAG_DAILY_BERRY_MASTER_RECEIVED_BERRY)) {
     msgbox(format("You may call me the Berry Master.\pI dream of filling the world with beautiful flowers, so I raise Berries and hand them out to everyone.\pTake these!"))
-    call(Common_PoryScript_GiveBerry_Resistance)
+    call(_Common_EventScript_GiveBerry_Resistance)
     setflag(FLAG_DAILY_BERRY_MASTER_RECEIVED_BERRY)
     msgbox(format("Why be stingy?\nTake some more!"))
-    call(Common_PoryScript_GiveBerry_Resistance)
+    call(_Common_EventScript_GiveBerry_Resistance)
     msgbox(format("Be sure to visit the Pretty Petal flower shop near Rustboro.\pLet flowers fill the world!"))
   } else {
     msgbox(format("I'm done for today. Come again another day.\pLet flowers fill the world!"))
@@ -16,13 +16,13 @@ script Route123_BerryMastersHouse_EventScript_BerryMaster_Pory {
   end
 }
 
-script Route123_BerryMastersHouse_EventScript_BerryMastersWife_Pory {
+script _Route123_BerryMastersHouse_EventScript_BerryMastersWife {
   lock
   faceplayer
   dotimebasedevents
   if (!flag(FLAG_DAILY_BERRY_MASTERS_WIFE)) {
     msgbox(format("The way my husband grows Berries, oh, he's the best in the world.\pHe makes me proud, that he does.\pAh…\nI want you to have these."))
-    call(Common_PoryScript_GiveBerry_RaiseStats)
+    call(_Common_EventScript_GiveBerry_RaiseStats)
     setflag(FLAG_DAILY_BERRY_MASTERS_WIFE)
   }
   msgbox(format("Our four grandchildren are becoming more accomplished than my husband.\pJoy never goes out of my life!"))

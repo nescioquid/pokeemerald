@@ -1,4 +1,4 @@
-script FallarborTown_MoveRelearnersHouse_EventScript_MoveRelearner_Pory {
+script _FallarborTown_MoveRelearnersHouse_EventScript_MoveRelearner {
   lock
   faceplayer
   if (!flag(FLAG_TEMP_1)) {

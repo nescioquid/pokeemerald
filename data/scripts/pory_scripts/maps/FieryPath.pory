@@ -1,6 +1,6 @@
 const LOCALID_LOST_HIKER = 9
 
-script Pory_EventScript_GiveTMNaturePower {
+script _FieryPath_EventScript_GiveTMNaturePower {
   lock
   faceplayer
   if (!flag(FLAG_RECEIVED_TM_NATURE_POWER)) {

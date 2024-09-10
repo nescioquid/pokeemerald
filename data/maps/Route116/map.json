@@ -270,7 +270,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route116_EventScript_DevonEmployee_Pory",
+      "script": "_Route116_EventScript_DevonEmployee",
       "flag": "FLAG_HIDE_ROUTE_116_DEVON_EMPLOYEE"
     },
     {
@@ -310,7 +310,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route116_EventScript_GlassesMan_Pory",
+      "script": "_Route116_EventScript_GlassesMan",
       "flag": "FLAG_HIDE_ROUTE_116_DROPPED_GLASSES_MAN"
     },
     {

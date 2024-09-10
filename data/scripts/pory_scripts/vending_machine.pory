@@ -1,6 +1,6 @@
 const DRINK_CHOSEN = VAR_TEMP_1
 
-script Common_PoryScript_VendingMachine {
+script _Common_EventScript_VendingMachine {
   lockall
   message(format("Which one do you want?"))
   waitmessage
@@ -49,13 +49,13 @@ script Common_PoryScript_VendingMachine {
   }
   additem(DRINK_CHOSEN)
   msgbox(format("{PLAYER} put away the {STR_VAR_1} in the Bag."))
-  call(Common_PoryScript_VendingMachine_ExtraCanOfDrinkDroppedDown)
+  call(_Common_EventScript_VendingMachine_ExtraCanOfDrinkDroppedDown)
   hidemoneybox
   releaseall
   end
 }
 
-script Common_PoryScript_VendingMachine_ExtraCanOfDrinkDroppedDown {
+script _Common_EventScript_VendingMachine_ExtraCanOfDrinkDroppedDown {
   // 1/50 chance of an additional drink dropping
   random(50)
   switch (var(VAR_RESULT)) {
@@ -70,6 +70,6 @@ script Common_PoryScript_VendingMachine_ExtraCanOfDrinkDroppedDown {
       msgbox(format("{PLAYER} put away the {STR_VAR_1} in the Bag."))
       msgbox(gText_PutItemInPocket)
       // 1/50 * the prev 1/50 chance of a third additional drink dropping, 0.04% chance
-      call(Common_PoryScript_VendingMachine_ExtraCanOfDrinkDroppedDown)
+      call(_Common_EventScript_VendingMachine_ExtraCanOfDrinkDroppedDown)
   }
 }

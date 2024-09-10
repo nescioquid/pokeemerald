@@ -320,7 +320,7 @@ static const match_call_text_data_t sWallyTextScripts[] = {
     { MatchCall_Text_Wally2,      FLAG_RUSTURF_TUNNEL_OPENED,          0xFFFF },
     { MatchCall_Text_Wally3,      FLAG_DEFEATED_LAVARIDGE_GYM,         0xFFFF },
     { MatchCall_Text_Wally4,      FLAG_RECEIVED_CASTFORM,              0xFFFF },
-    { MatchCall_Text_Wally5_Pory, FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT, 0xFFFF },
+    { _MatchCall_Text_Wally5,     FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT, 0xFFFF },
     { MatchCall_Text_Wally6,      FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN, 0xFFFF },
     { MatchCall_Text_Wally7,      FLAG_DEFEATED_WALLY_VICTORY_ROAD,    0xFFFF },
     { NULL,                       0xFFFF,                              0xFFFF }

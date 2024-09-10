@@ -1,4 +1,4 @@
-script Pory_EventScript_GiveTMDazzlingGleam {
+script _Route123_EventScript_GiveTMDazzlingGleam {
   lock
   faceplayer
   if (!flag(FLAG_RECEIVED_TM_DAZZLING_GLEAM)) {
@@ -12,7 +12,7 @@ script Pory_EventScript_GiveTMDazzlingGleam {
   end
 }
 
-script Pory_EventScript_GiveBigRoot {
+script _Route123_EventScript_GiveBigRoot {
   lock
   faceplayer
   goto_if_set(FLAG_RECEIVED_BIG_ROOT, Route123_EventScript_ReceivedGigaDrain)

@@ -1,4 +1,4 @@
-script PoryScript_Brendan_Postgame {
+script _Route103_EventScript_Brendan_Postgame {
   if (!flag(FLAG_DEFEATED_RIVAL_ROUTE_103_POSTGAME)) {
     msgbox(format("Man, this is nostaglic.\nBack here, huh?\p.Remember?\nThis is where we battled for the first time.\pHey, {PLAYER}…\nDo me a favor?\pCome on!\nLet's battle one more time!\pI wanna know what you saw on your journey, how you felt, and what you experienced out there.\pI want to know all about you and your Pokémon, {PLAYER}.\pBut that's not all…\pI want you to know all about me and mine!"))
     trainerbattle_no_intro(TRAINER_BRENDAN_ROUTE_103_POSTGAME, format("…\pThanks, {PLAYER}!\nJust what I'd expect from a Champion!"))
@@ -9,7 +9,7 @@ script PoryScript_Brendan_Postgame {
   end
 }
 
-script PoryScript_May_Postgame {
+script _Route103_EventScript_May_Postgame {
   if (!flag(FLAG_DEFEATED_RIVAL_ROUTE_103_POSTGAME)) {
     msgbox(format("Here we are again!\pWow, it's so nostalgic, you know?\pDo you remember? This is where we first battled.\p…{PLAYER}!\nCould you do something for me?\pCome on!\nLet's battle one more time!\pI wanna know what you saw on your journey, how you felt, and what you experienced out there.\pI want to know all about you and your Pokémon, {PLAYER}!\pAnd then…\pI want you to know all about me and mine!"))
     trainerbattle_no_intro(TRAINER_MAY_ROUTE_103_POSTGAME, format("…\pThanks, {PLAYER}!\nYou really are a Champion!"))

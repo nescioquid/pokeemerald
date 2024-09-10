@@ -1,10 +1,10 @@
-script LilycoveCity_EventScript_BerryGentleman_Pory {
+script _LilycoveCity_EventScript_BerryGentleman {
   lock
   faceplayer
   dotimebasedevents
   if (!flag(FLAG_DAILY_LILYCOVE_RECEIVED_BERRY)) {
     msgbox(format("When it gets right down to it…\pThe same way suits suit me perfectly, a crisp breeze suits the sea.\pAnd you, some Berries suit you to a “T”…\pWhy should that be so?"))
-    call(Common_PoryScript_GiveBerry_Generic)
+    call(_Common_EventScript_GiveBerry_Generic)
     setflag(FLAG_DAILY_LILYCOVE_RECEIVED_BERRY)
     msgbox(format("When it gets right down to it…\pIt's because you're a Trainer!"))
   } else {

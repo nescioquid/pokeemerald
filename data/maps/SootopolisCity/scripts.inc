@@ -692,8 +692,8 @@ SootopolisCity_EventScript_ExpertLegendaries::
 SootopolisCity_EventScript_Kiri::
 	lock
 	faceplayer
-	goto_if_le VAR_SOOTOPOLIS_CITY_STATE, 1, SootopolisCity_EventScript_KiriGiveBerry_Pory
-	goto_if_ge VAR_SOOTOPOLIS_CITY_STATE, 6, SootopolisCity_EventScript_KiriGiveBerry_Pory
+	goto_if_le VAR_SOOTOPOLIS_CITY_STATE, 1, _SootopolisCity_EventScript_KiriGiveBerry
+	goto_if_ge VAR_SOOTOPOLIS_CITY_STATE, 6, _SootopolisCity_EventScript_KiriGiveBerry
 	goto_if_eq VAR_SOOTOPOLIS_CITY_STATE, 5, SootopolisCity_EventScript_KiriRayquaza
 	msgbox SootopolisCity_Text_BigPokemonFighting, MSGBOX_DEFAULT
 	closemessage

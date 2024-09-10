@@ -25,7 +25,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PoryScript_MetaBoy_Postgame",
+      "script": "_MeteorFalls_StevensCave_EventScript_MetaBoy_Postgame",
       "flag": "0"
     }
   ],

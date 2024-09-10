@@ -2,7 +2,7 @@ const COINS_REQUIRED = 1000
 const PRIZE_CHOSEN = VAR_TEMP_1
 const COINS_OWNED = VAR_TEMP_2
 
-script PoryScript_PrizeCornerItems {
+script _MauvilleCity_GameCorner_EventScript_PrizeCornerItems {
   lock
   faceplayer
   msgbox(MauvilleCity_GameCorner_Text_ExchangeCoinsForPrizes)
