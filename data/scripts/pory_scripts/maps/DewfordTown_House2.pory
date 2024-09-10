@@ -1,4 +1,4 @@
-script DewfordTown_House2_EventScript_Man_Pory {
+script _DewfordTown_House2_EventScript_GiveChoiceScarf {
   lock
   faceplayer
   if (!flag(FLAG_RECEIVED_CHOICE_SCARF)) {

@@ -1,10 +1,10 @@
-script SootopolisCity_Gym_1F_EventScript_GymGuide_Pory {
+script _SootopolisCity_Gym_1F_EventScript_GymGuide {
   lock
   faceplayer
   if (!flag(FLAG_DEFEATED_SOOTOPOLIS_GYM)) {
     msgbox(format("Yo! How's it going, Champion-\nbound {PLAYER}?\pSootopolis's Gym Leader Juan is\na master of WATER-type Pokémon.\pAnd, to get to Juan, an icy floor\nwill hamper your progress…\pListen, I'm sorry, but that's all the\nadvice that I have for you.\pThe rest of the way, you have to\ngo for it yourself!"))
     if (!flag(FLAG_RECEIVED_FRESH_WATER_SOOTOPOLIS_GYM)) {
-      call(PoryScript_GymGuide_GiveFreshWater)
+      call(_Common_EventScript_GymGuide_GiveFreshWater)
       setflag(FLAG_RECEIVED_FRESH_WATER_SOOTOPOLIS_GYM)
       msgbox(format("Good luck!"))
     }
@@ -12,7 +12,7 @@ script SootopolisCity_Gym_1F_EventScript_GymGuide_Pory {
     msgbox(SootopolisCity_Gym_1F_Text_GymGuidePostVictory)
     if (!flag(FLAG_RECEIVED_RARE_CANDY_SOOTOPOLIS_GYM)) {
       msgbox(format("Oh, and take these!"))
-      call(PoryScript_GymGuide_GiveRareCandy)
+      call(_Common_EventScript_GymGuide_GiveRareCandy)
       setflag(FLAG_RECEIVED_RARE_CANDY_SOOTOPOLIS_GYM)
       msgbox(format("Congrats on the big win!"))
     }
@@ -21,18 +21,18 @@ script SootopolisCity_Gym_1F_EventScript_GymGuide_Pory {
   end
 }
 
-text SootopolisCity_Gym_1F_Text_JuanDefeat_Pory {
+text _SootopolisCity_Gym_1F_Text_JuanDefeat {
   format("Ahahaha, excellent!\nVery well, you are the winner.")
 }
 
-text Pory_Text_JuanDefeated {
+text _SootopolisCity_Gym_1F_Text_JuanDefeated {
   format("From you, I sense the brilliant shine of skill that will overcome all.\pHowever, compared with me or even Wallace, you are lacking in elegance.\pPerhaps I should make you a loan of my outfit?\p… … … … … …\n… … … … … …\pHahaha, I merely jest!\pRather than my clothes, I shall reward you with this, the Rain Badge!")
 }
 
-text SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis_Pory {
+text _SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis {
   format("Having the Rain Badge shall allow you the use\nof the HM move Waterfall to scale\lwalls of cascading water.\pAnd, so that you never forget the\nbattle we shared, take this…")
 }
 
-text Pory_Text_JuanExplainScald {
+text _SootopolisCity_Gym_1F_Text_ExplainScald {
   format("The Technical Machine I handed you contains the move Scald.\pIn use, it will occasionally burn the target with boiling hot water.")
 }

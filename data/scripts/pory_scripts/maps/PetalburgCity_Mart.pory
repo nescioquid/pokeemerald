@@ -1,4 +1,4 @@
-script PetalburgCity_Mart_EventScript_Man_Pory {
+script _PetalburgCity_Mart_EventScript_Man {
   lock
   faceplayer
   msgbox(format("Do you have any Antidotes with you? No? Hah! Well, you better figure something out if you're gonna go anywhere near Petalburg Woods."))

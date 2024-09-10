@@ -1,4 +1,4 @@
-script RustboroCity_House1_EventScript_Trader_Pory {
+script _RustboroCity_House1_EventScript_Trader {
   lock
   faceplayer
   msgbox(format("Any Pokémon can be cute if you raise\nit with care and kindness."))

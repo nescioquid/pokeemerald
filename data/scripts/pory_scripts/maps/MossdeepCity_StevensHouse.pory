@@ -1,4 +1,4 @@
-script PoryScript_StevenGiveOldAmber {
+script _MossdeepCity_StevensHouse_EventScript_GiveOldAmber {
   msgbox(format("Steven: {PLAYER}{KUN}…\pAs you can see, there's not much here, but this is my home.\pThank you for all that you've done. This is my token of appreciation.\pNo need to be shy you've earned it."))
   giveitem(ITEM_OLD_AMBER)
   goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
