@@ -27,7 +27,7 @@ LilycoveCity_PokemonCenter_1F_EventScript_ShowContestLadyMon::
 
 LilycoveCity_PokemonCenter_1F_EventScript_Nurse::
 	setvar VAR_0x800B, LOCALID_NURSE
-	call Common_PoryScript_PkmnCenterNurse
+	call _Common_EventScript_PkmnCenterNurse
 	waitmessage
 	waitbuttonpress
 	release

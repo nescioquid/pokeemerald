@@ -1,4 +1,4 @@
-script Common_PoryScript_MoveReminder {
+script _Common_EventScript_MoveReminder {
   lock
   faceplayer
   if (!flag(FLAG_TEMP_1)) {
@@ -8,14 +8,14 @@ script Common_PoryScript_MoveReminder {
     msgbox(format("You want me to remind one of them?"), MSGBOX_YESNO)
   }
   if (var(VAR_RESULT)) {
-    call(Common_PoryScript_MoveReminder_TeachMove)
+    call(_Common_EventScript_MoveReminder_TeachMove)
   }
   msgbox(format("If your Pokémon ever need to remember some moves, you know where to find me!"))
   release
   end
 }
 
-script Common_PoryScript_MoveReminder_TeachMove {
+script _Common_EventScript_MoveReminder_TeachMove {
   if (!flag(FLAG_TEMP_2)) {
     msgbox(format("Which one needs reminding?"))
     setflag(FLAG_TEMP_2)
@@ -28,16 +28,16 @@ script Common_PoryScript_MoveReminder_TeachMove {
     special(IsSelectedMonEgg)
     if (var(VAR_RESULT)) {
       msgbox(format("Huh? There isn't a single move that I can teach an Egg."))
-      call(Common_PoryScript_MoveReminder_TeachMove)
+      call(_Common_EventScript_MoveReminder_TeachMove)
     }
     if (var(VAR_0x8005) == 0) {
       msgbox(format("Sorry… It doesn't appear as if there's any move I can help that Pokémon remember."))
-      call(Common_PoryScript_MoveReminder_TeachMove)
+      call(_Common_EventScript_MoveReminder_TeachMove)
     }
     msgbox(format("What move should I remind them of?"))
     special(TeachMoveRelearnerMove)
     waitstate
-    call(Common_PoryScript_MoveReminder_TeachMove)
+    call(_Common_EventScript_MoveReminder_TeachMove)
   } else {
     clearflag(FLAG_TEMP_2)
     msgbox(format("Come back if your Pokémon ever need help remembering moves!"))

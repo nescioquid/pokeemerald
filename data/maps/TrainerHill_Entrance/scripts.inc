@@ -103,7 +103,7 @@ TrainerHill_Entrance_EventScript_EndExitChallenge::
 
 TrainerHill_Entrance_EventScript_Nurse::
 	setvar VAR_0x800B, LOCALID_NURSE
-	call Common_PoryScript_PkmnCenterNurse
+	call _Common_EventScript_PkmnCenterNurse
 	waitmessage
 	waitbuttonpress
 	release

@@ -266,7 +266,7 @@
       "elevation": 3,
       "var": "VAR_ROUTE104_STATE",
       "var_value": "1",
-      "script": "Route104South_EventScript_RivalTrigger"
+      "script": "_Route104South_EventScript_RivalTrigger"
     }
   ],
   "bg_events": [

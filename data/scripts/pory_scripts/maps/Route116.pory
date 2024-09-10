@@ -1,4 +1,4 @@
-script Route116_EventScript_DevonEmployee_Pory {
+script _Route116_EventScript_DevonEmployee {
   lock
   faceplayer
   if(!flag(FLAG_MET_DEVON_EMPLOYEE)) {
@@ -22,7 +22,7 @@ script Route116_EventScript_DevonEmployee_Pory {
   end
 }
 
-script Route116_EventScript_GlassesMan_Pory {
+script _Route116_EventScript_GlassesMan {
   lock
   faceplayer
   checkitem(ITEM_WISE_GLASSES)

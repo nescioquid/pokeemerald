@@ -1,4 +1,4 @@
-script FortreeCity_House1_EventScript_Trader_Pory {
+script _FortreeCity_House1_EventScript_Trader {
   lock
   faceplayer
   msgbox(format("I'm going to make my Pokémon super\nstrong from this moment on!\pI hope you do the same with yours!"))

@@ -1,7 +1,7 @@
 .set LOCALID_WALLY_ENTRANCE, 4
 
 VictoryRoad_1F_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, VictoryRoad_1F_OnTransition_Pory
+	map_script MAP_SCRIPT_ON_TRANSITION, _VictoryRoad_1F_OnTransition
 	.byte 0
 
 VictoryRoad_1F_OnTransition:
