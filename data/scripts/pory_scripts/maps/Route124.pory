@@ -1,5 +1,5 @@
-script Route124_EventScript_HuntersHouseSign_Pory {
-  msgbox(format("Diving Treasure Hunter's House\n“We buy Pearls!”"))
+script _Route124_EventScript_HuntersHouseSign {
+  msgbox(format("Diving Treasure Hunter's House\n“We buy Pearls!”"), MSGBOX_SIGN)
   release
   end
 }

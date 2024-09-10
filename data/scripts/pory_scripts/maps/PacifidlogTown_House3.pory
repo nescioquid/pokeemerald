@@ -1,4 +1,4 @@
-script PacifidlogTown_House3_EventScript_Trader_Pory {
+script _PacifidlogTown_House3_EventScript_Trader {
   lock
   faceplayer
   msgbox(format("I know I could go looking for them\non my own, but…\pBut I really want to get a Pokémon\nthat another Trainer's caught…"))

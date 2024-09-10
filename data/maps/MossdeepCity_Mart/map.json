@@ -25,7 +25,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Common_PoryScript_Clerk",
+      "script": "_Common_EventScript_Clerk",
       "flag": "0"
     },
     {
@@ -77,7 +77,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Pory_EventScript_GiveTMQuash",
+      "script": "_MossdeepCity_Mart_EventScript_GiveTMQuash",
       "flag": "0"
     }
   ],

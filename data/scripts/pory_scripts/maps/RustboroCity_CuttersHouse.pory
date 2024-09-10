@@ -1,4 +1,4 @@
-script RustboroCity_CuttersHouse_EventScript_Cutter_Pory {
+script _RustboroCity_CuttersHouse_EventScript_Cutter {
   lock
   faceplayer
   if (!flag(FLAG_RECEIVED_HM_CUT)){

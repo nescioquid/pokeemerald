@@ -26,7 +26,7 @@ RustboroCity_DevonCorp_1F_EventScript_RobberWasntBright::
 	end
 
 RustboroCity_DevonCorp_1F_EventScript_GoodsRecovered::
-	msgbox RustboroCity_DevonCorp_1F_Text_SoundsLikeStolenGoodsRecovered_Pory, MSGBOX_DEFAULT
+	msgbox _RustboroCity_DevonCorp_1F_Text_SoundsLikeStolenGoodsRecovered, MSGBOX_DEFAULT
 	release
 	end
 

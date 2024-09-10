@@ -1,23 +1,23 @@
 const LOCAL_ID_NURSE = VAR_0x800B
 const SERVICE_CHARGE_AMOUNT = VAR_TEMP_1
 
-script Common_PoryScript_PkmnCenterNurse {
+script _Common_EventScript_PkmnCenterNurse {
   lock
   faceplayer
-  call(Common_PoryScript_PkmnCenterNurse_CheckGoldCard)
+  call(_Common_EventScript_PkmnCenterNurse_CheckGoldCard)
   if (!flag(FLAG_NURSE_MENTIONS_GOLD_CARD)) {
-    call(Common_PoryScript_PkmnCenterNurse_Hello)
+    call(_Common_EventScript_PkmnCenterNurse_Hello)
     if (flag(FLAG_BADGE01_GET)) {
-      call(Common_PoryScript_PkmnCenterNurse_ServiceCharge)
+      call(_Common_EventScript_PkmnCenterNurse_ServiceCharge)
     }
   }
-  call(Common_PoryScript_PkmnCenterNurse_HealPkmn)
-  call(Common_PoryScript_PkmnCenterNurse_Goodbye)
+  call(_Common_EventScript_PkmnCenterNurse_HealPkmn)
+  call(_Common_EventScript_PkmnCenterNurse_Goodbye)
   release
   end
 }
 
-script Common_PoryScript_PkmnCenterNurse_CheckGoldCard {
+script _Common_EventScript_PkmnCenterNurse_CheckGoldCard {
   if (!flag(FLAG_NURSE_MENTIONS_GOLD_CARD)) {
     specialvar(VAR_RESULT, CountPlayerTrainerStars)
     if (var(VAR_RESULT) == 4) {
@@ -30,7 +30,7 @@ script Common_PoryScript_PkmnCenterNurse_CheckGoldCard {
       setflag(FLAG_NURSE_MENTIONS_GOLD_CARD)
       msgbox(gText_NoticesGoldCard, MSGBOX_YESNO)
       if (!var(VAR_RESULT)) {
-        call(Common_PoryScript_PkmnCenterNurse_Goodbye)
+        call(_Common_EventScript_PkmnCenterNurse_Goodbye)
         release
         end
       }
@@ -38,16 +38,16 @@ script Common_PoryScript_PkmnCenterNurse_CheckGoldCard {
   } else {
     msgbox(gText_YouWantTheUsual, MSGBOX_YESNO)
     if (!var(VAR_RESULT)) {
-      call(Common_PoryScript_PkmnCenterNurse_Goodbye)
+      call(_Common_EventScript_PkmnCenterNurse_Goodbye)
       release
       end
     }
   }
 }
 
-script Common_PoryScript_PkmnCenterNurse_HealPkmn {
+script _Common_EventScript_PkmnCenterNurse_HealPkmn {
   incrementgamestat(GAME_STAT_USED_POKECENTER)
-  call(Common_PoryScript_Nurse_IllTakeYourPkmn)
+  call(_Common_EventScript_PkmnCenterNurse_IllTakeYourPkmn)
   waitmessage
   applymovement(LOCAL_ID_NURSE, Common_Movement_WalkInPlaceFasterLeft)
   waitmovement(0)
@@ -56,15 +56,15 @@ script Common_PoryScript_PkmnCenterNurse_HealPkmn {
   applymovement(LOCAL_ID_NURSE, Common_Movement_WalkInPlaceFasterDown)
   waitmovement(0)
   special(HealPlayerParty)
-  call(Common_PoryScript_PkmnCenterNurse_CheckPokerus)
-  call(Common_PoryScript_PkmnCenterNurse_RestoredPkmnToFullHealth)
+  call(_Common_EventScript_PkmnCenterNurse_CheckPokerus)
+  call(_Common_EventScript_PkmnCenterNurse_RestoredPkmnToFullHealth)
   waitmessage
   applymovement(LOCAL_ID_NURSE, Movement_PkmnCenterNurse_Bow)
   waitmovement(0)
-  call(Common_PoryScript_PkmnCenterNurse_CheckPlayerWaitingInUnionRoom)
+  call(_Common_EventScript_PkmnCenterNurse_CheckPlayerWaitingInUnionRoom)
 }
 
-script Common_PoryScript_PkmnCenterNurse_CheckPokerus {
+script _Common_EventScript_PkmnCenterNurse_CheckPokerus {
   if (!flag(FLAG_POKERUS_EXPLAINED)) {
     specialvar(VAR_RESULT, IsPokerusInParty)
     if (var(VAR_RESULT)) {
@@ -74,7 +74,7 @@ script Common_PoryScript_PkmnCenterNurse_CheckPokerus {
   }
 }
 
-script Common_PoryScript_PkmnCenterNurse_CheckPlayerWaitingInUnionRoom {
+script _Common_EventScript_PkmnCenterNurse_CheckPlayerWaitingInUnionRoom {
   
   specialvar(VAR_RESULT, PlayerNotAtTrainerHillEntrance)
   if (var(VAR_RESULT)) {
@@ -89,9 +89,9 @@ script Common_PoryScript_PkmnCenterNurse_CheckPlayerWaitingInUnionRoom {
   }
 }
 
-script Common_PoryScript_PkmnCenterNurse_ServiceCharge {
+script _Common_EventScript_PkmnCenterNurse_ServiceCharge {
   showmoneybox(0, 0)
-  call(Common_PoryScript_GetBadgeCount)
+  call(_Common_EventScript_GetBadgeCount)
   switch(var(VAR_RESULT)) {
     case 0: setvar(SERVICE_CHARGE_AMOUNT, 1000)
     case 1: setvar(SERVICE_CHARGE_AMOUNT, 1000)
@@ -106,12 +106,12 @@ script Common_PoryScript_PkmnCenterNurse_ServiceCharge {
   buffernumberstring(STR_VAR_1, SERVICE_CHARGE_AMOUNT)
   random(3)
   switch (var(VAR_RESULT)) {
-    case 0: msgbox(format("We now charge a modest fee of ¥{STR_VAR_1} for our services, ¥100 for each Gym Badge you have.\NIs that ok?"), MSGBOX_YESNO)
+    case 0: msgbox(format("We now charge a modest fee of ¥{STR_VAR_1} for our services, ¥100 for each Gym Badge you have.\nIs that ok?"), MSGBOX_YESNO)
     case 1: msgbox(format("That'll be ¥{STR_VAR_1}, ok?"), MSGBOX_YESNO)
     case 2: msgbox(format("Our services now cost ¥100 per Badge obtained, so that'll be ¥{STR_VAR_1} today. Would you like us to heal your Pokémon?"), MSGBOX_YESNO)
   }
   if (var(VAR_RESULT)) {
-  call(Common_PoryScript_GetBadgeCount)
+  call(_Common_EventScript_GetBadgeCount)
   switch(var(VAR_RESULT)) {
     case 0: checkmoney(1000)
     case 1: checkmoney(1000)
@@ -129,7 +129,7 @@ script Common_PoryScript_PkmnCenterNurse_ServiceCharge {
     release
     end
   }
-  call(Common_PoryScript_GetBadgeCount)
+  call(_Common_EventScript_GetBadgeCount)
   switch(var(VAR_RESULT)) {
     case 0: removemoney(1000)
     case 1: removemoney(1000)
@@ -152,7 +152,7 @@ script Common_PoryScript_PkmnCenterNurse_ServiceCharge {
   }
 }
 
-script Common_PoryScript_PkmnCenterNurse_Hello {
+script _Common_EventScript_PkmnCenterNurse_Hello {
   if (flag(FLAG_SYS_GAME_CLEAR)) {
     random(8)
     switch (var(VAR_RESULT)) {
@@ -187,7 +187,7 @@ script Common_PoryScript_PkmnCenterNurse_Hello {
   }
 }
 
-script Common_PoryScript_Nurse_IllTakeYourPkmn {
+script _Common_EventScript_PkmnCenterNurse_IllTakeYourPkmn {
   random(3)
   switch (var(VAR_RESULT)) {
     case 0: message(format("I'll take your Pokémon for a few seconds…"))
@@ -196,7 +196,7 @@ script Common_PoryScript_Nurse_IllTakeYourPkmn {
   }
 }
 
-script Common_PoryScript_PkmnCenterNurse_RestoredPkmnToFullHealth {
+script _Common_EventScript_PkmnCenterNurse_RestoredPkmnToFullHealth {
   random(4)
   switch (var(VAR_RESULT)) {
     case 0: message(format("Thank you for waiting."))
@@ -206,7 +206,7 @@ script Common_PoryScript_PkmnCenterNurse_RestoredPkmnToFullHealth {
   }
 }
 
-script Common_PoryScript_PkmnCenterNurse_Goodbye {
+script _Common_EventScript_PkmnCenterNurse_Goodbye {
   if (!flag(FLAG_BADGE01_GET)) {
     random(3)
     switch (var(VAR_RESULT)) {

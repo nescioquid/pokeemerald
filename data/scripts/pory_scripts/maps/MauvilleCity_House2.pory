@@ -1,4 +1,4 @@
-script MauvilleCity_House2_EventScript_Woman_Pory {
+script _MauvilleCity_House2_EventScript_CoinCaseWoman {
   lock
   faceplayer
   if (!flag(FLAG_RECEIVED_COIN_CASE)) {

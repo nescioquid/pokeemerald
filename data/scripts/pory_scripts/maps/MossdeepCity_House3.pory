@@ -1,4 +1,4 @@
-script MossdeepCity_House3_EventScript_SuperRodFisherman_Pory {
+script _MossdeepCity_House3_EventScript_SuperRodFisherman {
   lock
   faceplayer
   if(!flag(FLAG_RECEIVED_SUPER_ROD)) {

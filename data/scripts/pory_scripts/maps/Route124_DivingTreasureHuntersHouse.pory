@@ -1,7 +1,7 @@
 const PUSH_TO_DYNMULTISTACK_IF_OWNED = VAR_TEMP_8
 const PEARL_CHOSEN = VAR_TEMP_1
 
-script Route124_DivingTreasureHuntersHouse_EventScript_TreasureHunter_Pory {
+script _Route124_DivingTreasureHuntersHouse_EventScript_TreasureHunter {
   lock
   faceplayer
   if (!flag(FLAG_MET_DIVING_TREASURE_HUNTER)) {
@@ -27,9 +27,9 @@ script Route124_DivingTreasureHuntersHouse_EventScript_TreasureHunter_Pory {
   message(format("Hey, you got any Pearls you wanna sell? I pay cash!"))
   waitmessage
   setvar(PUSH_TO_DYNMULTISTACK_IF_OWNED, ITEM_PEARL)
-  call(Common_PoryScript_PushItemToDynmultistackIfOwned)
+  call(_Common_EventScript_PushItemToDynmultistackIfOwned)
   setvar(PUSH_TO_DYNMULTISTACK_IF_OWNED, ITEM_BIG_PEARL)
-  call(Common_PoryScript_PushItemToDynmultistackIfOwned)
+  call(_Common_EventScript_PushItemToDynmultistackIfOwned)
   dynmultistack(0, 4, FALSE, 4, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
   if (var(VAR_RESULT) == MULTI_B_PRESSED) {
     msgbox(format("Totally uncool, dude! Maybe next time though!"))
@@ -68,8 +68,8 @@ script Route124_DivingTreasureHuntersHouse_EventScript_TreasureHunter_Pory {
   end
 }
 
-script Route124_DivingTreasureHuntersHouse_EventScript_ShardTradeBoard_Pory {
-  msgbox(format("A sign that looks like it should say\n“We accept Visa” but actually used to be a menu of different items for trade."))
+script _Route124_DivingTreasureHuntersHouse_EventScript_ShardTradeBoard {
+  msgbox(format("A sign that looks like it should say\n“We accept Visa” but actually used to be a menu of different items for trade."), MSGBOX_SIGN)
   release
   end
 }

@@ -18,20 +18,20 @@ FortreeCity_Gym_EventScript_InitRotatingGates::
 	end
 
 FortreeCity_Gym_EventScript_Winona::
-	trainerbattle_single TRAINER_WINONA_1, FortreeCity_Gym_Text_WinonaIntro_Pory, FortreeCity_Gym_Text_WinonaDefeat_Pory, FortreeCity_Gym_EventScript_WinonaDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_WINONA_1, _FortreeCity_Gym_Text_WinonaIntro, _FortreeCity_Gym_Text_WinonaDefeat, FortreeCity_Gym_EventScript_WinonaDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, FortreeCity_Gym_EventScript_WinonaRematch
 	goto_if_unset FLAG_RECEIVED_TM_ROOST, FortreeCity_Gym_EventScript_GiveAerialAce2
-	msgbox FortreeCity_Gym_Text_WinonaPostBattle_Pory, MSGBOX_DEFAULT
+	msgbox _FortreeCity_Gym_Text_WinonaPostBattle, MSGBOX_DEFAULT
 	release
 	end
 
 FortreeCity_Gym_EventScript_WinonaDefeated::
-	msgbox Pory_Text_WinonaDefeated
+	msgbox _FortreeCity_Gym_Text_WinonaDefeated
 	message FortreeCity_Gym_Text_ReceivedFeatherBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
-	msgbox FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis_Pory, MSGBOX_DEFAULT
+	msgbox _FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_FORTREE_GYM
 	setflag FLAG_BADGE06_GET
 	setvar VAR_0x8008, 6
@@ -53,7 +53,7 @@ FortreeCity_Gym_EventScript_WinonaDefeated::
 FortreeCity_Gym_EventScript_GiveAerialAce2::
 	giveitem ITEM_TM_ROOST
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	msgbox Pory_Text_WinonaExplainRoost, MSGBOX_DEFAULT
+	msgbox _FortreeCity_Gym_Text_ExplainRoost, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM_ROOST
 	release
 	end
@@ -61,7 +61,7 @@ FortreeCity_Gym_EventScript_GiveAerialAce2::
 FortreeCity_Gym_EventScript_GiveAerialAce::
 	giveitem ITEM_TM_ROOST
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
-	msgbox Pory_Text_WinonaExplainRoost, MSGBOX_DEFAULT
+	msgbox _FortreeCity_Gym_Text_ExplainRoost, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM_ROOST
 	return
 

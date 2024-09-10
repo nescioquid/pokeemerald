@@ -1,4 +1,4 @@
-script Pory_EventScript_GiveTMFling {
+script _PacifidlogTown_House4_EventScript_GiveTMFling {
   lock
   faceplayer
   if (!flag(FLAG_RECEIVED_TM_FLING)) {

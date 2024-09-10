@@ -1,5 +1,5 @@
 VictoryRoad_1F_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, VictoryRoad_1F_OnTransition_Pory
+	map_script MAP_SCRIPT_ON_TRANSITION, _VictoryRoad_1F_OnTransition
 	.byte 0
 
 @ This Wally appears near the entrance once his battle is triggered and remains there until the Hall of Fame is entered

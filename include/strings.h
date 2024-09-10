@@ -1901,7 +1901,7 @@ extern const u8 MatchCall_Text_Wally2[];
 extern const u8 MatchCall_Text_Wally3[];
 extern const u8 MatchCall_Text_Wally4[];
 extern const u8 MatchCall_Text_Wally5[];
-extern const u8 MatchCall_Text_Wally5_Pory[];
+extern const u8 _MatchCall_Text_Wally5[];
 extern const u8 MatchCall_Text_Wally6[];
 extern const u8 MatchCall_Text_Wally7[];
 extern const u8 MatchCall_Text_Scott1[];
