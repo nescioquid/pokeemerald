@@ -1,4 +1,4 @@
-script MtChimney_EventScript_LavaCookieLady_Pory {
+script _MtChimney_EventScript_LavaCookieLady {
   lock
   faceplayer
   showmoneybox(0, 0)

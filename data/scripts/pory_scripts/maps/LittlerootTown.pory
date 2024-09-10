@@ -1,4 +1,4 @@
-script LittlerootTown_EventScript_GiveRunningShoes_Pory {
+script _LittlerootTown_EventScript_GiveRunningShoes {
   // msgbox(LittlerootTown_Text_WearTheseRunningShoes)
   msgbox(format("{PLAYER}! {PLAYER}! Did you introduce yourself to Prof. Birch?\pOh! What an adorable Pokémon! You must have gotten it from him. How nice!\pYou're your father's child, all right. You look good together with your Pokémon!\pHere, honey!\nIf you're going out on an adventure, take these with you, just in case you or your new Pokémon get hungry!"))
   giveitem(ITEM_RARE_CANDY, 36)

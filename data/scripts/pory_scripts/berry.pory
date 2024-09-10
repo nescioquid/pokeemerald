@@ -1,4 +1,4 @@
-script Common_PoryScript_GiveBerry_Generic {
+script _Common_EventScript_GiveBerry_Generic {
   random(10)
   switch (var(VAR_RESULT)) {
     case 0: giveitem(ITEM_LEPPA_BERRY,  3)
@@ -6,16 +6,16 @@ script Common_PoryScript_GiveBerry_Generic {
     case 2: giveitem(ITEM_LEPPA_BERRY,  3)
     case 3: giveitem(ITEM_LUM_BERRY,    3)
     case 4: giveitem(ITEM_CHILAN_BERRY, 3)
-    case 5: call(Common_PoryScript_GiveBerry_Status)
-    case 6: call(Common_PoryScript_GiveBerry_Status)
-    case 7: call(Common_PoryScript_GiveBerry_HP)
-    case 8: call(Common_PoryScript_GiveBerry_HP)
-    case 9: call(Common_PoryScript_GiveBerry_Confuse)
+    case 5: call(_Common_EventScript_GiveBerry_Status)
+    case 6: call(_Common_EventScript_GiveBerry_Status)
+    case 7: call(_Common_EventScript_GiveBerry_HP)
+    case 8: call(_Common_EventScript_GiveBerry_HP)
+    case 9: call(_Common_EventScript_GiveBerry_Confuse)
   }
   goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
 }
 
-script Common_PoryScript_GiveBerry_Status {
+script _Common_EventScript_GiveBerry_Status {
   random(6)
   switch (var(VAR_RESULT)) {
     case 0: giveitem(ITEM_CHERI_BERRY,  3)
@@ -28,7 +28,7 @@ script Common_PoryScript_GiveBerry_Status {
   goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
 }
 
-script Common_PoryScript_GiveBerry_HP {
+script _Common_EventScript_GiveBerry_HP {
   random(4)
   switch (var(VAR_RESULT)) {
     case 0: giveitem(ITEM_ORAN_BERRY,   3)
@@ -39,7 +39,7 @@ script Common_PoryScript_GiveBerry_HP {
   goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
 }
 
-script Common_PoryScript_GiveBerry_Confuse {
+script _Common_EventScript_GiveBerry_Confuse {
   random(5)
   switch (var(VAR_RESULT)) {
     case 0: giveitem(ITEM_FIGY_BERRY,   3)
@@ -51,7 +51,7 @@ script Common_PoryScript_GiveBerry_Confuse {
   goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
 }
 
-script Common_PoryScript_GiveBerry_Retaliatory {
+script _Common_EventScript_GiveBerry_Retaliatory {
   random(4)
   switch (var(VAR_RESULT)) {
     case 0: giveitem(ITEM_JABOCA_BERRY,  3)
@@ -62,7 +62,7 @@ script Common_PoryScript_GiveBerry_Retaliatory {
   goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
 }
 
-script Common_PoryScript_GiveBerry_Resistance {
+script _Common_EventScript_GiveBerry_Resistance {
   random(17)
   switch (var(VAR_RESULT)) {
     case  0: giveitem(ITEM_OCCA_BERRY,   3)
@@ -86,7 +86,7 @@ script Common_PoryScript_GiveBerry_Resistance {
   goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
 }
 
-script Common_PoryScript_GiveBerry_RaiseStats {
+script _Common_EventScript_GiveBerry_RaiseStats {
   specialvar(VAR_RESULT, GetPlayerTrainerIdOnesDigit)
   switch (var(VAR_RESULT)) {
     case 0:

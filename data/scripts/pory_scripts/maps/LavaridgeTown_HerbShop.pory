@@ -1,4 +1,4 @@
-script LavaridgeTown_HerbShop_EventScript_OldMan_Pory {
+script _LavaridgeTown_HerbShop_EventScript_OldMan {
   lock
   faceplayer
   if (!flag(FLAG_RECEIVED_REVIVAL_HERB)) {
