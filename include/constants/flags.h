@@ -1240,10 +1240,10 @@
 #define FLAG_ITEM_SKY_PILLAR_TM_EXPLOSION                           0x4A2
 #define FLAG_ITEM_JAGGED_PASS_TM_ROCK_POLISH                        0x4A3
 #define FLAG_HIDE_CAVE_OF_ORIGIN_EXPERT                             0x4A4
-#define FLAG_UNUSED_0x4A5                                           0x4A5 // Unused Flag
-#define FLAG_UNUSED_0x4A6                                           0x4A6 // Unused Flag
-#define FLAG_UNUSED_0x4A7                                           0x4A7 // Unused Flag
-#define FLAG_UNUSED_0x4A8                                           0x4A8 // Unused Flag
+#define FLAG_RECEIVED_LINKING_CORD                                  0x4A5
+#define FLAG_HIDE_ROUTE_109_META_BOY                                0x4A6
+#define FLAG_RECEIVED_JOHTO_STARTER                                 0x4A7
+#define FLAG_HIDE_DEWFORD_POKEMON_CENTER_META_BOY                   0x4A8
 #define FLAG_UNUSED_0x4A9                                           0x4A9 // Unused Flag
 #define FLAG_UNUSED_0x4AA                                           0x4AA // Unused Flag
 #define FLAG_UNUSED_0x4AB                                           0x4AB // Unused Flag
