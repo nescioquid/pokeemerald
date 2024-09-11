@@ -1,0 +1,16 @@
+script PoryScript_MetaBoy_RelaxingOnBeach {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_LINKING_CORD)) {
+  msgbox(format("Hey, what's up? Remember me? Thanks again for taking care of my Pokémon for me.\p… … … … … … … …\n… … … … … … … …\pWhat's that? How did I get here so fast?\pWell, we can't ALL be the protagonist in this story, can we? You get plot armor and a sense of fulfillment, I get to warp instantaneously to this beach.\p… … … … … … … …\n… … … … … … … …\pOk fine, do you want to check out something REALLY meta?\pTake this, then!"))
+  // I mean, technically speaking, I'm actually a completely different set of code and graphical assets than who you talked to in Dewford. You're the one personifying me and creating any sense of continuity here. That's on you."
+  giveitem(ITEM_LINKING_CORD)
+  goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+  setflag(FLAG_RECEIVED_LINKING_CORD)
+  msgbox(format("Seriously though, in the newer games Game Freak has actually coded this item into the game.\pI'll let you figure out what it does on your own time."))
+  } else {
+    msgbox(format("Hey… You don't happen to know any good mojito recipes, do you?"))
+  }
+  release
+  end
+}
