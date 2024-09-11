@@ -10,6 +10,12 @@ script MauvilleCity_Gym_EventScript_GymGuide_Pory {
     }
   } else {
     msgbox(MauvilleCity_Gym_Text_GymGuidePostVictory)
+    if (!flag(FLAG_RECEIVED_RARE_CANDY_MAUVILLE_GYM)) {
+      msgbox(format("Oh, and take these!"))
+      call(PoryScript_GymGuide_GiveRareCandy)
+      setflag(FLAG_RECEIVED_RARE_CANDY_MAUVILLE_GYM)
+      msgbox(format("Congrats on the big win!"))
+    }
   }
   release
   end
