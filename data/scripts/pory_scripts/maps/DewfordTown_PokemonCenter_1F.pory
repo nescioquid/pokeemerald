@@ -1,0 +1,56 @@
+const LOCALID_META_BOY = 4
+const GIVEMON_HELPER_ARTICLE = VAR_TEMP_9
+const STARTER_GRASS = 0
+const STARTER_FIRE  = 1
+const STARTER_WATER = 2
+
+script PoryScript_MetaBoy_GiveJohtoStarter {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_JOHTO_STARTER)) {
+    if (!flag(FLAG_TEMP_1)) {
+      msgbox(format("Hmm… My parents got me this cool, rare Pokémon from Johto and everything, but I don't think I'm cut out to be a Trainer.\pI just want to go home and make mods of classic video games from the 2000s.\pI'd give it to a strong enough Trainer, if I could just find the right one…"))
+      setflag(FLAG_TEMP_1)
+    } else {
+      msgbox(format("I just don't think I'm cut out to be a Trainer.\pI'd give my Pokémon to a strong enough Trainer right now…\p{FONT_SMALL}…I could be laying on the beach right now, modding my video games…"))
+    }
+    call(Common_PoryScript_GetBadgeCount)
+    if (var(VAR_RESULT) >= 2) {
+      playse(SE_PIN)
+      applymovement(LOCALID_META_BOY, Common_Movement_ExclamationMark)
+      waitmovement(0)
+      applymovement(LOCALID_META_BOY, Common_Movement_Delay48)
+      waitmovement(0)
+      msgbox(format("Wait a second…\pThat confidence…\pThose badges…\pAnd, most of all, that plot armor…\p…YOU could take care of my Pokémon!\pPlease, oh please, would you?\nPleasy please?"), MSGBOX_YESNO)
+      if (!var(VAR_RESULT)) {
+        msgbox(format("But… It's a free Pokémon! And you're the protagonist!"))
+        release
+        end
+      }
+      msgbox(format("Yay! you're the best!"))
+      switch (var(VAR_STARTER_MON)) {
+        case STARTER_GRASS:
+          setvar(VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_CROCONAW)
+          setvar(GIVEMON_HELPER_ARTICLE, 1)
+          givemon(SPECIES_CROCONAW, 30)
+        case STARTER_FIRE:
+          setvar(VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_BAYLEEF)
+          setvar(GIVEMON_HELPER_ARTICLE, 1)
+          givemon(SPECIES_BAYLEEF, 30)
+        case STARTER_WATER:
+          setvar(VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_QUILAVA)
+          setvar(GIVEMON_HELPER_ARTICLE, 1)
+          givemon(SPECIES_QUILAVA, 30)
+      }
+      call(Common_PoryScript_GivemonHelper)
+      setflag(FLAG_RECEIVED_JOHTO_STARTER)
+      setflag(FLAG_HIDE_DEWFORD_POKEMON_CENTER_META_BOY)
+      clearflag(FLAG_HIDE_ROUTE_109_META_BOY)
+      msgbox(format("Now I can finally spend the summer at my family's beach house in peace!"))
+    }
+  } else {
+    msgbox(format("Now I can finally spend the summer at my family's beach house in peace!"))
+  }
+  release
+  end
+}
