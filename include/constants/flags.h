@@ -1293,28 +1293,28 @@
 #define FLAG_RECEIVED_RARE_CANDY_SOOTOPOLIS_GYM                     0x4D7
 #define FLAG_UNUSED_0x4D8                                           0x4D8 // Unused Flag
 #define FLAG_UNUSED_0x4D9                                           0x4D9 // Unused Flag
-#define FLAG_UNUSED_0x4DA                                           0x4DA // Unused Flag
-#define FLAG_UNUSED_0x4DB                                           0x4DB // Unused Flag
-#define FLAG_UNUSED_0x4DC                                           0x4DC // Unused Flag
-#define FLAG_UNUSED_0x4DD                                           0x4DD // Unused Flag
-#define FLAG_UNUSED_0x4DE                                           0x4DE // Unused Flag
-#define FLAG_UNUSED_0x4DF                                           0x4DF // Unused Flag
-#define FLAG_UNUSED_0x4E0                                           0x4E0 // Unused Flag
-#define FLAG_UNUSED_0x4E1                                           0x4E1 // Unused Flag
-#define FLAG_UNUSED_0x4E2                                           0x4E2 // Unused Flag
-#define FLAG_UNUSED_0x4E3                                           0x4E3 // Unused Flag
-#define FLAG_UNUSED_0x4E4                                           0x4E4 // Unused Flag
-#define FLAG_UNUSED_0x4E5                                           0x4E5 // Unused Flag
-#define FLAG_UNUSED_0x4E6                                           0x4E6 // Unused Flag
-#define FLAG_UNUSED_0x4E7                                           0x4E7 // Unused Flag
-#define FLAG_UNUSED_0x4E8                                           0x4E8 // Unused Flag
-#define FLAG_UNUSED_0x4E9                                           0x4E9 // Unused Flag
-#define FLAG_UNUSED_0x4EA                                           0x4EA // Unused Flag
-#define FLAG_UNUSED_0x4EB                                           0x4EB // Unused Flag
-#define FLAG_UNUSED_0x4EC                                           0x4EC // Unused Flag
-#define FLAG_UNUSED_0x4ED                                           0x4ED // Unused Flag
-#define FLAG_UNUSED_0x4EE                                           0x4EE // Unused Flag
-#define FLAG_UNUSED_0x4EF                                           0x4EF // Unused Flag
+#define FLAG_TREE_PETALBURG_WOODS_1                                 0x4DA
+#define FLAG_TREE_PETALBURG_WOODS_2                                 0x4DB
+#define FLAG_TREE_ROUTE_103_1                                       0x4DC
+#define FLAG_TREE_ROUTE_103_2                                       0x4DD
+#define FLAG_TREE_ROUTE_104_1                                       0x4DE
+#define FLAG_TREE_ROUTE_111_1                                       0x4DF
+#define FLAG_TREE_ROUTE_116_1                                       0x4E0
+#define FLAG_TREE_ROUTE_116_2                                       0x4E1
+#define FLAG_TREE_ROUTE_116_3                                       0x4E2
+#define FLAG_TREE_ROUTE_116_4                                       0x4E3
+#define FLAG_TREE_ROUTE_116_5                                       0x4E4
+#define FLAG_TREE_ROUTE_117_1                                       0x4E5
+#define FLAG_TREE_ROUTE_118_1                                       0x4E6
+#define FLAG_TREE_ROUTE_120_1                                       0x4E7
+#define FLAG_TREE_ROUTE_120_2                                       0x4E8
+#define FLAG_TREE_ROUTE_120_3                                       0x4E9
+#define FLAG_TREE_ROUTE_121_1                                       0x4EA
+#define FLAG_TREE_ROUTE_121_2                                       0x4EB
+#define FLAG_TREE_ROUTE_121_3                                       0x4EC
+#define FLAG_TREE_ROUTE_123_1                                       0x4ED
+#define FLAG_TREE_ROUTE_123_2                                       0x4EE
+#define FLAG_TREE_ROUTE_123_3                                       0x4EF
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
