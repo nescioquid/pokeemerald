@@ -1,3 +1,20 @@
 text PetalburgCity_Gym_Text_IllLoanYouMyChansey_Pory {
   format("Wally, here, I'll loan you my Pokémon.\pWally received a Chansey!")
 }
+
+script PetalburgCity_Gym_EventScript_GymGuide_Pory {
+  lock
+  faceplayer
+  if (!flag(FLAG_DEFEATED_PETALBURG_GYM)) {
+    msgbox(format("Hey, how's it going, Champion-\nbound {PLAYER}?\pThe doors in this Gym open when you\nbeat the awaiting Trainers.\pWhoops! The doors in this room are\nalready open, so don't attack me!\pThe Trainers of Petalburg Gym\nuse all kinds of items.\pThe door at the left leads to\nthe Speed Room.\pThe door at the right leads to\nthe Accuracy Room.\pThe room's name will be on\nthe door, so choose carefully.\pOnce you've chosen the door…"))
+    if (!flag(FLAG_RECEIVED_FRESH_WATER_PETALBURG_GYM)) {
+      call(PoryScript_GymGuide_GiveFreshWater)
+      setflag(FLAG_RECEIVED_FRESH_WATER_PETALBURG_GYM)
+      msgbox(format("Well, hey, go for it!"))
+    }
+  } else {
+    msgbox(PetalburgCity_Gym_Text_GymGuidePostVictory)
+  }
+  release
+  end
+}

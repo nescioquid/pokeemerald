@@ -1,0 +1,16 @@
+script MauvilleCity_Gym_EventScript_GymGuide_Pory {
+  lock
+  faceplayer
+  if (!flag(FLAG_DEFEATED_MAUVILLE_GYM)) {
+    msgbox(format("Hey, how's it going, Champion-\nbound {PLAYER}?\pWATTSON, the Leader of Mauville\nGym, uses Electric-type Pokémon.\pIf you challenge him with Water-type\nPokémon, he'll zap them! Bzzt!\pAnd, he's put in switch-controlled\ndoors all over his Gym! Eccentric!"))
+    if (!flag(FLAG_RECEIVED_FRESH_WATER_MAUVILLE_GYM)) {
+      call(PoryScript_GymGuide_GiveFreshWater)
+      setflag(FLAG_RECEIVED_FRESH_WATER_MAUVILLE_GYM)
+      msgbox(format("Hey, go for it!"))
+    }
+  } else {
+    msgbox(MauvilleCity_Gym_Text_GymGuidePostVictory)
+  }
+  release
+  end
+}

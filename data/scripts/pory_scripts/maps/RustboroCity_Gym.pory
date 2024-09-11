@@ -1,0 +1,16 @@
+script RustboroCity_Gym_EventScript_GymGuide_Pory {
+  lock
+  faceplayer
+  if (!flag(FLAG_DEFEATED_RUSTBORO_GYM)) {
+    msgbox(format("Yo, how's it going?\pListen, my friend!\nWould you like to become the Champion?\pI'm no Trainer, not me, but I can\nsure give you winning advice.\pThat's settled, then! We'll aim for the\nPokémon Championship together!\pIt's your job as a Trainer to collect\nGym Badges, am I right?\pBut Gym Leaders aren't pushovers!\pAnd that's where I come in!\nI'm here to provide expert advice!\pRoxanne, the Gym Leader, is a user\nof Rock-type Pokémon.\pThe Rock type is very durable, but\nit can't stand Water-type and\lGrass-type moves.\pCome see me afterwards, if you beat\nthe Gym Leader."))
+    if (!flag(FLAG_RECEIVED_FRESH_WATER_RUSTBORO_GYM)) {
+      call(PoryScript_GymGuide_GiveFreshWater)
+      setflag(FLAG_RECEIVED_FRESH_WATER_RUSTBORO_GYM)
+      msgbox(format("Well, go for it!"))
+    }
+  } else {
+    msgbox(RustboroCity_Gym_Text_GymGuidePostVictory)
+  }
+  release
+  end
+}
