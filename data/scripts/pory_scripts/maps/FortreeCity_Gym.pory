@@ -1,0 +1,16 @@
+script FortreeCity_Gym_EventScript_GymGuide_Pory {
+  lock
+  faceplayer
+  if (!flag(FLAG_DEFEATED_FORTREE_GYM)) {
+    msgbox(format("Yo, how's it going, Champion-\nbound {PLAYER}?\pFortree Gym Leader Winona is\na master of Flying-type Pokémon.\pShe's waiting at the back of this Gym,\nbehind the rotating doors.\pShe's waiting for new challengers\nwho are trying to take wing!"))
+    if (!flag(FLAG_RECEIVED_FRESH_WATER_FORTREE_GYM)) {
+      call(PoryScript_GymGuide_GiveFreshWater)
+      setflag(FLAG_RECEIVED_FRESH_WATER_FORTREE_GYM)
+      msgbox(format("Okay, go for it!"))
+    }
+  } else {
+    msgbox(FortreeCity_Gym_Text_GymGuidePostVictory)
+  }
+  release
+  end
+}
