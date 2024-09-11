@@ -10,6 +10,12 @@ script LavaridgeTown_Gym_1F_EventScript_GymGuide_Pory {
     }
   } else {
     msgbox(LavaridgeTown_Gym_1F_Text_GymGuidePostVictory)
+    if (!flag(FLAG_RECEIVED_RARE_CANDY_LAVARIDGE_GYM)) {
+      msgbox(format("Oh, and take these!"))
+      call(PoryScript_GymGuide_GiveRareCandy)
+      setflag(FLAG_RECEIVED_RARE_CANDY_LAVARIDGE_GYM)
+      msgbox(format("Congrats on the big win!"))
+    }
   }
   release
   end
