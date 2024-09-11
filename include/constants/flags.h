@@ -1291,8 +1291,8 @@
 #define FLAG_RECEIVED_RARE_CANDY_FORTREE_GYM                        0x4D5
 #define FLAG_RECEIVED_RARE_CANDY_MOSSDEEP_GYM                       0x4D6
 #define FLAG_RECEIVED_RARE_CANDY_SOOTOPOLIS_GYM                     0x4D7
-#define FLAG_UNUSED_0x4D8                                           0x4D8 // Unused Flag
-#define FLAG_UNUSED_0x4D9                                           0x4D9 // Unused Flag
+#define FLAG_ROCK_ROUTE_111_1                                       0x4D8
+#define FLAG_ROCK_ROUTE_111_2                                       0x4D9
 #define FLAG_TREE_PETALBURG_WOODS_1                                 0x4DA
 #define FLAG_TREE_PETALBURG_WOODS_2                                 0x4DB
 #define FLAG_TREE_ROUTE_103_1                                       0x4DC
