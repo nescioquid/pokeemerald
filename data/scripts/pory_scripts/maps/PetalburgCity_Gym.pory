@@ -14,6 +14,12 @@ script PetalburgCity_Gym_EventScript_GymGuide_Pory {
     }
   } else {
     msgbox(PetalburgCity_Gym_Text_GymGuidePostVictory)
+    if (!flag(FLAG_RECEIVED_RARE_CANDY_PETALBURG_GYM)) {
+      msgbox(format("Oh, and take these!"))
+      call(PoryScript_GymGuide_GiveRareCandy)
+      setflag(FLAG_RECEIVED_RARE_CANDY_PETALBURG_GYM)
+      msgbox(format("Congrats on the big win!"))
+    }
   }
   release
   end
