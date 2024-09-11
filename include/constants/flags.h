@@ -1275,14 +1275,14 @@
 #define FLAG_UNUSED_0x4C5                                           0x4C5 // Unused Flag
 #define FLAG_UNUSED_0x4C6                                           0x4C6 // Unused Flag
 #define FLAG_UNUSED_0x4C7                                           0x4C7 // Unused Flag
-#define FLAG_UNUSED_0x4C8                                           0x4C8 // Unused Flag
-#define FLAG_UNUSED_0x4C9                                           0x4C9 // Unused Flag
-#define FLAG_UNUSED_0x4CA                                           0x4CA // Unused Flag
-#define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
-#define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag
-#define FLAG_UNUSED_0x4CD                                           0x4CD // Unused Flag
-#define FLAG_UNUSED_0x4CE                                           0x4CE // Unused Flag
-#define FLAG_UNUSED_0x4CF                                           0x4CF // Unused Flag
+#define FLAG_RECEIVED_FRESH_WATER_RUSTBORO_GYM                      0x4C8
+#define FLAG_RECEIVED_FRESH_WATER_DEWFORD_GYM                       0x4C9
+#define FLAG_RECEIVED_FRESH_WATER_MAUVILLE_GYM                      0x4CA
+#define FLAG_RECEIVED_FRESH_WATER_LAVARIDGE_GYM                     0x4CB
+#define FLAG_RECEIVED_FRESH_WATER_PETALBURG_GYM                     0x4CC
+#define FLAG_RECEIVED_FRESH_WATER_FORTREE_GYM                       0x4CD
+#define FLAG_RECEIVED_FRESH_WATER_MOSSDEEP_GYM                      0x4CE
+#define FLAG_RECEIVED_FRESH_WATER_SOOTOPOLIS_GYM                    0x4CF
 #define FLAG_UNUSED_0x4D0                                           0x4D0 // Unused Flag
 #define FLAG_UNUSED_0x4D1                                           0x4D1 // Unused Flag
 #define FLAG_UNUSED_0x4D2                                           0x4D2 // Unused Flag
