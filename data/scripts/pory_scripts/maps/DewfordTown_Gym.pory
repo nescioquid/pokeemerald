@@ -1,0 +1,16 @@
+script DewfordTown_Gym_EventScript_GymGuide_Pory {
+  lock
+  faceplayer
+  if (!flag(FLAG_DEFEATED_DEWFORD_GYM)) {
+    msgbox(format("Hey, how's it going, Champion-\nbound {PLAYER}?\pDewford's Gym Leader Brawly commands\nFighting-type Pokémon.\pGoing against him with NORMAL-type\nPokémon is asking for trouble.\pFighting Pokémon will lay a serious\nsmack down on Normal Pokémon,\lso be careful!\pWhat's worse, the Gym is as dark as\nthe ocean floor.\pBut it will get brighter after defeating\nthe Trainers in your way."))
+    if (!flag(FLAG_RECEIVED_FRESH_WATER_DEWFORD_GYM)) {
+      call(PoryScript_GymGuide_GiveFreshWater)
+      setflag(FLAG_RECEIVED_FRESH_WATER_DEWFORD_GYM)
+      msgbox(format("Hey, okay, go for it!"))
+    }
+  } else {
+    msgbox(DewfordTown_Gym_Text_GymGuidePostVictory)
+  }
+  release
+  end
+}
