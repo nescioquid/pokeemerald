@@ -1,0 +1,7 @@
+const FRESH_WATER_AMOUNT = 6
+
+script PoryScript_GymGuide_GiveFreshWater {
+  msgbox(format("Oh, and take these!"))
+  giveitem(ITEM_FRESH_WATER, FRESH_WATER_AMOUNT)
+  goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)    
+}
