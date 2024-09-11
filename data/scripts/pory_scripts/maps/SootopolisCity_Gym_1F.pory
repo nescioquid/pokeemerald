@@ -1,0 +1,16 @@
+script SootopolisCity_Gym_1F_EventScript_GymGuide_Pory {
+  lock
+  faceplayer
+  if (!flag(FLAG_DEFEATED_SOOTOPOLIS_GYM)) {
+    msgbox(format("Yo! How's it going, Champion-\nbound {PLAYER}?\pSootopolis's Gym Leader Juan is\na master of WATER-type Pokémon.\pAnd, to get to Juan, an icy floor\nwill hamper your progress…\pListen, I'm sorry, but that's all the\nadvice that I have for you.\pThe rest of the way, you have to\ngo for it yourself!"))
+    if (!flag(FLAG_RECEIVED_FRESH_WATER_SOOTOPOLIS_GYM)) {
+      call(PoryScript_GymGuide_GiveFreshWater)
+      setflag(FLAG_RECEIVED_FRESH_WATER_SOOTOPOLIS_GYM)
+      msgbox(format("Good luck!"))
+    }
+  } else {
+    msgbox(SootopolisCity_Gym_1F_Text_GymGuidePostVictory)
+  }
+  release
+  end
+}
