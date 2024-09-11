@@ -1283,14 +1283,14 @@
 #define FLAG_RECEIVED_FRESH_WATER_FORTREE_GYM                       0x4CD
 #define FLAG_RECEIVED_FRESH_WATER_MOSSDEEP_GYM                      0x4CE
 #define FLAG_RECEIVED_FRESH_WATER_SOOTOPOLIS_GYM                    0x4CF
-#define FLAG_UNUSED_0x4D0                                           0x4D0 // Unused Flag
-#define FLAG_UNUSED_0x4D1                                           0x4D1 // Unused Flag
-#define FLAG_UNUSED_0x4D2                                           0x4D2 // Unused Flag
-#define FLAG_UNUSED_0x4D3                                           0x4D3 // Unused Flag
-#define FLAG_UNUSED_0x4D4                                           0x4D4 // Unused Flag
-#define FLAG_UNUSED_0x4D5                                           0x4D5 // Unused Flag
-#define FLAG_UNUSED_0x4D6                                           0x4D6 // Unused Flag
-#define FLAG_UNUSED_0x4D7                                           0x4D7 // Unused Flag
+#define FLAG_RECEIVED_RARE_CANDY_RUSTBORO_GYM                       0x4D0
+#define FLAG_RECEIVED_RARE_CANDY_DEWFORD_GYM                        0x4D1
+#define FLAG_RECEIVED_RARE_CANDY_MAUVILLE_GYM                       0x4D2
+#define FLAG_RECEIVED_RARE_CANDY_LAVARIDGE_GYM                      0x4D3
+#define FLAG_RECEIVED_RARE_CANDY_PETALBURG_GYM                      0x4D4
+#define FLAG_RECEIVED_RARE_CANDY_FORTREE_GYM                        0x4D5
+#define FLAG_RECEIVED_RARE_CANDY_MOSSDEEP_GYM                       0x4D6
+#define FLAG_RECEIVED_RARE_CANDY_SOOTOPOLIS_GYM                     0x4D7
 #define FLAG_UNUSED_0x4D8                                           0x4D8 // Unused Flag
 #define FLAG_UNUSED_0x4D9                                           0x4D9 // Unused Flag
 #define FLAG_UNUSED_0x4DA                                           0x4DA // Unused Flag
