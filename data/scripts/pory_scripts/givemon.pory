@@ -1,0 +1,45 @@
+// helper script for givemon fanfares/nicknaming/party management
+// optionally set GIVEMON_HELPER_ARTICLE, defaults to 0 (no article applied)
+
+// example:
+
+// const GIVEMON_HELPER_ARTICLE = VAR_TEMP_9
+
+// ...
+
+// setvar(VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_EEVEE)
+// setvar(GIVEMON_HELPER_ARTICLE, 2)
+// givemon(SPECIES_EEVEE, 20)
+// call(Common_PoryScript_GivemonHelper)
+
+const GIVEMON_HELPER_ARTICLE = VAR_TEMP_9
+
+script Common_PoryScript_GivemonHelper {
+  // must be STR_VAR_1 for gText_NicknameThisPokemon etc. to work
+  bufferspeciesname(STR_VAR_1, VAR_TEMP_TRANSFERRED_SPECIES)
+  playfanfare(MUS_OBTAIN_ITEM)
+  switch (var(GIVEMON_HELPER_ARTICLE)) {
+    case 0: message("{PLAYER} received {STR_VAR_1}!")
+    case 1: message("{PLAYER} received a {STR_VAR_1}!")
+    case 2: message("{PLAYER} received an {STR_VAR_1}!")
+    case 3: message("{PLAYER} received the {STR_VAR_1}!")
+  }
+  waitmessage
+  waitfanfare
+  switch (var(VAR_RESULT)) {
+    case MON_GIVEN_TO_PARTY:
+      msgbox(gText_NicknameThisPokemon, MSGBOX_YESNO)
+      if (var(VAR_RESULT)) {
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+      }
+    case MON_GIVEN_TO_PC:
+      msgbox(gText_NicknameThisPokemon, MSGBOX_YESNO)
+      if (var(VAR_RESULT)) {
+        call(Common_EventScript_NameReceivedBoxMon)
+      }
+      call(Common_EventScript_TransferredToPC)
+    case MON_CANT_GIVE:
+      call(Common_EventScript_NoMoreRoomForPokemon)
+  }
+}
