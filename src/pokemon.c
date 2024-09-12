@@ -639,7 +639,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     [NATURE_LONELY] =
     {
         .name = COMPOUND_STRING("Lonely"),
-        .statUp = STAT_ATK,
+        .statUp = STAT_DEF,
         .statDown = STAT_DEF,
         .backAnim = 2,
         .pokeBlockAnim = {ANIM_LONELY, AFFINE_NONE},
@@ -675,7 +675,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     [NATURE_NAUGHTY] =
     {
         .name = COMPOUND_STRING("Naughty"),
-        .statUp = STAT_ATK,
+        .statUp = STAT_SPDEF,
         .statDown = STAT_SPDEF,
         .backAnim = 0,
         .pokeBlockAnim = {ANIM_NAUGHTY, AFFINE_NONE},
@@ -735,7 +735,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     [NATURE_LAX] =
     {
         .name = COMPOUND_STRING("Lax"),
-        .statUp = STAT_DEF,
+        .statUp = STAT_SPDEF,
         .statDown = STAT_SPDEF,
         .backAnim = 1,
         .pokeBlockAnim = {ANIM_LAX, AFFINE_NONE},
@@ -759,7 +759,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     [NATURE_HASTY] =
     {
         .name = COMPOUND_STRING("Hasty"),
-        .statUp = STAT_SPEED,
+        .statUp = STAT_DEF,
         .statDown = STAT_DEF,
         .backAnim = 0,
         .pokeBlockAnim = {ANIM_HASTY, AFFINE_NONE},
@@ -795,7 +795,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     [NATURE_NAIVE] =
     {
         .name = COMPOUND_STRING("Naive"),
-        .statUp = STAT_SPEED,
+        .statUp = STAT_SPDEF,
         .statDown = STAT_SPDEF,
         .backAnim = 0,
         .pokeBlockAnim = {ANIM_NAIVE, AFFINE_NONE},
@@ -819,7 +819,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     [NATURE_MILD] =
     {
         .name = COMPOUND_STRING("Mild"),
-        .statUp = STAT_SPATK,
+        .statUp = STAT_DEF,
         .statDown = STAT_DEF,
         .backAnim = 2,
         .pokeBlockAnim = {ANIM_MILD, AFFINE_NONE},
@@ -855,7 +855,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     [NATURE_RASH] =
     {
         .name = COMPOUND_STRING("Rash"),
-        .statUp = STAT_SPATK,
+        .statUp = STAT_SPDEF,
         .statDown = STAT_SPDEF,
         .backAnim = 1,
         .pokeBlockAnim = {ANIM_RASH, AFFINE_NONE},
@@ -879,7 +879,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     [NATURE_GENTLE] =
     {
         .name = COMPOUND_STRING("Gentle"),
-        .statUp = STAT_SPDEF,
+        .statUp = STAT_DEF,
         .statDown = STAT_DEF,
         .backAnim = 2,
         .pokeBlockAnim = {ANIM_GENTLE, AFFINE_TURN_DOWN_SLIGHT},
