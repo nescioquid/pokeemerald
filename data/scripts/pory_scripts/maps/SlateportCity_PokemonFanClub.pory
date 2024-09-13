@@ -1,0 +1,18 @@
+script _SlateportCity_PokemonFanClub_EventScript_Meowth {
+  lock
+  faceplayer
+  waitse
+  playmoncry(SPECIES_MEOWTH, CRY_MODE_NORMAL)
+  random(6)
+  switch (var(VAR_RESULT)) {
+    case 0: msgbox(format("Meowth: Mya myaaah!"))
+    case 1: msgbox(format("Meowth: Miyao?"))
+    case 2: msgbox(format("Meowth: Miyaan?"))
+    case 3: msgbox(format("Meowth: Gyaaaah!"))
+    case 4: msgbox(format("Meowth: Fffnyaaaah…"))
+    case 5: msgbox(format("Meowth: Umyaaaan!"))
+  }
+  waitmoncry
+  release
+  end
+}
