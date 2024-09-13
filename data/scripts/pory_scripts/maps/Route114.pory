@@ -13,3 +13,16 @@ script _Route114_EventScript_BerryMan {
   release
   end
 }
+
+script _Route114_EventScript_Growlithe {
+  lock
+  faceplayer
+  waitse
+  // playmoncry(SPECIES_POOCHYENA, CRY_MODE_ENCOUNTER)
+  playmoncry(SPECIES_GROWLITHE, CRY_MODE_ENCOUNTER)
+  // Route114_Text_Poochyena
+  msgbox(format("Bow! Bowwow!"))
+  waitmoncry
+  release
+  end
+}
