@@ -1,0 +1,22 @@
+script _FallarborTown_Mart_EventScript_Woman {
+  lock
+  faceplayer
+  msgbox(format("I'm having a hard time deciding if I should make my Pikachu evolve or not.\pI only have to use this Thunder Stone, but it's so hard to decide…\pIf I make it evolve, it will become much stronger.\pBut it will look so different, too."))
+  release
+  end
+}
+
+script _FallarborTown_Mart_EventScript_Pikachu {
+  lock
+  faceplayer
+  waitse
+  playmoncry(SPECIES_PIKACHU, CRY_MODE_NORMAL)
+  random(2)
+  switch (var(VAR_RESULT)) {
+    case 0: msgbox(format("Pikachu: Pikaaaa!"))
+    case 1: msgbox(format("Pikachu: Pika pika!"))
+  }
+  waitmoncry
+  release
+  end
+}
