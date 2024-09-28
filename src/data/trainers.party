@@ -1546,13 +1546,13 @@ Items: Hyper Potion
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices
 
-Stantler
+Spinda
 Level: 25
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Confuse Ray
-- Zen Headbutt
-- Jump Kick
-- Shadow Ball
+- Teeter Dance
+- Dizzy Punch
+- Focus Punch
+- Sucker Punch
 
 === TRAINER_GEORGE ===
 Name: George
@@ -5568,9 +5568,13 @@ Music: Twins
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices
 
-Linoone
+Spinda
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Hypnosis
+- Psybeam
+- Dizzy Punch
+- Teeter Dance
 
 Slaking
 Level: 32
