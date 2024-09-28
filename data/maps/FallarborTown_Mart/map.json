@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "FallarborTown_Mart_EventScript_Clerk",
+      "script": "_Common_EventScript_Clerk",
       "flag": "0"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "FallarborTown_Mart_EventScript_Woman",
+      "script": "_FallarborTown_Mart_EventScript_Woman",
       "flag": "0"
     },
     {
@@ -54,7 +54,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SKITTY",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(PIKACHU)",
       "x": 2,
       "y": 5,
       "elevation": 3,
@@ -63,7 +63,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "FallarborTown_Mart_EventScript_Skitty",
+      "script": "_FallarborTown_Mart_EventScript_Pikachu",
       "flag": "0"
     },
     {

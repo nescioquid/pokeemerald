@@ -9507,7 +9507,7 @@ Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TABITHA_MOSSDEEP ===
-Name: Tabitha
+Name: Mitch
 Class: Magma Admin
 Pic: Magma Admin
 Gender: Male
@@ -11507,7 +11507,7 @@ Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TABITHA_MT_CHIMNEY ===
-Name: Tabitha
+Name: Mitch
 Class: Magma Admin
 Pic: Magma Admin
 Gender: Male
@@ -14372,7 +14372,7 @@ Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TABITHA_MAGMA_HIDEOUT ===
-Name: Tabitha
+Name: Mitch
 Class: Magma Admin
 Pic: Magma Admin
 Gender: Male

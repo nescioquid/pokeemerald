@@ -13,7 +13,7 @@ FallarborTown_PokemonCenter_1F_OnTransition:
 
 FallarborTown_PokemonCenter_1F_EventScript_Nurse::
 	setvar VAR_0x800B, LOCALID_NURSE
-	call Common_EventScript_PkmnCenterNurse
+	call _Common_EventScript_PkmnCenterNurse
 	waitmessage
 	waitbuttonpress
 	release

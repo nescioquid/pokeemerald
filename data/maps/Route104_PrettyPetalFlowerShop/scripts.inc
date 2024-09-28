@@ -1,7 +1,7 @@
 .set LOCALID_OWNER, 1
 
 Route104_PrettyPetalFlowerShop_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, Route104_PrettyPetalFlowerShop_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, _Route104_PrettyPetalFlowerShop_OnTransition
 	.byte 0
 
 Route104_PrettyPetalFlowerShop_OnTransition:

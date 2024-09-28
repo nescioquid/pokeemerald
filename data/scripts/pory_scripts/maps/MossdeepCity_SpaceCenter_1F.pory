@@ -1,0 +1,7 @@
+script _MossdeepCity_SpaceCenter_1F_EventScript_GiveSunStoneMoonStone {
+  random(2)
+    switch (var(VAR_RESULT)) {
+      case 0: giveitem(ITEM_SUN_STONE)
+      case 1: giveitem(ITEM_MOON_STONE)
+    }
+}

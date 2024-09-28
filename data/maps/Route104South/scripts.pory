@@ -2,24 +2,24 @@ const LOCALID_RIVAL = 15
 
 mapscripts Route104South_MapScripts {
   MAP_SCRIPT_ON_FRAME_TABLE [
-    VAR_BOARD_BRINEY_BOAT_STATE, 1: Route104South_EventScript_StartSailToDewford
+    VAR_BOARD_BRINEY_BOAT_STATE, 1: _Route104South_EventScript_StartSailToDewford
   ]
-  MAP_SCRIPT_ON_TRANSITION: Route104South_OnTransition
+  MAP_SCRIPT_ON_TRANSITION: _Route104South_OnTransition
 }
 
-script Route104South_EventScript_StartSailToDewford {
+script _Route104South_EventScript_StartSailToDewford {
   lockall
   goto(Route104_EventScript_SailToDewford)
   end
 }
 
-script Route104South_OnTransition {
+script _Route104South_OnTransition {
   call(Common_EventScript_SetupRivalGfxId)
-  call(Route104South_EventScript_TrySetRivalPos)
+  call(_Route104South_EventScript_TrySetRivalPos)
   end
 }
 
-script Route104South_EventScript_TrySetRivalPos {
+script _Route104South_EventScript_TrySetRivalPos {
   if (var(VAR_BOARD_BRINEY_BOAT_STATE) >= 1) {
     goto(Route104_EventScript_DontSetRivalPos)
   }
@@ -33,7 +33,7 @@ script Route104South_EventScript_TrySetRivalPos {
   return
 }
 
-script Route104South_EventScript_RivalTrigger {
+script _Route104South_EventScript_RivalTrigger {
   lockall
   setflag(FLAG_HIDE_RUSTBORO_CITY_RIVAL)
   setvar(VAR_RUSTBORO_CITY_STATE, 8)
@@ -57,12 +57,12 @@ script Route104South_EventScript_RivalTrigger {
   waitmovement(0)
   checkplayergender
   switch (var(VAR_RESULT)) {
-    case   MALE: goto(Route104South_EventScript_MayEncounter)
-    case FEMALE: goto(Route104South_EventScript_BrendanEncounter)
+    case   MALE: goto(_Route104South_EventScript_MayEncounter)
+    case FEMALE: goto(_Route104South_EventScript_BrendanEncounter)
   }
 }
 
-script Route104South_EventScript_MayEncounter {
+script _Route104South_EventScript_MayEncounter {
   if (flag(FLAG_DEFEATED_RIVAL_ROUTE_104)) {
     goto(Route104_EventScript_MayDefeated)
   }
@@ -87,15 +87,17 @@ script Route104South_EventScript_MayEncounter {
   applymovement(LOCALID_RIVAL, Route104_Movement_RivalApproachPlayer)
   waitmovement(0)
   copyobjectxytoperm(LOCALID_RIVAL)
-  msgbox(Route104_Text_MayMinesDecentLetsBattle, MSGBOX_YESNO)
-  goto_if_eq(VAR_RESULT, YES, Route104_EventScript_BattleMay)
-  msgbox(Route104_Text_MayHaventRaisedPokemon, MSGBOX_DEFAULT)
-  call(Route104_EventScript_RestoreMusic)
+  msgbox(format("Mine's looking pretty decent.\nSo…\lHow about a little battle?"))
+  switch(var(VAR_STARTER_MON)) {
+    case 0: call(Route104_EventScript_BattleMayTreecko)
+    case 1: call(Route104_EventScript_BattleMayTorchic)
+    case 2: call(Route104_EventScript_BattleMayMudkip)
+  }
   releaseall
   end
 }
 
-script Route104South_EventScript_BrendanEncounter {
+script _Route104South_EventScript_BrendanEncounter {
   if (flag(FLAG_DEFEATED_RIVAL_ROUTE_104)) {
     goto(Route104_EventScript_BrendanDefeated)
   }
@@ -120,10 +122,12 @@ script Route104South_EventScript_BrendanEncounter {
   applymovement(LOCALID_RIVAL, Route104_Movement_RivalApproachPlayer)
   waitmovement(0)
   copyobjectxytoperm(LOCALID_RIVAL)
-  msgbox(Route104_Text_BrendanDoingGreatLetsBattle, MSGBOX_YESNO)
-  goto_if_eq(VAR_RESULT, YES, Route104_EventScript_BattleBrendan)
-  msgbox(Route104_Text_BrendanNoConfidence, MSGBOX_DEFAULT)
-  call(Route104_EventScript_RestoreMusic)
+  msgbox(format("Me, I'm doing great!\pWanna check out how good I am with\na battle?"))
+  switch(var(VAR_STARTER_MON)) {
+    case 0: call(Route104_EventScript_BattleBrendanTreecko)
+    case 1: call(Route104_EventScript_BattleBrendanTorchic)
+    case 2: call(Route104_EventScript_BattleBrendanMudkip)
+  }
   releaseall
   end
 }
