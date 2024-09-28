@@ -1,0 +1,8 @@
+mapscripts Route104North_MapScripts {
+  MAP_SCRIPT_ON_TRANSITION: Route104North_OnTransition
+}
+
+script Route104North_OnTransition {
+  call(Route104_EventScript_ShowOrHideWhiteHerbFlorist)
+  end
+}
