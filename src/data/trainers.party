@@ -1949,7 +1949,7 @@ Gender: Female
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Setup First Turn
+AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Force Setup First Turn
 
 Ursaring
 Level: 25
@@ -1966,7 +1966,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Setup First Turn
+AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Force Setup First Turn
 
 Mawile
 Level: 29
@@ -1996,7 +1996,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Setup First Turn
+AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Force Setup First Turn
 
 Slowpoke
 Level: 45
@@ -4794,7 +4794,7 @@ Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Setup First Turn
+AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Force Setup First Turn
 Mugshot: Purple
 
 Honchkrow @ Black Glasses
@@ -4888,7 +4888,7 @@ Gender: Female
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Setup First Turn
+AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Force Setup First Turn
 Mugshot: Pink
 
 Lapras @ Never Melt Ice
@@ -9795,7 +9795,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Setup First Turn
+AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Force Setup First Turn
 
 Torchic
 Level: 5
@@ -10777,7 +10777,7 @@ Gender: Male
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Setup First Turn
+AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Force Setup First Turn
 
 Breloom
 Level: 31
@@ -10805,7 +10805,7 @@ Gender: Male
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Setup First Turn
+AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Force Setup First Turn
 
 Breloom
 Level: 37
@@ -10837,7 +10837,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Setup First Turn
+AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Force Setup First Turn
 
 Gloom
 Level: 26
@@ -10855,7 +10855,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Setup First Turn
+AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Force Setup First Turn
 
 Oddish
 Level: 28
@@ -10895,7 +10895,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Setup First Turn
+AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Force Setup First Turn
 
 Bellossom
 Level: 30
@@ -10931,7 +10931,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Setup First Turn
+AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Force Setup First Turn
 
 Bellossom
 Level: 36
@@ -11559,7 +11559,7 @@ Gender: Male
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Setup First Turn
+AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Force Setup First Turn
 
 Kecleon
 Level: 33
@@ -11621,7 +11621,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Setup First Turn
+AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Force Setup First Turn
 
 Dodrio @ Chilan Berry
 Level: 10
@@ -13589,7 +13589,7 @@ Pic: Old Couple
 Gender: Male
 Music: Intense
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Setup First Turn
+AI: Check Bad Move / Try To Faint / Check Viability / Hp Aware / Smart Switching / Smart Mon Choices / Force Setup First Turn
 
 Hitmonlee
 Level: 49
