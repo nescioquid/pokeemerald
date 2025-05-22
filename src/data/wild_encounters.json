@@ -9022,7 +9022,7 @@
               {
                 "min_level": 37,
                 "max_level": 37,
-                "species": "SPECIES_UNOWN_EMARK"
+                "species": "SPECIES_UNOWN_EXCLAMATION"
               },
               {
                 "min_level": 39,
@@ -9181,7 +9181,7 @@
               {
                 "min_level": 39,
                 "max_level": 39,
-                "species": "SPECIES_UNOWN_QMARK"
+                "species": "SPECIES_UNOWN_QUESTION"
               },
               {
                 "min_level": 40,
