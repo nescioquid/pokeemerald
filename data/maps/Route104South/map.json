@@ -208,6 +208,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_ROUTE104SOUTH_RIVAL",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 17,
       "y": 18,
