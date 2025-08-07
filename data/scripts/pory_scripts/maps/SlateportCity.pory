@@ -76,7 +76,6 @@ mart _SlateportCity_Pokemart_TMs_All {
   ITEM_TM_CONFIDE        // TM100
 }
 
-const LOCALID_FOSSIL_MANIAC = 36
 const PUSH_TO_DYNMULTISTACK_IF_OWNED = VAR_TEMP_8
 const FOSSIL_TO_TRADE = VAR_TEMP_7
 const EVO_STONE_CHOSEN = VAR_TEMP_6
@@ -107,9 +106,9 @@ script _SlateportCity_EventScript_FossilManiac {
     }
   }
   playse(SE_PIN)
-  applymovement(LOCALID_FOSSIL_MANIAC, Common_Movement_ExclamationMark)
+  applymovement(LOCALID_SLATEPORT_FOSSIL_MANIAC, Common_Movement_ExclamationMark)
   waitmovement(0)
-  applymovement(LOCALID_FOSSIL_MANIAC, Common_Movement_Delay48)
+  applymovement(LOCALID_SLATEPORT_FOSSIL_MANIAC, Common_Movement_Delay48)
   waitmovement(0)
   setflag(FLAG_TEMP_1)
   message(format("Hey, that's a cool rock!\pDo you wanna trade something for it? I'll give you one of my rocks if you let me have it."))

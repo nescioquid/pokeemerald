@@ -1,4 +1,3 @@
-const LOCALID_META_BOY = 4
 const GIVEMON_HELPER_ARTICLE = VAR_TEMP_9
 const STARTER_GRASS = 0
 const STARTER_FIRE  = 1
@@ -17,9 +16,9 @@ script _DewfordTown_PokemonCenter_1F_EventScript_MetaBoy {
     call(_Common_EventScript_GetBadgeCount)
     if (var(VAR_RESULT) >= 2) {
       playse(SE_PIN)
-      applymovement(LOCALID_META_BOY, Common_Movement_ExclamationMark)
+      applymovement(LOCALID_DEWFORD_META_BOY, Common_Movement_ExclamationMark)
       waitmovement(0)
-      applymovement(LOCALID_META_BOY, Common_Movement_Delay48)
+      applymovement(LOCALID_DEWFORD_META_BOY, Common_Movement_Delay48)
       waitmovement(0)
       msgbox(format("Wait a second…\pThat confidence…\pThose badges…\pAnd, most of all, that plot armor…\p…YOU could take care of my Pokémon!\pPlease, oh please, would you?\nPleasy please?"), MSGBOX_YESNO)
       if (!var(VAR_RESULT)) {

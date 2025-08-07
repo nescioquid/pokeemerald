@@ -1,4 +1,3 @@
-const LOCALID_CAPT_STERN = 4
 const GIVEMON_HELPER_ARTICLE = VAR_TEMP_9
 
 script _SlateportCity_Harbor_EventScript_CaptStern {

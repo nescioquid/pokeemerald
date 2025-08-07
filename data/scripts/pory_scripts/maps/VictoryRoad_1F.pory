@@ -1,17 +1,15 @@
-const LOCALID_WALLY = 6
-
 script _VictoryRoad_1F_OnTransition {
   if (var(VAR_VICTORY_ROAD_1F_STATE) == 1) {
-    setobjectxyperm(LOCALID_WALLY, 31, 9)
-    setobjectmovementtype(LOCALID_WALLY, MOVEMENT_TYPE_LOOK_AROUND)
+    setobjectxyperm(LOCALID_VICTORY_ROAD_EXIT_WALLY, 31, 9)
+    setobjectmovementtype(LOCALID_VICTORY_ROAD_EXIT_WALLY, MOVEMENT_TYPE_LOOK_AROUND)
   }
   end
 }
 
 script _VictoryRoad_1F_EventScript_WallyTriggerLeft {
   lock
-  addobject(LOCALID_WALLY)
-  applymovement(LOCALID_WALLY, _VictoryRoad_1F_Movement_WallyApproachPlayerLeft)
+  addobject(LOCALID_VICTORY_ROAD_EXIT_WALLY)
+  applymovement(LOCALID_VICTORY_ROAD_EXIT_WALLY, _VictoryRoad_1F_Movement_WallyApproachPlayerLeft)
   waitmovement(0)
   faceplayer
   applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight)
@@ -24,8 +22,8 @@ script _VictoryRoad_1F_EventScript_WallyTriggerLeft {
 
 script _VictoryRoad_1F_EventScript_WallyTriggerCenter {
   lock
-  addobject(LOCALID_WALLY)
-  applymovement(LOCALID_WALLY, _VictoryRoad_1F_Movement_WallyApproachPlayerCenter)
+  addobject(LOCALID_VICTORY_ROAD_EXIT_WALLY)
+  applymovement(LOCALID_VICTORY_ROAD_EXIT_WALLY, _VictoryRoad_1F_Movement_WallyApproachPlayerCenter)
   waitmovement(0)
   faceplayer
   applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown)
@@ -38,8 +36,8 @@ script _VictoryRoad_1F_EventScript_WallyTriggerCenter {
 
 script _VictoryRoad_1F_EventScript_WallyTriggerRight {
   lock
-  addobject(LOCALID_WALLY)
-  applymovement(LOCALID_WALLY, _VictoryRoad_1F_Movement_WallyApproachPlayerRight)
+  addobject(LOCALID_VICTORY_ROAD_EXIT_WALLY)
+  applymovement(LOCALID_VICTORY_ROAD_EXIT_WALLY, _VictoryRoad_1F_Movement_WallyApproachPlayerRight)
   waitmovement(0)
   faceplayer
   applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft)
@@ -70,7 +68,7 @@ script _VictoryRoad_1F_EventScript_Wally {
   trainerbattle_no_intro(TRAINER_WALLY_VR_1, VictoryRoad_1F_Text_WallyEntranceDefeat)
   msgbox(VictoryRoad_1F_Text_WallyPostEntranceBattle)
   clearflag(FLAG_HIDE_VICTORY_ROAD_EXIT_WALLY)
-  copyobjectxytoperm(LOCALID_WALLY)
+  copyobjectxytoperm(LOCALID_VICTORY_ROAD_EXIT_WALLY)
   setflag(FLAG_DEFEATED_WALLY_VICTORY_ROAD)
   release
   end

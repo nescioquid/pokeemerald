@@ -10,17 +10,15 @@ script _BattleFrontier_Mart_EventScript_Clerk {
   end
 }
 
-const LOCALID_RICH_LADY = 5
-
 script _BattleFrontier_Mart_EventScript_GiveTMSwagger {
   lock
   faceplayer
   if (!flag(FLAG_RECEIVED_TM_SWAGGER)) {
     msgbox(format("{FONT_SMALL}How might I have been so heedless…"))
     playse(SE_PIN)
-    applymovement(LOCALID_RICH_LADY, Common_Movement_ExclamationMark)
+    applymovement(LOCALID_FRONTIER_RICH_LADY, Common_Movement_ExclamationMark)
     waitmovement(0)
-    applymovement(LOCALID_RICH_LADY, Common_Movement_Delay48)
+    applymovement(LOCALID_FRONTIER_RICH_LADY, Common_Movement_Delay48)
     waitmovement(0)
     msgbox(format("You there!\nI've left my purse back on the yacht, and I find myself in somewhat compromised circumstances."))
     showmoneybox(0, 0)
