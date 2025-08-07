@@ -1897,6 +1897,7 @@ extern const u8 MatchCall_Text_Wally2[];
 extern const u8 MatchCall_Text_Wally3[];
 extern const u8 MatchCall_Text_Wally4[];
 extern const u8 MatchCall_Text_Wally5[];
+extern const u8 _MatchCall_Text_Wally5[];
 extern const u8 MatchCall_Text_Wally6[];
 extern const u8 MatchCall_Text_Wally7[];
 extern const u8 MatchCall_Text_Scott1[];
@@ -2421,5 +2422,11 @@ extern const u8 gText_Rename[]; // change nickname from summary screen
 
 // Switch Caught Mon into Party
 extern const u8 gText_CannotSendMonToBoxHM[];
+
+// Party Screen item swapping
+extern const u8 gMenuText_Move[];
+extern const u8 gText_MoveItemWhere[];
+extern const u8 gText_XsYAnd[];
+extern const u8 gText_XsYWereSwapped[];
 
 #endif // GUARD_STRINGS_H

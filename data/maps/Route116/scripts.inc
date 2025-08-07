@@ -63,7 +63,7 @@ Route116_EventScript_GiveRepeatBall::
 	call_if_eq VAR_FACING, DIR_EAST, Route116_EventScript_DevonEmployeeExitEast
 	removeobject VAR_LAST_TALKED
 	clearflag FLAG_HIDE_RUSTBORO_CITY_DEVON_CORP_3F_EMPLOYEE
-	setflag FLAG_RECEIVED_REPEAT_BALL
+	setflag FLAG_RECEIVED_MASTER_BALL
 	release
 	end
 
@@ -152,9 +152,9 @@ Route116_EventScript_BrineyTrigger::
 Route116_EventScript_GlassesMan::
 	lock
 	faceplayer
-	checkitem ITEM_BLACK_GLASSES
+	checkitem ITEM_WISE_GLASSES
 	goto_if_eq VAR_RESULT, TRUE, Route116_EventScript_PlayerHasGlasses
-	specialvar VAR_RESULT, FoundBlackGlasses
+	specialvar VAR_RESULT, FoundWiseGlasses
 	goto_if_eq VAR_RESULT, TRUE, Route116_EventScript_FoundGlassesNotOnPlayer
 	msgbox Route116_Text_CanYouHelpMeFindGlasses, MSGBOX_DEFAULT
 	release
@@ -169,7 +169,7 @@ Route116_EventScript_FoundGlassesNotOnPlayer::
 Route116_EventScript_PlayerHasGlasses::
 	msgbox Route116_Text_CanYouHelpMeFindGlasses, MSGBOX_DEFAULT
 	msgbox Route116_Text_MayISeeThoseGlasses, MSGBOX_DEFAULT
-	specialvar VAR_RESULT, FoundBlackGlasses
+	specialvar VAR_RESULT, FoundWiseGlasses
 	goto_if_eq VAR_RESULT, TRUE, Route116_EventScript_FoundGlassesOnPlayer
 	msgbox Route116_Text_NotWhatImLookingFor, MSGBOX_DEFAULT
 	release

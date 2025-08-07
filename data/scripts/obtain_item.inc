@@ -187,6 +187,7 @@ EventScript_NoRoomToPickUpItem::
 EventScript_HiddenItemScript::
 	lockall
 	waitse
+	call _Common_EventScript_RandomizedItemHidden
 	copyvar VAR_0x8006, VAR_0x8005
 	additem VAR_0x8005
 	copyvar VAR_0x8007, VAR_RESULT

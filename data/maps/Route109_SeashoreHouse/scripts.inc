@@ -54,9 +54,9 @@ Route109_SeashoreHouse_EventScript_BuySodaPop::
 	updatemoneybox
 .if OW_SHOW_ITEM_DESCRIPTIONS != OW_ITEM_DESCRIPTIONS_OFF
 	hidemoneybox
-	giveitem ITEM_SODA_POP
+	giveitem ITEM_SODA_POP, 6
 .else
-	giveitem ITEM_SODA_POP
+	giveitem ITEM_SODA_POP, 6
 	hidemoneybox
 .endif
 	release
