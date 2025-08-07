@@ -55,6 +55,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_DEWFORD_META_BOY",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY_3",
       "x": 12,
       "y": 4,
