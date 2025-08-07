@@ -1,13 +1,11 @@
-const LOCALID_LOST_HIKER = 9
-
 script _FieryPath_EventScript_GiveTMNaturePower {
   lock
   faceplayer
   if (!flag(FLAG_RECEIVED_TM_NATURE_POWER)) {
     playse(SE_PIN)
-    applymovement(LOCALID_LOST_HIKER, Common_Movement_ExclamationMark)
+    applymovement(LOCALID_FIERY_PATH_LOST_HIKER, Common_Movement_ExclamationMark)
     waitmovement(0)
-    applymovement(LOCALID_LOST_HIKER, Common_Movement_Delay48)
+    applymovement(LOCALID_FIERY_PATH_LOST_HIKER, Common_Movement_Delay48)
     waitmovement(0)
     msgbox(format("Oh?!"))
     giveitem(ITEM_TM_NATURE_POWER)
