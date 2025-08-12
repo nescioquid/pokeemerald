@@ -280,8 +280,8 @@ Route109_EventScript_MrBriney::
 	end
 
 Route109_EventScript_HaveNotDeliveredDevonGood::
-	message Route109_Text_BrineySailToDewfordQuestion
-	msgbox Route109_Text_BrineySailToDewfordQuestion, MSGBOX_YESNO
+	message _Route109_Text_BrineySailToDewfordQuestion
+	msgbox _Route109_Text_BrineySailToDewfordQuestion, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Route109_EventScript_StayHere
 	goto Route109_EventScript_SailToDewford
 	end
@@ -303,7 +303,7 @@ Route109_EventScript_SailToDewford::
 	end
 
 Route109_EventScript_StayHere::
-	msgbox Route109_Text_BrineyDeliverDevonGoods, MSGBOX_DEFAULT
+	msgbox _Route109_Text_BrineyDeliverDevonGoods, MSGBOX_DEFAULT
 	release
 	end
 
@@ -330,14 +330,14 @@ Route109_EventScript_SoftSandGirl::
 	lock
 	faceplayer
 	special GetPlayerBigGuyGirlString
-	goto_if_set FLAG_RECEIVED_SOFT_SAND, Route109_EventScript_AlreadyReceivedSoftSand
+	goto_if_set FLAG_RECEIVED_DAMP_ROCK, Route109_EventScript_AlreadyReceivedSoftSand
 	msgbox Route109_Text_YouCanHaveThis, MSGBOX_DEFAULT
-	giveitem ITEM_SOFT_SAND
+	giveitem ITEM_DAMP_ROCK
 	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
 	closemessage
 	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
-	setflag FLAG_RECEIVED_SOFT_SAND
+	setflag FLAG_RECEIVED_DAMP_ROCK
 	release
 	end
 

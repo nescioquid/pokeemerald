@@ -65,7 +65,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_AZURILL",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(AZURILL)",
       "x": 8,
       "y": 12,
       "elevation": 3,
@@ -171,7 +171,7 @@
       "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "FallarborTown_EventScript_MoveTutorSign"
+      "script": "_FallarborTown_EventScript_MoveTutorSign"
     },
     {
       "type": "hidden_item",

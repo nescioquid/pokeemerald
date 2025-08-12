@@ -6,3 +6,55 @@ script _Route104North_OnTransition {
   call(Route104_EventScript_ShowOrHideWhiteHerbFlorist)
   end
 }
+
+script _Route104North_EventScript_ExpertF {
+  lock
+  faceplayer
+  if (!flag(FLAG_RECEIVED_BERRY_ROUTE_104)) {
+    msgbox(format("If you see Berries growing in loamy soil, feel free to take them.\pBut, make sure you plant a Berry in the same spot. That's common courtesy.\pHere, I'll share these with you."))
+    call(_Common_EventScript_GiveBerry_Retaliatory)
+    setflag(FLAG_RECEIVED_BERRY_ROUTE_104)
+  }
+  msgbox(format("The way you look, you must be a Trainer, no?\pTrainers often make Pokémon hold Berries.\pIt's up to you whether to grow Berries or use them."))
+  release
+  end
+}
+
+script _Route104North_EventScript_GiveTMEchoedVoice {
+  lock
+  faceplayer
+  if(!flag(FLAG_RECEIVED_TM_ECHOED_VOICE)) {
+    msgbox(format("Wassup!\nI like to shout my lungs out!\lIt feels so good!\pYou can have this, so you try it out!\pUse it on a Pokémon, and it will learn a move that attacks with its voice.\pIf the move is used several times in a row, it becomes more powerful!"))
+    giveitem(ITEM_TM_ECHOED_VOICE)
+    goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+    setflag(FLAG_RECEIVED_TM_ECHOED_VOICE)
+  }
+  msgbox(format("A word of advice!\nA TM, or Technical Machine, can be used many times.\pIt won't go away.\nSo try it out as many times as you want!"))
+  release
+  end
+}
+
+script Route104North_EventScript_WhiteHerbFlorist {
+  lock
+  faceplayer
+  if (!flag(FLAG_VISITED_DEWFORD_TOWN)) {
+    if (!flag(FLAG_MET_WHITE_HERB_FLORIST)) {
+      msgbox(format("This Flower Shop started selling Mulch and saplings recently.\pIt made me so happy, I went overboard shopping.\pI don't need so many of these berries, could I heal your Pokémon with some of them please?"), MSGBOX_YESNO)
+      setflag(FLAG_MET_WHITE_HERB_FLORIST)
+    } else {
+      msgbox(format("Hey there! I still have too many berries, can I heal your Pokémon for you again?"), MSGBOX_YESNO)
+    }
+    if (var(VAR_RESULT)) {
+      msgbox(format("Oh, thank you so much!"))
+      closemessage
+      call(Common_EventScript_OutOfCenterPartyHeal)
+      msgbox(format("All healed up!\nThere's lots of icky bugs in Petalburg Woods, so make sure your Pokémon stay healthy!"))
+    } else {
+      msgbox(format("Well, what am I gonna do with all these berries then?"))
+    }
+  } else {
+    msgbox(format("Thanks for helping me out! Now I just have a sane amount of berries. Haha!"))
+  }
+  release
+  end
+}
