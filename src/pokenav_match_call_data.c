@@ -576,7 +576,7 @@ static const struct MatchCallStructTrainer sWallaceMatchCallHeader =
     .mapSec = MAPSEC_EVER_GRANDE_CITY,
     .flag = FLAG_REGISTERED_WALLACE,
     .rematchTableIdx = REMATCH_WALLACE,
-    .desc = COMPOUND_STRING("Champion"),
+    .desc = COMPOUND_STRING("Water Wonder"),
     .name = NULL,
     .textData = sWallaceTextScripts
 };
