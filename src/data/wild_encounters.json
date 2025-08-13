@@ -56,9 +56,22 @@
             1
           ],
           "groups": {
-            "old_rod": [0, 1],
-            "good_rod": [2, 3, 4],
-            "super_rod": [5, 6, 7, 8, 9]
+            "old_rod": [
+              0,
+              1
+            ],
+            "good_rod": [
+              2,
+              3,
+              4
+            ],
+            "super_rod": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
           }
         }
       ],
@@ -9022,7 +9035,7 @@
               {
                 "min_level": 37,
                 "max_level": 37,
-                "species": "SPECIES_UNOWN_EMARK"
+                "species": "SPECIES_PIKACHU"
               },
               {
                 "min_level": 39,
@@ -9181,7 +9194,7 @@
               {
                 "min_level": 39,
                 "max_level": 39,
-                "species": "SPECIES_UNOWN_QMARK"
+                "species": "SPECIES_DEOXYS"
               },
               {
                 "min_level": 40,
