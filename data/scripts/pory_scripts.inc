@@ -26,6 +26,7 @@
 .include "data/scripts/pory_scripts/maps/EverGrandeCity_HallOfFame.inc"
 .include "data/scripts/pory_scripts/maps/EverGrandeCity_PokemonLeague_1F.inc"
 .include "data/scripts/pory_scripts/maps/FallarborTown_Mart.inc"
+.include "data/scripts/pory_scripts/maps/FallarborTown_MoveRelearnersHouse.inc"
 .include "data/scripts/pory_scripts/maps/FieryPath.inc"
 .include "data/scripts/pory_scripts/maps/FortreeCity_Gym.inc"
 .include "data/scripts/pory_scripts/maps/FortreeCity_House1.inc"
