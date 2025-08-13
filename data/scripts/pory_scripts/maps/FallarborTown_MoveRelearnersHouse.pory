@@ -1,0 +1,12 @@
+script _FallarborTown_MoveRelearnersHouse_EventScript_MoveRelearner {
+  lock
+  faceplayer
+  if (!flag(FLAG_TEMP_1)) {
+    msgbox(format("I'm the Move Tutor.\p I know all the moves that Pokémon learn--every one of them--and I could teach them those moves.\p I could teach a move to a Pokémon of yours,\N but now anyone can do that whenever they want in their Summary screen, so I just chill out here mostly."))
+    setflag(FLAG_TEMP_1)
+  } else {
+    msgbox(format("If your Pokémon need to learn a move, just teach it to them in their Summary screen!"))
+  }
+  release
+  end
+}
