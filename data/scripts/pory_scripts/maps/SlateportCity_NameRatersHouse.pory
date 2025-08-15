@@ -1,0 +1,12 @@
+script _SlateportCity_NameRatersHouse_EventScript_NameRater {
+  lock
+  faceplayer
+  if (!flag(FLAG_TEMP_1)) {
+    msgbox(format("Hi, hi! I'm the Name Rater.\p I used to be the fortune-teller of names.\N It was my pleasure to rate Pokémon's nicknames.\p But that was another time.\p Now that all you kids can rate and change your Pokémon's nicknames whenever you want in their Summary screen, my services are no longer sought out."))
+    setflag(FLAG_TEMP_1)
+  } else {
+    msgbox(format("Do come visit again."))
+  }
+  release
+  end
+}
