@@ -94,6 +94,7 @@
 .include "data/scripts/pory_scripts/maps/RustboroCity_Mart.inc"
 .include "data/scripts/pory_scripts/maps/SlateportCity.inc"
 .include "data/scripts/pory_scripts/maps/SlateportCity_Harbor.inc"
+.include "data/scripts/pory_scripts/maps/SlateportCity_NameRatersHouse.inc"
 .include "data/scripts/pory_scripts/maps/SlateportCity_PokemonFanClub.inc"
 .include "data/scripts/pory_scripts/maps/SootopolisCity.inc"
 .include "data/scripts/pory_scripts/maps/SootopolisCity_Mart.inc"
