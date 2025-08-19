@@ -25,6 +25,8 @@
 #include "constants/layouts.h"
 #include "constants/weather.h"
 
+#include "caps.h"
+
 extern const u8 EventScript_SprayWoreOff[];
 
 #define MAX_ENCOUNTER_RATE 2880
@@ -304,6 +306,9 @@ static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIn
     u8 range;
     u8 rand;
 
+    u8 cappedRand;
+    u8 cappedMax;
+
     if (LURE_STEP_COUNT == 0)
     {
         // Make sure minimum level is less than maximum level
@@ -320,6 +325,9 @@ static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIn
         range = max - min + 1;
         rand = Random() % range;
 
+        cappedRand = Random() % 3;
+        cappedMax = GetCurrentLevelCap() - 5;
+
         // check ability for max level mon
         if (!GetMonData(&gPlayerParty[0], MON_DATA_SANITY_IS_EGG))
         {
@@ -327,13 +335,13 @@ static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIn
             if (ability == ABILITY_HUSTLE || ability == ABILITY_VITAL_SPIRIT || ability == ABILITY_PRESSURE)
             {
                 if (Random() % 2 == 0)
-                    return max;
+                    return cappedMax;
 
                 if (rand != 0)
                     rand--;
             }
         }
-        return min + rand;
+        return cappedMax - cappedRand;
     }
     else
     {
