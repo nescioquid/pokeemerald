@@ -53,4 +53,6 @@
 
 #define AI_SCORE_DEFAULT 100 // Default score for all AI moves.
 
+#include "battle_ai_composite_flags.h"
+
 #endif // GUARD_CONSTANTS_BATTLE_AI_H
