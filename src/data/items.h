@@ -14141,4 +14141,166 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
+
+    // Start qol_field_moves
+    [ITEM_CUT_TOOL] =
+    {
+        .name = _("Cut Tool"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "This tool\n"
+            "is used for\n"
+            "cutting trees."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_CutTool,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
+
+    [ITEM_FLY_TOOL] =
+    {
+        .name = _("Fly Tool"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "This tool\n"
+            "is used for\n"
+            "going places."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_FlyTool,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
+
+    [ITEM_SURF_TOOL] =
+    {
+        .name = _("Surf Tool"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "This tool\n"
+            "is used for\n"
+            "riding waves."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_SurfTool,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
+
+    [ITEM_STRENGTH_TOOL] =
+    {
+        .name = _("Strength Tool"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "This tool\n"
+            "is used for\n"
+            "moving boulders."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_StrengthTool,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
+
+    [ITEM_FLASH_TOOL] =
+    {
+        .name = _("Flash Tool"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "This tool\n"
+            "is used for\n"
+            "lighting caves."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_FlashTool,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
+
+    [ITEM_ROCKSMASH_TOOL] =
+    {
+        .name = _("Rock Smash Tool"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "This tool\n"
+            "is used for\n"
+            "smashing rocks."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_RockSmashTool,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
+
+    [ITEM_WATERFALL_TOOL] =
+    {
+        .name = _("Waterfall Tool"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "This tool\n"
+            "is used for\n"
+            "climbing waterfalls."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_WaterfallTool,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
+
+    [ITEM_DIVE_TOOL] =
+    {
+        .name = _("Dive Tool"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "This tool\n"
+            "is used for\n"
+            "diving underwater."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_DiveTool,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
+
+    [ITEM_TELEPORT_TOOL] =
+    {
+        .name = _("Teleport Tool"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "This tool\n"
+            "is used for\n"
+            "getting to safety."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_TeleportTool,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
+
+    [ITEM_SWEETSCENT_TOOL] =
+    {
+        .name = _("Sweet Scent Tool"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "This tool\n"
+            "is used for\n"
+            "luring pokemon."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_SweetScentTool,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
+    // End qol_field_moves
 };
