@@ -4794,7 +4794,7 @@ Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Elite Four / Force Setup First Turn
+AI: Sidney
 Mugshot: Purple
 
 Honchkrow @ Black Glasses
@@ -4841,7 +4841,7 @@ Gender: Female
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Elite Four
+AI: Phoebe
 Mugshot: Green
 
 Mismagius @ Spell Tag
@@ -4888,7 +4888,7 @@ Gender: Female
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Elite Four / Force Setup First Turn
+AI: Glacia
 Mugshot: Pink
 
 Lapras @ Never Melt Ice
@@ -4935,7 +4935,7 @@ Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Elite Four
+AI: Drake
 Mugshot: Blue
 
 Flygon @ Dragon Fang
@@ -4981,7 +4981,7 @@ Pic: Leader Roxanne
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Leader
+AI: Roxanne
 Mugshot: Pink
 
 Rhyhorn @ Oran Berry
@@ -5027,7 +5027,7 @@ Pic: Leader Brawly
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Leader
+AI: Brawly
 Mugshot: Blue
 
 Primeape @ Lum Berry
@@ -5073,7 +5073,7 @@ Pic: Leader Wattson
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Leader
+AI: Wattson
 Mugshot: Yellow
 
 Electrode @ Shuca Berry
@@ -5119,7 +5119,7 @@ Pic: Leader Flannery
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Leader
+AI: Flannery
 Mugshot: Purple
 
 Ninetales (F) @ White Herb
@@ -5165,7 +5165,7 @@ Pic: Leader Norman
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Leader
+AI: Norman
 Mugshot: Green
 
 Stantler @ Pinap Berry
@@ -5211,7 +5211,7 @@ Pic: Leader Winona
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Leader / Risky
+AI: Winona
 Mugshot: Pink
 
 Pidgeot @ Charti Berry
@@ -5257,7 +5257,7 @@ Pic: Leader Tate And Liza
 Gender: Male
 Music: Female
 Double Battle: Yes
-AI: Leader
+AI: Tate and Liza
 Mugshot: Purple
 
 Exeggutor @ Maranga Berry
@@ -5303,7 +5303,7 @@ Pic: Leader Juan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Leader
+AI: Juan
 Mugshot: Blue
 
 Lanturn @ Salac Berry
@@ -15137,7 +15137,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Roxanne
 Mugshot: Pink
 
 Golem
@@ -15180,7 +15180,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Roxanne
 Mugshot: Pink
 
 Omanyte
@@ -15231,7 +15231,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Roxanne
 Mugshot: Pink
 
 Omastar
@@ -15282,7 +15282,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Roxanne
 Mugshot: Pink
 
 Aerodactyl
@@ -15341,7 +15341,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Brawly
 Mugshot: Blue
 
 Machamp @ Sitrus Berry
@@ -15384,7 +15384,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Brawly
 Mugshot: Blue
 
 Machamp @ Sitrus Berry
@@ -15427,7 +15427,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Brawly
 Mugshot: Blue
 
 Hitmonchan
@@ -15478,7 +15478,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Brawly
 Mugshot: Blue
 
 Hitmonlee
@@ -15537,7 +15537,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Wattson
 Mugshot: Yellow
 
 Mareep
@@ -15580,7 +15580,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Wattson
 Mugshot: Yellow
 
 Pikachu
@@ -15631,7 +15631,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Wattson
 Mugshot: Yellow
 
 Raichu
@@ -15682,7 +15682,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Wattson
 Mugshot: Yellow
 
 Electabuzz
@@ -15741,7 +15741,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Flannery
 Mugshot: Purple
 
 Magcargo @ White Herb
@@ -15784,7 +15784,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Flannery
 Mugshot: Purple
 
 Growlithe
@@ -15835,7 +15835,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Flannery
 Mugshot: Purple
 
 Houndour
@@ -15894,7 +15894,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Flannery
 Mugshot: Purple
 
 Arcanine
@@ -15953,7 +15953,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Norman
 Mugshot: Green
 
 Chansey
@@ -15996,7 +15996,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Norman
 Mugshot: Green
 
 Slaking @ Sitrus Berry
@@ -16047,7 +16047,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Norman
 Mugshot: Green
 
 Slaking @ Sitrus Berry
@@ -16098,7 +16098,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Norman
 Mugshot: Green
 
 Slaking @ Sitrus Berry
@@ -16157,7 +16157,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader / Risky
+AI: Winona
 Mugshot: Pink
 
 Dratini @ Sitrus Berry
@@ -16208,7 +16208,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader / Risky
+AI: Winona
 Mugshot: Pink
 
 Hoothoot
@@ -16267,7 +16267,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader / Risky
+AI: Winona
 Mugshot: Pink
 
 Noctowl
@@ -16326,7 +16326,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader / Risky
+AI: Winona
 Mugshot: Pink
 
 Noctowl
@@ -16385,7 +16385,7 @@ Gender: Male
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Tate and Liza
 Mugshot: Purple
 
 Slowpoke
@@ -16436,7 +16436,7 @@ Gender: Male
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Tate and Liza
 Mugshot: Purple
 
 Drowzee
@@ -16495,7 +16495,7 @@ Gender: Male
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Tate and Liza
 Mugshot: Purple
 
 Hypno
@@ -16554,7 +16554,7 @@ Gender: Male
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Tate and Liza
 Mugshot: Purple
 
 Hypno
@@ -16613,7 +16613,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Juan
 Mugshot: Blue
 
 Poliwag
@@ -16664,7 +16664,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Juan
 Mugshot: Blue
 
 Poliwhirl
@@ -16715,7 +16715,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Juan
 Mugshot: Blue
 
 Lapras
@@ -16774,7 +16774,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Leader
+AI: Juan
 Mugshot: Blue
 
 Lapras
