@@ -9633,7 +9633,7 @@ Pic: Wally
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Rival
+AI: Medium Wally
 
 Jolteon @ Magnet
 Level: 50
@@ -9687,7 +9687,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Rival
+AI: Very Easy Rival
 
 Treecko
 Level: 5
@@ -9705,7 +9705,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Rival
+AI: Medium Rival
 
 Nidoking @ Chilan Berry
 Level: 20
@@ -9750,7 +9750,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Rival
+AI: Medium Rival
 
 Nidoking @ Chilan Berry
 Level: 30
@@ -9795,7 +9795,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Rival / Force Setup First Turn
+AI: Very Easy Rival
 
 Torchic
 Level: 5
@@ -9813,7 +9813,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Rival
+AI: Medium Rival
 
 Nidoking @ Chilan Berry
 Level: 20
@@ -9858,7 +9858,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Rival
+AI: Medium Rival
 
 Nidoking @ Chilan Berry
 Level: 30
@@ -9903,7 +9903,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Rival
+AI: Very Easy Rival
 
 Mudkip
 Level: 5
@@ -9921,7 +9921,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Rival
+AI: Medium Rival
 
 Nidoking @ Chilan Berry
 Level: 20
@@ -9966,7 +9966,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Rival
+AI: Medium Rival
 
 Nidoking @ Chilan Berry
 Level: 30
@@ -10011,7 +10011,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Rival
+AI: Very Easy Rival
 
 Treecko
 Level: 5
@@ -10029,7 +10029,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Rival
+AI: Medium Rival
 
 Nidoqueen @ Chilan Berry
 Level: 20
@@ -10074,7 +10074,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Rival
+AI: Medium Rival
 
 Nidoqueen @ Chilan Berry
 Level: 30
@@ -10119,7 +10119,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Rival
+AI: Very Easy Rival
 
 Torchic
 Level: 5
@@ -10137,7 +10137,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Rival
+AI: Medium Rival
 
 Nidoqueen @ Chilan Berry
 Level: 20
@@ -10182,7 +10182,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Rival
+AI: Medium Rival
 
 Nidoqueen @ Chilan Berry
 Level: 30
@@ -10227,7 +10227,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Rival
+AI: Very Easy Rival
 
 Mudkip
 Level: 5
@@ -10245,7 +10245,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Rival
+AI: Medium Rival
 
 Nidoqueen @ Chilan Berry
 Level: 20
@@ -10290,7 +10290,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Rival
+AI: Medium Rival
 
 Nidoqueen @ Chilan Berry
 Level: 30
@@ -11376,7 +11376,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Rival
+AI: Easy Rival
 
 Fearow @ Chilan Berry
 Level: 10
@@ -11421,7 +11421,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Rival
+AI: Easy Rival
 
 Fearow @ Chilan Berry
 Level: 10
@@ -11576,7 +11576,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Rival
+AI: Easy Rival
 
 Fearow @ Chilan Berry
 Level: 10
@@ -11621,7 +11621,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Rival / Force Setup First Turn
+AI: Easy Rival
 
 Dodrio @ Chilan Berry
 Level: 10
@@ -12794,7 +12794,7 @@ Pic: Wally
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Rival
+AI: Easy Wally
 
 Eevee @ Nanab Berry
 Level: 20
@@ -12813,7 +12813,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Rival
+AI: Hard Wally
 
 Altaria
 Level: 47
@@ -12863,7 +12863,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Rival
+AI: Hard Wally
 
 Altaria
 Level: 50
@@ -12913,7 +12913,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Rival
+AI: Hard Wally
 
 Altaria
 Level: 53
@@ -12963,7 +12963,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Rival
+AI: Hard Wally
 
 Altaria
 Level: 56
@@ -13012,7 +13012,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Rival
+AI: Medium Rival
 
 Nidoking @ Chilan Berry
 Level: 40
@@ -13057,7 +13057,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Rival
+AI: Medium Rival
 
 Nidoking @ Chilan Berry
 Level: 40
@@ -13102,7 +13102,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Rival
+AI: Medium Rival
 
 Nidoking @ Chilan Berry
 Level: 40
@@ -13147,7 +13147,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Rival
+AI: Medium Rival
 
 Nidoqueen @ Chilan Berry
 Level: 40
@@ -13192,7 +13192,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Rival
+AI: Medium Rival
 
 Nidoqueen @ Chilan Berry
 Level: 40
@@ -13237,7 +13237,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Rival
+AI: Medium Rival
 
 Nidoqueen @ Chilan Berry
 Level: 40
@@ -15046,7 +15046,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Rival
+AI: Easy Rival
 
 Dodrio @ Chilan Berry
 Level: 10
@@ -15091,7 +15091,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Rival
+AI: Easy Rival
 
 Dodrio @ Chilan Berry
 Level: 10
@@ -17876,7 +17876,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Rival
+AI: Hard Rival
 Mugshot: Green
 
 Snorlax @ Pinap Berry
@@ -17922,7 +17922,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Rival
+AI: Hard Rival
 Mugshot: Green
 
 Clefable @ Pinap Berry
@@ -17968,7 +17968,7 @@ Pic: School Kid M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Rival
+AI: Hard Rival
 Mugshot: Yellow
 
 Gliscor @ Toxic Orb

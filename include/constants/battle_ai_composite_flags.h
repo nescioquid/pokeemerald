@@ -56,6 +56,17 @@
 // Special trainer classes
 #define AI_FLAG_WINSTRATE                   (AI_FLAG_SMARTER_TRAINER)
 #define AI_FLAG_INTERVIEWER                 (AI_FLAG_BASIC_TRAINER | AI_FLAG_DOUBLES_TRAINER)
+#define AI_FLAG_WALLACE                     (AI_FLAG_SMARTEST_TRAINER | AI_FLAG_POWERFUL_STATUS)
+
+#define AI_FLAG_RIVAL                       (AI_FLAG_SMART_TRAINER)
+#define AI_FLAG_VERY_EASY_RIVAL             (AI_FLAG_BASIC_TRAINER)
+#define AI_FLAG_EASY_RIVAL                  (AI_FLAG_SMART_TRAINER)
+#define AI_FLAG_MEDIUM_RIVAL                (AI_FLAG_SMARTER_TRAINER)
+#define AI_FLAG_HARD_RIVAL                  (AI_FLAG_SMARTEST_TRAINER)
+
+#define AI_FLAG_EASY_WALLY                  (AI_FLAG_EASY_RIVAL | AI_FLAG_CONSERVATIVE)
+#define AI_FLAG_MEDIUM_WALLY                (AI_FLAG_MEDIUM_RIVAL | AI_FLAG_CONSERVATIVE)
+#define AI_FLAG_HARD_WALLY                  (AI_FLAG_HARD_RIVAL | AI_FLAG_CONSERVATIVE)
 
 // Villainous teams
 #define AI_FLAG_TEAM_AQUA                   (AI_FLAG_SMART_TRAINER | AI_FLAG_RISKY)
@@ -68,14 +79,14 @@
 
 // Gym Leaders
 #define AI_FLAG_LEADER                      (AI_FLAG_SMARTEST_TRAINER)
-#define AI_FLAG_ROXANNE                     (AI_FLAG_LEADER)
-#define AI_FLAG_BRAWLY                      (AI_FLAG_LEADER)
+#define AI_FLAG_ROXANNE                     (AI_FLAG_LEADER | AI_FLAG_CONSERVATIVE)
+#define AI_FLAG_BRAWLY                      (AI_FLAG_LEADER | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE)
 #define AI_FLAG_WATTSON                     (AI_FLAG_LEADER)
-#define AI_FLAG_FLANNERY                    (AI_FLAG_LEADER)
-#define AI_FLAG_NORMAN                      (AI_FLAG_LEADER)
+#define AI_FLAG_FLANNERY                    (AI_FLAG_LEADER | AI_FLAG_POWERFUL_STATUS)
+#define AI_FLAG_NORMAN                      (AI_FLAG_LEADER | AI_FLAG_RISKY)
 #define AI_FLAG_WINONA                      (AI_FLAG_LEADER | AI_FLAG_RISKY)
-#define AI_FLAG_TATE_AND_LIZA               (AI_FLAG_LEADER | AI_FLAG_DOUBLES_TRAINER)
-#define AI_FLAG_JUAN                        (AI_FLAG_LEADER)
+#define AI_FLAG_TATE_AND_LIZA               (AI_FLAG_LEADER | AI_FLAG_DOUBLES_TRAINER | AI_FLAG_POWERFUL_STATUS)
+#define AI_FLAG_JUAN                        (AI_FLAG_LEADER | AI_FLAG_POWERFUL_STATUS)
 
 // Elite Four and Champion
 #define AI_FLAG_ELITE_FOUR                  (AI_FLAG_SMARTEST_TRAINER)
@@ -98,9 +109,3 @@
 // Placeholder
 #define AI_FLAG_RS_PROTAG                   (AI_FLAG_BASIC_TRAINER)
 
-// Rivals
-#define AI_FLAG_RIVAL                       (AI_FLAG_SMARTER_TRAINER)
-#define AI_FLAG_BRENDAN                     (AI_FLAG_RIVAL)
-#define AI_FLAG_MAY                         (AI_FLAG_RIVAL)
-#define AI_FLAG_WALLY                       (AI_FLAG_RIVAL | AI_FLAG_CONSERVATIVE)
-#define AI_FLAG_WALLACE                     (AI_FLAG_SMARTEST_TRAINER)
