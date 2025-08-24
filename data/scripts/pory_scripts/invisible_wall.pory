@@ -1,0 +1,75 @@
+// Note: scripts have not been tested, only refactored in poryscript and generalized.
+
+// Passed in from `setvar VAR_0x8004, 0` in trigger scripts.
+const TRIGGER_UP    = 0
+const TRIGGER_DOWN  = 1
+const TRIGGER_LEFT  = 2
+const TRIGGER_RIGHT = 3
+
+script _Common_EventScript_InvisibleWall {
+  // Your logic for why the player can't enter the area yet goes here:
+  // checkitem(ITEM_GO_GOGGLES)
+  if (!var(VAR_RESULT)) {
+    msgbox(format("You cannot leave this area."))
+    closemessage
+    if (var(VAR_0x8004) == TRIGGER_UP) {
+      call(_Common_EventScript_PushUp)
+    }
+    if (var(VAR_0x8004) == TRIGGER_DOWN) {
+      call(_Common_EventScript_PushDown)
+    }
+    if (var(VAR_0x8004) == TRIGGER_LEFT) {
+      call(_Common_EventScript_PushLeft)
+    }
+    if (var(VAR_0x8004) == TRIGGER_RIGHT) {
+      call(_Common_EventScript_PushRight)
+    }
+  }
+  setvar(VAR_TEMP_3, 1)
+  releaseall
+  end
+}
+
+script _Common_EventScript_PushUp {
+  applymovement(LOCALID_PLAYER, _Common_Movement_PushUp)
+  waitmovement(0)
+  return
+}
+
+script _Common_EventScript_PushDown {
+  applymovement(LOCALID_PLAYER, _Common_Movement_PushDown)
+  waitmovement(0)
+  return
+}
+
+script _Common_EventScript_PushLeft {
+  applymovement(LOCALID_PLAYER, _Common_Movement_PushLeft)
+  waitmovement(0)
+  return
+}
+
+script _Common_EventScript_PushRight {
+  applymovement(LOCALID_PLAYER, _Common_Movement_PushRight)
+  waitmovement(0)
+  return
+}
+
+movement _Common_Movement_PushUp {
+  walk_up
+  step_end
+}
+
+movement _Common_Movement_PushDown {
+  walk_down
+  step_end
+}
+
+movement _Common_Movement_PushLeft {
+  walk_left
+  step_end
+}
+
+movement _Common_Movement_PushRight {
+  walk_right
+  step_end
+}
