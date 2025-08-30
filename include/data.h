@@ -182,6 +182,7 @@ extern const struct TrainerBacksprite gTrainerBacksprites[];
 
 extern const struct Trainer gTrainers[DIFFICULTY_COUNT][TRAINERS_COUNT];
 extern const struct Trainer gBattlePartners[DIFFICULTY_COUNT][PARTNER_COUNT];
+extern const struct Trainer gPartyPools[DIFFICULTY_COUNT][POOL_COUNT];
 
 extern const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT];
 
@@ -205,10 +206,22 @@ static inline bool8 IsPartnerTrainerId(u16 trainerId)
     return FALSE;
 }
 
+static inline bool8 IsPartyPoolId(u16 trainerId)
+{
+    if (trainerId >= PARTY_POOL(POOL_NONE) && trainerId < PARTY_POOL(POOL_COUNT))
+        return TRUE;
+    return FALSE;
+}
+
 static inline u16 SanitizeTrainerId(u16 trainerId)
 {
     if (trainerId >= TRAINERS_COUNT && !IsPartnerTrainerId(trainerId))
-        return TRAINER_NONE;
+    {
+        if (trainerId >= PARTNER_COUNT && !IsPartyPoolId(trainerId))
+        {
+            return TRAINER_NONE;
+        }
+    }
     return trainerId;
 }
 
@@ -220,7 +233,12 @@ static inline const struct Trainer *GetTrainerStructFromId(u16 trainerId)
     enum DifficultyLevel difficulty = GetTrainerDifficultyLevel(sanitizedTrainerId);
 
     if (IsPartnerTrainerId(trainerId))
+    {
         return &gBattlePartners[difficulty][sanitizedTrainerId - TRAINER_PARTNER(PARTNER_NONE)];
+    } else if (IsPartyPoolId(trainerId))
+    {
+        return &gBattlePartners[difficulty][sanitizedTrainerId - PARTY_POOL(POOL_NONE)];
+    }
     else
         return &gTrainers[difficulty][sanitizedTrainerId];
 }

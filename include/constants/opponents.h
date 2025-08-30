@@ -2,6 +2,7 @@
 #define GUARD_CONSTANTS_OPPONENTS_H
 
 #include "constants/battle_partner.h"
+#include "constants/party_pools.h"
 
 #define TRAINER_NONE                          0
 #define TRAINER_SAWYER_1                      1
@@ -869,5 +870,6 @@
 #define TRAINERS_COUNT                      858
 #define MAX_TRAINERS_COUNT                  864
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
+#define PARTY_POOL(pool)                   (MAX_TRAINERS_COUNT + PARTNER_COUNT + pool)
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H
