@@ -1,0 +1,1974 @@
+=== POOL_NONE ===
+Name:
+Class: Pkmn Trainer 1
+Pic: Brendan
+Gender: Male
+Music: Male
+Double Battle: No
+
+=== PARTY_POOL_AROMA_LADY ===
+Name: Pool
+Class: Aroma Lady
+Pic: Aroma Lady
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Aroma Lady
+Party Size: 1
+
+Oddish
+Level: 5
+
+Bellsprout
+Level: 5
+
+Sunkern
+Level: 5
+
+Shroomish
+Level: 5
+
+=== PARTY_POOL_BATTLE_GIRL ===
+Name: Pool
+Class: Battle Girl
+Pic: Battle Girl
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Battle Girl
+Party Size: 1
+
+Mankey
+Level: 5
+
+Machop
+Level: 5
+
+/*
+Hitmon
+Level: 5
+*/
+
+Shroomish
+Level: 5
+
+=== PARTY_POOL_BEAUTY ===
+Name: Pool
+Class: Beauty
+Pic: Beauty
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Beauty
+Party Size: 1
+
+Rattata
+Level: 5
+
+Caterpie
+Level: 5
+
+Pidgey
+Level: 5
+
+Pikachu
+Level: 5
+
+Nidoran♀
+Level: 5
+
+Paras
+Level: 5
+
+Clefairy
+Level: 5
+
+Vulpix
+Level: 5
+
+Jigglypuff
+Level: 5
+
+Oddish
+Level: 5
+
+Meowth
+Level: 5
+
+Psyduck
+Level: 5
+
+Poliwag
+Level: 5
+
+Growlithe
+Level: 5
+
+Bellsprout
+Level: 5
+
+Slowpoke
+Level: 5
+
+Seel
+Level: 5
+
+Shellder
+Level: 5
+
+Exeggcute
+Level: 5
+
+Chansey
+Level: 5
+
+Horsea
+Level: 5
+
+Goldeen
+Level: 5
+
+Staryu
+Level: 5
+
+Eevee
+Level: 5
+
+Jynx
+Level: 5
+
+Sentret
+Level: 5
+
+Marill
+Level: 5
+
+Hoppip
+Level: 5
+
+Corsola
+Level: 5
+
+Lotad
+Level: 5
+
+Shroomish
+Level: 5
+
+Wailmer
+Level: 5
+
+Kecleon
+Level: 5
+
+=== PARTY_POOL_BIRD KEEPER ===
+Name: Pool
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Bird Keeper
+Party Size: 1
+
+Pidgey
+Level: 5
+
+Spearow
+Level: 5
+
+Farfetch'd
+Level: 5
+
+Doduo
+Level: 5
+
+Hoothoot
+Level: 5
+
+Natu
+Level: 5
+
+Murkrow
+Level: 5
+
+Skarmory
+Level: 5
+
+Taillow
+Level: 5
+
+Wingull
+Level: 5
+
+Swablu
+Level: 5
+
+=== PARTY_POOL_BLACK_BELT ===
+Name: Pool
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Black Belt
+Party Size: 1
+
+Mankey
+Level: 5
+
+Poliwag
+Level: 5
+
+Machop
+Level: 5
+
+Geodude
+Level: 5
+
+Onix
+Level: 5
+
+/*
+Hitmon
+Level: 5
+*/
+
+Heracross
+Level: 5
+
+=== PARTY_POOL_BUG_CATCHER ===
+Name: Pool
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Bug Catcher
+Party Size: 1
+
+Caterpie
+Level: 5
+
+Weedle
+Level: 5
+
+Pikachu
+Level: 5
+
+Paras
+Level: 5
+
+Venonat
+Level: 5
+
+Scyther
+Level: 5
+
+Pinsir
+Level: 5
+
+Ledyba
+Level: 5
+
+Spinarak
+Level: 5
+
+Yanma
+Level: 5
+
+Pineco
+Level: 5
+
+Heracross
+Level: 5
+
+Wurmple
+Level: 5
+
+Surskit
+Level: 5
+
+Nincada
+Level: 5
+
+=== PARTY_POOL_BUG_MANIAC ===
+Name: Pool
+Class: Bug Maniac
+Pic: Bug Maniac
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Bug Maniac
+Party Size: 1
+
+Pinsir
+Level: 5
+
+Pineco
+Level: 5
+
+Wurmple
+Level: 5
+
+Surskit
+Level: 5
+
+Nincada
+Level: 5
+
+=== PARTY_POOL_CAMPER ===
+Name: Pool
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Camper
+Party Size: 1
+
+Rattata
+Level: 5
+
+Spearow
+Level: 5
+
+Ekans
+Level: 5
+
+Sandshrew
+Level: 5
+
+Nidoran♂
+Level: 5
+
+Zubat
+Level: 5
+
+Diglett
+Level: 5
+
+Psyduck
+Level: 5
+
+Mankey
+Level: 5
+
+Growlithe
+Level: 5
+
+Poliwag
+Level: 5
+
+Bellsprout
+Level: 5
+
+Geodude
+Level: 5
+
+Doduo
+Level: 5
+
+Krabby
+Level: 5
+
+Rhyhorn
+Level: 5
+
+Pinsir
+Level: 5
+
+Tauros
+Level: 5
+
+Eevee
+Level: 5
+
+Chinchou
+Level: 5
+
+Natu
+Level: 5
+
+Marill
+Level: 5
+
+Sudowoodo
+Level: 5
+
+Hoppip
+Level: 5
+
+Heracross
+Level: 5
+
+Slugma
+Level: 5
+
+Zigzagoon
+Level: 5
+
+Seedot
+Level: 5
+
+Taillow
+Level: 5
+
+Slakoth
+Level: 5
+
+Kecleon
+Level: 5
+
+/* TODO PARTY_POOL_COLLECTOR */
+
+=== PARTY_POOL_COOLTRAINER ===
+Name: Pool
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Cool
+Items: Hyper Potion
+Double Battle: No
+AI: Cooltrainer
+Party Size: 1
+
+Caterpie
+Level: 5
+
+Weedle
+Level: 5
+
+Pidgey
+Level: 5
+
+Rattata
+Level: 5
+
+Pikachu
+Level: 5
+
+Sandshrew
+Level: 5
+
+Nidoran♀
+Level: 5
+
+Nidoran♂
+Level: 5
+
+Vulpix
+Level: 5
+
+Jigglypuff
+Level: 5
+
+Zubat
+Level: 5
+
+Oddish
+Level: 5
+
+Paras
+Level: 5
+
+Diglett
+Level: 5
+
+Meowth
+Level: 5
+
+Psyduck
+Level: 5
+
+Mankey
+Level: 5
+
+Growlithe
+Level: 5
+
+Poliwag
+Level: 5
+
+Abra
+Level: 5
+
+Machop
+Level: 5
+
+Bellsprout
+Level: 5
+
+Tentacool
+Level: 5
+
+Geodude
+Level: 5
+
+Ponyta
+Level: 5
+
+Slowpoke
+Level: 5
+
+Magnemite
+Level: 5
+
+Doduo
+Level: 5
+
+Seel
+Level: 5
+
+Grimer
+Level: 5
+
+Shellder
+Level: 5
+
+Gastly
+Level: 5
+
+Onix
+Level: 5
+
+Krabby
+Level: 5
+
+Voltorb
+Level: 5
+
+Exeggcute
+Level: 5
+
+Cubone
+Level: 5
+
+/*
+Hitmon
+Level: 5
+*/
+
+Lickitung
+Level: 5
+
+Koffing
+Level: 5
+
+Rhyhorn
+Level: 5
+
+Chansey
+Level: 5
+
+Tangela
+Level: 5
+
+Kangaskhan
+Level: 5
+
+Horsea
+Level: 5
+
+Goldeen
+Level: 5
+
+Staryu
+Level: 5
+
+Scyther
+Level: 5
+
+Jynx
+Level: 5
+
+Electabuzz
+Level: 5
+
+Magmar
+Level: 5
+
+Pinsir
+Level: 5
+
+Tauros
+Level: 5
+
+Magikarp
+Level: 5
+
+Lapras
+Level: 5
+
+Eevee
+Level: 5
+
+Snorlax
+Level: 5
+
+Dratini
+Level: 5
+
+Chinchou
+Level: 5
+
+Mareep
+Level: 5
+
+Marill
+Level: 5
+
+Sudowoodo
+Level: 5
+
+Hoppip
+Level: 5
+
+Wooper
+Level: 5
+
+Girafarig
+Level: 5
+
+Teddiursa
+Level: 5
+
+Slugma
+Level: 5
+
+Skarmory
+Level: 5
+
+Stantler
+Level: 5
+
+Larvitar
+Level: 5
+
+Zigzagoon
+Level: 5
+
+Lotad
+Level: 5
+
+Seedot
+Level: 5
+
+Taillow
+Level: 5
+
+Wingull
+Level: 5
+
+Surskit
+Level: 5
+
+Shroomish
+Level: 5
+
+Nincada
+Level: 5
+
+Slakoth
+Level: 5
+
+Sableye
+Level: 5
+
+Mawile
+Level: 5
+
+Aron
+Level: 5
+
+Wailmer
+Level: 5
+
+Torkoal
+Level: 5
+
+Spinda
+Level: 5
+
+Trapinch
+Level: 5
+
+Cacnea
+Level: 5
+
+Kecleon
+Level: 5
+
+Duskull
+Level: 5
+
+Bagon
+Level: 5
+
+/* TODO PARTY_POOL_DRAGON_TAMER */
+
+=== PARTY_POOL_EXPERT ===
+Name: Pool
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Expert
+Party Size: 1
+
+Machop
+Level: 5
+
+/*
+Hitmon
+Level: 5
+*/
+
+Chinchou
+Level: 5
+
+Taillow
+Level: 5
+
+Shroomish
+Level: 5
+
+Barboach
+Level: 5
+
+=== PARTY_POOL_FISHERMAN ===
+Name: Pool
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Fisherman
+Party Size: 1
+
+Poliwag
+Level: 5
+
+Tentacool
+Level: 5
+
+Shellder
+Level: 5
+
+Krabby
+Level: 5
+
+Horsea
+Level: 5
+
+Goldeen
+Level: 5
+
+Staryu
+Level: 5
+
+Magikarp
+Level: 5
+
+Chinchou
+Level: 5
+
+Qwilfish
+Level: 5
+
+Corsola
+Level: 5
+
+Remoraid
+Level: 5
+
+Mantine
+Level: 5
+
+Wailmer
+Level: 5
+
+Barboach
+Level: 5
+
+=== PARTY_POOL_GENTLEMAN ===
+Name: Pool
+Class: Gentleman
+Pic: Gentleman
+Gender: Male
+Music: Rich
+Double Battle: No
+AI: Gentleman
+Party Size: 1
+
+Pikachu
+Level: 5
+
+Nidoran M
+Level: 5
+
+Vulpix
+Level: 5
+
+Meowth
+Level: 5
+
+Psyduck
+Level: 5
+
+Growlithe
+Level: 5
+
+Ponyta
+Level: 5
+
+Magnemite
+Level: 5
+
+Voltorb
+Level: 5
+
+Cubone
+Level: 5
+
+Eevee
+Level: 5
+
+Hoothoot
+Level: 5
+
+Mareep
+Level: 5
+
+Wobbuffet
+Level: 5
+
+Girafarig
+Level: 5
+
+Zigzagoon
+Level: 5
+
+/* TODO PARTY_POOL_GUITARIST */
+
+=== PARTY_POOL_HEX_MANIAC ===
+Name: Pool
+Class: Hex Maniac
+Pic: Hex Maniac
+Gender: Female
+Music: Suspicious
+Double Battle: No
+AI: Hex Maniac
+Party Size: 1
+
+Abra
+Level: 5
+
+Gastly
+Level: 5
+
+Natu
+Level: 5
+
+Murkrow
+Level: 5
+
+Misdreavus
+Level: 5
+
+Sableye
+Level: 5
+
+Shuppet
+Level: 5
+
+Duskull
+Level: 5
+
+=== PARTY_POOL_HIKER ===
+Name: Pool
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Hiker
+Party Size: 1
+
+Sandshrew
+Level: 5
+
+Clefairy
+Level: 5
+
+Diglett
+Level: 5
+
+Machop
+Level: 5
+
+Geodude
+Level: 5
+
+Onix
+Level: 5
+
+Cubone
+Level: 5
+
+Rhyhorn
+Level: 5
+
+Sudowoodo
+Level: 5
+
+Dunsparce
+Level: 5
+
+Swinub
+Level: 5
+
+=== PARTY_POOL_KINDLER ===
+Name: Pool
+Class: Kindler
+Pic: Kindler
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Kindler
+Party Size: 1
+
+Magmar
+Level: 5
+
+Slugma
+Level: 5
+
+Houndour
+Level: 5
+
+Wingull
+Level: 5
+
+=== PARTY_POOL_LADY ===
+Name: Pool
+Class: Lady
+Pic: Lady
+Gender: Female
+Music: Female
+Items: Full Restore
+Double Battle: No
+AI: Lady
+Party Size: 1
+
+Meowth
+Level: 5
+
+Goldeen
+Level: 5
+
+Mareep
+Level: 5
+
+Hoppip
+Level: 5
+
+Misdreavus
+Level: 5
+
+Corsola
+Level: 5
+
+Zigzagoon
+Level: 5
+
+Lotad
+Level: 5
+
+
+=== PARTY_POOL_LASS ===
+Name: Pool
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Lass
+Party Size: 1
+
+Rattata
+Level: 5
+
+Pidgey
+Level: 5
+
+Ekans
+Level: 5
+
+Pikachu
+Level: 5
+
+Nidoran F
+Level: 5
+
+Nidoran M
+Level: 5
+
+Clefairy
+Level: 5
+
+Jigglypuff
+Level: 5
+
+Oddish
+Level: 5
+
+Paras
+Level: 5
+
+Meowth
+Level: 5
+
+Psyduck
+Level: 5
+
+Poliwag
+Level: 5
+
+Bellsprout
+Level: 5
+
+Exeggcute
+Level: 5
+
+Cubone
+Level: 5
+
+Chansey
+Level: 5
+
+Tangela
+Level: 5
+
+Goldeen
+Level: 5
+
+Lapras
+Level: 5
+
+Eevee
+Level: 5
+
+Mareep
+Level: 5
+
+Marill
+Level: 5
+
+Hoppip
+Level: 5
+
+Snubbull
+Level: 5
+
+Zigzagoon
+Level: 5
+
+Lotad
+Level: 5
+
+Taillow
+Level: 5
+
+Shroomish
+Level: 5
+
+Wailmer
+Level: 5
+
+=== PARTY_POOL_NINJA_BOY ===
+Name: Pool
+Class: Ninja Boy
+Pic: Ninja Boy
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Ninja Boy
+Party Size: 1
+
+Koffing
+Level: 5
+
+Pineco
+Level: 5
+
+Nincada
+Level: 5
+
+/* TODO PARTY_POOL_OLD_COUPLE */
+
+=== PARTY_POOL_PARASOL_LADY ===
+Name: Pool
+Class: Parasol Lady
+Pic: Parasol Lady
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Parasol Lady
+Party Size: 1
+
+Goldeen
+Level: 5
+
+Staryu
+Level: 5
+
+Wingull
+Level: 5
+
+Surskit
+Level: 5
+
+Wailmer
+Level: 5
+
+Spheal
+Level: 5
+
+=== PARTY_POOL_PICNICKER ===
+Name: Pool
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Picnicker
+Party Size: 1
+
+Pidgey
+Level: 5
+
+Rattata
+Level: 5
+
+Pikachu
+Level: 5
+
+Sandshrew
+Level: 5
+
+Nidoran F
+Level: 5
+
+Nidoran M
+Level: 5
+
+Clefairy
+Level: 5
+
+Vulpix
+Level: 5
+
+Jigglypuff
+Level: 5
+
+Oddish
+Level: 5
+
+Paras
+Level: 5
+
+Meowth
+Level: 5
+
+Psyduck
+Level: 5
+
+Poliwag
+Level: 5
+
+Bellsprout
+Level: 5
+
+Tentacool
+Level: 5
+
+Geodude
+Level: 5
+
+Ponyta
+Level: 5
+
+Seel
+Level: 5
+
+Exeggcute
+Level: 5
+
+Cubone
+Level: 5
+
+Tangela
+Level: 5
+
+Horsea
+Level: 5
+
+Eevee
+Level: 5
+
+Sentret
+Level: 5
+
+Goldeen
+Level: 5
+
+Mareep
+Level: 5
+
+Marill
+Level: 5
+
+Hoppip
+Level: 5
+
+Sunkern
+Level: 5
+
+Lotad
+Level: 5
+
+Taillow
+Level: 5
+
+Shroomish
+Level: 5
+
+Cacnea
+Level: 5
+
+Swablu
+Level: 5
+
+=== PARTY_POOL_POKEMON_BREEDER ===
+Name: Pool
+Class: Pkmn Breeder
+Pic: Pokemon Breeder F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Pkmn Breeder
+Party Size: 1
+
+Pikachu
+Level: 5
+
+Sandshrew
+Level: 5
+
+Clefairy
+Level: 5
+
+Chansey
+Level: 5
+
+Goldeen
+Level: 5
+
+Snorlax
+Level: 5
+
+Marill
+Level: 5
+
+Togepi
+Level: 5
+
+Zigzagoon
+Level: 5
+
+Lotad
+Level: 5
+
+Seedot
+Level: 5
+
+Taillow
+Level: 5
+
+Wingull
+Level: 5
+
+Shroomish
+Level: 5
+
+Aron
+Level: 5
+
+/* TODO PARTY_POOL_PKMN_RANGER */
+/* TODO PARTY_POOL_POKEFAN */
+/* TODO PARTY_POOL_POKEMANIAC */
+
+=== PARTY_POOL_PSYCHIC ===
+Name: Pool
+Class: Psychic
+Pic: Psychic M
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Psychic
+Party Size: 1
+
+Abra
+Level: 5
+
+Slowpoke
+Level: 5
+
+Drowzee
+Level: 5
+
+Exeggcute
+Level: 5
+
+Staryu
+Level: 5
+
+Mr. Mime
+Level: 5
+
+Eevee
+Level: 5
+
+Natu
+Level: 5
+
+Wobbuffet
+Level: 5
+
+Girafarig
+Level: 5
+
+Shuppet
+Level: 5
+
+=== PARTY_POOL_RICH_BOY ===
+Name: Pool
+Class: Rich Boy
+Pic: Rich Boy
+Gender: Male
+Music: Rich
+Items: Full Restore
+Double Battle: No
+AI: Rich Boy
+Party Size: 1
+
+Eevee
+Level: 5
+
+Chinchou
+Level: 5
+
+Marill
+Level: 5
+
+Zigzagoon
+Level: 5
+
+=== PARTY_POOL_RUIN_MANIAC ===
+Name: Pool
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Ruin Maniac
+Party Size: 1
+
+Sandshrew
+Level: 5
+
+Machop
+Level: 5
+
+Geodude
+Level: 5
+
+Onix
+Level: 5
+
+Cubone
+Level: 5
+
+Gligar
+Level: 5
+
+=== PARTY_POOL_SAILOR ===
+Name: Pool
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Sailor
+Party Size: 1
+
+Rattata
+Level: 5
+
+Pikachu
+Level: 5
+
+Psyduck
+Level: 5
+
+Mankey
+Level: 5
+
+Poliwag
+Level: 5
+
+Machop
+Level: 5
+
+Tentacool
+Level: 5
+
+Slowpoke
+Level: 5
+
+Magnemite
+Level: 5
+
+Seel
+Level: 5
+
+Shellder
+Level: 5
+
+Krabby
+Level: 5
+
+Horsea
+Level: 5
+
+Staryu
+Level: 5
+
+Marill
+Level: 5
+
+Wooper
+Level: 5
+
+Wingull
+Level: 5
+
+Wailmer
+Level: 5
+
+Spheal
+Level: 5
+
+=== PARTY_POOL_SCHOOL_KID ===
+Name: Pool
+Class: School Kid
+Pic: School Kid M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: School Kid
+Party Size: 1
+
+Vulpix
+Level: 5
+
+Zubat
+Level: 5
+
+Oddish
+Level: 5
+
+Paras
+Level: 5
+
+Growlithe
+Level: 5
+
+Poliwag
+Level: 5
+
+Abra
+Level: 5
+
+Bellsprout
+Level: 5
+
+Geodude
+Level: 5
+
+Magnemite
+Level: 5
+
+Seel
+Level: 5
+
+Voltorb
+Level: 5
+
+Exeggcute
+Level: 5
+
+Tangela
+Level: 5
+
+Goldeen
+Level: 5
+
+Mr. Mime
+Level: 5
+
+Jynx
+Level: 5
+
+Electabuzz
+Level: 5
+
+Magmar
+Level: 5
+
+Ditto
+Level: 5
+
+Eevee
+Level: 5
+
+Ledyba
+Level: 5
+
+Natu
+Level: 5
+
+Aipom
+Level: 5
+
+Yanma
+Level: 5
+
+Wooper
+Level: 5
+
+Zigzagoon
+Level: 5
+
+Wurmple
+Level: 5
+
+Wingull
+Level: 5
+
+Shroomish
+Level: 5
+
+Shuppet
+Level: 5
+
+=== PARTY_POOL_SIS_AND_BRO ===
+Name: Pool
+Class: Sis And Bro
+Pic: Sis And Bro
+Gender: Male
+Music: Swimmer
+Double Battle: Yes
+AI: Sis And Bro
+Party Size: 1
+
+Poliwag
+Level: 5
+
+Tentacool
+Level: 5
+
+Horsea
+Level: 5
+
+Goldeen
+Level: 5
+
+Staryu
+Level: 5
+
+Chinchou
+Level: 5
+
+Marill
+Level: 5
+
+Corsola
+Level: 5
+
+Wingull
+Level: 5
+
+Barboach
+Level: 5
+
+Spheal
+Level: 5
+
+=== PARTY_POOL_SR_AND_JR ===
+Name: Pool
+Class: Sr And Jr
+Pic: Sr And Jr
+Gender: Male
+Music: Twins
+Double Battle: Yes
+AI: Sr And Jr
+Party Size: 1
+
+Geodude
+Level: 5
+
+Marill
+Level: 5
+
+Zigzagoon
+Level: 5
+
+Slakoth
+Level: 5
+
+Spinda
+Level: 5
+
+Swablu
+Level: 5
+
+=== PARTY_POOL_SWIMMER ===
+Name: Pool
+Class: Swimmer M
+Pic: Swimmer M
+Gender: Male
+Music: Swimmer
+Double Battle: No
+AI: Swimmer M
+Party Size: 1
+
+Psyduck
+Level: 5
+
+Poliwag
+Level: 5
+
+Tentacool
+Level: 5
+
+Slowpoke
+Level: 5
+
+Seel
+Level: 5
+
+Shellder
+Level: 5
+
+Krabby
+Level: 5
+
+Horsea
+Level: 5
+
+Goldeen
+Level: 5
+
+Staryu
+Level: 5
+
+Magikarp
+Level: 5
+
+Lapras
+Level: 5
+
+Dratini
+Level: 5
+
+Qwilfish
+Level: 5
+
+Chinchou
+Level: 5
+
+Marill
+Level: 5
+
+Wooper
+Level: 5
+
+Remoraid
+Level: 5
+
+Corsola
+Level: 5
+
+Wingull
+Level: 5
+
+Wailmer
+Level: 5
+
+Barboach
+Level: 5
+
+Spheal
+Level: 5
+
+/* TODO PARTY_POOL_TRIATHLETE */
+
+=== PARTY_POOL_TUBER ===
+Name: Pool
+Class: Tuber F
+Pic: Tuber F
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Tuber F
+Party Size: 1
+
+Poliwag
+Level: 5
+
+Tentacool
+Level: 5
+
+Krabby
+Level: 5
+
+Goldeen
+Level: 5
+
+Staryu
+Level: 5
+
+Marill
+Level: 5
+
+Zigzagoon
+Level: 5
+
+=== PARTY_POOL_TWINS ===
+Name: Pool
+Class: Twins
+Pic: Twins
+Gender: Male
+Music: Twins
+Double Battle: Yes
+AI: Twins
+Party Size: 1
+
+Pikachu
+Level: 5
+
+Clefairy
+Level: 5
+
+Jigglypuff
+Level: 5
+
+Oddish
+Level: 5
+
+Bellsprout
+Level: 5
+
+Dratini
+Level: 5
+
+Ledyba
+Level: 5
+
+Spinarak
+Level: 5
+
+Mareep
+Level: 5
+
+Marill
+Level: 5
+
+Wooper
+Level: 5
+
+Teddiursa
+Level: 5
+
+Phanpy
+Level: 5
+
+Wurmple
+Level: 5
+
+Lotad
+Level: 5
+
+Seedot
+Level: 5
+
+Spinda
+Level: 5
+
+=== PARTY_POOL_YOUNG_COUPLE ===
+Name: Pool
+Class: Young Couple
+Pic: Young Couple
+Gender: Male
+Music: Girl
+Double Battle: Yes
+AI: Young Couple
+Party Size: 1
+
+Nidoran F
+Level: 5
+
+Nidoran M
+Level: 5
+
+Vulpix
+Level: 5
+
+Psyduck
+Level: 5
+
+Abra
+Level: 5
+
+Ponyta
+Level: 5
+
+Shellder
+Level: 5
+
+Onix
+Level: 5
+
+Magmar
+Level: 5
+
+Tauros
+Level: 5
+
+Sunkern
+Level: 5
+
+Miltank
+Level: 5
+
+Wurmple
+Level: 5
+
+Lotad
+Level: 5
+
+Seedot
+Level: 5
+
+=== PARTY_POOL_YOUNGSTER ===
+Name: Pool
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Youngster
+Party Size: 1
+
+Pidgey
+Level: 5
+
+Rattata
+Level: 5
+
+Spearow
+Level: 5
+
+Ekans
+Level: 5
+
+Sandshrew
+Level: 5
+
+Nidoran M
+Level: 5
+
+Zubat
+Level: 5
+
+Paras
+Level: 5
+
+Diglett
+Level: 5
+
+Meowth
+Level: 5
+
+Mankey
+Level: 5
+
+Growlithe
+Level: 5
+
+Machop
+Level: 5
+
+Bellsprout
+Level: 5
+
+Geodude
+Level: 5
+
+Slowpoke
+Level: 5
+
+Farfetchd
+Level: 5
+
+Voltorb
+Level: 5
+
+Lickitung
+Level: 5
+
+Magikarp
+Level: 5
+
+Wooper
+Level: 5
+
+Slugma
+Level: 5
+
+Zigzagoon
+Level: 5
+
+Lotad
+Level: 5
+
+Seedot
+Level: 5
+
+Taillow
+Level: 5
+
+Shroomish
+Level: 5
+
+Slakoth
+Level: 5
+
+Aron
+Level: 5
+
+Trapinch
+Level: 5

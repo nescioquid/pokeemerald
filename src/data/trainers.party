@@ -5971,9 +5971,8 @@ Gender: Male
 Music: Male
 Double Battle: No
 AI: Youngster
-
-Rattata
-Level: 5
+Party Size: 1
+Copy Pool: TRAINER_POOL_YOUNGSTER
 
 === TRAINER_BILLY ===
 Name: Billy
@@ -6242,12 +6241,8 @@ Gender: Male
 Music: Male
 Double Battle: No
 AI: Youngster
-
-Zigzagoon
-Level: 4
-
-Taillow
-Level: 3
+Party Size: 2
+Copy Pool: TRAINER_POOL_YOUNGSTER
 
 === TRAINER_TIMMY ===
 Name: Timmy
@@ -11533,12 +11528,8 @@ Gender: Male
 Music: Male
 Double Battle: No
 AI: Bug Catcher
-
-Caterpie
-Level: 4
-
-Weedle
-Level: 4
+Party Size: 2
+Copy Pool: TRAINER_POOL_BUG_CATCHER
 
 === TRAINER_LYLE ===
 Name: Lyle

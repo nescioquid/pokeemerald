@@ -233,4 +233,11 @@ const struct Trainer gTrainers[DIFFICULTY_COUNT][TRAINERS_COUNT] =
 #include "data/trainers.h"
 };
 
+// #include "include/constants/party_pools.h"
+
+const struct Trainer gPartyPools[DIFFICULTY_COUNT][POOL_COUNT] =
+{
+#include "data/party_pools.h"
+};
+
 #include "data/text/follower_messages.h"
