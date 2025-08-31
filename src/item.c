@@ -93,12 +93,12 @@ struct ItemSlot NONNULL BagPocket_GetSlotData(struct BagPocket *pocket, u32 pock
     switch (pocket->id)
     {
     case POCKET_ITEMS:
-    case POCKET_KEY_ITEMS:
+    case POCKET_HELD_ITEMS:
+    case POCKET_MEDICINE:
     case POCKET_POKE_BALLS:
     case POCKET_TM_HM:
-    case POCKET_MEDICINE:
-    case POCKET_HELD_ITEMS:
     case POCKET_BERRIES:
+    case POCKET_KEY_ITEMS:
         return BagPocket_GetSlotDataGeneric(pocket, pocketPos);
     case POCKET_DUMMY:
         return BagPocket_GetSlotDataPC(pocket, pocketPos);

@@ -102,7 +102,7 @@ static const union AnimCmd sSpriteAnim_Bag_Medicine[] =
 
 static const union AnimCmd sSpriteAnim_Bag_HeldITems[] =
 {
-    ANIMCMD_FRAME(256, 4),
+    ANIMCMD_FRAME(64, 4),
     ANIMCMD_END
 };
 
