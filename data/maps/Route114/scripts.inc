@@ -85,7 +85,7 @@ Route114_EventScript_Lenny::
 	end
 
 Route114_EventScript_Lucas::
-	trainerbattle_single TRAINER_LUCAS_1, Route114_Text_LucasIntro, Route114_Text_LucasDefeat
+	trainerbattle_single TRAINER_LUCAS, Route114_Text_LucasIntro, Route114_Text_LucasDefeat
 	msgbox Route114_Text_LucasPostBattle, MSGBOX_AUTOCLOSE
 	end
 

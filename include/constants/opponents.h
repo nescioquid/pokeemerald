@@ -223,7 +223,7 @@
 #define TRAINER_GEORGIA                     217
 #define TRAINER_GERALD                      218
 #define TRAINER_GILBERT                     219
-#define TRAINER_GINA_AND_MIA_1              220
+#define TRAINER_GINA_AND_MIA                220
 #define TRAINER_GRACE                       221
 #define TRAINER_GREG                        222
 #define TRAINER_GRETA                       223
@@ -377,7 +377,7 @@
 #define TRAINER_LOLA_2                      371
 #define TRAINER_LOLA_3                      372
 #define TRAINER_LORENZO                     373
-#define TRAINER_LUCAS_1                     374
+#define TRAINER_LUCAS                       374
 #define TRAINER_LUCY                        375
 #define TRAINER_LUIS                        376
 #define TRAINER_LUNG                        377
@@ -412,7 +412,7 @@
 #define TRAINER_MIGUEL_1                    406
 #define TRAINER_MIGUEL_2                    407
 #define TRAINER_MIGUEL_3                    408
-#define TRAINER_MIKE_1                      409
+#define TRAINER_MIKE                        409
 #define TRAINER_MISSY                       410
 #define TRAINER_MITCHELL                    411
 #define TRAINER_MIU_AND_YUKI                412

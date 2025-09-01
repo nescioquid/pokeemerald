@@ -8649,7 +8649,7 @@ Weepinbell
 Level: 27
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-=== TRAINER_GINA_AND_MIA_1 ===
+=== TRAINER_GINA_AND_MIA ===
 Name: Gina & Mia
 Class: Twins
 Pic: Twins
@@ -8693,25 +8693,6 @@ Level: 9
 
 Weepinbell
 Level: 9
-
-=== TRAINER_GINA_AND_MIA_2 ===
-Name: Gina & Mia
-Class: Twins
-Pic: Twins
-Gender: Male
-Music: Twins
-Double Battle: Yes
-AI: Twins
-
-Duskull
-Level: 10
-- Night Shade
-- Disable
-
-Shroomish
-Level: 10
-- Absorb
-- Leech Seed
 
 === TRAINER_AMY_AND_LIV_4 ===
 Name: Amy & Liv
@@ -10619,21 +10600,6 @@ Banette
 Level: 36
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-=== TRAINER_GRUNT_UNUSED ===
-Name: Grunt
-Class: Team Magma
-Pic: Aqua Grunt F
-Gender: Female
-Music: Aqua
-Double Battle: No
-AI: Team Magma
-
-Wailmer
-Level: 31
-
-Zubat
-Level: 31
-
 === TRAINER_GRUNT_MT_PYRE_4 ===
 Name: Grunt
 Class: Team Aqua
@@ -11825,7 +11791,7 @@ Level: 18
 Machop
 Level: 18
 
-=== TRAINER_LUCAS_1 ===
+=== TRAINER_LUCAS ===
 Name: Lucas
 Class: Hiker
 Pic: Hiker
@@ -11885,40 +11851,7 @@ Level: 20
 Clefairy
 Level: 20
 
-=== TRAINER_LUCAS_2 ===
-Name: Lucas
-Class: Hiker
-Pic: Hiker
-Gender: Male
-Music: Hiker
-Double Battle: No
-AI: Hiker
-
-Wailmer
-Level: 9
-- Splash
-- Water Gun
-
-=== TRAINER_MIKE_1 ===
-Name: Mike
-Class: Hiker
-Pic: Hiker
-Gender: Male
-Music: Hiker
-Double Battle: No
-AI: Hiker
-
-Pelipper
-Level: 10
-- Gust
-- Growl
-
-Poochyena
-Level: 10
-- Bite
-- Scary Face
-
-=== TRAINER_MIKE_2 ===
+=== TRAINER_MIKE ===
 Name: Mike
 Class: Hiker
 Pic: Hiker
